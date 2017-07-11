@@ -15,7 +15,7 @@ pkill compton
 compton &
 killall dunst
 dunst -conf /home/icyphox/.config/dunst/dunstrc &
-nitrogen --set-zoom-fill ~/Pictures/Wallpapers/abstracttriangles.png
+nitrogen --set-zoom-fill ~/dotfiles/images/wallpaper.png
 xrdb .Xresources 
 pkill polybar
 polybar top &

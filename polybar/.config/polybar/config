@@ -1,0 +1,187 @@
+[global/wm]
+margin-top = 0
+margin-bottom = 0 
+override-redirect = true
+
+[bar/top]
+width = 100%
+height = 20
+offset-x = 0
+offset-y = 0
+
+locale = de_DE.UTF-8
+background = #00282c34
+foreground = #abb2bf
+
+font-0 = Iosevka Nerd Font:size=8:;-2
+font-1 = FontAwesome:size=8:;0
+font-2 = MaterialIcons-Regular:size=10:;-3
+font-3 = Siji:pixelsize=18:0
+
+modules-left = date2 date1 volume 
+modules-center = hlws
+modules-right = powermenu 
+
+tray-position = left
+tray-padding = 2
+tray-transparent = false
+tray-detached = false
+tray-background = #00282c34
+
+spacing = 1
+padding-left = 1
+padding-right = 1
+module-margin-left = 3
+module-margin-right = 2
+
+[module/volume]
+type = internal/volume
+
+format-volume = <ramp-volume><label-volume> 
+module-margin-right = 0
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 =
+ramp-volume-3 =
+
+format-volume-foreground = #abb2bf
+format-volume-background = #00282c34
+
+label-muted =  muted
+
+[module/date1]
+type = internal/date
+interval = 1
+date = " %I:%M"
+format-prefix = 
+
+[module/date2]
+type = internal/date
+interval = 5
+date = " %A %b %m"
+format-prefix =
+
+[module/powermenu]
+type = custom/menu
+
+label-open =  
+label-open-foreground = #e06c75
+label-open-background = #00282c34
+label-close =
+label-close-foreground = #e06c75
+label-close-background = #00282c34
+label-separator =|
+label-separator-foreground = #abb2bf
+label-separator-background = #00282c34
+
+menu-0-0 =
+menu-0-0-exec = menu-open-1
+menu-0-1 =
+menu-0-1-exec = menu-open-2
+menu-0-2 =
+menu-0-2-exec = menu-open-3
+
+menu-1-0 =
+menu-1-0-exec = menu-open-0
+menu-1-1 =
+menu-1-1-exec = systemctl reboot
+
+menu-2-0 =
+menu-2-0-exec = systemctl poweroff
+menu-2-1 =
+menu-2-1-exec = menu-open-0
+
+menu-3-0 =
+menu-3-0-exec = herbstclient quit 
+menu-3-1 =
+menu-3-1-exec = menu-open-0
+[module/rofi]
+type = custom/script
+exec = echo "       Finder"
+click-left = rofi -show run
+
+[module/hlws]
+type = custom/script
+exec = python3 scripts/hlws.py
+
+scroll-down = exec herbstclient use_index +1
+scroll-up = exec herbstclient use_index -1
+interval = 0.01
+
+[module/cpu]
+type = internal/cpu
+label =  %percentage-core1%%
+label-foreground = #abb2bf
+
+[module/battery]
+type = internal/battery
+full-at = 99
+battery = BAT1
+adapter = ACAD
+poll-interval = 5
+
+format-charging = <animation-charging><label-charging>
+format-discharging = <ramp-capacity><label-discharging>
+label-charging = %percentage%%
+label-charging-foreground = #abb2bf
+label-discharging = %percentage%%
+label-discharging-foreground = #abb2bf
+label-full = fully charged
+ramp-capacity-foreground = #abb2bf
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+bar-capacity-width = 10
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = #abb2bf
+animation-charging-framerate = 750
+
+[module/music]
+type = custom/script
+interval = 0.01
+exec = rhythmbox-client --print-playing
+format-foreground = #abb2bf
+format-background = #00282c34
+click-left = exec rhythmbox-client --play-pause
+click-right = exec -i
+scroll-up = exec --volume-up
+scroll-down = exec --volume-down
+
+[module/previous]
+type = custom/script
+format-text = <label>
+label = 
+exec = echo label
+click-left = exec pragha -r
+format-foreground = #abb2bf
+format-background = #00282c34
+
+[module/next]
+type = custom/script
+format-text = <label>
+label = 
+exec = echo label
+click-left = exec pragha -n
+format-foreground = #abb2bf
+format-background = #00282c34
+
+[module/pauseplay]
+type = custom/script
+interval = 0.01
+exec = python3 /home/nerdypepper/praghapauseplay.py
+click-left = exec pragha -t
+format-foreground = #abb2bf
+format-background = #00282c34
+
+[module/title]
+type = custom/script
+interval = 0.01
+exec = python3 scripts/hltitle.py
+format-foreground: #abb2bf
+format-background = #00282c34

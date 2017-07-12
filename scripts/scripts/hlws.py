@@ -9,7 +9,7 @@ index = output.find(upto)
 i = 0
 while i < index:
     if output[i] == ":":
-        wstr = wstr + "  ◇"
+        wstr = wstr + "  ○"
         i = i + 1
     elif output[i] == ".":
         wstr = wstr + "  ◦"

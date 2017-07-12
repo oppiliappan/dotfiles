@@ -56,7 +56,7 @@ URxvt.shading: 30
 URxvt.scrollBar: false
 URxvt.internalBorder: 30
 URxvt.cursorUnderline : true
-URxvt.geometry : 70x20
+URxvt.geometry : 60x20
 URxvt.thickness : 5
 
 

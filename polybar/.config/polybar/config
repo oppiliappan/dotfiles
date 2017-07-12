@@ -18,9 +18,9 @@ font-1 = FontAwesome:size=8:;0
 font-2 = MaterialIcons-Regular:size=10:;-3
 font-3 = Siji:pixelsize=18:0
 
-modules-left = date2 date1 volume 
-modules-center = hlws
-modules-right = powermenu 
+modules-left = powermenu date2 date1 volume 
+modules-center = previous spotipy next
+modules-right = hlws
 
 tray-position = left
 tray-padding = 2
@@ -95,10 +95,6 @@ menu-3-0 =
 menu-3-0-exec = herbstclient quit 
 menu-3-1 =
 menu-3-1-exec = menu-open-0
-[module/rofi]
-type = custom/script
-exec = echo "       Finder"
-click-left = rofi -show run
 
 [module/hlws]
 type = custom/script
@@ -107,11 +103,6 @@ exec = python3 scripts/hlws.py
 scroll-down = exec herbstclient use_index +1
 scroll-up = exec herbstclient use_index -1
 interval = 0.01
-
-[module/cpu]
-type = internal/cpu
-label =  %percentage-core1%%
-label-foreground = #abb2bf
 
 [module/battery]
 type = internal/battery
@@ -142,23 +133,12 @@ animation-charging-4 = 
 animation-charging-foreground = #abb2bf
 animation-charging-framerate = 750
 
-[module/music]
-type = custom/script
-interval = 0.01
-exec = rhythmbox-client --print-playing
-format-foreground = #abb2bf
-format-background = #00282c34
-click-left = exec rhythmbox-client --play-pause
-click-right = exec -i
-scroll-up = exec --volume-up
-scroll-down = exec --volume-down
-
 [module/previous]
 type = custom/script
 format-text = <label>
 label = 
 exec = echo label
-click-left = exec pragha -r
+click-left = exec playerctl previous
 format-foreground = #abb2bf
 format-background = #00282c34
 
@@ -167,21 +147,14 @@ type = custom/script
 format-text = <label>
 label = 
 exec = echo label
-click-left = exec pragha -n
+click-left = exec playerctl next
 format-foreground = #abb2bf
 format-background = #00282c34
 
-[module/pauseplay]
+[module/spotipy]
 type = custom/script
+exec =  python3 ~/scripts/spoti.py
+exec-if = pgrep spotify > /dev/null
 interval = 0.01
-exec = python3 /home/nerdypepper/praghapauseplay.py
-click-left = exec pragha -t
-format-foreground = #abb2bf
-format-background = #00282c34
+click-left = playerctl -p spotify play-pause 
 
-[module/title]
-type = custom/script
-interval = 0.01
-exec = python3 scripts/hltitle.py
-format-foreground: #abb2bf
-format-background = #00282c34

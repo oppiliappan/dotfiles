@@ -67,10 +67,10 @@ URxvt.thickness : 5
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
 
-rofi.color-window:    base00,        base00,        base00,             base00,          base05
-rofi.color-normal:    base00,        #65737e,        base00,             base00,          #ffffff
-rofi.color-active:    base00,        #ffffff,        base00,             base00,          base05
-rofi.color-urgent:    base00,        #DDDDDD,        base00,             base00,          base05
+rofi.color-window:    #333842,        #333842,        #333842,             #333842,          base05
+rofi.color-normal:    #333842,        #65737e,        #333842,             #333842,          #ffffff
+rofi.color-active:    #333842,        #ffffff,        #333842,             #333842,          base05
+rofi.color-urgent:    #333842,        #DDDDDD,        #333842,             #333842,          base05
 
 rofi.fake-transparency: true
 rofi.font: Dina 8

@@ -13,13 +13,13 @@ locale = de_DE.UTF-8
 background = #00282c34
 foreground = #abb2bf
 
-font-0 = Iosevka Nerd Font:size=8:;-2
+font-0 = Iosevka Nerd Font:size=8:antialias=true;-2
 font-1 = FontAwesome:size=8:;0
 font-2 = MaterialIcons-Regular:size=10:;-3
 font-3 = Siji:pixelsize=18:0
 
 modules-left = powermenu date2 date1 volume 
-modules-center = previous spotipy next
+modules-center = previous playpause next spotipy 
 modules-right = hlws
 
 tray-position = left
@@ -157,4 +157,13 @@ exec =  python3 ~/scripts/spoti.py
 exec-if = pgrep spotify > /dev/null
 interval = 0.01
 click-left = playerctl -p spotify play-pause 
+
+[module/playpause]
+type = custom/script
+exec = python3 ~/scripts/playpause.py
+interval = 0.01
+click-left = playerctl -p spotify play-pause 
+
+
+
 

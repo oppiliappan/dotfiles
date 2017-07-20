@@ -1,5 +1,4 @@
 execute pathogen#infect()
-colorscheme base16-onedark
 set tabstop=4
 set number
 syntax on
@@ -8,8 +7,8 @@ set nobackup
 set nowritebackup
 set swapfile
 set dir=/tmp
+set laststatus=2 
 set noshowmode
-set laststatus=2
-let g:lightline = {
-	\ 'colorscheme': '16color'
-	\}
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+colorscheme base16-onedark

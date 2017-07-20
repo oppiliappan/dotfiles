@@ -4,36 +4,35 @@ margin-bottom = 0
 override-redirect = true
 
 [bar/top]
-width = 100%
+width = 80%
 height = 20
-offset-x = 0
-offset-y = 0
+offset-x = 10%
+offset-y = 5
 
 locale = de_DE.UTF-8
-background = #00282c34
+background = #282c34
 foreground = #abb2bf
 
-font-0 = Iosevka Nerd Font:size=8:antialias=true;-2
+font-0 = tewi :size=8:antialias=true;-4
 font-1 = FontAwesome:size=8:;0
-font-2 = MaterialIcons-Regular:size=10:;-3
+font-2 = MaterialIcons-Regular:size=10:;-4
 font-3 = Siji:pixelsize=18:0
 
 modules-left = powermenu date2 date1 volume 
-modules-center = previous playpause next spotipy 
-modules-right = hlws
+modules-center = spotipy previous playpause next 
+modules-right = hlws  
 
 tray-position = left
 tray-padding = 2
 tray-transparent = false
 tray-detached = false
-tray-background = #00282c34
+tray-background = #282c34
 
 spacing = 1
 padding-left = 1
 padding-right = 1
-module-margin-left = 3
-module-margin-right = 2
-
+module-margin-left = 2
+module-margin-right = 1
 [module/volume]
 type = internal/volume
 
@@ -45,7 +44,7 @@ ramp-volume-2 =
 ramp-volume-3 =
 
 format-volume-foreground = #abb2bf
-format-volume-background = #00282c34
+format-volume-background = #282c34
 
 label-muted =  muted
 
@@ -66,13 +65,13 @@ type = custom/menu
 
 label-open =  
 label-open-foreground = #e06c75
-label-open-background = #00282c34
+label-open-background = #282c34
 label-close =
 label-close-foreground = #e06c75
-label-close-background = #00282c34
+label-close-background = #282c34
 label-separator =|
 label-separator-foreground = #abb2bf
-label-separator-background = #00282c34
+label-separator-background = #282c34
 
 menu-0-0 =
 menu-0-0-exec = menu-open-1
@@ -140,7 +139,7 @@ label = 
 exec = echo label
 click-left = exec playerctl previous
 format-foreground = #abb2bf
-format-background = #00282c34
+format-background = #282c34
 
 [module/next]
 type = custom/script
@@ -149,7 +148,7 @@ label = 
 exec = echo label
 click-left = exec playerctl next
 format-foreground = #abb2bf
-format-background = #00282c34
+format-background = #282c34
 
 [module/spotipy]
 type = custom/script

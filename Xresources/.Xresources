@@ -51,7 +51,7 @@ URxvt.cursorBlink: 1
 
 
 URxvt.url-launcher: usr/bin/chromium
-URxvt.font: xft:Dina:size=8
+URxvt.font: xft:tewi:size=9
 URxvt.shading: 30
 URxvt.scrollBar: false
 URxvt.internalBorder: 30
@@ -73,14 +73,14 @@ rofi.color-active:    #333842,        #ffffff,        #333842,             #3338
 rofi.color-urgent:    #333842,        #DDDDDD,        #333842,             #333842,          base05
 
 rofi.fake-transparency: true
-rofi.font: Dina 8
+rofi.font: tewi 8
 rofi.columns: 1
 rofi.separator-style: none
 rofi.hide-scrollbar: true
 rofi.location: 0
 rofi.padding: 12
 rofi.fullscreen: false
-rofi.width: 450
+rofi.width: 350
 rofi.lines: 6
 
 Xft.dpi:        96

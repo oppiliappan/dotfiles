@@ -5,7 +5,7 @@ override-redirect = true
 
 [bar/top]
 width = 80%
-height = 20
+height = 22
 offset-x = 10%
 offset-y = 5
 
@@ -18,9 +18,9 @@ font-1 = FontAwesome:size=8:;0
 font-2 = MaterialIcons-Regular:size=10:;-4
 font-3 = Siji:pixelsize=18:0
 
-modules-left = powermenu date2 date1 volume 
+modules-left = date1 volume 
 modules-center = spotipy previous playpause next 
-modules-right = hlws  
+modules-right = hlws powermenu 
 
 tray-position = left
 tray-padding = 2
@@ -28,15 +28,15 @@ tray-transparent = false
 tray-detached = false
 tray-background = #282c34
 
-spacing = 1
-padding-left = 1
-padding-right = 1
+spacing = 0
+padding-left = 2
+padding-right = 2
 module-margin-left = 2
 module-margin-right = 1
 [module/volume]
 type = internal/volume
 
-format-volume = <ramp-volume><label-volume> 
+format-volume = <ramp-volume> <label-volume> 
 module-margin-right = 0
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -63,13 +63,13 @@ format-prefix =
 [module/powermenu]
 type = custom/menu
 
-label-open =  
+label-open = 
 label-open-foreground = #e06c75
 label-open-background = #282c34
 label-close =
 label-close-foreground = #e06c75
 label-close-background = #282c34
-label-separator =|
+label-separator = ● 
 label-separator-foreground = #abb2bf
 label-separator-background = #282c34
 

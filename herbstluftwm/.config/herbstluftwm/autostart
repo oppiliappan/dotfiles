@@ -128,7 +128,8 @@ hc set frame_bg_normal_color '#292a44'
 hc set frame_bg_active_color '#292a44'
 hc set frame_border_width 0
 hc set always_show_frame 1
-hc set frame_bg_transparent 1
+hc set frame_active_opacity 0
+hc set frame_normal_opacity 0
 hc set frame_transparent_width 0
 hc set frame_gap 0
 

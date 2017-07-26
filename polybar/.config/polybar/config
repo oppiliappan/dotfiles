@@ -28,7 +28,7 @@ tray-transparent = false
 tray-detached = false
 tray-background = #282c34
 
-spacing = 0
+spacing = 1
 padding-left = 2
 padding-right = 2
 module-margin-left = 2
@@ -69,8 +69,8 @@ label-open-background = #282c34
 label-close =
 label-close-foreground = #e06c75
 label-close-background = #282c34
-label-separator = ● 
-label-separator-foreground = #abb2bf
+label-separator = | 
+label-separator-foreground = #666666
 label-separator-background = #282c34
 
 menu-0-0 =

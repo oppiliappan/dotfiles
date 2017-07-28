@@ -5,7 +5,7 @@ override-redirect = true
 
 [bar/top]
 width = 80%
-height = 22
+height = 24
 offset-x = 10%
 offset-y = 5
 
@@ -13,10 +13,9 @@ locale = de_DE.UTF-8
 background = #282c34
 foreground = #abb2bf
 
-font-0 = tewi :size=8:antialias=true;-4
-font-1 = FontAwesome:size=8:;0
-font-2 = MaterialIcons-Regular:size=10:;-4
-font-3 = Siji:pixelsize=18:0
+font-0 = Iosevka Nerd Font:size=8:antialias=true;
+;font-1 = MaterialIcons-Regular :size=10:;
+font-1 = icomoon :size=9:;-2
 
 modules-left = date1 volume 
 modules-center = spotipy previous playpause next 
@@ -36,23 +35,23 @@ module-margin-right = 1
 [module/volume]
 type = internal/volume
 
-format-volume = <ramp-volume> <label-volume> 
+format-volume = <ramp-volume><label-volume> 
 module-margin-right = 0
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 =
-ramp-volume-3 =
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 =
+ramp-volume-3 =
 
 format-volume-foreground = #abb2bf
 format-volume-background = #282c34
 
-label-muted =  muted
+label-muted =  muted
 
 [module/date1]
 type = internal/date
 interval = 1
 date = " %I:%M"
-format-prefix = 
+format-prefix = 
 
 [module/date2]
 type = internal/date
@@ -63,36 +62,36 @@ format-prefix =
 [module/powermenu]
 type = custom/menu
 
-label-open = 
+label-open = 
 label-open-foreground = #e06c75
 label-open-background = #282c34
-label-close =
+label-close =
 label-close-foreground = #e06c75
 label-close-background = #282c34
 label-separator = | 
 label-separator-foreground = #666666
 label-separator-background = #282c34
 
-menu-0-0 =
+menu-0-0 =
 menu-0-0-exec = menu-open-1
-menu-0-1 =
+menu-0-1 =
 menu-0-1-exec = menu-open-2
-menu-0-2 =
+menu-0-2 =
 menu-0-2-exec = menu-open-3
 
-menu-1-0 =
+menu-1-0 =
 menu-1-0-exec = menu-open-0
-menu-1-1 =
+menu-1-1 =
 menu-1-1-exec = systemctl reboot
 
-menu-2-0 =
+menu-2-0 =
 menu-2-0-exec = systemctl poweroff
-menu-2-1 =
+menu-2-1 =
 menu-2-1-exec = menu-open-0
 
-menu-3-0 =
+menu-3-0 =
 menu-3-0-exec = herbstclient quit 
-menu-3-1 =
+menu-3-1 =
 menu-3-1-exec = menu-open-0
 
 [module/hlws]
@@ -135,7 +134,7 @@ animation-charging-framerate = 750
 [module/previous]
 type = custom/script
 format-text = <label>
-label = 
+label = 
 exec = echo label
 click-left = exec playerctl previous
 format-foreground = #abb2bf
@@ -144,7 +143,7 @@ format-background = #282c34
 [module/next]
 type = custom/script
 format-text = <label>
-label = 
+label = 
 exec = echo label
 click-left = exec playerctl next
 format-foreground = #abb2bf

@@ -1,4 +1,4 @@
-[global/wm]
+[GLOBAL/Wm]
 margin-top = 0
 margin-bottom = 0 
 override-redirect = true
@@ -17,7 +17,7 @@ font-0 = Iosevka Nerd Font:size=8:antialias=true;
 ;font-1 = MaterialIcons-Regular :size=10:;
 font-1 = icomoon :size=9:;-2
 
-modules-left = date1 volume 
+modules-left = date1 volume cpu 
 modules-center = spotipy previous playpause next 
 modules-right = hlws powermenu 
 
@@ -29,7 +29,7 @@ tray-background = #282c34
 
 spacing = 1
 padding-left = 2
-padding-right = 2
+padding-right = 0
 module-margin-left = 2
 module-margin-right = 1
 [module/volume]
@@ -37,10 +37,10 @@ type = internal/volume
 
 format-volume = <ramp-volume><label-volume> 
 module-margin-right = 0
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 =
-ramp-volume-3 =
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 =
+ramp-volume-3 =
 
 format-volume-foreground = #abb2bf
 format-volume-background = #282c34
@@ -62,10 +62,12 @@ format-prefix =
 [module/powermenu]
 type = custom/menu
 
-label-open = 
-label-open-foreground = #e06c75
-label-open-background = #282c34
+label-open =
+label-open-foreground = #282c34
+label-open-background = #e06c75
+label-open-padding = 1
 label-close =
+label-close-padding = 1
 label-close-foreground = #e06c75
 label-close-background = #282c34
 label-separator = | 
@@ -162,6 +164,13 @@ exec = python3 ~/scripts/playpause.py
 interval = 0.01
 click-left = playerctl -p spotify play-pause 
 
+[module/cpu]
+type = internal/cpu
+label =  %percentage-core1%%
 
-
-
+[module/weather]
+type = custom/script
+interval = 10
+format = <label>
+format-prefix = " "
+exec = python3 ~/scripts/weather.py

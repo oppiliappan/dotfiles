@@ -11,7 +11,7 @@ offset-y = 5
 
 locale = de_DE.UTF-8
 background = #282c34
-foreground = #abb2bf
+foreground = #eeeeee
 
 font-0 = Iosevka Nerd Font:size=8:antialias=true;
 ;font-1 = MaterialIcons-Regular :size=10:;
@@ -42,7 +42,7 @@ ramp-volume-1 =
 ramp-volume-2 =
 ramp-volume-3 =
 
-format-volume-foreground = #abb2bf
+format-volume-foreground = #eeeeee
 format-volume-background = #282c34
 
 label-muted =  muted
@@ -114,11 +114,11 @@ poll-interval = 5
 format-charging = <animation-charging><label-charging>
 format-discharging = <ramp-capacity><label-discharging>
 label-charging = %percentage%%
-label-charging-foreground = #abb2bf
+label-charging-foreground = #eeeeee
 label-discharging = %percentage%%
-label-discharging-foreground = #abb2bf
+label-discharging-foreground = #eeeeee
 label-full = fully charged
-ramp-capacity-foreground = #abb2bf
+ramp-capacity-foreground = #eeeeee
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
@@ -130,7 +130,7 @@ animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
-animation-charging-foreground = #abb2bf
+animation-charging-foreground = #eeeeee
 animation-charging-framerate = 750
 
 [module/previous]
@@ -139,7 +139,7 @@ format-text = <label>
 label = 
 exec = echo label
 click-left = exec playerctl previous
-format-foreground = #abb2bf
+format-foreground = #eeeeee
 format-background = #282c34
 
 [module/next]
@@ -148,7 +148,7 @@ format-text = <label>
 label = 
 exec = echo label
 click-left = exec playerctl next
-format-foreground = #abb2bf
+format-foreground = #eeeeee
 format-background = #282c34
 
 [module/spotipy]

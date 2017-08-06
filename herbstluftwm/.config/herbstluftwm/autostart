@@ -133,20 +133,20 @@ hc set frame_normal_opacity 0
 hc set frame_transparent_width 0
 hc set frame_gap 3
 
-hc attr theme.active.color '#64666e'
-hc attr theme.normal.color '#383941'
+hc attr theme.active.color '#B09A87'
+hc attr theme.normal.color '#3d4f6e'
 hc attr theme.urgent.color '#e72d2d'
 hc attr theme.inner_width 0
 hc attr theme.inner_color black
-hc attr theme.border_width 3
-hc attr theme.floating.border_width 3
+hc attr theme.border_width 2
+hc attr theme.floating.border_width 2
 hc attr theme.floating.outer_width 0
 hc attr theme.floating.outer_color black
 hc attr theme.active.inner_color '#3E4A00'
 hc attr theme.active.outer_color '#3E4A00'
 hc attr theme.background_color '#141414'
 
-hc set window_gap 10
+hc set window_gap 12
 hc set frame_padding 0
 hc set smart_window_surroundings 1
 hc set smart_frame_surroundings 1

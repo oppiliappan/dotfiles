@@ -2,22 +2,25 @@
 Xcursor.theme: Numix
 Xcursor.size: 16
 
-#define base00 #282c34
-#define base01 #353b45
-#define base02 #3e4451
-#define base03 #545862
-#define base04 #565c64
-#define base05 #abb2bf
-#define base06 #b6bdca
-#define base07 #c8ccd4
-#define base08 #e06c75
-#define base09 #d19a66
-#define base0A #e5c07b
-#define base0B #98c379
-#define base0C #56b6c2
-#define base0D #61afef
-#define base0E #c678dd
-#define base0F #be5046
+! Pristine
+! NerdyPepper
+
+#define base00 #172030
+#define base01 #212e46
+#define base02 #2c3e5d
+#define base03 #969896
+#define base04 #b4b7b4
+#define base05 #c5c8c6
+#define base06 #e0e0e0
+#define base07 #c0c5ce
+#define base08 #ea7599
+#define base09 #de935f
+#define base0A #eabe9a
+#define base0B #97a38f
+#define base0C #8abeb7
+#define base0D #6e94b9
+#define base0E #b18ba4
+#define base0F #a67868
 
 *.foreground:   base05
 #ifdef background_opacity
@@ -45,13 +48,11 @@ Xcursor.size: 16
 *.color14:      base0F
 *.color15:      base07
 
-
-URxvt.cursorColor: #a3be8c
 URxvt.cursorBlink: 1
 
 
 URxvt.url-launcher: usr/bin/chromium
-URxvt.font: xft:tewi:size=9
+URxvt.font: xft:tewi:size=8
 URxvt.shading: 30
 URxvt.scrollBar: false
 URxvt.internalBorder: 30
@@ -67,10 +68,10 @@ URxvt.thickness : 5
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
 
-rofi.color-window:    #333842,        #333842,        #333842,             #333842,          base05
-rofi.color-normal:    #333842,        #65737e,        #333842,             #333842,          #ffffff
-rofi.color-active:    #333842,        #ffffff,        #333842,             #333842,          base05
-rofi.color-urgent:    #333842,        #DDDDDD,        #333842,             #333842,          base05
+rofi.color-window:    #172030,        #172030,        #172030,             #172030,          base05
+rofi.color-normal:    #172030,        #65737e,        #172030,             #172030,          #ffffff
+rofi.color-active:    #172030,        #ffffff,        #172030,             #172030,          base05
+rofi.color-urgent:    #172030,        #DDDDDD,        #172030,             #172030,          base05
 
 rofi.fake-transparency: true
 rofi.font: tewi 8
@@ -83,7 +84,7 @@ rofi.fullscreen: false
 rofi.width: 350
 rofi.lines: 6
 
-Xft.dpi:        96
+Xft.dpi:        118
 Xft.antialias:  true
 Xft.rgba:       rgb
 Xft.hinting:    true

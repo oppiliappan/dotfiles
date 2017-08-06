@@ -1,6 +1,6 @@
 [GLOBAL/Wm]
 margin-top = 0
-margin-bottom = 0 
+margin-bottom = 0
 override-redirect = true
 
 [bar/top]
@@ -10,22 +10,22 @@ offset-x = 0
 offset-y = 0
 
 locale = de_DE.UTF-8
-background = #282c34
+background = #aa172030
 foreground = #eeeeee
 
-font-0 = Iosevka Nerd Font:size=8:antialias=true;
+font-0 = Iosevka Nerd Font:size=7:antialias=true;
 ;font-1 = MaterialIcons-Regular :size=10:;
-font-1 = icomoon :size=9:;-2
+font-1 = icomoon :size=8:;-1
 
-modules-left = date1 volume cpu 
-modules-center = spotipy previous playpause next 
-modules-right = hlws powermenu 
+modules-left = date1 volume cpu weather
+modules-center = spotipy previous playpause next
+modules-right = hlws powermenu
 
-tray-position = left
+tray-position = off 
 tray-padding = 2
 tray-transparent = false
 tray-detached = false
-tray-background = #282c34
+tray-background = #aa172030
 
 spacing = 1
 padding-left = 2
@@ -35,15 +35,14 @@ module-margin-right = 1
 [module/volume]
 type = internal/volume
 
-format-volume = <ramp-volume><label-volume> 
+format-volume = <ramp-volume><label-volume>
 module-margin-right = 0
-ramp-volume-0 = 
-ramp-volume-1 = 
+ramp-volume-0 =
+ramp-volume-1 =
 ramp-volume-2 =
 ramp-volume-3 =
 
 format-volume-foreground = #eeeeee
-format-volume-background = #282c34
 
 label-muted =  muted
 
@@ -63,16 +62,14 @@ format-prefix =
 type = custom/menu
 
 label-open =
-label-open-foreground = #282c34
+label-open-foreground = #aa172030
 label-open-background = #e06c75
 label-open-padding = 1
-label-close =
+label-close =
 label-close-padding = 1
 label-close-foreground = #e06c75
-label-close-background = #282c34
-label-separator = | 
+label-separator = |
 label-separator-foreground = #666666
-label-separator-background = #282c34
 
 menu-0-0 =
 menu-0-0-exec = menu-open-1
@@ -81,19 +78,19 @@ menu-0-1-exec = menu-open-2
 menu-0-2 =
 menu-0-2-exec = menu-open-3
 
-menu-1-0 =
+menu-1-0 =
 menu-1-0-exec = menu-open-0
-menu-1-1 =
+menu-1-1 =
 menu-1-1-exec = systemctl reboot
 
-menu-2-0 =
+menu-2-0 =
 menu-2-0-exec = systemctl poweroff
-menu-2-1 =
+menu-2-1 =
 menu-2-1-exec = menu-open-0
 
-menu-3-0 =
-menu-3-0-exec = herbstclient quit 
-menu-3-1 =
+menu-3-0 =
+menu-3-0-exec = herbstclient quit
+menu-3-1 =
 menu-3-1-exec = menu-open-0
 
 [module/hlws]
@@ -104,35 +101,6 @@ scroll-down = exec herbstclient use_index +1
 scroll-up = exec herbstclient use_index -1
 interval = 0.01
 
-[module/battery]
-type = internal/battery
-full-at = 99
-battery = BAT1
-adapter = ACAD
-poll-interval = 5
-
-format-charging = <animation-charging><label-charging>
-format-discharging = <ramp-capacity><label-discharging>
-label-charging = %percentage%%
-label-charging-foreground = #eeeeee
-label-discharging = %percentage%%
-label-discharging-foreground = #eeeeee
-label-full = fully charged
-ramp-capacity-foreground = #eeeeee
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-bar-capacity-width = 10
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-foreground = #eeeeee
-animation-charging-framerate = 750
-
 [module/previous]
 type = custom/script
 format-text = <label>
@@ -140,7 +108,6 @@ label = 
 exec = echo label
 click-left = exec playerctl previous
 format-foreground = #eeeeee
-format-background = #282c34
 
 [module/next]
 type = custom/script
@@ -149,28 +116,28 @@ label = 
 exec = echo label
 click-left = exec playerctl next
 format-foreground = #eeeeee
-format-background = #282c34
 
 [module/spotipy]
 type = custom/script
 exec =  python3 ~/scripts/spoti.py
 exec-if = pgrep spotify > /dev/null
 interval = 0.01
-click-left = playerctl -p spotify play-pause 
+click-left = playerctl -p spotify play-pause
 
 [module/playpause]
 type = custom/script
 exec = python3 ~/scripts/playpause.py
 interval = 0.01
-click-left = playerctl -p spotify play-pause 
+click-left = playerctl -p spotify play-pause
 
 [module/cpu]
 type = internal/cpu
-label =  %percentage-core1%%
+label =  %percentage-core1%%
 
 [module/weather]
 type = custom/script
 interval = 10
 format = <label>
-format-prefix = " "
-exec = python3 ~/scripts/weather.py
+format-prefix = " "
+format-suffix = "°C"
+exec = python2.7 ~/scripts/weather.py

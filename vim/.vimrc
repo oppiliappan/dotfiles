@@ -13,4 +13,4 @@ set nowrap
 set cursorline
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
-colorscheme base16-onedark
+colorscheme base16-tomorrow-night

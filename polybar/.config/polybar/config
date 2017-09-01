@@ -1,48 +1,61 @@
-[GLOBAL/Wm]
+[colors]
+foreground = #ffffff
+background = #1b243c
+modb = #1b243c
+accent_1 = #ff8787
+accent_2 = #ff8787
+accent_3 = #ff8787
+
+[global/wm]
 margin-top = 0
 margin-bottom = 0
 override-redirect = true
 
 [bar/top]
 width = 100%
-height = 24
-offset-x = 0
+height = 30
+offset-x = 0%
 offset-y = 0
 
 locale = de_DE.UTF-8
-background = #aa172030
-foreground = #eeeeee
+background = ${colors.background}
+foreground = ${colors.foreground}
 
-font-0 = Iosevka Nerd Font:size=7:antialias=true;
+font-0 = tewi:size=8:antialias=true;
 ;font-1 = MaterialIcons-Regular :size=10:;
-font-1 = icomoon :size=8:;-1
+font-1 = icomoon :size=9:;-1
 
 modules-left = date1 volume cpu weather
 modules-center = spotipy previous playpause next
 modules-right = hlws powermenu
 
-tray-position = off 
+tray-position = off
 tray-padding = 2
 tray-transparent = false
 tray-detached = false
-tray-background = #aa172030
+tray-background = ${colors.modb}
 
 spacing = 1
-padding-left = 2
+padding-left = 0
 padding-right = 0
-module-margin-left = 2
-module-margin-right = 1
+module-margin-left = 0
+module-margin-right = 0
+
 [module/volume]
 type = internal/volume
 
 format-volume = <ramp-volume><label-volume>
+
+format-volume-background = ${colors.modb}
+format-volume-padding = 2
+
 module-margin-right = 0
 ramp-volume-0 =
 ramp-volume-1 =
 ramp-volume-2 =
 ramp-volume-3 =
+ramp-volume-foreground = ${colors.accent_1}
 
-format-volume-foreground = #eeeeee
 
 label-muted =  muted
 
@@ -51,23 +64,20 @@ type = internal/date
 interval = 1
 date = " %I:%M"
 format-prefix = 
-
-[module/date2]
-type = internal/date
-interval = 5
-date = " %A %b %m"
-format-prefix =
+format-prefix-foreground = ${colors.accent_1}
+format-background = ${colors.modb}
+format-padding = 2
 
 [module/powermenu]
 type = custom/menu
 
 label-open =
-label-open-foreground = #aa172030
-label-open-background = #e06c75
+label-open-foreground = ${colors.modb}
+label-open-background = ${colors.accent_1}
 label-open-padding = 1
 label-close =
 label-close-padding = 1
-label-close-foreground = #e06c75
+label-close-foreground = $[colors.accent_3]
 label-separator = |
 label-separator-foreground = #666666
 
@@ -96,10 +106,11 @@ menu-3-1-exec = menu-open-0
 [module/hlws]
 type = custom/script
 exec = python3 scripts/hlws.py
-
 scroll-down = exec herbstclient use_index +1
 scroll-up = exec herbstclient use_index -1
 interval = 0.01
+format-background = ${colors.modb}
+format-padding = 2
 
 [module/previous]
 type = custom/script
@@ -107,7 +118,9 @@ format-text = <label>
 label = 
 exec = echo label
 click-left = exec playerctl previous
-format-foreground = #eeeeee
+format-foreground = ${colors.accent_2}
+format-background = ${colors.modb}
+format-padding = 2
 
 [module/next]
 type = custom/script
@@ -115,7 +128,9 @@ format-text = <label>
 label = 
 exec = echo label
 click-left = exec playerctl next
-format-foreground = #eeeeee
+format-foreground = ${colors.accent_2}
+format-background = ${colors.modb}
+format-padding = 2
 
 [module/spotipy]
 type = custom/script
@@ -123,21 +138,35 @@ exec =  python3 ~/scripts/spoti.py
 exec-if = pgrep spotify > /dev/null
 interval = 0.01
 click-left = playerctl -p spotify play-pause
+format-background = ${colors.modb}
+format-padding = 2
 
 [module/playpause]
 type = custom/script
 exec = python3 ~/scripts/playpause.py
 interval = 0.01
 click-left = playerctl -p spotify play-pause
+format-foreground = ${colors.accent_2}
+format-background = ${colors.modb}
+format-padding = 2
+
 
 [module/cpu]
 type = internal/cpu
-label =  %percentage-core1%%
+label = %percentage-core1%%
+format-prefix = " "
+format-prefix-foreground = ${colors.accent_1}
+format-background = ${colors.modb}
+format-padding = 2
 
 [module/weather]
 type = custom/script
 interval = 10
 format = <label>
+format-padding = 2
 format-prefix = " "
 format-suffix = "°C"
+format-prefix-foreground = ${colors.accent_1}
+format-background = ${colors.modb}
 exec = python2.7 ~/scripts/weather.py
+

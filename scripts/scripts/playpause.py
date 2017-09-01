@@ -10,5 +10,5 @@ if cmd == "Playing":
 elif cmd == 'Paused':
      print('')
 else:
-    print('no music playing')
+    print('  ')
                  

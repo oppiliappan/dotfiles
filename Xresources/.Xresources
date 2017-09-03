@@ -1,4 +1,4 @@
-#define base00 #1b243c
+#define base00 #152128
 #define base01 #373e4d
 #define base02 #595f6f
 #define base03 #595f6f
@@ -51,7 +51,7 @@ URxvt.shading: 30
 URxvt.scrollBar: false
 URxvt.internalBorder: 24
 URxvt.cursorUnderline : true
-URxvt.geometry : 70x20
+URxvt.geometry : 60x30
 URxvt.thickness : 5
 
 

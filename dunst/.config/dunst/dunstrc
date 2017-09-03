@@ -72,19 +72,17 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    # IMPORTANT: colors have to be defined in quotation marks.
-    # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#2e3440"
+    background = "#152128"
     foreground = "#ffffff"
     timeout = 10
 
 [urgency_normal]
-    background = "#2e3440"
+    background = "#152128"
     foreground = "#ffffff"
     timeout = 10
 
 [urgency_critical]
-    background = "#2e3440"
+    background = "#152128"
     foreground = "#ff5d5d"
     timeout = 0
 

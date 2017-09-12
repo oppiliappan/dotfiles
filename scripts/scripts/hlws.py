@@ -9,13 +9,16 @@ index = output.find(upto)
 i = 0
 while i < index:
     if output[i] == ":":
-        wstr = wstr + "  ∘"
+        #occupied
+        wstr = wstr + "  ○"
         i = i + 1
     elif output[i] == ".":
-        wstr = wstr + "  ·"
+        #unoccupied
+        wstr = wstr + "  ∙"
         i = i + 1
     elif output[i] == "#":
-        wstr = wstr + "  ∙"
+        #current
+        wstr = wstr + "  ●"
         i = i + 1
     else:
         i = i + 1

@@ -1,74 +1,50 @@
-#define base00 #152128
-#define base01 #373e4d
-#define base02 #595f6f
-#define base03 #595f6f
-#define base04 #C9CCD3
-#define base05 #CDD3DE
-#define base06 #D5DBE5
-#define base07 #FFFFFF
-#define base08 #6294e7
-#define base09 #6294e7
-#define base0A #ffc9c9
-#define base0B #ff7575
-#define base0C #ffc9c9
-#define base0D #ffc9c9
-#define base0E #ff7575
-#define base0F #cc6666
+*.foreground:   #625b50
+*.background:   #f7f3ee
+*.cursorColor:  #625b50
 
-*.foreground:   base05
-#ifdef background_opacity
-*.background:   [background_opacity]base00
-#else
-*.background:   base00
-#endif
-*.cursorColor:  base05
+*.color0:       #625b50
+*.color1:       #c5baaa
+*.color2:       #7a7264
+*.color3:       #877d6e
+*.color4:       #968c7b
+*.color5:       #a39886
+*.color6:       #f1ebe4
+*.color7:       #f7f3ee
 
-*.color0:       base00
-*.color1:       base08
-*.color2:       base0B
-*.color3:       base0A
-*.color4:       base0D
-*.color5:       base0E
-*.color6:       base0C
-*.color7:       base05
-
-*.color8:       base03
-*.color9:       base09
-*.color10:      base01
-*.color11:      base02
-*.color12:      base04
-*.color13:      base06
-*.color14:      base0F
-*.color15:      base07
+*.color8:       #664b64
+*.color9:       #f1ddf1
+*.color10:      #51553f
+*.color11:      #e0e9b8
+*.color12:      #485561
+*.color13:      #d6e5f2
+*.color14:      #5b5245
+*.color15:      #f6e0c2
 
 URxvt.cursorBlink: 1
 
 
 URxvt.url-launcher: usr/bin/chromium
-URxvt.font: xft:tewi:size=11
-#URxvt.boldFont: xft:tewi:size=12
-URxvt.shading: 30
+URxvt.font: xft:Iosevka Nerd Font:size=9
+!URxvt.boldFont: xft:flottflott:size=16
 URxvt.scrollBar: false
-URxvt.internalBorder: 24
+URxvt.internalBorder: 32
 URxvt.cursorUnderline : true
-URxvt.geometry : 60x30
+URxvt.geometry : 50x25
 URxvt.thickness : 5
-
-
-
+URxvt.titleBar: true
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
 
-rofi.color-window:    base00,        base00,        base00,             base00,          base05
-rofi.color-normal:    base00,        #c9c9c9,        base00,             base00,          base0B
-rofi.color-active:    base00,        base0B,        base00,             base00,          base05
-rofi.color-urgent:    base00,        base03,        base00,             base00,          base05
+rofi.color-window:    #f7f3ee,        #f7f3ee,       #f7f3ee,             #f7f3ee,          base05
+rofi.color-normal:    #f7f3ee,        #625b50,       #f7f3ee,             #d6e5f2,          #485561
+rofi.color-active:    #f7f3ee,        base0B,        #f7f3ee,             #f7f3ee,
+rofi.color-urgent:    #f7f3ee,        base03,        #f7f3ee,             #f7f3ee,
 
 rofi.fake-transparency: true
-rofi.font: tewi 9
+rofi.font: Iosevka Nerd Font 9
 rofi.columns: 1
 rofi.separator-style: none
 rofi.hide-scrollbar: true

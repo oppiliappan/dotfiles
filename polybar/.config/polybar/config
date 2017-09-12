@@ -1,10 +1,12 @@
 [colors]
-foreground = #ffffff
-background = #152128
-modb = #152128
-accent_1 = #ff8787
-accent_2 = #ff8787
-accent_3 = #ff8787
+foreground = #625b50
+background = #f7f3ee
+modb = #f7f3ee
+modb1 = #f7f3ee
+modb2 = #f7f3ee
+accent_1 = #664b64
+accent_2 = #51553f
+accent_3 = #5b5245
 
 [global/wm]
 margin-top = 0
@@ -13,7 +15,7 @@ override-redirect = true
 
 [bar/top]
 width = 100%
-height = 30
+height = 27
 offset-x = 0%
 offset-y = 0
 
@@ -21,7 +23,7 @@ locale = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = tewi:size=8:antialias=true;
+font-0 = Iosevka Nerd Font:size=8:antialias=true;1
 ;font-1 = MaterialIcons-Regular :size=10:;
 font-1 = icomoon :size=9:;-1
 
@@ -72,9 +74,9 @@ format-padding = 2
 type = custom/menu
 
 label-open =
-label-open-foreground = ${colors.modb}
-label-open-background = ${colors.accent_1}
-label-open-padding = 1
+label-open-foreground = ${colors.accent_3}
+label-open-background = ${colors.modb2}
+label-open-padding = 2
 label-close =
 label-close-padding = 1
 label-close-foreground = $[colors.accent_3]
@@ -109,7 +111,8 @@ exec = python3 scripts/hlws.py
 scroll-down = exec herbstclient use_index +1
 scroll-up = exec herbstclient use_index -1
 interval = 0.01
-format-background = ${colors.modb}
+format-foreground = ${colors.accent_3}
+format-background = ${colors.modb2}
 format-padding = 2
 
 [module/previous]
@@ -119,7 +122,7 @@ label = 
 exec = echo label
 click-left = exec playerctl previous
 format-foreground = ${colors.accent_2}
-format-background = ${colors.modb}
+format-background = ${colors.modb1}
 format-padding = 2
 
 [module/next]
@@ -129,7 +132,7 @@ label = 
 exec = echo label
 click-left = exec playerctl next
 format-foreground = ${colors.accent_2}
-format-background = ${colors.modb}
+format-background = ${colors.modb1}
 format-padding = 2
 
 [module/spotipy]
@@ -138,7 +141,8 @@ exec =  python3 ~/scripts/spoti.py
 exec-if = pgrep spotify > /dev/null
 interval = 0.01
 click-left = playerctl -p spotify play-pause
-format-background = ${colors.modb}
+format-foreground = ${colors.accent_2}
+format-background = ${colors.modb1}
 format-padding = 2
 
 [module/playpause]
@@ -147,7 +151,7 @@ exec = python3 ~/scripts/playpause.py
 interval = 0.01
 click-left = playerctl -p spotify play-pause
 format-foreground = ${colors.accent_2}
-format-background = ${colors.modb}
+format-background = ${colors.modb1}
 format-padding = 2
 
 

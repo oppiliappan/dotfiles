@@ -1,60 +1,32 @@
 [global]
-    font = tewi 8
-
+    font = Iosevka Nerd Font 9
     allow_markup = yes
-
     format = "<b>%s</b>\n%b"
-
     sort = yes
-
     indicate_hidden = yes
-
     alignment = right
-
     bounce_freq = 0
-
     show_age_threshold = 60
-
     word_wrap = yes
-
     ignore_newline = no
-
     geometry = "300x5-20-20"
-
     shrink = yes
-
     transparency = 0
-
     idle_threshold = 120
-
     monitor = 0
-
     follow = mouse
-
     sticky_history = yes
-
     history_length = 20
-
     show_indicators = yes
-
     line_height = 0
-
     separator_height = 0
-
     padding = 8
-
     horizontal_padding = 8
-
     separator_color = auto
-
     startup_notification = false
-
     dmenu = /usr/bin/dmenu -p dunst:
-
     browser = /usr/bin/firefox -new-tab
-
     icon_position = off
-
     icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
 [frame]
@@ -72,18 +44,18 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#152128"
-    foreground = "#ffffff"
+    background = "#f7f3ee"
+    foreground = "#625b50"
     timeout = 10
 
 [urgency_normal]
-    background = "#152128"
-    foreground = "#ffffff"
+    background = "#f7f3ee"
+    foreground = "#625b50"
     timeout = 10
 
 [urgency_critical]
-    background = "#152128"
-    foreground = "#ff5d5d"
+    background = "#f7f3ee"
+    foreground = "#625b50"
     timeout = 0
 
 

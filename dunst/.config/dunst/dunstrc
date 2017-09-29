@@ -1,5 +1,5 @@
 [global]
-    font = Iosevka Nerd Font 9
+    font = tewi 9
     allow_markup = yes
     format = "<b>%s</b>\n%b"
     sort = yes
@@ -44,18 +44,18 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#f7f3ee"
-    foreground = "#625b50"
+    background = "#232323"
+    foreground = "#96a3ad"
     timeout = 10
 
 [urgency_normal]
-    background = "#f7f3ee"
-    foreground = "#625b50"
+    background = "#232323"
+    foreground = "#96a3ad"
     timeout = 10
 
 [urgency_critical]
-    background = "#f7f3ee"
-    foreground = "#625b50"
+    background = "#3e464c"
+    foreground = "#c2e5ff"
     timeout = 0
 
 

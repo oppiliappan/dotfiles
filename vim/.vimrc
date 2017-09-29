@@ -1,6 +1,6 @@
 execute pathogen#infect()
 set tabstop=4
-set number
+" set number
 syntax on
 filetype plugin indent on
 set nobackup
@@ -29,7 +29,7 @@ autocmd BufWritePre * %s/\s\+$//e
 " ui settings
 let g:enable_bold_font = 1
 let g:enable_italic_font = 0
-colorscheme chestnut
+colorscheme base16-tomorrow-night
 
 " keybindings
 map <F1> :NERDTreeCWD

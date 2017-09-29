@@ -1,12 +1,12 @@
 [colors]
-foreground = #625b50
-background = #f7f3ee
-modb = #f7f3ee
-modb1 = #f7f3ee
-modb2 = #f7f3ee
-accent_1 = #664b64
-accent_2 = #51553f
-accent_3 = #5b5245
+foreground = #96a3ad
+background = #232323
+modb = #232323
+modb1 = #232323
+modb2 = #232323
+accent_1 = #f48d8d
+accent_2 = #f48d8d
+accent_3 = #f48d8d
 
 [global/wm]
 margin-top = 0
@@ -23,7 +23,7 @@ locale = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = Iosevka Nerd Font:size=8:antialias=true;1
+font-0 = tewi:size=8:antialias=true;0
 ;font-1 = MaterialIcons-Regular :size=10:;
 font-1 = icomoon :size=9:;-1
 
@@ -111,7 +111,7 @@ exec = python3 scripts/hlws.py
 scroll-down = exec herbstclient use_index +1
 scroll-up = exec herbstclient use_index -1
 interval = 0.01
-format-foreground = ${colors.accent_3}
+format-foreground = ${colors.foreground}
 format-background = ${colors.modb2}
 format-padding = 2
 
@@ -141,7 +141,7 @@ exec =  python3 ~/scripts/spoti.py
 exec-if = pgrep spotify > /dev/null
 interval = 0.01
 click-left = playerctl -p spotify play-pause
-format-foreground = ${colors.accent_2}
+format-foreground = ${colors.foreground}
 format-background = ${colors.modb1}
 format-padding = 2
 

@@ -1,12 +1,12 @@
 [colors]
-foreground = #96a3ad
+foreground = #a7a7a7
 background = #232323
 modb = #232323
 modb1 = #232323
 modb2 = #232323
-accent_1 = #f48d8d
-accent_2 = #f48d8d
-accent_3 = #f48d8d
+accent_1 = #b5bd68
+accent_2 = #b5bd68
+accent_3 = #b5bd68
 
 [global/wm]
 margin-top = 0

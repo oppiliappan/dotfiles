@@ -1,6 +1,6 @@
 execute pathogen#infect()
 set tabstop=4
-" set number
+set number
 syntax on
 filetype plugin indent on
 set nobackup
@@ -10,10 +10,11 @@ set dir=/tmp
 set laststatus=2
 set nowrap
 set cursorline
+set noshowmode
 
 " minimal current line indicator
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{LineNoIndicator()}
-let g:line_no_indicator_chars = ['top', '▁', '▂', '▃', '▄', '▅', '▆', '▇', '█', 'bot']
+let g:line_no_indicator_chars = [' ', '▁', '▂', '▃', '▄', '▅', '▆', '▇', '█']
 
 " git gutter settings
 let g:gitgutter_override_sign_column_highlight = 0
@@ -37,3 +38,9 @@ map <F2> :NERDTreeToggle
 map <F5> :split
 map <F6> :vsplit
 map <F9> :GitGutterSignsToggle
+
+" airline
+let g:airline_powerline_fonts = 0
+let g:airline_section_x = '%{&filetype}'
+let g:airline_section_y = '%#__accent_bold#%{LineNoIndicator()}%#__restore__#'
+let g:airline_section_z = '%2c'

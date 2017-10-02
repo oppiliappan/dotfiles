@@ -1,5 +1,5 @@
 [global]
-    font = tewi 9
+    font = kakwafont 9
     allow_markup = yes
     format = "<b>%s</b>\n%b"
     sort = yes

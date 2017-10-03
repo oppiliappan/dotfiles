@@ -1,4 +1,4 @@
-#define base00 #1d1f21
+#define base00 #17181a
 #define base01 #282a2e
 #define base02 #373b41
 #define base03 #969896
@@ -44,12 +44,12 @@ URxvt.cursorBlink: 1
 
 
 URxvt.url-launcher: usr/bin/chromium
-URxvt.font: xft:kakwafont:size=8
-URxvt.boldFont: xft:kakwafont:size=16
+URxvt.font: xft:kakwafont:size=9
+URxvt.boldFont: xft:kakwafont:size=9
 URxvt.scrollBar: false
 URxvt.internalBorder: 24
 URxvt.cursorUnderline : true
-URxvt.geometry : 50x25
+URxvt.geometry : 60x25
 URxvt.thickness : 5
 URxvt.titleBar: true
 
@@ -64,7 +64,7 @@ rofi.color-active:    base00,        base0B,        base00,             base00, 
 rofi.color-urgent:    base00,        base03,        base00,             base00,          base05
 
 rofi.fake-transparency: true
-rofi.font: tewi 9
+rofi.font: kakwafont 9
 rofi.columns: 1
 rofi.separator-style: none
 rofi.hide-scrollbar: true

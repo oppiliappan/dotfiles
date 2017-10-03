@@ -1,9 +1,9 @@
 [colors]
 foreground = #a7a7a7
-background = #232323
-modb = #232323
-modb1 = #232323
-modb2 = #232323
+background = #222326
+modb = #222326
+modb1 = #222326
+modb2 = #222326
 accent_1 = #b5bd68
 accent_2 = #b5bd68
 accent_3 = #b5bd68

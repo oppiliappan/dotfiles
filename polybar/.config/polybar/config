@@ -1,5 +1,5 @@
 [colors]
-foreground = #a7a7a7
+foreground = #c5c8c6
 background = #222326
 modb = #222326
 modb1 = #222326
@@ -23,7 +23,7 @@ locale = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = tewi:size=8:antialias=true;0
+font-0 = kakwafont:size=8:antialias=true;0
 ;font-1 = MaterialIcons-Regular :size=10:;
 font-1 = icomoon :size=9:;-1
 

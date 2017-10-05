@@ -14,6 +14,17 @@ set cursorline
 set noshowmode
 set list
 
+" functions
+function! Minimalify()
+	if &laststatus
+		setlocal laststatus=0
+	else
+		setlocal laststatus=2
+	endif
+	set noshowmode! list! number! cursorline!
+	:GitGutterSignsToggle
+endfunction
+
 " minimal current line indicator
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{LineNoIndicator()}
 let g:line_no_indicator_chars = [' ', '▁', '▂', '▃', '▄', '▅', '▆', '▇', '█']
@@ -38,6 +49,7 @@ set listchars=tab:¦\ ,eol:¬,nbsp:␣,trail:•,extends:>,precedes:<
 " keybindings
 map <F1> :NERDTreeCWD
 map <F2> :NERDTreeToggle
+map <F3> :call Minimalify()
 map <F5> :split
 map <F6> :vsplit
 map <F9> :GitGutterSignsToggle
@@ -54,3 +66,6 @@ let g:ycm_warning_symbol = '·>'
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_confirm_extra_conf = 0
+
+" NERDTree
+let NERDTreeShowHidden = 1

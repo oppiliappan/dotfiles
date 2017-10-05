@@ -52,5 +52,5 @@ let g:airline_section_z = '%2c'
 let g:ycm_error_symbol = '->'
 let g:ycm_warning_symbol = '·>'
 let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_confirm_extra_conf = 0

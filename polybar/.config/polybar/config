@@ -1,9 +1,9 @@
 [colors]
 foreground = #c5c8c6
-background = #222326
-modb = #222326
-modb1 = #222326
-modb2 = #222326
+background = #17181a
+modb = #17181a
+modb1 = #17181a
+modb2 = #17181a
 accent_1 = #b5bd68
 accent_2 = #b5bd68
 accent_3 = #b5bd68
@@ -15,7 +15,7 @@ override-redirect = true
 
 [bar/top]
 width = 100%
-height = 27
+height = 32
 offset-x = 0%
 offset-y = 0
 
@@ -23,7 +23,7 @@ locale = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = kakwafont:size=8:antialias=true;0
+font-0 = kakwafont:size=9:antialias=true;0
 ;font-1 = MaterialIcons-Regular :size=10:;
 font-1 = icomoon :size=9:;-1
 

@@ -1,6 +1,6 @@
 [global]
     font = kakwafont 9
-    allow_markup = yes
+    allow_markup = no
     format = "<b>%s</b>\n%b"
     sort = yes
     indicate_hidden = yes
@@ -44,18 +44,18 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#222326"
-    foreground = "#e7e7e7"
+    background = "#17181a"
+    foreground = "#c5c8c6"
     timeout = 10
 
 [urgency_normal]
-    background = "#222326"
-    foreground = "#e7e7e7"
+    background = "#17181a"
+    foreground = "#c5c8c6"
     timeout = 10
 
 [urgency_critical]
-    background = "#222326"
-    foreground = "#e7e7e7"
+    background = "#17181a"
+    foreground = "#c5c8c6"
     timeout = 0
 
 

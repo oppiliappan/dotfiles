@@ -3,8 +3,10 @@
 hc() {
     cmds="$cmds , $@"
 }
-hc emit_hook reload xsetroot -solid '#292a44'
-hc pad 0 27 0 0
+
+hc emit_hook reload
+xsetroot -solid '#222222'
+hc pad 0 32 0 0
 hc keyunbind --all
 pkill compton
 compton &

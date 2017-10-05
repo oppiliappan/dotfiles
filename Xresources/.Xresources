@@ -48,10 +48,18 @@ URxvt.font: xft:kakwafont:size=9
 URxvt.boldFont: xft:kakwafont:size=9
 URxvt.scrollBar: false
 URxvt.internalBorder: 24
-URxvt.cursorUnderline : true
+URxvt.cursorUnderline : false
 URxvt.geometry : 60x25
 URxvt.thickness : 5
 URxvt.titleBar: true
+URxvt.perl-ext-common: default,tabbedex,matcher
+URxvt.tabbed.new-button: true
+URXvt.tabbed.reopen-on-close: no
+URxvt.keysym.Control-Shift-t: perl:tabbedex:new_tab
+URxvt.keysym.Shifft-Right: perl:tabbedex:next_tab
+URxvt.keysym.Shift-Left: perl:tabbedex:prev_tab
+URxvt.tabbed.no-tabbedex-keys: true
+
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme

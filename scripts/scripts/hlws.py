@@ -8,11 +8,11 @@ i = 0
 while i < index:
     if output[i] == ":":
         #occupied
-        wstr = wstr + "  *"
+        wstr = wstr + "  ·"
         i = i + 1
     elif output[i] == ".":
         #unoccupied
-        wstr = wstr + "  ·"
+        wstr = wstr + "  -"
         i = i + 1
     elif output[i] == "#":
         #current

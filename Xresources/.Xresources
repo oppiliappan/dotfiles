@@ -48,10 +48,10 @@ URxvt.font: xft:kakwafont:size=9
 URxvt.boldFont: xft:kakwafont:size=9
 URxvt.scrollBar: false
 URxvt.internalBorder: 24
-URxvt.cursorUnderline : false
+URxvt.cursorUnderline : true
 URxvt.geometry : 60x25
 URxvt.thickness : 5
-URxvt.titleBar: true
+URxvt.titleBar:false
 URxvt.perl-ext-common: default,tabbedex,matcher
 URxvt.tabbed.new-button: true
 URXvt.tabbed.reopen-on-close: no

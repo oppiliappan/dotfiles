@@ -6,7 +6,7 @@ hc() {
 
 hc emit_hook reload
 xsetroot -solid '#222222'
-hc pad 0 32 0 0
+hc pad 0 0 0 0
 hc keyunbind --all
 pkill compton
 compton &
@@ -16,6 +16,8 @@ nitrogen --set-zoom-fill ~/dotfiles/images/wallpaper.png
 xrdb .Xresources
 pkill polybar
 polybar top &
+sleep 5
+~/hideIt.sh/hideIt.sh -N polybar -H -d top -s 1 -i 0.1 -p 1 &
 
 Mod=Mod4   # Use the super key as the main modifier
 

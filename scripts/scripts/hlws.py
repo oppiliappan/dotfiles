@@ -20,4 +20,4 @@ while i < index:
         i = i + 1
     else:
         i = i + 1
-print(wstr)
+print(wstr[1:])

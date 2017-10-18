@@ -1,6 +1,5 @@
 " basic settings
 execute pathogen#infect()
-set tabstop=4
 set number
 syntax on
 filetype plugin indent on
@@ -15,8 +14,24 @@ set noshowmode
 set list
 autocmd FileType nerdtree :call GetFt()
 
+" use indents of 4 spaces
+set shiftwidth=4
+
+" tabs are tabs
+set noexpandtab
+
+" an indentation every four columns
+set tabstop=4
+
+" let backspace delete indent
+set softtabstop=4
+
+" enable auto indentation
+set autoindent
+
+
 " functions
-function! Minimalify()
+function Minimalify()
 	if &laststatus
 		setlocal laststatus=0
 	else
@@ -81,4 +96,9 @@ let g:ycm_confirm_extra_conf = 0
 
 " NERDTree
 let NERDTreeShowHidden = 1
-let g:NERDTreeWinSize=50
+let g:NERDTreeWinSize=40
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '-'
+
+" Autoclose nerdtree if it is the only open buffer
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

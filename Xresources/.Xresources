@@ -1,19 +1,19 @@
-#define base00 #282c34
-#define base01 #353b45
-#define base02 #3e4451
-#define base03 #545862
-#define base04 #565c64
-#define base05 #abb2bf
-#define base06 #b6bdca
-#define base07 #c8ccd4
-#define base08 #e06c75
-#define base09 #d19a66
-#define base0A #e5c07b
-#define base0B #98c379
-#define base0C #56b6c2
-#define base0D #61afef
-#define base0E #c678dd
-#define base0F #be5046
+#define base00 #1a1e24
+#define base01 #252b33
+#define base02 #252a34
+#define base03 #3b4453
+#define base04 #505964
+#define base05 #cdd3df
+#define base06 #dae0ed
+#define base07 #cfcfcf
+#define base08 #ee6165
+#define base09 #fb924c
+#define base0A #fac751
+#define base0B #91b859
+#define base0C #5bb3b4
+#define base0D #6398cf
+#define base0E #c28aa3
+#define base0F #926b3e
 
 *.foreground:   base05
 #ifdef background_opacity
@@ -47,7 +47,7 @@ URxvt.url-launcher: usr/bin/chromium
 URxvt.font: xft:kakwafont:size=9
 URxvt.boldFont: xft:kakwafont:size=9
 URxvt.scrollBar: false
-URxvt.internalBorder: 24
+URxvt.internalBorder: 12
 URxvt.cursorUnderline : true
 URxvt.geometry : 60x25
 URxvt.thickness : 5

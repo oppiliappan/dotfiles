@@ -1,12 +1,17 @@
 [colors]
 foreground = #c5c8c6
 background = #0017181a
-modb = #282c34
-modb1 = #282c34
-modb2 = #282c34
-accent_1 = #98c379
-accent_2 = #98c379
-accent_3 = #98c379
+modb = #1a1e24
+modb1 = #1a1e24
+modb2 = #1a1e24
+
+red     = #ee6165
+green   = #91b859
+yellow  = #fac751
+blue    = #6398cf
+violet  = #c28aa3
+cyan    = #5bb3b4
+white   = #cdd3df
 
 [global/wm]
 margin-top = 0
@@ -23,9 +28,9 @@ locale = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = kakwafont:size=8:antialias=true;0
+font-0 = Source Code Pro for Powerline:size=9:antialias=true;0
 ;font-1 = MaterialIcons-Regular :size=10:;
-font-1 = icomoon :size=9:;-1
+font-1 = icomoon :size=9:;-2
 
 modules-left = date1 volume cpu weather
 modules-center = hlws
@@ -56,17 +61,18 @@ ramp-volume-0 =
 ramp-volume-1 =
 ramp-volume-2 =
 ramp-volume-3 =
-ramp-volume-foreground = ${colors.accent_1}
+ramp-volume-foreground = ${colors.green}
 
-
+label-muted-padding = 2
 label-muted =  muted
+label-muted-background = ${colors.modb}
 
 [module/date1]
 type = internal/date
 interval = 1
 date = " %I:%M"
 format-prefix = 
-format-prefix-foreground = ${colors.accent_1}
+format-prefix-foreground = ${colors.red}
 format-background = ${colors.modb}
 format-padding = 2
 
@@ -74,12 +80,12 @@ format-padding = 2
 type = custom/menu
 
 label-open =
-label-open-foreground = ${colors.accent_3}
+label-open-foreground = ${colors.red}
 label-open-background = ${colors.modb2}
 label-open-padding = 2
 label-close =
 label-close-padding = 1
-label-close-foreground = $[colors.accent_3]
+label-close-foreground = $[colors.red]
 label-separator = |
 label-separator-foreground = #666666
 
@@ -121,7 +127,7 @@ format-text = <label>
 label = 
 exec = echo label
 click-left = exec playerctl previous
-format-foreground = ${colors.accent_2}
+format-foreground = ${colors.violet}
 format-background = ${colors.modb1}
 format-padding = 2
 
@@ -131,7 +137,7 @@ format-text = <label>
 label = 
 exec = echo label
 click-left = exec playerctl next
-format-foreground = ${colors.accent_2}
+format-foreground = ${colors.violet}
 format-background = ${colors.modb1}
 format-padding = 2
 
@@ -150,7 +156,7 @@ type = custom/script
 exec = python3 ~/scripts/playpause.py
 interval = 0.01
 click-left = playerctl -p spotify play-pause
-format-foreground = ${colors.accent_2}
+format-foreground = ${colors.violet}
 format-background = ${colors.modb1}
 format-padding = 2
 
@@ -159,7 +165,7 @@ format-padding = 2
 type = internal/cpu
 label = %percentage-core1%%
 format-prefix = " "
-format-prefix-foreground = ${colors.accent_1}
+format-prefix-foreground = ${colors.yellow}
 format-background = ${colors.modb}
 format-padding = 2
 
@@ -170,7 +176,7 @@ format = <label>
 format-padding = 2
 format-prefix = " "
 format-suffix = "°C"
-format-prefix-foreground = ${colors.accent_1}
+format-prefix-foreground = ${colors.blue}
 format-background = ${colors.modb}
 exec = python2.7 ~/scripts/weather.py
 

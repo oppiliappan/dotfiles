@@ -1,6 +1,6 @@
 [global]
-    font = kakwafont 9
-    allow_markup = no
+    font = Inter UI 9
+    allow_markup = yes
     format = "<b>%s</b>\n%b"
     sort = yes
     indicate_hidden = yes

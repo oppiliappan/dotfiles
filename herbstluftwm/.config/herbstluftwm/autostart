@@ -22,7 +22,7 @@ Mod=Mod4   # Use the super key as the main modifier
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
-hc keybind $Mod-Return spawn ${TERMINAL:-urxvt} # use your $TERMINAL with xterm as fallback
+hc keybind $Mod-Return spawn ${TERMINAL:-gnome-terminal} # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-Alt-l spawn i3lock -i ~/Pictures/Wallpapers/rocket.png -l c0c5ce -w bf616a -o a3be8c
 
 

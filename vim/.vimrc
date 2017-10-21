@@ -16,18 +16,20 @@ autocmd FileType nerdtree :call GetFt()
 
 " use indents of 4 spaces
 set shiftwidth=4
-
 " tabs are tabs
 set noexpandtab
-
 " an indentation every four columns
 set tabstop=4
-
 " let backspace delete indent
 set softtabstop=4
-
 " enable auto indentation
 set autoindent
+" I always linger on the shift key...
+:command WQ wq
+:command Wq wq
+:command Wqa wqa
+:command W w
+:command Q q
 
 
 " functions
@@ -71,10 +73,10 @@ autocmd BufWritePre * %s/\s\+$//e
 let g:enable_bold_font = 1
 let g:enable_italic_font = 0
 colorscheme aglia
-set listchars=tab:¦\ ,eol:¬,nbsp:␣,trail:•,extends:>,precedes:<
+set listchars=tab:┊\ ,eol:¬,nbsp:␣,trail:•,extends:>,precedes:<
 
 " keybindings
-map <F1> :NERDTreeCWD <bar> call ChangeBack()
+map <F1> :NERDTreeCWD
 map <F2> :NERDTreeToggle
 map <F3> :call Minimalify()
 map <F5> :split
@@ -82,7 +84,7 @@ map <F6> :vsplit
 map <F9> :GitGutterSignsToggle
 
 " airline
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
 let g:airline_section_x = '%{&filetype}'
 let g:airline_section_y = '%#__accent_bold#%{LineNoIndicator()}%#__restore__#'
 let g:airline_section_z = '%2c'
@@ -96,9 +98,10 @@ let g:ycm_confirm_extra_conf = 0
 
 " NERDTree
 let NERDTreeShowHidden = 1
-let g:NERDTreeWinSize=40
+let g:NERDTreeWinSize=35
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
+let g:NERDTreeWinPos = "right"
 
 " Autoclose nerdtree if it is the only open buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

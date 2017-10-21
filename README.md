@@ -10,15 +10,15 @@ herbstluft WM - more info ![here](https://www.herbstluftwm.org/)
 
 ### terminal
 
-- rxvt-unicode
+- ![rxvt-unicode](https://wiki.archlinux.org/index.php/rxvt-unicode)
 
-- gnome-terminal (Better font rendering)
+- ![gnome-terminal](https://en.wikipedia.org/wiki/GNOME_Terminal) (Better font rendering)
 
 
 
 ### vim
 
-The one true text editor, for lightning fast edits.
+the one true text editor, for lightning fast edits.
 
 check out some of my themes: ![chestnut.vim](https://github.com/NerdyPepper/chestnut.vim), 
 ![aglia.vim](https://github.com/NerdyPepper/agila.vim).
@@ -27,7 +27,7 @@ check out some of my themes: ![chestnut.vim](https://github.com/NerdyPepper/ches
 
 ### status bar
 
-polybar - easiest way to create statusbars.
+![polybar](https://github.com/jaagr/polybar) - easiest way to create statusbars.
 
 
 
@@ -39,17 +39,22 @@ python scripts to display info in my polybar (and to burn my cpu).
 
 ### shell
 
-zsh - because oh-my-zsh.
+![zsh](https://en.wikipedia.org/wiki/Z_shell) - because oh-my-zsh and autocomplete
+
+
+
+### gtk 
+![oomox](https://github.com/actionless/oomox) - graphical gtk theme generator
 
 
 
 ### misc
 
-- compton - smooth transitions and shadows.
+- ![compton](https://github.com/chjj/compton) - X11 compositor for smooth transitions and shadows.
 
-- dunst - lightweight notification daemon.
+- ![dunst](https://dunst-project.org/) - lightweight notification daemon.
 
-- rofi - simple applicaton launcher
+- ![rofi](https://github.com/DaveDavenport/rofi) - simple applicaton launcher
 
 
 

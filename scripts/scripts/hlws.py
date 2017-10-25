@@ -1,23 +1,21 @@
 import os
-cmd = "herbstclient tag_status"
-wstr = ""
-output = str(os.popen(cmd).read())
-upto = "9"
-index = output.find(upto)
+
+Cmd = "herbstclient tag_status"
+Wstr = ""
+Output = str(os.popen(Cmd).read())
+Index = Output.find("9")
 i = 0
-while i < index:
-    if output[i] == ":":
-        #occupied
-        wstr = wstr + "  -"
+
+while i < Index:
+    if Output[i] == ":":
+        Wstr = Wstr + "  -"         #occupied
         i = i + 1
-    elif output[i] == ".":
-        #unoccupied
-        wstr = wstr + "  ·"
+    elif Output[i] == ".":
+        Wstr = Wstr + "  ·"         #unoccupied
         i = i + 1
-    elif output[i] == "#":
-        #current
-        wstr = wstr + "  ×"
+    elif Output[i] == "#":
+        Wstr = Wstr + "  ×"         #current
         i = i + 1
     else:
         i = i + 1
-print(wstr[1:])
+print(Wstr[1:])

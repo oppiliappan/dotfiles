@@ -1,32 +1,36 @@
 " basic settings
 execute pathogen#infect()
-set number
-syntax on
-filetype plugin indent on
+autocmd FileType nerdtree :call GetFt()
 set nobackup
 set nowritebackup
-set swapfile
+set noswapfile                                                        " get rid of swapfiles everywhere
 set dir=/tmp
-set laststatus=2
-set nowrap
-set cursorline
-set noshowmode
-set list
-set scrolloff=7
-set t_Co=256
-autocmd FileType nerdtree :call GetFt()
 
-" use indents of 4 spaces
-set shiftwidth=4
-" tabs are tabs
-set noexpandtab
-" an indentation every four columns
-set tabstop=4
-" let backspace delete indent
-set softtabstop=4
-" enable auto indentation
+
+" ui settings
+let g:enable_bold_font = 1
+let g:enable_italic_font = 1
+colorscheme agila
+set number
+syntax on
+set laststatus=2                                                      " always show the status line
+set nowrap                                                            " dont wrap the text
+set cursorline														  " highlight the current cursor position
+set noshowmode                                                        " airline shows the current mode anyways
+set list
+set listchars=tab:│\ ,eol:¬,nbsp:␣,trail:•,extends:>,precedes:<       " tab, end of line, non-breakable space chars
+set scrolloff=7                                                       " start scrolling before end is reached
+autocmd BufWritePre * %s/\s\+$//e                                     " strip trailing whitespaces
+
+
+" spacing and stuff
+set shiftwidth=4     " indent = 4 spaces
+set noexpandtab      " tabs are tabs
+set tabstop=4        " tab = 4 spaces
+set softtabstop=4    " backspace through spaces
 set autoindent
-" I always linger on the shift key...
+
+" I always linger on the shift key
 :command WQ wq
 :command Wq wq
 :command Wqa wqa
@@ -56,26 +60,11 @@ function! GetFt()
 	endif
 endfunction
 
+
 " minimal current line indicator
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{LineNoIndicator()}
 let g:line_no_indicator_chars = [' ', '▁', '▂', '▃', '▄', '▅', '▆', '▇', '█']
 
-" git gutter settings
-let g:gitgutter_override_sign_column_highlight = 0
-let g:gitgutter_sign_added = '+'
-let g:gitgutter_sign_modified = '±'
-let g:gitgutter_sign_removed = '-'
-let g:gitgutter_sign_removed_first_line = '^'
-let g:gitgutter_sign_modified_removed = '∆'
-
-" strip trailing whitespaces
-autocmd BufWritePre * %s/\s\+$//e
-
-" ui settings
-let g:enable_bold_font = 1
-let g:enable_italic_font = 1
-colorscheme agila
-set listchars=tab:│\ ,eol:¬,nbsp:␣,trail:•,extends:>,precedes:<
 
 " keybindings
 map <F1> :NERDTreeCWD
@@ -83,13 +72,14 @@ map <F2> :NERDTreeToggle
 map <F3> :call Minimalify()
 map <F5> :split
 map <F6> :vsplit
-map <F9> :GitGutterSignsToggle
+
 
 " airline
 let g:airline_powerline_fonts = 1
 let g:airline_section_x = '%{&filetype}'
 let g:airline_section_y = '%#__accent_bold#%{LineNoIndicator()}%#__restore__#'
 let g:airline_section_z = '%2c'
+
 
 " youcompleteme
 let g:ycm_error_symbol = ' '
@@ -98,6 +88,7 @@ let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_confirm_extra_conf = 0
 
+
 " NERDTree
 let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize=35
@@ -105,5 +96,15 @@ let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 let g:NERDTreeWinPos = "right"
 
-" Autoclose nerdtree if it is the only open buffer
+
+" autoclose nerdtree if it is the only open buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+
+" git gutter settings
+let g:gitgutter_override_sign_column_highlight = 0
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '±'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_removed_first_line = '^'
+let g:gitgutter_sign_modified_removed = '∆'

@@ -13,6 +13,7 @@ set cursorline
 set noshowmode
 set list
 set scrolloff=7
+set t_Co=256
 autocmd FileType nerdtree :call GetFt()
 
 " use indents of 4 spaces

@@ -21,10 +21,9 @@ Mod=Mod4   # Use the super key as the main modifier
 
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
-hc keybind $Mod-Shift-c close
+hc keybind $Mod-Shift-c close_and_remove
 hc keybind $Mod-Return spawn ${TERMINAL:-gnome-terminal} # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-Alt-l spawn i3lock -i ~/Pictures/Wallpapers/rocket.png -l c0c5ce -w bf616a -o a3be8c
-
 
 hc keybind $Mod-Left  focus left
 hc keybind $Mod-Down  focus down
@@ -46,8 +45,12 @@ hc keybind $Mod-Shift-k     shift up
 hc keybind $Mod-Shift-l     shift right
 
 
-hc keybind $Mod-u       split   bottom  0.5
-hc keybind $Mod-o       split   right   0.5
+hc keybind $Mod-u chain .-. split bottom 0.5 .-. focus down
+hc keybind $Mod-o chain .-. split right  0.5 .-. focus right
+
+hc keybind $Mod-Shift-u chain .-. split bottom 0.5 .-. shift_edge down
+hc keybind $Mod-Shift-o chain .-. split right  0.5 .-. shift_edge right
+
 hc keybind $Mod-Control-space split explode
 
 
@@ -71,7 +74,7 @@ for i in ${!tag_names[@]} ; do
     key="${tag_keys[$i]}"
     if ! [ -z "$key" ] ; then
         hc keybind "$Mod-$key" use_index "$i"
-        hc keybind "$Mod-Shift-$key" move_index "$i"
+        hc keybind "$Mod-Shift-$key" chain .-. move_index "$i" .-. use_index "$i"
     fi
 done
 
@@ -116,7 +119,7 @@ hc set always_show_frame 1
 hc set frame_active_opacity 0
 hc set frame_normal_opacity 0
 hc set frame_transparent_width 0
-hc set frame_gap 0
+hc set frame_gap 10
 
 hc attr theme.active.color '#828282'
 hc attr theme.normal.color '#444d53'
@@ -131,7 +134,7 @@ hc attr theme.active.inner_color '#3E4A00'
 hc attr theme.active.outer_color '#3E4A00'
 hc attr theme.background_color '#141414'
 
-hc set window_gap 6
+hc set window_gap 0
 hc set frame_padding 0
 hc set smart_window_surroundings 1
 hc set smart_frame_surroundings 1
@@ -144,7 +147,8 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 hc rule class~'[Pp]olybar' manage=off
-hc rule class~'[Ss]potify' manage=off
+hc rule --class=Spotify --tag=4
+hc rule class=chromium tag=2
 
 hc unlock
 

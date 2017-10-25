@@ -1,6 +1,6 @@
 [global]
-    font = Inter UI 9
-    allow_markup = yes
+    font = Source Code Pro for Powerline 9
+    allow_markup = no
     format = "<b>%s</b>\n%b"
     sort = yes
     indicate_hidden = yes

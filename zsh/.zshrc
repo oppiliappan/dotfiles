@@ -86,3 +86,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias als='ls --color=never'
 alias cav='~/Desktop/cava-master/cava'
+alias nerdz='~/scripts/nerdinfo.sh'

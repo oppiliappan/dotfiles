@@ -12,6 +12,7 @@ set nowrap
 set cursorline
 set noshowmode
 set list
+set scrolloff=7
 autocmd FileType nerdtree :call GetFt()
 
 " use indents of 4 spaces
@@ -64,16 +65,16 @@ let g:gitgutter_sign_added = '+'
 let g:gitgutter_sign_modified = '±'
 let g:gitgutter_sign_removed = '-'
 let g:gitgutter_sign_removed_first_line = '^'
-let g:gitgutter_sign_modified_removed = 'x'
+let g:gitgutter_sign_modified_removed = '∆'
 
 " strip trailing whitespaces
 autocmd BufWritePre * %s/\s\+$//e
 
 " ui settings
 let g:enable_bold_font = 1
-let g:enable_italic_font = 0
-colorscheme aglia
-set listchars=tab:┊\ ,eol:¬,nbsp:␣,trail:•,extends:>,precedes:<
+let g:enable_italic_font = 1
+colorscheme agila
+set listchars=tab:│\ ,eol:¬,nbsp:␣,trail:•,extends:>,precedes:<
 
 " keybindings
 map <F1> :NERDTreeCWD
@@ -90,8 +91,8 @@ let g:airline_section_y = '%#__accent_bold#%{LineNoIndicator()}%#__restore__#'
 let g:airline_section_z = '%2c'
 
 " youcompleteme
-let g:ycm_error_symbol = '->'
-let g:ycm_warning_symbol = '·>'
+let g:ycm_error_symbol = ' '
+let g:ycm_warning_symbol = ' '
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_confirm_extra_conf = 0

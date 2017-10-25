@@ -44,7 +44,7 @@ URxvt.cursorBlink: 1
 
 
 URxvt.url-launcher: usr/bin/chromium
-URxvt.font: xft:Source Code Pro for Powerline:size=8
+URxvt.font: xft:Source Code Pro for Powerline:size=11
 !URxvt.boldFont: xft:Dina:size=9
 URxvt.scrollBar: false
 URxvt.internalBorder: 12

@@ -1,5 +1,5 @@
 [global]
-    font = Source Code Pro for Powerline 9
+    font = Source Code Pro for Powerline 8
     allow_markup = no
     format = "<b>%s</b>\n%b"
     sort = yes
@@ -9,7 +9,7 @@
     show_age_threshold = 60
     word_wrap = yes
     ignore_newline = no
-    geometry = "300x5-20+20"
+    geometry = "300x5-20-20"
     shrink = yes
     transparency = 0
     idle_threshold = 120

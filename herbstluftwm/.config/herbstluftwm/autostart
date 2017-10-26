@@ -6,7 +6,7 @@ hc() {
 
 hc emit_hook reload
 xsetroot -solid '#222222'
-hc pad 0 0 0 42
+hc pad 0 30 0 0
 hc keyunbind --all
 pkill compton
 compton &

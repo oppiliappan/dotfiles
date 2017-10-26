@@ -20,17 +20,17 @@ herbstluft WM - more info ![here](https://www.herbstluftwm.org/)
 
 the one true text editor, for lightning fast edits.
 
- - auto-pairs : match braces with ease
+ - auto-pairs - match braces with ease
  
- - airline : fancy statusline for vim
+ - airline - fancy statusline for vim
  
- - line-no-indicator : minimal current line indicator
+ - line-no-indicator - minimal current line indicator
  
- - nerdtree : file browser for vim
+ - nerdtree - file browser for vim
  
- - youcompleteme : auto complete and C semantic error correction
+ - youcompleteme - auto complete and C semantic error correction
  
- - gitgutter : git diffs in vim's sign coloumn
+ - gitgutter - git diffs in vim's sign coloumn
 
 check out some of my themes: ![chestnut.vim](https://github.com/NerdyPepper/chestnut.vim), 
 ![aglia.vim](https://github.com/NerdyPepper/agila.vim).
@@ -53,7 +53,7 @@ python scripts to display info in my polybar (and to burn my cpu).
  
  - weather.py - display current weather status from using openweathermap api
  
- - nerdinfo.sh - a small ssystem info script
+ - nerdinfo.sh - a small system info script
 
 
 

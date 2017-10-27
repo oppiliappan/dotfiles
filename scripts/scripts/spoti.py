@@ -13,4 +13,3 @@ if cmd == "Playing":
     print(meta_title + ' - ' + meta_artist)
 elif cmd == 'Paused':
     print(meta_title + ' - ' + meta_artist)
-

@@ -15,7 +15,6 @@ set number
 syntax on
 set laststatus=2                                                      " always show the status line
 set nowrap                                                            " dont wrap the text
-set cursorline														  " highlight the current cursor position
 set noshowmode                                                        " airline shows the current mode anyways
 set list
 set listchars=tab:│\ ,eol:¬,nbsp:␣,trail:•,extends:>,precedes:<       " tab, end of line, non-breakable space chars
@@ -45,7 +44,7 @@ function Minimalify()
 	else
 		setlocal laststatus=2
 	endif
-	set noshowmode! list! number! cursorline!
+	set noshowmode! list! number!
 	:GitGutterSignsToggle
 endfunction
 

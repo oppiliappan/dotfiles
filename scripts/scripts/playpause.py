@@ -7,8 +7,8 @@ Cmd = Cmd.split('\n')
 Cmd = Cmd[0]
 
 if Cmd == "Playing":
-	print('')
+    print('')
 elif Cmd == 'Paused':
-	print('')
+    print('')
 else:
-	print('  ')
+    print('  ')

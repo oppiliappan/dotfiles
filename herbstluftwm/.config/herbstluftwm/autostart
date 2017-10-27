@@ -6,7 +6,7 @@ hc() {
 
 hc emit_hook reload
 xsetroot -solid '#222222'
-hc pad 0 30 0 0
+hc pad 0 32 0 0
 hc keyunbind --all
 pkill compton
 compton &
@@ -15,7 +15,7 @@ dunst -conf /home/icyphox/.config/dunst/dunstrc &
 nitrogen --set-zoom-fill ~/dotfiles/images/wallpaper.jpg
 xrdb .Xresources
 pkill polybar
-polybar bot &
+polybar top &
 
 Mod=Mod4   # Use the super key as the main modifier
 

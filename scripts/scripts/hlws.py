@@ -8,10 +8,10 @@ i = 0
 
 for i in range(index):
     if output[i] == ":":
-        wstr += "  -"         #occupied
+        wstr += "  -"                      # occupied
     elif output[i] == ".":
-        wstr += "  ·"         #unoccupied
+        wstr += "  ·"                      # unoccupied
     elif output[i] == "#":
-        wstr += "  ×"         #current
+        wstr += "  ×"                      # current
 
 print(wstr[1:])

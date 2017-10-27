@@ -1,26 +1,26 @@
 [colors]
-foreground = #efefef
-background = #1a1e24
-modb = #1a1e24
-modb1 = #1a1e24
-modb2 = #1a1e24
+foreground = #EBDBB2
+background = #1D2021
+modb = #1D2021
+modb1 = #1D2021
+modb2 = #1D2021
 
-red     = #ee6165
-green   = #91b859
-yellow  = #fac751
-blue    = #6398cf
-violet  = #c28aa3
-cyan    = #5bb3b4
-white   = #cdd3df
+red     = #FB4934
+green   = #B8BB26
+yellow  = #FABD2F
+blue    = #83A598
+violet  = #D3869B
+cyan    = #8EC07C
+white   = #EBDBB2
 
 [global/wm]
 margin-top = 0
 margin-bottom = 0
 override-redirect = true
 
-[bar/bot]
+[bar/top]
 width = 100%
-height = 30
+height = 32
 offset-x = 0
 offset-y = 0
 

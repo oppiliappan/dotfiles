@@ -1,3 +1,5 @@
+![scrot](images/scrot.png)
+
 # dotfiles
 
 A bunch of files that are essential to my linux box.
@@ -86,7 +88,5 @@ python scripts to display info in my polybar (and to burn my cpu).
 
 ### screenshots
 ![scrot](images/scrot2.png)
-
-![scrot](images/scrot.png)
 
 ![scrot_gtk](images/scrot_gtk.png)

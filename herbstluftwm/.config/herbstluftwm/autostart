@@ -16,6 +16,8 @@ nitrogen --set-zoom-fill ~/dotfiles/images/wallpaper.jpg
 xrdb .Xresources
 pkill polybar
 polybar top &
+pkill redshift
+redshift -O 4500K
 
 Mod=Mod4   # Use the super key as the main modifier
 

@@ -28,7 +28,6 @@ up=${up//.*}                # string before first . is seconds
 days=$((${up}/86400))       # seconds divided by 86400 is days
 hours=$((${up}/3600%24))    # seconds divided by 3600 mod 24 is hours
 mins=$((${up}/60%60))       # seconds divided by 60 mod 60 is mins
-# color-echo "uptime" $days'd '$hours'h '$mins'm'
 
 # shell
 color-echo 'shell ' 'zsh'
@@ -40,12 +39,11 @@ color-echo 'wm    ' 'herbstluftwm'
 color-echo 'distro' 'Ubuntu 17.04'
 
 # ascii art
-echo -e "        "
-echo -e " (⌐•_•) NerdyPepper"
-echo -e "        "
-
+echo
+echo -e " |⌐ •_•| NerdyPepper"
+echo
 # colors
-echo -e " $red●$rst $grn●$rst $blu●$rst $ylw●$rst $cyn●$rst $prp●$rst $bprp●$rst"
+echo -e " $red*$rst $grn*$rst $blu*$rst $ylw*$rst $cyn*$rst $prp*$rst $bprp*$rst"
 
 echo
 echo

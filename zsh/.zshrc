@@ -1,8 +1,8 @@
-echo "\e[3m$(fortune -sa)\e[0m\n"    # display a random short quote at start
+echo "$(fortune -sa)\n"    # display a random short quote at start
 
 export ZSH=/home/icyphox/.oh-my-zsh
 
-ZSH_THEME="agnoster"
+ZSH_THEME="simple"
 
 DISABLE_LS_COLORS="true"
 ENABLE_CORRECTION="true"
@@ -49,3 +49,7 @@ alias als='ls --color=never'
 alias cav='~/Desktop/cava-master/cava'
 alias nerdz='~/scripts/nerdinfo.sh'
 alias dpkg='sudo dpkg'
+alias :q='echo "This is not vim :/"'
+alias gtop='LANG=en_US.utf8 TERM=xterm-256color gtop'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -6,7 +6,7 @@ A bunch of files that are essential to my linux box.
 
 #### window manager
 
-herbstluft WM - more info ![here](https://www.herbstluftwm.org/)
+herbstluft WM - a tiling window manager for X11. More info ![here](https://www.herbstluftwm.org/).
 
 
 
@@ -61,13 +61,11 @@ python scripts to display info in my polybar (and to burn my cpu).
 
 #### shell
 
-![zsh](https://en.wikipedia.org/wiki/Z_shell) - because oh-my-zsh and autocomplete
+![fish](https://en.wikipedia.org/wiki/Z_shell) - because oh-my-fish and autocomplete thats superior to zsh
 
  - git : plugin with a bunch of useful git aliases
- 
- - web-search : search from terminal
- 
- - sudo : double tap  ```Esc```  to insert sudo at the beginning of current command
+  
+ - sudo : press  ```Ctrl+s```  to insert sudo at the beginning of current command
 
 
 

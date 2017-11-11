@@ -33,6 +33,14 @@ the one true text editor, for lightning fast edits.
  - youcompleteme - auto complete and C semantic error correction
  
  - gitgutter - git diffs in vim's sign coloumn
+ 
+ - MatchTagAlways - pair enclosing html/xml tags
+ 
+ - emmet - html completion
+ 
+ - tabular - plugin for easy alignments
+ 
+ - fzf - needs no introduction
 
 check out some of my themes: ![chestnut.vim](https://github.com/NerdyPepper/chestnut.vim), 
 ![aglia.vim](https://github.com/NerdyPepper/agila.vim).
@@ -61,7 +69,7 @@ python scripts to display info in my polybar (and to burn my cpu).
 
 #### shell
 
-![fish](https://en.wikipedia.org/wiki/Z_shell) - because oh-my-fish and autocomplete thats superior to zsh
+![fish](https://fishshell.com/) - because oh-my-fish and autocomplete thats superior to zsh
 
  - git : plugin with a bunch of useful git aliases
   

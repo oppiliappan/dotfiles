@@ -3,28 +3,30 @@ execute pathogen#infect()
 autocmd FileType nerdtree :call GetFt()
 set nobackup
 set nowritebackup
-set noswapfile                                                        " get rid of swapfiles everywhere
+set noswapfile " get rid of swapfiles everywhere
 set dir=/tmpset
-
+set t_Co=256
 
 
 " ui settings
 let g:enable_bold_font = 1
 let g:enable_italic_font = 1
-autocmd BufWritePre * %s/\s\+$//e                                     " strip trailing whitespaces
+autocmd BufWritePre * %s/\s\+$//e " strip trailing whitespaces
 syntax on
 
-set number
-filetype indent on
-set laststatus=2                                                      " always show the status line
-set nowrap                                                            " dont wrap the text
-set noshowmode                                                        " airline shows the current mode anyways
-set cursorline                                                        " highlight current line
 set list
-set listchars=tab:│\ ,eol:¬,nbsp:␣,trail:•,extends:>,precedes:<       " tab, end of line, non-breakable space chars
-set scrolloff=7                                                       " start scrolling before end is reached
+filetype indent on
+set number
+set relativenumber                                              " Easier to use commands such as 9k and 21j
+set laststatus=2                                                " always show the status line
+set nowrap                                                      " dont wrap the text
+set noshowmode                                                  " airline shows the current mode anyways
+set cursorline                                                  " highlight current line
+set listchars=tab:│\ ,eol:¬,nbsp:␣,trail:•,extends:>,precedes:< " tab, end of line, non-breakable space chars
+set scrolloff=7                                                 " start scrolling before end is reached
+set ignorecase                                                  " case insensitive searching
 
-colorscheme agila
+colorscheme iceberg
 
 
 " spacing and stuff
@@ -49,7 +51,7 @@ function Minimalify()  " focus only on code
 	else
 		setlocal laststatus=2
 	endif
-	set noshowmode list! number! cursorline! noru!
+	set noshowmode list! number! cursorline! noru! relativenumber!
 	:GitGutterSignsToggle
 endfunction
 
@@ -72,37 +74,37 @@ let g:line_no_indicator_chars = [' ', '▁', '▂', '▃', '▄', '▅', '▆', 
 
 
 " keybindings
-map <F1> :NERDTreeCWD
-map <F2> :NERDTreeToggle
-map <F3> :call Minimalify()
-map <F5> :split
-map <F6> :vsplit
+map <F1>  :NERDTreeCWD
+map <F2>  :NERDTreeToggle
+map <F3>  :call Minimalify()
+map <F5>  :split
+map <F6>  :vsplit
 map <C-f> :YcmCompleter FixIt
-nnoremap % :MtaJumpToOtherTag
 map <C-z> :FZF
+map <F1>  :MtaJumpToOtherTag
 
 " airline
 let g:airline_powerline_fonts = 0
-let g:airline_section_x = '%{&filetype}'
-let g:airline_section_y = '%#__accent_bold#%{LineNoIndicator()}%#__restore__#'
-let g:airline_section_z = ''
-let g:airline_theme = 'base16'
+let g:airline_section_x       = '%{&filetype}'
+let g:airline_section_y       = '%#__accent_bold#%{LineNoIndicator()}%#__restore__#'
+let g:airline_section_z       = ''
+let g:airline_theme           = 'base16'
 
 
 " youcompleteme
-let g:ycm_error_symbol = '>>'
-let g:ycm_warning_symbol = '->'
-let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_autoclose_preview_window_after_completion = 0
-let g:ycm_confirm_extra_conf = 0
+let g:ycm_error_symbol                              = '>>'
+let g:ycm_warning_symbol                            = '->'
+let g:ycm_add_preview_to_completeopt                = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_confirm_extra_conf                        = 0
 
 
 " NERDTree
-let NERDTreeShowHidden = 1
-let g:NERDTreeWinSize=35
-let g:NERDTreeDirArrowExpandable = '+'
+let NERDTreeShowHidden            = 1
+let g:NERDTreeWinSize             = 35
+let g:NERDTreeDirArrowExpandable  = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
-let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinPos              = "right"
 
 
 " autoclose nerdtree if it is the only open buffer
@@ -111,8 +113,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " git gutter settings
 let g:gitgutter_override_sign_column_highlight = 0
-let g:gitgutter_sign_added = '+'
-let g:gitgutter_sign_modified = '±'
-let g:gitgutter_sign_removed = '-'
-let g:gitgutter_sign_removed_first_line = '^'
-let g:gitgutter_sign_modified_removed = '#'
+let g:gitgutter_sign_added                     = '+'
+let g:gitgutter_sign_modified                  = '±'
+let g:gitgutter_sign_removed                   = '-'
+let g:gitgutter_sign_removed_first_line        = '^'
+let g:gitgutter_sign_modified_removed          = '#'

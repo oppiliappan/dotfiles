@@ -6,15 +6,15 @@ A bunch of files that are essential to my linux box.
 
 #### window manager
 
-herbstluft WM - a tiling window manager for X11. More info ![here](https://www.herbstluftwm.org/).
+herbstluft WM - a tiling window manager for X11. More info [here](https://www.herbstluftwm.org/).
 
 
 
 #### terminal
 
-- ![rxvt-unicode](https://wiki.archlinux.org/index.php/rxvt-unicode)
+- [rxvt-unicode](https://wiki.archlinux.org/index.php/rxvt-unicode)
 
-- ![gnome-terminal](https://en.wikipedia.org/wiki/GNOME_Terminal) (Better font rendering)
+- [gnome-terminal](https://en.wikipedia.org/wiki/GNOME_Terminal) (Better font rendering)
 
 
 
@@ -42,14 +42,14 @@ the one true text editor, for lightning fast edits.
  
  - fzf - needs no introduction
 
-check out some of my themes: ![chestnut.vim](https://github.com/NerdyPepper/chestnut.vim), 
-![aglia.vim](https://github.com/NerdyPepper/agila.vim).
+check out some of my themes: [chestnut.vim](https://github.com/NerdyPepper/chestnut.vim), 
+[aglia.vim](https://github.com/NerdyPepper/agila.vim).
 
 
 
 #### status bar
 
-![polybar](https://github.com/jaagr/polybar) - easiest way to create statusbars.
+[polybar](https://github.com/jaagr/polybar) - easiest way to create statusbars.
 
 
 
@@ -69,7 +69,7 @@ python scripts to display info in my polybar (and to burn my cpu).
 
 #### shell
 
-![fish](https://fishshell.com/) - because oh-my-fish and autocomplete thats superior to zsh
+[fish](https://fishshell.com/) - because oh-my-fish and autocomplete thats superior to zsh
 
  - git : plugin with a bunch of useful git aliases
   
@@ -78,17 +78,17 @@ python scripts to display info in my polybar (and to burn my cpu).
 
 
 #### gtk 
-![oomox](https://github.com/actionless/oomox) - graphical gtk theme generator
+[oomox](https://github.com/actionless/oomox) - graphical gtk theme generator
 
 
 
 #### misc
 
-- ![compton](https://github.com/chjj/compton) - X11 compositor for smooth transitions and shadows.
+- [compton](https://github.com/chjj/compton) - X11 compositor for smooth transitions and shadows.
 
-- ![dunst](https://dunst-project.org/) - lightweight notification daemon.
+- [dunst](https://dunst-project.org/) - lightweight notification daemon.
 
-- ![rofi](https://github.com/DaveDavenport/rofi) - simple applicaton launcher
+- [rofi](https://github.com/DaveDavenport/rofi) - simple applicaton launcher
 
 
 

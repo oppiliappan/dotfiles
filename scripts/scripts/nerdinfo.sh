@@ -33,7 +33,7 @@ mins=$((${up}/60%60))       # seconds divided by 60 mod 60 is mins
 color-echo 'shell  '   'zsh'
 
 # wm
-color-echo 'wm     '   'herbstluftwm'
+color-echo 'wm     '   '2bwm'
 
 # distro
 color-echo 'distro '   'Ubuntu 17.04'

@@ -1,9 +1,7 @@
-#    ___          
-#   (,   )     /) 
-#       /  _  (/  
-#     _/_ /_)_/ )_
-#  )   /          
-# (__ /           
+# __ __    
+#  /(_ |_| 
+# /___)| | 
+#          
 
 echo "$(fortune -sa)\n"    # display a random short quote at start
 

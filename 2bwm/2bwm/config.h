@@ -1,3 +1,9 @@
+// 
+// _  _            
+//  )|_)\    /|\/| 
+// /_|_) \/\/ |  | 
+//                 
+
 ///---User configurable stuff---///
 ///---Modifiers---///
 #define MOD             XCB_MOD_MASK_4       /* Super/Windows key  or check xmodmap(1) with -pm  defined in /usr/include/xcb/xproto.h */

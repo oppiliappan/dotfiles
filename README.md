@@ -16,6 +16,7 @@ A bunch of files that are essential to my linux box configuration.
 #### Window Manager
 
 Herbstluft WM - a tiling window manager for X11. More info [here](https://www.herbstluftwm.org/).
+
 2bwm - a floating window manager for X11. More info [here](https://github.com/venam/2bwm).
 
 

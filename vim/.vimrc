@@ -29,22 +29,22 @@ syntax on
 set list
 filetype indent on
 set number
-set relativenumber                                             " easier to use c ommands su c h as 9k and 21j
-set laststatus=2                                               " always show the status line
-set nowrap                                                     " dont wrap the text
-set noshowmode                                                 " statusline shows the current mode anyways
-set cursorline                                                 " highlight current line
-set listchars=tab:│\ ,eol:¬,nbsp:␣,trail:▪,extends:>,precedes:< " tab, end of line, non-breakable space chars
-set scrolloff=12                                               " start scrolling before end is reached
-set ignorecase                                                 " case insensitive searching
-set smartcase                                                  " /The searches for 'The but /the searches for 'The' and 'the'
-set sidescroll=40                                              " like scrolloff but sideways
-set incsearch                                                  " highlight results as you type
-set hlsearch                                                   " highlight search results
-set undofile                                                   " maintaion undo history
-set undodir=~/.vim/undodir                                     " store swaps here
-set showcmd                                                    " show current cmd in cmdline
-set updatetime=250                                             " instant live status updates
+set relativenumber                                        " easier to use c ommands su c h as 9k and 21j
+set laststatus=2                                          " always show the status line
+set nowrap                                                " dont wrap the text
+set noshowmode                                            " statusline shows the current mode anyways
+set cursorline                                            " highlight current line
+set listchars=tab:│\ ,nbsp:␣,trail:▪,extends:>,precedes:< " tab, end of line, non-breakable space chars
+set scrolloff=12                                          " start scrolling before end is reached
+set ignorecase                                            " case insensitive searching
+set smartcase                                             " /The searches for 'The but /the searches for 'The' and 'the'
+set sidescroll=40                                         " like scrolloff but sideways
+set incsearch                                             " highlight results as you type
+set hlsearch                                              " highlight search results
+set undofile                                              " maintaion undo history
+set undodir=~/.vim/undodir                                " store swaps here
+set showcmd                                               " show current cmd in cmdline
+set updatetime=250                                        " instant live status updates
 set backspace=indent,eol,start
 
 colorscheme agila

@@ -1,4 +1,4 @@
-![sanctum.png](https://0x0.st/sPDL.png)
+![gruv.png](https://0x0.st/squ5.png)
 
 
 ```
@@ -15,7 +15,7 @@ A bunch of files that are essential to my linux box configuration.
 
 Herbstluft WM - a tiling window manager for X11. More info [here](https://www.herbstluftwm.org/).
 
-2bwm - a floating window manager for X11. More info [here](https://github.com/venam/2bwm).
+2bwm - probably the lightest functional WM out there. More info [here](https://github.com/venam/2bwm).
 
 
 

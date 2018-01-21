@@ -1,0 +1,95 @@
+
+
+!  __   __)                                
+! (,  |/                                   
+!     |   __   _  _   ___    __  _   _  _  
+!  ) /|_ / (__(/_/_)_(_)(_(_/ (_(___(/_/_)_
+! (_/                                      
+
+
+#define base00 #1d2021
+#define base01 #3c3836
+#define base02 #504945
+#define base03 #665c54
+#define base04 #bdae93
+#define base05 #d5c4a1
+#define base06 #ebdbb2
+#define base07 #fbf1c7
+#define base08 #fb4934
+#define base09 #fe8019
+#define base0A #fabd2f
+#define base0B #b8bb26
+#define base0C #8ec07c
+#define base0D #83a598
+#define base0E #d3869b
+#define base0F #d65d0e
+
+*foreground:   base05
+*background:   base00
+*cursorColor:  base05
+
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
+
+*color8:       base03
+*color9:       base09
+*color10:      base01
+*color11:      base02
+*color12:      base04
+*color13:      base06
+*color14:      base0F
+*color15:      base07
+
+URxvt.cursorBlink  :0
+URxvt.font         :xft:scientifica:size=9
+URxvt.boldFont     :xft:scientifica:size=9
+
+URxvt.lineSpace           : 0
+URxvt.letterSpace         : 1
+URxvt.scrollBar           : false
+URxvt.internalBorder      : 30
+URxvt.cursorUnderline     : false
+URxvt.geometry            : 80x25
+URxvt.thickness           : 5
+URxvt.titleBar            : false
+URxvt.intensityStyles     : false
+
+
+URxvt.perl-ext-common : default,matcher
+URxvt.url-launcher    : chromium-browser
+URxvt.matcher.button  : 1
+
+! ------------------------------------------------------------------------------
+! ROFI COLOR THEME
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+
+rofi.color-window:    base00 , base00 , base00 , base00 , base05
+rofi.color-normal:    base00 , base05 , base00 , base00 , base0E
+rofi.color-active:    base00 , base0E , base00 , base00 , base05
+rofi.color-urgent:    base00 , base03 , base00 , base00 , base05
+
+rofi.fake-transparency : true
+rofi.font              : scientifica 9
+rofi.columns           : 1
+rofi.separator-style   : none
+rofi.hide-scrollbar    : true
+rofi.location          : 0
+rofi.padding           : 12
+rofi.fullscreen        : false
+rofi.width             : 350
+rofi.lines             : 6
+
+Xft.dpi       : 96
+Xft.antialias : true
+Xft.rgba      : rgb
+Xft.hinting   : true
+Xft.hintstyle : hintslight
+Xft.autohint  : false
+Xft.lcdfilter : lcddefault

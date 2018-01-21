@@ -1,0 +1,203 @@
+
+;     _____                        
+;    (, /   )    /)      /)        
+;     _/__ / ___//      (/_ _   __ 
+;     /     (_)(/_ (_/_/_) (_(_/ (_
+;  ) /            .-/              
+; (_/            (_/               
+
+[colors]
+foreground = #d5c4a1
+background = #1d2021
+modb       = #1d2021
+modb1      = #1d2021
+modb2      = #1d2021
+
+red     = #fb4934
+orange  = #fe8019
+yellow  = #fabd2f
+green   = #b8bb26
+cyan    = #8ec07c
+blue    = #83a598
+magenta = #d3869b
+white   = #d65d0e
+
+[global/wm]
+margin-top        = 0
+margin-bottom     = 0
+override-redirect = true
+
+[bar/top]
+width    = 70%
+height   = 40
+offset-x = 15%
+offset-y = 710
+
+locale     = de_DE.UTF-8
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = scientifica:size=8:antialias=true;
+font-1 = Siji:size=9:;
+
+modules-left   = date1 volume cpu weather
+modules-center = 2bws
+modules-right  = cmusnp previous playpause next powermenu
+
+tray-position    = off
+tray-padding     = 2
+tray-transparent = false
+tray-detached    = false
+tray-background  = ${colors.modb}
+tray-maxsize     = 12
+
+spacing             = 1
+padding-left        = 0
+padding-right       = 0
+module-margin-left  = 0
+module-margin-right = 0
+
+[module/volume]
+type = internal/volume
+
+format-volume = <ramp-volume><label-volume>
+
+format-volume-background = ${colors.modb}
+format-volume-padding    = 2
+
+module-margin-right = 0
+ramp-volume-0       = 
+ramp-volume-1       = 
+ramp-volume-2       = 
+
+ramp-volume-foreground = ${colors.green}
+
+label-muted-padding    = 2
+label-muted            =  muted
+label-muted-background = ${colors.modb}
+
+[module/date1]
+type                     = internal/date
+interval                 = 1
+date                     = " %I:%M"
+format-prefix            = 
+format-prefix-foreground = ${colors.red}
+format-background        = ${colors.modb}
+format-padding           = 2
+
+[module/powermenu]
+type = custom/menu
+
+label-open                 = 
+label-open-foreground      = ${colors.red}
+label-open-background      = ${colors.modb2}
+label-open-padding         = 2
+label-close                = ✕
+label-close-padding        = 2
+label-close-foreground     = $[colors.red]
+label-separator            = |
+label-separator-foreground = #666666
+
+menu-0-0      = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1      = poweroff
+menu-0-1-exec = menu-open-2
+menu-0-2      = logout
+menu-0-2-exec = menu-open-3
+
+menu-1-0      = ✕
+menu-1-0-exec = menu-open-0
+menu-1-1      = ✓
+menu-1-1-exec = systemctl reboot
+
+menu-2-0      = ✓
+menu-2-0-exec = systemctl poweroff
+menu-2-1      = ✕
+menu-2-1-exec = menu-open-0
+
+menu-3-0      = ✓
+menu-3-0-exec = herbstclient quit
+menu-3-1      = ✕
+menu-3-1-exec = menu-open-0
+
+[module/hlws]
+format-font       = 1
+type              = custom/script
+exec              = python2.7 ~/scripts/hlws.py
+scroll-down       = exec herbstclient use_index +1
+scroll-up         = exec herbstclient use_index -1
+interval          = 0.01
+format-foreground = ${colors.foreground}
+format-background = ${colors.modb2}
+format-padding    = 2
+
+[module/previous]
+type              = custom/script
+format-text       = <label>
+label             = 
+exec              = echo label
+click-left        = exec cmus-remote -r -p
+format-foreground = ${colors.cyan}
+format-background = ${colors.modb1}
+format-padding    = 1
+
+[module/next]
+type              = custom/script
+format-text       = <label>
+label             = 
+exec              = echo label
+click-left        = exec cmus-remote -n -p
+format-foreground = ${colors.cyan}
+format-background = ${colors.modb1}
+format-padding    = 1
+
+[module/cmusnp]
+type              = custom/script
+exec              = ~/scripts/cmusnp.py
+exec-if           = pgrep cmus > /dev/null
+interval          = 0.01
+click-left        = cmus-remote -u
+click-right       = xdesktop -g 4
+format-foreground = ${colors.foreground}
+format-background = ${colors.modb1}
+format-padding    = 1
+
+[module/playpause]
+type              = custom/script
+exec              = python3 ~/scripts/playpause.py
+interval          = 0.01
+click-left        = cmus-remote -u
+format-foreground = ${colors.cyan}
+format-background = ${colors.modb1}
+format-padding    = 2
+
+
+[module/cpu]
+type                     = internal/cpu
+label                    = %percentage-core1%%
+format-prefix            = " "
+format-prefix-foreground = ${colors.magenta}
+format-background        = ${colors.modb}
+format-padding           = 2
+
+[module/weather]
+type                     = custom/script
+interval                 = 100
+format                   = <label>
+format-padding           = 2
+format-prefix            = " "
+format-suffix            = "°C"
+format-prefix-foreground = ${colors.blue}
+format-background        = ${colors.modb}
+exec                     = python2.7 ~/scripts/weather.py
+
+[module/2bws]
+format-font    = 1
+type           = custom/script
+exec           = python3 ~/scripts/2bws.py
+scroll-down    = exec xdesktop -p
+scroll-up      = exec xdesktop -n
+click-right    = exec xdesktop -p
+click-left     = exec xdesktop -n
+interval       = 0.01
+format-padding = 2

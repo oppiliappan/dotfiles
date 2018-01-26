@@ -4,46 +4,54 @@
 // /_|_) \/\/ |  | 
 //                 
 
-///---User configurable stuff---///
-///---Modifiers---///
 #define MOD             XCB_MOD_MASK_4       /* Super/Windows key  or check xmodmap(1) with -pm  defined in /usr/include/xcb/xproto.h */
+
 ///--Speed---///
 /* Move this many pixels when moving or resizing with keyboard unless the window has hints saying otherwise.
  *0)move step slow   1)move step fast
  *2)mouse slow       3)mouse fast     */
-static const uint16_t movements[] = {20,40,15,400};
+static const uint16_t movements[] = {25,50,15,400};
+
 /* resize by line like in mcwm -- jmbi */
 static const bool     resize_by_line          = true;
+
 /* the ratio used when resizing and keeping the aspect */
 static const float    resize_keep_aspect_ratio= 1.03;
+
 ///---Offsets---///
 /*0)offsetx          1)offsety
  *2)maxwidth         3)maxheight */
 static const uint8_t offsets[] = {0,0,0,0};
+
 ///---Colors---///
 /*0)focuscol         1)unfocuscol
  *2)fixedcol         3)unkilcol
  *4)fixedunkilcol    5)outerbordercol
  *6)emptycol         */
 static const char *colors[] = {"#1d2021","#1d2021","#83a598","#fe8019","#d3869b","#3c3836","#181818"};
+
 /* if this is set to true the inner border and outer borders colors will be swapped */
 static const bool inverted_colors = true;
+
 ///---Cursor---///
 /* default position of the cursor:
  * correct values are:
  * TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT, MIDDLE
  * All these are relative to the current window. */
 #define CURSOR_POSITION MIDDLE
+
 ///---Borders---///
 /*0) Outer border size. If you put this negative it will be a square.
  *1) Full borderwidth    2) Magnet border size
  *3) Resize border size  */
 static const uint8_t borders[] = {5,7,2,3};
+
 /* Windows that won't have a border.
  * It uses substring comparison with what is found in the WM_NAME
  * attribute of the window. You can test this using `xprop WM_NAME`
  */
 #define LOOK_INTO "WM_NAME"
+
 static const char *ignore_names[] = {"bar", "xclock"};
 ///--Menus and Programs---///
 static const char *menucmd[]   = { "", NULL };

@@ -8,10 +8,8 @@
 execute pathogen#infect()
 
 " indents for different filetypes
-autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType text setlocal ts=4 sts=4 sw=4 expandtab
-autocmd FileType nerdtree :call ChangeBack()
+autocmd FileType less,css,html setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType text setlocal expandtab
 
 set nobackup
 set nowritebackup

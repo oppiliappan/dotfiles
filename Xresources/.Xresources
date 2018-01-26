@@ -52,7 +52,7 @@ URxvt.letterSpace         : 1
 URxvt.scrollBar           : false
 URxvt.internalBorder      : 30
 URxvt.cursorUnderline     : false
-URxvt.geometry            : 80x25
+URxvt.geometry            : 70x35
 URxvt.thickness           : 5
 URxvt.titleBar            : false
 URxvt.intensityStyles     : false

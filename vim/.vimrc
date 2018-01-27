@@ -1,15 +1,29 @@
-
-"     ___     _  _ 
-"  \  /| |\/||_)/  
-"   \/_|_|  || \\_ 
-"                  
+"     ___     _  _
+"  \  /| |\/||_)/
+"   \/_|_|  || \\_
+"
 " ---------------------------------------------------------BASIC SETTINGS
 
 execute pathogen#infect()
 
+
 " indents for different filetypes
-autocmd FileType less,css,html setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType text setlocal expandtab
+augroup indents
+	autocmd!
+	autocmd FileType less,css,html setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType text setlocal expandtab
+augroup end
+
+" completions
+augroup completions
+	autocmd!
+	autocmd FileType php setl ofu=phpcomplete#CompletePHP
+	autocmd FileType ruby,eruby setl ofu=rubycomplete#Complete
+	autocmd FileType html,xhtml setl ofu=htmlcomplete#CompleteTags
+	autocmd FileType c setl ofu=ccomplete#CompleteCpp
+	autocmd FileType css setl ofu=csscomplete#CompleteCSS
+augroup end
+
 
 set nobackup
 set nowritebackup
@@ -19,8 +33,6 @@ set dir=/tmpset
 
 " ---------------------------------------------------------UI SETTINGS
 
-let g:enable_bold_font = 1
-let g:enable_italic_font = 1
 " autocmd BufWritePre * %s/\s\+$//e " strip trailing whitespaces
 syntax on
 
@@ -31,7 +43,7 @@ set relativenumber                                        " easier to use c omma
 set laststatus=2                                          " always show the status line
 set nowrap                                                " dont wrap the text
 set noshowmode                                            " statusline shows the current mode anyways
-set cursorline                                            " highlight current line
+" set cursorline                                            " highlight current line
 set listchars=tab:│\ ,nbsp:␣,trail:▪,extends:>,precedes:< " tab, end of line, non-breakable space chars
 set scrolloff=12                                          " start scrolling before end is reached
 set ignorecase                                            " case insensitive searching
@@ -41,7 +53,6 @@ set incsearch                                             " highlight results as
 set hlsearch                                              " highlight search results
 set undofile                                              " maintaion undo history
 set undodir=~/.vim/undodir                                " store swaps here
-set showcmd                                               " show current cmd in cmdline
 set updatetime=250                                        " instant live status updates
 set backspace=indent,eol,start
 
@@ -150,6 +161,7 @@ endfunction
 
 " ---------------------------------------------------------KEYBINDINGS
 
+mapclear
 let mapleader=' '
 
 nnoremap <F3>      : call Minimalify()<cr>
@@ -162,6 +174,7 @@ nnoremap <Leader>b : Buffers<cr>
 nnoremap <Leader>z : FZF<cr>
 nnoremap <Leader>w : MtaJumpToOtherTag<cr>
 nnoremap <Leader>t : call GetTabber()<cr>
+nnoremap <Leader>n : nohlsearch<cr>
 
 
 nnoremap H H:exec 'norm! '. &scrolloff . 'k'<cr>
@@ -170,6 +183,15 @@ cmap w!! %!sudo tee > /dev/null %
 
 vnoremap > >gv
 vnoremap < <gv
+
+inoremap { {}<Left>
+inoremap {<cr> {<CR>}<Esc>ko<tab>
+inoremap ( ()<Left>
+inoremap [ []<Left>
+inoremap ' ''<Left>
+inoremap " ""<Left>
+inoremap ` ``<Left>
+
 
 " I always linger on the shift key
 :command! WQ wq
@@ -220,4 +242,4 @@ map g# <Plug>(incsearch-nohl-g#)
 
 map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
+map g/ <Plug>(incsearch-stay)"

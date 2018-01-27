@@ -30,5 +30,8 @@ else:
 	
 	output = ( str(posmin).zfill(2) + ":" + str(possec).zfill(2) +    # time elapsed
 		" / " + str(durmin).zfill(2) + ":" + str(dursec).zfill(2) +   # duration of song
-		"   " + title + " - " + artist )                              # song details
-	print(output)
+		"  " + title + " - " + artist )                              # song details
+	if len(output) > 50:
+		print(output[:50] + "...")
+	else:
+		print(output)

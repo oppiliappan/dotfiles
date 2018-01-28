@@ -6,9 +6,10 @@
 echo "$(fortune -sa)\n"    # display a random short quote at start
 
 export ZSH=/home/icyphox/.oh-my-zsh
-export EDITOR=/usr/bin/vim
-export MANPAGER="vim -c MANPAGER -"
+export EDITOR=/usr/bin/nvim
+export MANPAGER="nvim -c MANPAGER -"
 export BROWSER="/usr/bin/chromium-browser"
+export PATH=$PATH":~/Desktop/Telegram/"
 
 
 ZSH_THEME="simple"
@@ -30,6 +31,8 @@ alias :q='exit'
 alias :qa='cd ~'
 alias gtop='LANG=en_US.utf8 TERM=xterm-256color gtop'
 alias fuz='~/scripts/fuz.sh'
+alias vim='nvim'
+alias nvime='nvim ~/.config/nvim/init.vim'
 
 [ -f ~/.fzf.zsh  ] && source ~/.fzf.zsh
 

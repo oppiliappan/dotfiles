@@ -30,7 +30,6 @@ set nowritebackup
 set noswapfile " get rid of swapfiles everywhere
 set dir=/tmpset
 
-
 " ---------------------------------------------------------UI SETTINGS
 
 " autocmd BufWritePre * %s/\s\+$//e " strip trailing whitespaces
@@ -185,7 +184,7 @@ vnoremap > >gv
 vnoremap < <gv
 
 inoremap { {}<Left>
-inoremap {<cr> {<CR>}<Esc>ko<tab>
+inoremap {<cr> {<CR>}<Esc>ko
 inoremap ( ()<Left>
 inoremap [ []<Left>
 inoremap ' ''<Left>
@@ -227,7 +226,7 @@ let g:gitgutter_sign_modified_removed          = '#'
 
 
 " emmet
-let g:user_emmet_mode='a'    "enable all function in all mode.
+let g:user_emmet_mode='a'
 let g:user_emmet_leader_key='<C-X>'
 
 
@@ -243,3 +242,10 @@ map g# <Plug>(incsearch-nohl-g#)
 map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)"
+
+
+" netrw
+let g:netrw_liststyle    = 3
+let g:netrw_banner       = 0
+let g:netrw_winsize      = 25
+let g:netrw_browse_split = 3

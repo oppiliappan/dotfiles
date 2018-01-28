@@ -40,7 +40,7 @@ color-echo 'distro '   'Ubuntu 17.04'
 
 # ascii art
 echo
-echo -e " |⌐ •_•| NerdyPepper"
+echo -e " (⌐ •_•) NerdyPepper"
 echo
 # colors
 echo -e " $red▪$rst $grn▪$rst $blu▪$rst $ylw▪$rst $cyn▪$rst $prp▪$rst $bprp▪$rst"

@@ -45,7 +45,7 @@
 
 URxvt.cursorBlink  :0
 URxvt.font         :xft:scientifica:size=9
-URxvt.boldFont     :xft:scientifica:size=9
+!URxvt.boldFont     :xft:scientifica:size=9
 
 URxvt.lineSpace           : 0
 URxvt.letterSpace         : 1

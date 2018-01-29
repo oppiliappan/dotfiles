@@ -9,7 +9,8 @@ export ZSH=/home/icyphox/.oh-my-zsh
 export EDITOR=/usr/bin/nvim
 export MANPAGER="nvim -c MANPAGER -"
 export BROWSER="/usr/bin/chromium-browser"
-export PATH=$PATH":~/Desktop/Telegram/"
+export PATH=$PATH":home/icyphox/Desktop/Telegram/"
+export PATH=$PATH":home/icyphox/bin"
 
 
 ZSH_THEME="simple"
@@ -33,6 +34,7 @@ alias gtop='LANG=en_US.utf8 TERM=xterm-256color gtop'
 alias fuz='~/scripts/fuz.sh'
 alias vim='nvim'
 alias nvime='nvim ~/.config/nvim/init.vim'
+alias upit='~/scripts/upit'
 
 [ -f ~/.fzf.zsh  ] && source ~/.fzf.zsh
 

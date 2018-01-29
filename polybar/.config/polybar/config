@@ -30,6 +30,7 @@ width    = 70%
 height   = 40
 offset-x = 15%
 offset-y = 710
+radius = 5.0
 
 locale     = de_DE.UTF-8
 background = ${colors.background}
@@ -42,7 +43,7 @@ modules-left   = date1 volume cpu weather
 modules-center = 2bws
 modules-right  = cmusnp previous playpause next powermenu
 
-tray-position    = off
+tray-position    =
 tray-padding     = 2
 tray-transparent = false
 tray-detached    = false

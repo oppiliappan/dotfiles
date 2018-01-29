@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+
+import sys
+import os
+
+os.popen("curl -F'file=@" + sys.argv[1] + "' https://0x0.st | xclip -selection clipboard")
+
+notification = "notify-send 'Uploaded' " + sys.argv[1]
+
+os.popen(notification)

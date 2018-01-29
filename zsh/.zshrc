@@ -13,7 +13,7 @@ export PATH=$PATH":home/icyphox/Desktop/Telegram/"
 export PATH=$PATH":home/icyphox/bin"
 
 
-ZSH_THEME="simple"
+ZSH_THEME="agnoster"
 
 DISABLE_LS_COLORS="false"
 ENABLE_CORRECTION="false"

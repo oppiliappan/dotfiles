@@ -11,10 +11,10 @@ current = int(os.popen(current).read())
 wstr = [ '-','-','-','-','-' ]
 
 for i in range(total):
-	if i == current:
-		wstr[i] = '✕'
-	else:
-		wstr[i] = '·'
+    if i == current:
+        wstr[i] = '✕'
+    else:
+        wstr[i] = '-'
 
 wstr = '  '.join(wstr)
 print(wstr)

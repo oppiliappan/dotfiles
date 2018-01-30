@@ -28,6 +28,7 @@ augroup indents
 	autocmd!
 	autocmd FileType less,css,html setlocal ts=2 sts=2 sw=2 expandtab
 	autocmd FileType text setlocal expandtab
+	autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
 augroup end
 
 
@@ -61,6 +62,7 @@ set nowrap                                                " dont wrap the text
 set noshowmode                                            " statusline shows the current mode anyways
 set cursorline                                            " highlight current line
 set listchars=tab:│\ ,nbsp:␣,trail:▪,extends:>,precedes:< " tab, end of line, non-breakable space chars
+set fillchars=vert:\│                                    " characters to fill vert splits
 set scrolloff=12                                          " start scrolling before end is reached
 set ignorecase                                            " case insensitive searching
 set smartcase                                             " /The searches for 'The but /the searches for 'The' and 'the'
@@ -71,6 +73,7 @@ set undofile                                              " maintaion undo histo
 set undodir=~/.vim/undodir                                " store swaps here
 set updatetime=250                                        " instant live status updates
 set backspace=indent,eol,start
+set hidden
 
 colorscheme agila
 
@@ -255,7 +258,7 @@ map g/ <Plug>(incsearch-stay)"
 
 
 " netrw
-let g:netrw_liststyle    = 3
+let g:netrw_liststyle    = 4
 let g:netrw_banner       = 0
 let g:netrw_winsize      = 25
 let g:netrw_browse_split = 3

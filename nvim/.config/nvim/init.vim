@@ -58,11 +58,12 @@ filetype indent on
 set number
 set relativenumber                                        " easier to use c ommands su c h as 9k and 21j
 set laststatus=2                                          " always show the status line
+set showtabline=2                                         " always show the tab line
 set nowrap                                                " dont wrap the text
 set noshowmode                                            " statusline shows the current mode anyways
 set cursorline                                            " highlight current line
 set listchars=tab:│\ ,nbsp:␣,trail:▪,extends:>,precedes:< " tab, end of line, non-breakable space chars
-set fillchars=vert:\│                                    " characters to fill vert splits
+set fillchars=vert:\│                                     " characters to fill vert splits
 set scrolloff=12                                          " start scrolling before end is reached
 set ignorecase                                            " case insensitive searching
 set smartcase                                             " /The searches for 'The but /the searches for 'The' and 'the'

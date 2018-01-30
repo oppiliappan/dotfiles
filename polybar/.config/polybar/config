@@ -5,19 +5,19 @@
 ;
 
 [colors]
-foreground = #d5c4a1
-background = #1d2021
-modb       = #1d2021
-modb1      = #1d2021
-modb2      = #1d2021
+foreground = #282828
+background = #f9f5d7
+modb       = #f9f5d7
+modb1      = #f9f5d7
+modb2      = #f9f5d7
 
-red     = #fb4934
-orange  = #fe8019
-yellow  = #fabd2f
-green   = #b8bb26
-cyan    = #8ec07c
-blue    = #83a598
-magenta = #d3869b
+red     = #9d0006
+orange  = #af3a03
+yellow  = #b57614
+green   = #79740e
+cyan    = #427b58
+blue    = #076678
+magenta = #8f3f71
 white   = #d65d0e
 
 [global/wm]

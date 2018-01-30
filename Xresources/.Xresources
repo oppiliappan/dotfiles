@@ -4,7 +4,7 @@
 !  /\| \|___)\_/|_|| \\_|___)
 !
 
-#define base00 #1d2021
+#define base00 #282828
 #define base01 #3c3836
 #define base02 #504945
 #define base03 #665c54

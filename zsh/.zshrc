@@ -7,7 +7,6 @@ export ZSH=/home/icyphox/.oh-my-zsh
 export EDITOR=/usr/bin/nvim
 export MANPAGER="nvim -c MANPAGER -"
 export BROWSER="/usr/bin/chromium-browser"
-export PATH=$PATH":home/icyphox/Desktop/Telegram/"
 export PATH=$PATH":home/icyphox/bin"
 
 

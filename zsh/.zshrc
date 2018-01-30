@@ -1,9 +1,7 @@
-# __ __    
-#  /(_ |_| 
-# /___)| | 
-#          
-
-echo "$(fortune -sa)\n"    # display a random short quote at start
+# __ __
+#  /(_ |_|
+# /___)| |
+#
 
 export ZSH=/home/icyphox/.oh-my-zsh
 export EDITOR=/usr/bin/nvim
@@ -13,7 +11,7 @@ export PATH=$PATH":home/icyphox/Desktop/Telegram/"
 export PATH=$PATH":home/icyphox/bin"
 
 
-ZSH_THEME="agnoster"
+ZSH_THEME="simple"
 
 DISABLE_LS_COLORS="false"
 ENABLE_CORRECTION="false"

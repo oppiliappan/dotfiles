@@ -6,7 +6,7 @@
 
 [colors]
 foreground = #282828
-background = #f9f5d7
+background = #00f9f5d7
 modb       = #f9f5d7
 modb1      = #f9f5d7
 modb2      = #f9f5d7
@@ -26,9 +26,9 @@ margin-bottom     = 0
 override-redirect = true
 
 [bar/top]
-width    = 70%
-height   = 40
-offset-x = 15%
+width    = 90%
+height   = 35
+offset-x = 5%
 offset-y = 710
 radius = 5.0
 
@@ -159,7 +159,7 @@ click-left        = cmus-remote -u
 click-right       = xdesktop -g 4
 format-foreground = ${colors.foreground}
 format-background = ${colors.modb1}
-format-padding    = 1
+format-padding    = 2
 
 [module/playpause]
 type              = custom/script
@@ -191,12 +191,13 @@ format-background        = ${colors.modb}
 exec                     = python2.7 ~/scripts/weather.py
 
 [module/2bws]
-format-font    = 1
-type           = custom/script
-exec           = python3 ~/scripts/2bws.py
-scroll-down    = exec xdesktop -p
-scroll-up      = exec xdesktop -n
-click-right    = exec xdesktop -p
-click-left     = exec xdesktop -n
-interval       = 0.01
-format-padding = 2
+format-font       = 1
+type              = custom/script
+exec              = python3 ~/scripts/2bws.py
+scroll-down       = exec xdesktop -p
+scroll-up         = exec xdesktop -n
+click-right       = exec xdesktop -p
+click-left        = exec xdesktop -n
+interval          = 0.01
+format-padding    = 3
+format-background = ${colors.modb}

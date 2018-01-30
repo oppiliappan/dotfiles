@@ -70,6 +70,8 @@ Misc. scripts
 
  - nerdinfo.sh : a small system info script
  - fuz.sh : fzf script to show code preview with syntax and open selected files in `$EDITOR`
+ - upit.py : python script to upload file(s) to https://0x0.st, copy links with xclip,  
+ and send notifications through notify-send
 
 
 

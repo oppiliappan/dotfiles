@@ -20,6 +20,7 @@ Plug 'godlygeek/tabular'
 Plug 'drzel/vim-line-no-indicator'
 Plug 'lambdalisue/vim-manpager'
 Plug 'Valloric/MatchTagAlways'
+Plug 'tpope/vim-repeat'
 
 call plug#end()
 
@@ -28,18 +29,7 @@ augroup indents
 	autocmd!
 	autocmd FileType less,css,html setlocal ts=2 sts=2 sw=2 expandtab
 	autocmd FileType text setlocal expandtab
-	autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
-augroup end
-
-
-" completions
-augroup completions
-	autocmd!
-	autocmd FileType php setl ofu=phpcomplete#CompletePHP
-	autocmd FileType ruby,eruby setl ofu=rubycomplete#Complete
-	autocmd FileType html,xhtml setl ofu=htmlcomplete#CompleteTags
-	autocmd FileType c setl ofu=ccomplete#CompleteCpp
-	autocmd FileType css setl ofu=csscomplete#CompleteCSS
+	autocmd FileType python setlocal ts=4 sts=4 sw=4 noexpandtab
 augroup end
 
 

@@ -7,9 +7,9 @@
 [colors]
 foreground = #282828
 background = #00f9f5d7
-modb       = #f9f5d7
-modb1      = #f9f5d7
-modb2      = #f9f5d7
+modb       = #fff9f5d7
+modb1      = #fff9f5d7
+modb2      = #fff9f5d7
 
 red     = #9d0006
 orange  = #af3a03
@@ -27,7 +27,7 @@ override-redirect = true
 
 [bar/top]
 width    = 90%
-height   = 35
+height   = 30
 offset-x = 5%
 offset-y = 710
 radius = 5.0
@@ -41,7 +41,7 @@ font-1 = Siji:size=9:;
 
 modules-left   = date1 volume cpu weather
 modules-center = 2bws
-modules-right  = cmusnp previous playpause next powermenu
+modules-right  = cmusnp previous playpause next
 
 tray-position    =
 tray-padding     = 2
@@ -83,41 +83,6 @@ format-prefix            = 
 format-prefix-foreground = ${colors.red}
 format-background        = ${colors.modb}
 format-padding           = 2
-
-[module/powermenu]
-type = custom/menu
-
-label-open                 = 
-label-open-foreground      = ${colors.red}
-label-open-background      = ${colors.modb2}
-label-open-padding         = 2
-label-close                = ✕
-label-close-padding        = 2
-label-close-foreground     = $[colors.red]
-label-separator            = |
-label-separator-foreground = #666666
-
-menu-0-0      = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1      = poweroff
-menu-0-1-exec = menu-open-2
-menu-0-2      = logout
-menu-0-2-exec = menu-open-3
-
-menu-1-0      = ✕
-menu-1-0-exec = menu-open-0
-menu-1-1      = ✓
-menu-1-1-exec = systemctl reboot
-
-menu-2-0      = ✓
-menu-2-0-exec = systemctl poweroff
-menu-2-1      = ✕
-menu-2-1-exec = menu-open-0
-
-menu-3-0      = ✓
-menu-3-0-exec = herbstclient quit
-menu-3-1      = ✕
-menu-3-1-exec = menu-open-0
 
 [module/hlws]
 format-font       = 1

@@ -48,11 +48,10 @@ filetype indent on
 set number
 set relativenumber                                        " easier to use c ommands su c h as 9k and 21j
 set laststatus=2                                          " always show the status line
-set showtabline=2                                         " always show the tab line
 set nowrap                                                " dont wrap the text
 set noshowmode                                            " statusline shows the current mode anyways
 set cursorline                                            " highlight current line
-set listchars=tab:│\ ,nbsp:␣,trail:▪,extends:>,precedes:< " tab, end of line, non-breakable space chars
+set listchars=tab:│\ ,nbsp:␣,trail:▪,extends:,precedes: " tab, end of line, non-breakable space chars
 set fillchars=vert:\│                                     " characters to fill vert splits
 set scrolloff=12                                          " start scrolling before end is reached
 set ignorecase                                            " case insensitive searching
@@ -67,7 +66,6 @@ set backspace=indent,eol,start
 set hidden
 
 colorscheme agila
-
 
 
 " ---------------------------------------------------------SPACING AND STUFF
@@ -211,14 +209,6 @@ cab vg vimgrep
 
 
 " ---------------------------------------------------------PLUGINS
-
-" youcompleteme
-let g:ycm_error_symbol                              = '>>'
-let g:ycm_warning_symbol                            = '->'
-let g:ycm_add_preview_to_completeopt                = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_confirm_extra_conf                        = 0
-
 
 " git gutter settings
 let g:gitgutter_override_sign_column_highlight = 0

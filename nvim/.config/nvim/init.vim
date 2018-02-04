@@ -21,6 +21,8 @@ Plug 'drzel/vim-line-no-indicator'
 Plug 'lambdalisue/vim-manpager'
 Plug 'Valloric/MatchTagAlways'
 Plug 'tpope/vim-repeat'
+Plug 'ehamberg/vim-cute-python'
+
 
 call plug#end()
 

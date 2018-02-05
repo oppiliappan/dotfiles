@@ -5,20 +5,20 @@
 ;
 
 [colors]
-foreground = #282828
+foreground = #121c21
 background = #00f9f5d7
-modb       = #fff9f5d7
-modb1      = #fff9f5d7
-modb2      = #fff9f5d7
+modb       = #ffdce5ca
+modb1      = #ffdce5ca
+modb2      = #ffdce5ca
 
-red     = #9d0006
-orange  = #af3a03
-yellow  = #b57614
-green   = #79740e
-cyan    = #427b58
-blue    = #076678
-magenta = #8f3f71
-white   = #d65d0e
+red     = #f0696f
+orange  = #fa9a6a
+yellow  = #f7cca1
+green   = #76a08c
+cyan    = #5f9993
+blue    = #718c97
+magenta = #ce7fcd
+white   = #877366
 
 [global/wm]
 margin-top        = 0
@@ -39,9 +39,9 @@ foreground = ${colors.foreground}
 font-0 = scientifica:size=8:antialias=true;
 font-1 = Siji:size=9:;
 
-modules-left   = date1 volume cpu weather
+modules-left   = date1 volume
 modules-center = 2bws
-modules-right  = cmusnp previous playpause next
+modules-right  = previous playpause next
 
 tray-position    =
 tray-padding     = 2

@@ -4,22 +4,22 @@
 !  /\| \|___)\_/|_|| \\_|___)
 !
 
-#define base00 #282828
-#define base01 #3c3836
-#define base02 #504945
-#define base03 #665c54
-#define base04 #bdae93
-#define base05 #d5c4a1
-#define base06 #ebdbb2
-#define base07 #fbf1c7
-#define base08 #fb4934
-#define base09 #fe8019
-#define base0A #fabd2f
-#define base0B #b8bb26
-#define base0C #8ec07c
-#define base0D #83a598
-#define base0E #d3869b
-#define base0F #d65d0e
+#define base00 #121c21
+#define base01 #1e2e36
+#define base02 #304b59
+#define base03 #3f6173
+#define base04 #7b8e98
+#define base05 #aaafb2
+#define base06 #bcd9e8
+#define base07 #cfefff
+#define base08 #f0696f
+#define base09 #fa9a6a
+#define base0A #f7cca1
+#define base0B #76a08c
+#define base0C #5f9993
+#define base0D #718c97
+#define base0E #ceb5ce
+#define base0F #877366
 
 *foreground:   base05
 *background:   base00
@@ -50,7 +50,7 @@ URxvt.boldFont     :xft:scientifica:size=9
 URxvt.lineSpace           : 0
 URxvt.letterSpace         : 1
 URxvt.scrollBar           : false
-URxvt.internalBorder      : 30
+URxvt.internalBorder      : 20
 URxvt.cursorUnderline     : false
 URxvt.geometry            : 70x35
 URxvt.thickness           : 5

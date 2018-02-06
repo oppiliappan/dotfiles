@@ -6,7 +6,7 @@
 
 [colors]
 foreground = #121c21
-background = #00f9f5d7
+background = #ffdce5ca
 modb       = #ffdce5ca
 modb1      = #ffdce5ca
 modb2      = #ffdce5ca
@@ -26,9 +26,9 @@ margin-bottom     = 0
 override-redirect = true
 
 [bar/top]
-width    = 90%
-height   = 30
-offset-x = 5%
+width    = 30%
+height   = 40
+offset-x = 35%
 offset-y = 710
 radius = 5.0
 
@@ -39,8 +39,8 @@ foreground = ${colors.foreground}
 font-0 = scientifica:size=8:antialias=true;
 font-1 = Siji:size=9:;
 
-modules-left   = date1 volume
-modules-center = 2bws
+modules-left   = 2bws
+modules-center = date
 modules-right  = previous playpause next
 
 tray-position    =
@@ -56,26 +56,26 @@ padding-right       = 0
 module-margin-left  = 0
 module-margin-right = 0
 
-[module/volume]
-type = internal/volume
+; [module/volume]
+; type = internal/volume
+; 
+; format-volume = <ramp-volume><label-volume>
+; 
+; format-volume-background = ${colors.modb}
+; format-volume-padding    = 2
+; 
+; module-margin-right = 0
+; ramp-volume-0       = 
+; ramp-volume-1       = 
+; ramp-volume-2       = 
+; 
+; ramp-volume-foreground = ${colors.red}
+; 
+; label-muted-padding    = 2
+; label-muted            =  muted
+; label-muted-background = ${colors.modb}
 
-format-volume = <ramp-volume><label-volume>
-
-format-volume-background = ${colors.modb}
-format-volume-padding    = 2
-
-module-margin-right = 0
-ramp-volume-0       = 
-ramp-volume-1       = 
-ramp-volume-2       = 
-
-ramp-volume-foreground = ${colors.green}
-
-label-muted-padding    = 2
-label-muted            =  muted
-label-muted-background = ${colors.modb}
-
-[module/date1]
+[module/date]
 type                     = internal/date
 interval                 = 1
 date                     = " %I:%M"
@@ -84,16 +84,6 @@ format-prefix-foreground = ${colors.red}
 format-background        = ${colors.modb}
 format-padding           = 2
 
-[module/hlws]
-format-font       = 1
-type              = custom/script
-exec              = python2.7 ~/scripts/hlws.py
-scroll-down       = exec herbstclient use_index +1
-scroll-up         = exec herbstclient use_index -1
-interval          = 0.01
-format-foreground = ${colors.foreground}
-format-background = ${colors.modb2}
-format-padding    = 2
 
 [module/previous]
 type              = custom/script
@@ -101,7 +91,8 @@ format-text       = <label>
 label             = 
 exec              = echo label
 click-left        = exec cmus-remote -r -p
-format-foreground = ${colors.cyan}
+click-right        = xdesktop -g 4
+format-foreground = ${colors.red}
 format-background = ${colors.modb1}
 format-padding    = 1
 
@@ -111,58 +102,29 @@ format-text       = <label>
 label             = 
 exec              = echo label
 click-left        = exec cmus-remote -n -p
-format-foreground = ${colors.cyan}
+click-right        = xdesktop -g 4
+format-foreground = ${colors.red}
 format-background = ${colors.modb1}
 format-padding    = 1
-
-[module/cmusnp]
-type              = custom/script
-exec              = ~/scripts/cmusnp.py
-exec-if           = pgrep cmus > /dev/null
-interval          = 0.01
-click-left        = cmus-remote -u
-click-right       = xdesktop -g 4
-format-foreground = ${colors.foreground}
-format-background = ${colors.modb1}
-format-padding    = 2
 
 [module/playpause]
 type              = custom/script
 exec              = python3 ~/scripts/playpause.py
 interval          = 0.01
 click-left        = cmus-remote -u
-format-foreground = ${colors.cyan}
+click-right        = xdesktop -g 4
+scroll-up                = exec amixer -D pulse sset Master 2%+
+scroll-down              = exec amixer -D pulse sset Master 2%-
+format-foreground = ${colors.red}
 format-background = ${colors.modb1}
 format-padding    = 2
 
 
-[module/cpu]
-type                     = internal/cpu
-label                    = %percentage-core1%%
-format-prefix            = " "
-format-prefix-foreground = ${colors.magenta}
-format-background        = ${colors.modb}
-format-padding           = 2
-
-[module/weather]
-type                     = custom/script
-interval                 = 100
-format                   = <label>
-format-padding           = 2
-format-prefix            = " "
-format-suffix            = "°C"
-format-prefix-foreground = ${colors.blue}
-format-background        = ${colors.modb}
-exec                     = python2.7 ~/scripts/weather.py
-
 [module/2bws]
 format-font       = 1
 type              = custom/script
-exec              = python3 ~/scripts/2bws.py
-scroll-down       = exec xdesktop -p
-scroll-up         = exec xdesktop -n
-click-right       = exec xdesktop -p
-click-left        = exec xdesktop -n
+exec              = ~/scripts/2b.out
 interval          = 0.01
 format-padding    = 3
-format-background = ${colors.modb}
+format-background = ${colors.red}
+format-foreground = ${colors.foreground}

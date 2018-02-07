@@ -45,12 +45,12 @@
 
 URxvt.cursorBlink  :0
 URxvt.font         :xft:scientifica:size=9
-URxvt.boldFont     :xft:scientifica:size=9
+!URxvt.boldFont     :xft:scientifica:size=9
 
 URxvt.lineSpace           : 0
 URxvt.letterSpace         : 1
 URxvt.scrollBar           : false
-URxvt.internalBorder      : 20
+URxvt.internalBorder      : 24
 URxvt.cursorUnderline     : false
 URxvt.geometry            : 70x35
 URxvt.thickness           : 5

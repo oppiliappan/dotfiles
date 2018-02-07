@@ -178,6 +178,8 @@ cmap w!! %!sudo tee > /dev/null %
 vnoremap > >gv
 vnoremap < <gv
 
+onoremap in( :<c-u>normal! f(vi(<cr>
+onoremap in[ :<c-u>normal! f[vi[<cr>
 
 " I always linger on the shift key
 :command! WQ wq
@@ -186,7 +188,7 @@ vnoremap < <gv
 :command! W w
 :command! Q q
 
-" abbreviations.
+" abbreviations
 iab #i #include
 iab #d #define
 cab dst put =strftime('%d %a, %b %Y')<cr>

@@ -17,18 +17,13 @@ ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git web-search sudo)
+plugins=(git sudo)
 
 source $ZSH/oh-my-zsh.sh
 
-alias als='ls --color=never'
 alias cava='~/Desktop/cava/cava'
 alias nerdz='~/scripts/nerdinfo.sh'
-alias dpkg='sudo dpkg'
-alias :q='exit'
-alias :qa='cd ~'
 alias gtop='LANG=en_US.utf8 TERM=xterm-256color gtop'
-alias fuz='~/scripts/fuz.sh'
 alias vim='nvim'
 alias nvime='nvim ~/.config/nvim/init.vim'
 alias upit='~/scripts/upit'
@@ -42,4 +37,3 @@ PERL_MB_OPT="--install_base \"/home/icyphox/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/icyphox/perl5"; export PERL_MM_OPT;
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-source ~/.zsh/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh

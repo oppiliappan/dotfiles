@@ -5,11 +5,11 @@
 ;
 
 [colors]
-foreground = #121c21
-background = #ffdce5ca
-modb       = #ffdce5ca
-modb1      = #ffdce5ca
-modb2      = #ffdce5ca
+foreground = #aaafb2
+background = #ff121c21
+modb       = #ff121c21
+modb1      = #ff121c21
+modb2      = #ff121c21
 
 red     = #f0696f
 orange  = #fa9a6a
@@ -26,9 +26,9 @@ margin-bottom     = 0
 override-redirect = true
 
 [bar/top]
-width    = 30%
+width    = 20%
 height   = 40
-offset-x = 35%
+offset-x = 2%
 offset-y = 710
 radius = 5.0
 
@@ -112,9 +112,9 @@ type              = custom/script
 exec              = python3 ~/scripts/playpause.py
 interval          = 0.01
 click-left        = cmus-remote -u
-click-right        = xdesktop -g 4
-scroll-up                = exec amixer -D pulse sset Master 2%+
-scroll-down              = exec amixer -D pulse sset Master 2%-
+click-right       = xdesktop -g 4
+scroll-up         = exec amixer -D pulse sset Master 2%+
+scroll-down       = exec amixer -D pulse sset Master 2%-
 format-foreground = ${colors.red}
 format-background = ${colors.modb1}
 format-padding    = 2
@@ -127,4 +127,8 @@ exec              = ~/scripts/2b.out
 interval          = 0.01
 format-padding    = 3
 format-background = ${colors.red}
-format-foreground = ${colors.foreground}
+format-foreground = ${colors.background}
+click-left        = xdesktop -n
+click-right       = xdesktop -p
+scroll-up         = xdesktop -n
+scroll-down       = xdesktop -p

@@ -94,7 +94,7 @@ click-left        = exec cmus-remote -r -p
 click-right        = xdesktop -g 4
 format-foreground = ${colors.red}
 format-background = ${colors.modb1}
-format-padding    = 1
+format-padding    = 2
 
 [module/next]
 type              = custom/script
@@ -105,7 +105,7 @@ click-left        = exec cmus-remote -n -p
 click-right        = xdesktop -g 4
 format-foreground = ${colors.red}
 format-background = ${colors.modb1}
-format-padding    = 1
+format-padding    = 2
 
 [module/playpause]
 type              = custom/script
@@ -117,7 +117,7 @@ scroll-up         = exec amixer -D pulse sset Master 2%+
 scroll-down       = exec amixer -D pulse sset Master 2%-
 format-foreground = ${colors.red}
 format-background = ${colors.modb1}
-format-padding    = 2
+format-padding    = 0
 
 
 [module/2bws]

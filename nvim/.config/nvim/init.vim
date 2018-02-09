@@ -55,7 +55,7 @@ set laststatus=2                                          " always show the stat
 set nowrap                                                " dont wrap the text
 set noshowmode                                            " statusline shows the current mode anyways
 set cursorline                                            " highlight current line
-set listchars=tab:│\ ,nbsp:␣,trail:▪,extends:,precedes: " tab, end of line, non-breakable space chars
+set listchars=tab:│\ ,nbsp:␣,trail:▢,extends:,precedes: " tab, end of line, non-breakable space chars
 set fillchars=vert:\│                                     " characters to fill vert splits
 set scrolloff=12                                          " start scrolling before end is reached
 set ignorecase                                            " case insensitive searching

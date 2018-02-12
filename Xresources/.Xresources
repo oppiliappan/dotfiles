@@ -50,7 +50,7 @@ URxvt.font         :xft:scientifica:size=9
 URxvt.lineSpace           : 0
 URxvt.letterSpace         : 1
 URxvt.scrollBar           : false
-URxvt.internalBorder      : 24
+URxvt.internalBorder      : 34
 URxvt.cursorUnderline     : false
 URxvt.geometry            : 70x35
 URxvt.thickness           : 5

@@ -9,20 +9,15 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-vinegar'
 Plug 'haya14busa/incsearch.vim'
 Plug 'mattn/emmet-vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
 Plug 'drzel/vim-line-no-indicator'
 Plug 'lambdalisue/vim-manpager'
 Plug 'Valloric/MatchTagAlways'
-Plug 'tpope/vim-repeat'
 Plug 'ehamberg/vim-cute-python'
-Plug 'junegunn/goyo.vim'
 Plug 'machakann/vim-highlightedyank'
 
 
@@ -50,25 +45,27 @@ syntax on
 set list
 filetype indent on
 set number
-set relativenumber                                        " easier to use c ommands su c h as 9k and 21j
-set laststatus=2                                          " always show the status line
-set nowrap                                                " dont wrap the text
-set noshowmode                                            " statusline shows the current mode anyways
-set cursorline                                            " highlight current line
-set listchars=tab:│\ ,nbsp:␣,trail:▢,extends:,precedes: " tab, end of line, non-breakable space chars
-set fillchars=vert:\│                                     " characters to fill vert splits
-set scrolloff=12                                          " start scrolling before end is reached
-set ignorecase                                            " case insensitive searching
-set smartcase                                             " /The searches for 'The but /the searches for 'The' and 'the'
-set sidescroll=40                                         " like scrolloff but sideways
-set incsearch                                             " highlight results as you type
-set hlsearch                                              " highlight search results
-set undofile                                              " maintaion undo history
-set undodir=~/.vim/undodir                                " store swaps here
-set updatetime=250                                        " instant live status updates
+set relativenumber
+set laststatus=2
+set nowrap
+set noshowmode
+set cursorline
+set listchars=tab:│\ ,nbsp:␣,trail:∙,extends:,precedes:
+set fillchars=vert:\│
+set scrolloff=12
+set ignorecase
+set smartcase
+set sidescroll=40
+set incsearch
+set hlsearch
+set undofile
+set undodir=~/.vim/undodir
+set updatetime=250
+set path+=**
 set inccommand=split
 set backspace=indent,eol,start
 set hidden
+set wildmenu
 
 colorscheme agila
 
@@ -157,7 +154,7 @@ function! HelpInNewTab ()
 endfunction
 
 
-" ---------------------------------------------------------KEYBINDINGS
+" ---------------------------------------------------------MAPPINGS
 
 mapclear
 let mapleader=' '
@@ -169,7 +166,7 @@ nnoremap <Leader>z : FZF<cr>
 nnoremap <Leader>w : MtaJumpToOtherTag<cr>
 nnoremap <Leader>t : call GetTabber()<cr>
 nnoremap <Leader>n : nohlsearch<cr>
-nnoremap <Leader>g : Goyo<cr>
+nnoremap <Leader>f : YcmCompleter FixIt<cr>
 
 nnoremap H H:exec 'norm! '. &scrolloff . 'k'<cr>
 nnoremap L L:exec 'norm! '. &scrolloff . 'j'<cr>
@@ -232,8 +229,12 @@ let g:netrw_winsize      = 25
 let g:netrw_browse_split = 3
 
 
-" deoplete
-let g:deoplete#enable_at_startup = 1
+" youcompleteme
+let g:ycm_error_symbol                              = ''
+let g:ycm_warning_symbol                            = ''
+let g:ycm_add_preview_to_completeopt                = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_confirm_extra_conf = 0
 
 
 " LineNoIndicator

@@ -30,7 +30,8 @@ width    = 20%
 height   = 40
 offset-x = 2%
 offset-y = 710
-radius = 5.0
+
+radius = 200
 
 locale     = de_DE.UTF-8
 background = ${colors.background}

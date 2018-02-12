@@ -10,7 +10,7 @@ export BROWSER="/usr/bin/chromium-browser"
 export PATH=$PATH":home/icyphox/bin"
 
 
-ZSH_THEME="agnoster"
+ZSH_THEME="simple"
 
 DISABLE_LS_COLORS="false"
 ENABLE_CORRECTION="false"

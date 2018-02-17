@@ -1,2 +1,8 @@
 images/
 *.txt
+*logs*
+*.log
+*~
+*.swp
+*.pyc
+weechat/sec.conf

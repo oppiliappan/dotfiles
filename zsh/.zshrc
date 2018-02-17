@@ -9,7 +9,6 @@ export MANPAGER="nvim -c MANPAGER -"
 export BROWSER="/usr/bin/chromium-browser"
 export PATH=$PATH":home/icyphox/bin"
 
-
 ZSH_THEME="simple"
 
 DISABLE_LS_COLORS="false"

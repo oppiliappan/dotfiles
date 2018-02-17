@@ -14,12 +14,10 @@ Plug 'mattn/emmet-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
-Plug 'drzel/vim-line-no-indicator'
 Plug 'lambdalisue/vim-manpager'
 Plug 'Valloric/MatchTagAlways'
 Plug 'ehamberg/vim-cute-python'
 Plug 'machakann/vim-highlightedyank'
-
 
 call plug#end()
 
@@ -60,7 +58,6 @@ set incsearch
 set hlsearch
 set undofile
 set undodir=~/.vim/undodir
-set updatetime=250
 set path+=**
 set inccommand=split
 set backspace=indent,eol,start
@@ -78,23 +75,23 @@ set tabstop=4        " tab = 4 spaces
 set softtabstop=4    " backspace through spaces
 
 
-" ---------------------------------------------------------AIRLINE CAN GO TO HELL
+" ---------------------------------------------------------SAY NO TO AIRLINE
 let g:currentmode={
     \ 'n'  : 'NORMAL ',
-    \ 'no' : 'N·Operator Pending ',
+    \ 'no' : 'N·OPERATOR PENDING ',
     \ 'v'  : 'VISUAL ',
-    \ 'V'  : 'V·Line ',
-    \ '' : 'V·Block',
-    \ 's'  : 'Select ',
-    \ 'S'  : 'S·Line ',
-    \ '' : 'S·Block',
+    \ 'V'  : 'V·LINE ',
+    \ '' : 'V·BLOCK ',
+    \ 's'  : 'SELECT ',
+    \ 'S'  : 'S·LINE ',
+    \ '' : 'S·BLOCK ',
     \ 'i'  : 'INSERT ',
     \ 'R'  : 'REPLACE ',
-    \ 'Rv' : 'V·Replace ',
-    \ 'c'  : 'Command ',
-    \ 'cv' : 'Vim Ex ',
-    \ 'ce' : 'Ex ',
-    \ 'r'  : 'Prompt ',
+    \ 'Rv' : 'V·REPLACE ',
+    \ 'c'  : 'COMMAND ',
+    \ 'cv' : 'VIM EX ',
+    \ 'ce' : 'EX ',
+    \ 'r'  : 'PROMPT ',
     \ 'rm' : 'MORE ',
     \ 'r?' : 'CONFIRM ',
     \ '!'  : 'SHELL ',
@@ -114,7 +111,7 @@ set statusline+=%=
 set statusline+=%#SecondaryBlock#
 set statusline+=\ %Y\ 
 set statusline+=%#PrimaryBlock#
-set statusline+=\ %{LineNoIndicator()}\ 
+set statusline+=\ %P\ 
 
 function! GitBranch()
 	return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
@@ -134,7 +131,6 @@ function! GetTabber()  " a lil function that integrates well with Tabular.vim
 	:execute 'Tabularize /' . c
 endfunction
 
-
 let g:help_in_tabs = 1
 
 nmap <silent> H  :let g:help_in_tabs = !g:help_in_tabs<CR>
@@ -152,7 +148,6 @@ function! HelpInNewTab ()
         execute "normal \<C-W>T"
     endif
 endfunction
-
 
 " ---------------------------------------------------------MAPPINGS
 
@@ -220,24 +215,3 @@ map g# <Plug>(incsearch-nohl-g#)
 map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)"
-
-
-" netrw
-let g:netrw_liststyle    = 4
-let g:netrw_banner       = 0
-let g:netrw_winsize      = 25
-let g:netrw_browse_split = 3
-
-
-" youcompleteme
-let g:ycm_error_symbol                              = ''
-let g:ycm_warning_symbol                            = ''
-let g:ycm_add_preview_to_completeopt                = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_confirm_extra_conf = 0
-
-
-" LineNoIndicator
-let g:line_no_indicator_chars = [
-  \  ' ', '▁', '▂', '▃', '▄', '▅', '▆', '▇', '█'
-  \  ]

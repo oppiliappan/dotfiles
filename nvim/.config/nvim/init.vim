@@ -3,7 +3,6 @@
 " | \| \/_|_|  |
 "
 " ---------------------------------------------------------BASIC SETTINGS
-
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -11,7 +10,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 Plug 'haya14busa/incsearch.vim'
 Plug 'mattn/emmet-vim'
-Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
 Plug 'lambdalisue/vim-manpager'
@@ -160,7 +158,8 @@ nnoremap <Leader>b : Buffers<cr>
 nnoremap <Leader>z : FZF<cr>
 nnoremap <Leader>w : MtaJumpToOtherTag<cr>
 nnoremap <Leader>t : call GetTabber()<cr>
-nnoremap <Leader>n : nohlsearch<cr>
+nnoremap <Leader>n : tabnext<cr>
+nnoremap <Leader>N : tabprevious<cr>
 nnoremap <Leader>f : YcmCompleter FixIt<cr>
 
 nnoremap H H:exec 'norm! '. &scrolloff . 'k'<cr>

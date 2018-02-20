@@ -28,7 +28,7 @@ static const uint8_t offsets[] = {0,0,0,0};
  *2)fixedcol         3)unkilcol
  *4)fixedunkilcol    5)outerbordercol
  *6)emptycol         */
-static const char *colors[] = {"#304b59","#1e2e36","#718c97","#fa9a6a","#ceb5ce","#121c21","#181818"};
+static const char *colors[] = {"#203a48","#1e2e36","#718c97","#fa9a6a","#ceb5ce","#121c21","#181818"};
 
 /* if this is set to true the inner border and outer borders colors will be swapped */
 static const bool inverted_colors = false;

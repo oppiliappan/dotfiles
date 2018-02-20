@@ -59,7 +59,7 @@ URxvt.intensityStyles     : false
 
 
 URxvt.perl-ext-common : default,matcher
-URxvt.url-launcher    : firefox
+URxvt.url-launcher    : chromium-browser
 URxvt.matcher.button  : 1
 
 ! ------------------------------------------------------------------------------

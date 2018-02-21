@@ -110,7 +110,7 @@ format-padding    = 2
 
 [module/playpause]
 type              = custom/script
-exec              = python3 ~/scripts/playpause.py
+exec              = ~/scripts/playpause.sh
 interval          = 0.01
 click-left        = cmus-remote -u
 click-right       = xdesktop -g 4

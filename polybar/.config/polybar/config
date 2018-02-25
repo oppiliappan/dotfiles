@@ -8,7 +8,7 @@
 foreground = #aaafb2
 background = #ff121c21
 modb       = #ff121c21
-modb1      = #ff121c21
+modb1      = #ff1e2e36
 modb2      = #ff121c21
 
 red     = #f0696f
@@ -94,7 +94,7 @@ exec              = echo label
 click-left        = exec cmus-remote -r -p
 click-right        = xdesktop -g 4
 format-foreground = ${colors.red}
-format-background = ${colors.modb1}
+format-background = ${colors.modb}
 format-padding    = 2
 
 [module/next]
@@ -105,7 +105,7 @@ exec              = echo label
 click-left        = exec cmus-remote -n -p
 click-right        = xdesktop -g 4
 format-foreground = ${colors.red}
-format-background = ${colors.modb1}
+format-background = ${colors.modb}
 format-padding    = 2
 
 [module/playpause]
@@ -117,7 +117,7 @@ click-right       = xdesktop -g 4
 scroll-up         = exec amixer -D pulse sset Master 2%+
 scroll-down       = exec amixer -D pulse sset Master 2%-
 format-foreground = ${colors.red}
-format-background = ${colors.modb1}
+format-background = ${colors.modb}
 format-padding    = 0
 
 
@@ -127,7 +127,7 @@ type              = custom/script
 exec              = ~/scripts/2bws.sh
 interval          = 0.01
 format-padding    = 3
-format-background = ${colors.modb}
+format-background = ${colors.modb1}
 click-left        = xdesktop -n
 click-right       = xdesktop -p
 scroll-up         = xdesktop -n

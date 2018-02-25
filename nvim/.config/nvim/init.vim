@@ -2,7 +2,9 @@
 " |\ |\  /| |\/|
 " | \| \/_|_|  |
 "
-" ---------------------------------------------------------BASIC SETTINGS
+
+" vim-plugs {{{
+
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -14,13 +16,15 @@ Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
 Plug 'lambdalisue/vim-manpager'
-Plug 'Valloric/MatchTagAlways'
-Plug 'ehamberg/vim-cute-python'
-Plug 'machakann/vim-highlightedyank'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
-" indents for different filetypes
+" }}}
+
+
+" augroups {{{
+
 augroup indents
 	autocmd!
 	autocmd FileType less,css,html setlocal ts=2 sts=2 sw=2 expandtab
@@ -29,14 +33,30 @@ augroup indents
 augroup end
 
 
+augroup highlight_follows_focus
+    autocmd!
+    autocmd WinEnter * set cursorline
+    autocmd WinLeave * set nocursorline
+augroup END
+
+
+augroup highlight_follows_vim
+    autocmd!
+    autocmd FocusGained * set cursorline
+    autocmd FocusLost * set nocursorline
+augroup END
+
+
+" }}}
+
+
+" general settings {{{
+
 set nobackup
 set nowritebackup
 set noswapfile " get rid of swapfiles everywhere
 set dir=/tmpset
 
-" ---------------------------------------------------------UI SETTINGS
-
-" autocmd BufWritePre * %s/\s\+$//e " strip trailing whitespaces
 syntax on
 
 set list
@@ -65,16 +85,16 @@ set wildmenu
 
 colorscheme agila
 
-
-" ---------------------------------------------------------SPACING AND STUFF
-
 set shiftwidth=4     " indent = 4 spaces
 set noexpandtab      " tabs are tabs
 set tabstop=4        " tab = 4 spaces
 set softtabstop=4    " backspace through spaces
 
+" }}}
 
-" ---------------------------------------------------------SAY NO TO AIRLINE
+
+" statusline {{{
+
 let g:currentmode={
     \ 'n'  : 'NORMAL ',
     \ 'no' : 'N·OPERATOR PENDING ',
@@ -120,10 +140,9 @@ function! StatuslineGit()
 	let l:branchname = GitBranch()
 	return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
 endfunction
+" }}}
 
-
-
-" ---------------------------------------------------------FUNCTIONS
+" functions {{{
 
 function! GetTabber()  " a lil function that integrates well with Tabular.vim
 	let c = nr2char(getchar())
@@ -147,12 +166,14 @@ function! HelpInNewTab ()
         execute "normal \<C-W>T"
     endif
 endfunction
+" }}}
 
-" ---------------------------------------------------------MAPPINGS
+" mappings {{{
 
 mapclear
 let mapleader=' '
 
+" nnoremap {{{
 nnoremap <Leader>o : only<cr>
 nnoremap <Leader>l : Lines<cr>
 nnoremap <Leader>b : Buffers<cr>
@@ -161,17 +182,23 @@ nnoremap <Leader>w : MtaJumpToOtherTag<cr>
 nnoremap <Leader>t : call GetTabber()<cr>
 nnoremap <Leader>n : tabnext<cr>
 nnoremap <Leader>N : tabprevious<cr>
-nnoremap <Leader>f : YcmCompleter FixIt<cr>
-
+nnoremap <F2>      : NERDTreeToggle<cr>
+nnoremap <Leader>N : tabprevious<cr>
 nnoremap H H:exec 'norm! '. &scrolloff . 'k'<cr>
 nnoremap L L:exec 'norm! '. &scrolloff . 'j'<cr>
+" }}}
+
 cmap w!! %!sudo tee > /dev/null %
 
+" vnoremap {{{
 vnoremap > >gv
 vnoremap < <gv
+" }}}
 
+" onoremap {{{
 onoremap in( :<c-u>normal! f(vi(<cr>
 onoremap in[ :<c-u>normal! f[vi[<cr>
+" }}}
 
 " I always linger on the shift key
 :command! WQ wq
@@ -185,25 +212,25 @@ iab #i #include
 iab #d #define
 cab dst put =strftime('%d %a, %b %Y')<cr>
 cab vg vimgrep
+" }}}
 
+" plugin settings {{{
 
-" ---------------------------------------------------------PLUGINS
-
-" git gutter settings
+" git gutter settings {{{
 let g:gitgutter_override_sign_column_highlight = 0
 let g:gitgutter_sign_added                     = '+'
 let g:gitgutter_sign_modified                  = '±'
 let g:gitgutter_sign_removed                   = '-'
 let g:gitgutter_sign_removed_first_line        = '^'
 let g:gitgutter_sign_modified_removed          = '#'
+" }}}
 
-
-" emmet
+" emmet {{{
 let g:user_emmet_mode='a'
 let g:user_emmet_leader_key='<C-X>'
+" }}}
 
-
-" incsearch
+" incsearch {{{
 let g:incsearch#auto_nohlsearch = 1
 map n  <Plug>(incsearch-nohl-n)
 map N  <Plug>(incsearch-nohl-N)
@@ -215,3 +242,12 @@ map g# <Plug>(incsearch-nohl-g#)
 map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)"
+" }}}
+
+" nerdtree {{{
+let g:NERDTreeMinimalUI  = 1
+let g:NERDTreeWinPos     = 'right'
+let g:NERDTreeStatusline = -1
+" }}}
+
+" }}}

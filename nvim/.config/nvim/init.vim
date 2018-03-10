@@ -11,7 +11,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'haya14busa/incsearch.vim'
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
@@ -34,16 +33,16 @@ augroup end
 
 
 augroup highlight_follows_focus
-    autocmd!
-    autocmd WinEnter * set cursorline
-    autocmd WinLeave * set nocursorline
+	autocmd!
+	autocmd WinEnter * set cursorline
+	autocmd WinLeave * set nocursorline
 augroup END
 
 
 augroup highlight_follows_vim
-    autocmd!
-    autocmd FocusGained * set cursorline
-    autocmd FocusLost * set nocursorline
+	autocmd!
+	autocmd FocusGained * set cursorline
+	autocmd FocusLost * set nocursorline
 augroup END
 
 
@@ -67,7 +66,7 @@ set laststatus=2
 set nowrap
 set noshowmode
 set cursorline
-set listchars=tab:│\ ,nbsp:␣,trail:∙,extends:,precedes:
+set listchars=tab:│\ ,nbsp:␣,trail:∙,extends:>,precedes:<
 set fillchars=vert:\│
 set scrolloff=12
 set ignorecase
@@ -82,6 +81,17 @@ set inccommand=split
 set backspace=indent,eol,start
 set hidden
 set wildmenu
+
+set wildignore+=.git,.hg,.svn
+set wildignore+=*.aux,*.out,*.toc
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest,*.rbc,*.class
+set wildignore+=*.ai,*.bmp,*.gif,*.ico,*.jpg,*.jpeg,*.png,*.psd,*.webp
+set wildignore+=*.avi,*.divx,*.mp4,*.webm,*.mov,*.m2ts,*.mkv,*.vob,*.mpg,*.mpeg
+set wildignore+=*.mp3,*.oga,*.ogg,*.wav,*.flac
+set wildignore+=*.eot,*.otf,*.ttf,*.woff
+set wildignore+=*.doc,*.pdf,*.cbr,*.cbz
+set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.kgb
+set wildignore+=*.swp,.lock,.DS_Store,._*
 
 colorscheme agila
 
@@ -125,7 +135,7 @@ set statusline+=%{StatuslineGit()}
 set statusline+=%#TeritaryBlock#
 set statusline+=\ %f\ 
 set statusline+=%M\ 
-set statusline+=%#Blanks#
+set statusline+=%#TeritaryBlock#
 set statusline+=%=
 set statusline+=%#SecondaryBlock#
 set statusline+=\ %Y\ 
@@ -155,16 +165,16 @@ nmap <silent> H  :let g:help_in_tabs = !g:help_in_tabs<CR>
 
 "Only apply to .txt files...
 augroup HelpInTabs
-    autocmd!
-    autocmd BufEnter  *.txt   call HelpInNewTab()
+	autocmd!
+	autocmd BufEnter  *.txt   call HelpInNewTab()
 augroup END
 
 "Only apply to help files...
 function! HelpInNewTab ()
-    if &buftype == 'help' && g:help_in_tabs
-        "Convert the help window to a tab...
-        execute "normal \<C-W>T"
-    endif
+	if &buftype == 'help' && g:help_in_tabs
+		"Convert the help window to a tab...
+		execute "normal \<C-W>T"
+	endif
 endfunction
 " }}}
 
@@ -184,8 +194,14 @@ nnoremap <Leader>n : tabnext<cr>
 nnoremap <Leader>N : tabprevious<cr>
 nnoremap <F2>      : NERDTreeToggle<cr>
 nnoremap <Leader>N : tabprevious<cr>
+nnoremap <Leader><ESC> : nohlsearch<cr>
 nnoremap H H:exec 'norm! '. &scrolloff . 'k'<cr>
 nnoremap L L:exec 'norm! '. &scrolloff . 'j'<cr>
+nnoremap <Leader>s : 
+
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+			\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+			\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 " }}}
 
 cmap w!! %!sudo tee > /dev/null %
@@ -198,6 +214,11 @@ vnoremap < <gv
 " onoremap {{{
 onoremap in( :<c-u>normal! f(vi(<cr>
 onoremap in[ :<c-u>normal! f[vi[<cr>
+" }}}
+
+" xnoremap {{{
+xnoremap + g<C-a>
+xnoremap - g<C-x>
 " }}}
 
 " I always linger on the shift key
@@ -228,20 +249,6 @@ let g:gitgutter_sign_modified_removed          = '#'
 " emmet {{{
 let g:user_emmet_mode='a'
 let g:user_emmet_leader_key='<C-X>'
-" }}}
-
-" incsearch {{{
-let g:incsearch#auto_nohlsearch = 1
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
-
-map / <Plug>(incsearch-forward)
-map ? <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)"
 " }}}
 
 " nerdtree {{{

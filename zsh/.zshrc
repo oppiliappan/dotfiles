@@ -25,7 +25,6 @@ alias nerdz='~/scripts/nerdinfo.sh'
 alias gtop='LANG=en_US.utf8 TERM=xterm-256color gtop'
 alias vim='nvim'
 alias nvime='nvim ~/.config/nvim/init.vim'
-alias upit='~/scripts/upit'
 
 [ -f ~/.fzf.zsh  ] && source ~/.fzf.zsh
 

@@ -27,7 +27,7 @@ override-redirect = true
 
 [bar/top]
 width    = 18%
-height   = 40
+height   = 45
 offset-x = 2%
 offset-y = 710
 
@@ -37,8 +37,8 @@ locale     = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = scientifica:size=8:antialias=true;-1
-font-1 = Siji:size=9:;
+font-0 = scientifica:size=8:antialias=true;0
+font-1 = Siji:size=9:;1
 
 modules-left   = 2bws
 modules-center = date
@@ -127,7 +127,7 @@ type              = custom/script
 exec              = ~/scripts/2bws.sh
 interval          = 0.01
 format-padding    = 3
-format-background = ${colors.modb1}
+format-background = ${colors.modb}
 click-left        = xdesktop -n
 click-right       = xdesktop -p
 scroll-up         = xdesktop -n

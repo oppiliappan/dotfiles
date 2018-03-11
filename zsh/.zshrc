@@ -7,7 +7,7 @@ export ZSH=/home/icyphox/.oh-my-zsh
 export EDITOR=/usr/bin/nvim
 export MANPAGER="nvim -c MANPAGER -"
 export BROWSER="/usr/bin/chromium-browser"
-export PATH=$PATH":home/icyphox/bin"
+export PATH=$PATH":$HOME/bin"
 
 ZSH_THEME="simple"
 

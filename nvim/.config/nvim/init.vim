@@ -11,7 +11,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-repeat'
+Plug 'mattn/emmet-vim', { 'for': ['*html', '*css'] }
 Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
 Plug 'lambdalisue/vim-manpager'
@@ -27,6 +28,7 @@ call plug#end()
 augroup indents
 	autocmd!
 	autocmd FileType less,css,html setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType less,css,html nnoremap <Leader>s vi{:sort<cr>
 	autocmd FileType text setlocal expandtab
 	autocmd FileType python setlocal ts=4 sts=4 sw=4 noexpandtab
 augroup end
@@ -197,7 +199,6 @@ nnoremap <Leader>N : tabprevious<cr>
 nnoremap <Leader><ESC> : nohlsearch<cr>
 nnoremap H H:exec 'norm! '. &scrolloff . 'k'<cr>
 nnoremap L L:exec 'norm! '. &scrolloff . 'j'<cr>
-nnoremap <Leader>s : 
 
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 			\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"

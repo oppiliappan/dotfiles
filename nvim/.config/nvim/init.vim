@@ -3,6 +3,7 @@
 " | \| \/_|_|  |
 "
 
+mapclear
 " vim-plugs {{{
 
 call plug#begin('~/.local/share/nvim/plugged')
@@ -17,21 +18,20 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
 Plug 'lambdalisue/vim-manpager'
 Plug 'scrooloose/nerdtree'
+Plug 'ervandew/supertab'
 
 call plug#end()
 
 " }}}
-
 
 " augroups {{{
 
 augroup indents
 	autocmd!
 	autocmd FileType less,css,html setlocal ts=2 sts=2 sw=2 expandtab
-	autocmd FileType less,css,html nnoremap <Leader>s vi{:sort<cr>
-	autocmd FileType text setlocal expandtab
+	autocmd FileType text,markdown setlocal expandtab
 	autocmd FileType python setlocal ts=4 sts=4 sw=4 noexpandtab
-augroup end
+augroup END
 
 
 augroup highlight_follows_focus
@@ -47,6 +47,17 @@ augroup highlight_follows_vim
 	autocmd FocusLost * set nocursorline
 augroup END
 
+augroup mapppings
+	autocmd!
+	autocmd FileType less,css,html nnoremap <Leader>s viB:sort<cr>
+augroup END
+
+augroup restorecursor
+	autocmd BufReadPost *
+		\ if line("'\"") > 1 && line("'\"") <= line("$") |
+		\   execute "normal! g`\"" |
+		\ endif
+augroup END
 
 " }}}
 
@@ -83,6 +94,7 @@ set inccommand=split
 set backspace=indent,eol,start
 set hidden
 set wildmenu
+set foldmethod=manual
 
 set wildignore+=.git,.hg,.svn
 set wildignore+=*.aux,*.out,*.toc
@@ -182,7 +194,6 @@ endfunction
 
 " mappings {{{
 
-mapclear
 let mapleader=' '
 
 " nnoremap {{{
@@ -197,6 +208,7 @@ nnoremap <Leader>N : tabprevious<cr>
 nnoremap <F2>      : NERDTreeToggle<cr>
 nnoremap <Leader>N : tabprevious<cr>
 nnoremap <Leader><ESC> : nohlsearch<cr>
+nnoremap <C-l> :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
 nnoremap H H:exec 'norm! '. &scrolloff . 'k'<cr>
 nnoremap L L:exec 'norm! '. &scrolloff . 'j'<cr>
 
@@ -215,6 +227,8 @@ vnoremap < <gv
 " onoremap {{{
 onoremap in( :<c-u>normal! f(vi(<cr>
 onoremap in[ :<c-u>normal! f[vi[<cr>
+onoremap ax a`
+onoremap ix i`
 " }}}
 
 " xnoremap {{{
@@ -256,6 +270,10 @@ let g:user_emmet_leader_key='<C-X>'
 let g:NERDTreeMinimalUI  = 1
 let g:NERDTreeWinPos     = 'right'
 let g:NERDTreeStatusline = -1
+" }}}
+
+" supertab {{{
+let g:SuperTabDefaultCompletionType = "context"
 " }}}
 
 " }}}

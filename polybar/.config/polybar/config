@@ -5,13 +5,13 @@
 ;
 
 [colors]
-foreground = #aaafb2
-background = #ff121c21
-modb       = #ff121c21
-modb1      = #ff1e2e36
-modb2      = #ff121c21
+foreground = #121c21
+background = #ffe8ede9
+modb       = #ffe8ede9
+modb1      = #ffe8ede9
+modb2      = #ffe8ede9
 
-red     = #f0696f
+red     = #b52441
 orange  = #fa9a6a
 yellow  = #f7cca1
 green   = #76a08c
@@ -128,7 +128,6 @@ exec              = ~/scripts/2bws.sh
 interval          = 0.01
 format-padding    = 3
 format-background = ${colors.modb}
-click-left        = xdesktop -n
-click-right       = xdesktop -p
 scroll-up         = xdesktop -n
 scroll-down       = xdesktop -p
+click-left = exec ~/scripts/gitpop.sh

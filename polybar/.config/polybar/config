@@ -27,8 +27,8 @@ override-redirect = true
 
 [bar/top]
 width    = 18%
-height   = 45
-offset-x = 2%
+height   = 30
+offset-x = 30
 offset-y = 710
 
 radius = 200
@@ -40,7 +40,7 @@ foreground = ${colors.foreground}
 font-0 = scientifica:size=8:antialias=true;0
 font-1 = Siji:size=9:;1
 
-modules-left   = 2bws
+modules-left   = gitpop 2bws
 modules-center = date
 modules-right  = previous playpause next
 
@@ -126,8 +126,15 @@ format-font       = 1
 type              = custom/script
 exec              = ~/scripts/2bws.sh
 interval          = 0.01
-format-padding    = 3
+format-padding    = 1
 format-background = ${colors.modb}
 scroll-up         = xdesktop -n
 scroll-down       = xdesktop -p
-click-left = exec ~/scripts/gitpop.sh
+
+[module/gitpop]
+exec = echo ▲
+type = custom/script
+format-padding    = 2
+format-background = ${colors.red}
+format-foreground = ${colors.modb}
+click-left = ~/scripts/gitpop.sh

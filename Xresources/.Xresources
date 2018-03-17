@@ -4,22 +4,22 @@
 !  /\| \|___)\_/|_|| \\_|___)
 !
 
-#define base00 #121c21
-#define base01 #1e2e36
-#define base02 #304b59
-#define base03 #3f6173
-#define base04 #7b8e98
-#define base05 #aaafb2
-#define base06 #bcd9e8
-#define base07 #cfefff
-#define base08 #f0696f
-#define base09 #fa9a6a
-#define base0A #f7cca1
-#define base0B #76a08c
-#define base0C #5f9993
-#define base0D #718c97
-#define base0E #ceb5ce
-#define base0F #877366
+#define base00 #dce0ce
+#define base01 #cbcfbe
+#define base02 #b9bdad
+#define base03 #a5a89a
+#define base04 #666666
+#define base05 #525252
+#define base06 #404040
+#define base07 #323232
+#define base08 #854457
+#define base09 #b19575
+#define base0A #a1945c
+#define base0B #3c5e3d
+#define base0C #3e6d70
+#define base0D #1a3e4c
+#define base0E #373658
+#define base0F #443224
 
 *foreground:   base05
 *background:   base00
@@ -77,7 +77,7 @@ rofi.font              : scientifica 9
 rofi.columns           : 1
 rofi.separator-style   : none
 rofi.hide-scrollbar    : true
-rofi.location          : 0
+rofi.location          : 2
 rofi.padding           : 12
 rofi.fullscreen        : false
 rofi.width             : 350

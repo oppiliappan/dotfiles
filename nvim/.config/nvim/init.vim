@@ -120,25 +120,25 @@ set softtabstop=4    " backspace through spaces
 " statusline {{{
 
 let g:currentmode={
-    \ 'n'  : 'NORMAL ',
-    \ 'no' : 'N·OPERATOR PENDING ',
-    \ 'v'  : 'VISUAL ',
-    \ 'V'  : 'V·LINE ',
-    \ '' : 'V·BLOCK ',
-    \ 's'  : 'SELECT ',
-    \ 'S'  : 'S·LINE ',
-    \ '' : 'S·BLOCK ',
-    \ 'i'  : 'INSERT ',
-    \ 'R'  : 'REPLACE ',
-    \ 'Rv' : 'V·REPLACE ',
-    \ 'c'  : 'COMMAND ',
-    \ 'cv' : 'VIM EX ',
-    \ 'ce' : 'EX ',
-    \ 'r'  : 'PROMPT ',
-    \ 'rm' : 'MORE ',
-    \ 'r?' : 'CONFIRM ',
-    \ '!'  : 'SHELL ',
-    \ 't'  : 'TERMINAL '}
+    \ 'n'  : 'normal ',
+    \ 'no' : 'n·operator pending ',
+    \ 'v'  : 'visual ',
+    \ 'V'  : 'v·line ',
+    \ '' : 'v·block ',
+    \ 's'  : 'select ',
+    \ 'S'  : 's·line ',
+    \ '' : 's·block ',
+    \ 'i'  : 'insert ',
+    \ 'R'  : 'replace ',
+    \ 'Rv' : 'v·replace ',
+    \ 'c'  : 'command ',
+    \ 'cv' : 'vim ex ',
+    \ 'ce' : 'ex ',
+    \ 'r'  : 'prompt ',
+    \ 'rm' : 'more ',
+    \ 'r?' : 'confirm ',
+    \ '!'  : 'shell ',
+    \ 't'  : 'terminal '}
 
 
 set statusline=

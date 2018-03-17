@@ -24,14 +24,14 @@ set color_error=lightred
 set color_info=lightyellow
 
 # Color of currently playing track.
-set color_win_cur=red
+set color_win_cur=2
 
 # Color of the separator line between windows in view (1).
 set color_separator=black
 
 # Color of window titles (topmost line of the screen).
 set color_win_title_bg=default
-set color_win_title_fg=red
+set color_win_title_fg=black
 
 # Status line color.
 set color_statusline_bg=default
@@ -39,23 +39,23 @@ set color_statusline_fg=gray
 
 # Color of the line displaying currently playing track.
 set color_titleline_bg=black
-set color_titleline_fg=red
+set color_titleline_fg=green
 
 # Color of the selected row which is also the currently playing track in active window.
-set color_win_cur_sel_bg=default
-set color_win_cur_sel_fg=yellow
+set color_win_cur_sel_bg=10
+set color_win_cur_sel_fg=2
 
 # Color of the selected row which is also the currently playing track in inactive window.
-set color_win_inactive_cur_sel_bg=default
-set color_win_inactive_cur_sel_fg=red
+set color_win_inactive_cur_sel_bg=0
+set color_win_inactive_cur_sel_fg=2
 
 # Color of selected row in inactive window.
-set color_win_inactive_sel_bg=default
-set color_win_inactive_sel_fg=default
+set color_win_inactive_sel_bg=0
+set color_win_inactive_sel_fg=7
 
 # Color of selected row in active window.
-set color_win_sel_bg=default
-set color_win_sel_fg=yellow
+set color_win_sel_bg=10
+set color_win_sel_fg=7
 
 # Command line color.
 set color_cmdline_bg=default

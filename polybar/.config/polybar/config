@@ -5,20 +5,20 @@
 ;
 
 [colors]
-foreground = #121c21
-background = #ffe8ede9
-modb       = #ffe8ede9
-modb1      = #ffe8ede9
-modb2      = #ffe8ede9
+foreground = #323232
+background = #ffdce0ce
+modb       = #ffdce0ce
+modb1      = #ffdce0ce
+modb2      = #ffdce0ce
 
-red     = #b52441
-orange  = #fa9a6a
-yellow  = #f7cca1
-green   = #76a08c
-cyan    = #5f9993
-blue    = #718c97
-magenta = #ce7fcd
-white   = #877366
+red     = #854457
+orange  = #b19575
+yellow  = #a1945c
+green   = #3c5e3d
+cyan    = #3e6d70
+blue    = #1a3e4c
+magenta = #373658
+white   = #443224
 
 [global/wm]
 margin-top        = 0
@@ -26,8 +26,8 @@ margin-bottom     = 0
 override-redirect = true
 
 [bar/top]
-width    = 18%
-height   = 30
+width    = 22%
+height   = 38
 offset-x = 30
 offset-y = 710
 
@@ -70,7 +70,7 @@ module-margin-right = 0
 ; ramp-volume-1       = 
 ; ramp-volume-2       = 
 ; 
-; ramp-volume-foreground = ${colors.red}
+; ramp-volume-foreground = ${colors.green}
 ; 
 ; label-muted-padding    = 2
 ; label-muted            =  muted
@@ -81,7 +81,7 @@ type                     = internal/date
 interval                 = 1
 date                     = " %I:%M"
 format-prefix            = 
-format-prefix-foreground = ${colors.red}
+format-prefix-foreground = ${colors.green}
 format-background        = ${colors.modb}
 format-padding           = 2
 
@@ -93,7 +93,7 @@ label             = 
 exec              = echo label
 click-left        = exec cmus-remote -r -p
 click-right        = xdesktop -g 4
-format-foreground = ${colors.red}
+format-foreground = ${colors.green}
 format-background = ${colors.modb}
 format-padding    = 2
 
@@ -104,7 +104,7 @@ label             = 
 exec              = echo label
 click-left        = exec cmus-remote -n -p
 click-right        = xdesktop -g 4
-format-foreground = ${colors.red}
+format-foreground = ${colors.green}
 format-background = ${colors.modb}
 format-padding    = 2
 
@@ -116,7 +116,7 @@ click-left        = cmus-remote -u
 click-right       = xdesktop -g 4
 scroll-up         = exec amixer -D pulse sset Master 2%+
 scroll-down       = exec amixer -D pulse sset Master 2%-
-format-foreground = ${colors.red}
+format-foreground = ${colors.green}
 format-background = ${colors.modb}
 format-padding    = 0
 
@@ -132,9 +132,9 @@ scroll-up         = xdesktop -n
 scroll-down       = xdesktop -p
 
 [module/gitpop]
-exec = echo ▲
+exec = echo +
 type = custom/script
-format-padding    = 2
-format-background = ${colors.red}
+format-padding    = 3
+format-background = ${colors.green}
 format-foreground = ${colors.modb}
 click-left = ~/scripts/gitpop.sh

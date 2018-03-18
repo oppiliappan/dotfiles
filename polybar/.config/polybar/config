@@ -5,20 +5,20 @@
 ;
 
 [colors]
-foreground = #323232
-background = #ffdce0ce
-modb       = #ffdce0ce
-modb1      = #ffdce0ce
-modb2      = #ffdce0ce
+foreground = ${xrdb:color15}
+background = ${xrdb:color0}
+modb       = ${xrdb:color0}
+modb1      = ${xrdb:color11}
+modb2      = ${xrdb:color8}
 
-red     = #854457
-orange  = #b19575
-yellow  = #a1945c
-green   = #3c5e3d
-cyan    = #3e6d70
-blue    = #1a3e4c
-magenta = #373658
-white   = #443224
+red     = ${xrdb:color8}
+orange  = ${xrdb:color9}
+yellow  = ${xrdb:color3}
+green   = ${xrdb:color2}
+cyan    = ${xrdb:color6}
+blue    = ${xrdb:color4}
+magenta = ${xrdb:color5}
+brown   = ${xrdb:color7}
 
 [global/wm]
 margin-top        = 0
@@ -28,7 +28,7 @@ override-redirect = true
 [bar/top]
 width    = 22%
 height   = 38
-offset-x = 30
+offset-x = 32
 offset-y = 710
 
 radius = 200
@@ -38,7 +38,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 font-0 = scientifica:size=8:antialias=true;0
-font-1 = Siji:size=9:;1
+font-1 = Siji:size=9:;0
 
 modules-left   = gitpop 2bws
 modules-center = date

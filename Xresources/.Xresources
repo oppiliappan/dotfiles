@@ -12,13 +12,13 @@
 #define base05 #525252
 #define base06 #404040
 #define base07 #323232
-#define base08 #854457
+#define base08 #9c4854
 #define base09 #b19575
 #define base0A #a1945c
-#define base0B #3c5e3d
-#define base0C #3e6d70
-#define base0D #1a3e4c
-#define base0E #373658
+#define base0B #7f941a
+#define base0C #1a9767
+#define base0D #147094
+#define base0E #807b97
 #define base0F #443224
 
 *foreground:   base05
@@ -68,8 +68,8 @@ URxvt.matcher.button  : 1
 rofi.color-enabled: true
 
 rofi.color-window:    base00 , base00 , base00 , base00 , base05
-rofi.color-normal:    base00 , base05 , base00 , base00 , base0E
-rofi.color-active:    base00 , base0E , base00 , base00 , base05
+rofi.color-normal:    base00 , base05 , base00 , base0B , base00
+rofi.color-active:    base02 , base0E , base00 , base0B , base05
 rofi.color-urgent:    base00 , base03 , base00 , base00 , base05
 
 rofi.fake-transparency : true
@@ -77,10 +77,12 @@ rofi.font              : scientifica 9
 rofi.columns           : 1
 rofi.separator-style   : none
 rofi.hide-scrollbar    : true
-rofi.location          : 2
-rofi.padding           : 12
+rofi.location          : 1
+rofi.yoffset           : 32
+rofi.xoffset           : 32
+rofi.padding           : 32
 rofi.fullscreen        : false
-rofi.width             : 350
+rofi.width             : 200
 rofi.lines             : 6
 
 Xft.dpi       : 96

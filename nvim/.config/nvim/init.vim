@@ -59,6 +59,10 @@ augroup restorecursor
 		\ endif
 augroup END
 
+augroup nerdtree
+	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+augroup END
+
 " }}}
 
 
@@ -270,6 +274,8 @@ let g:user_emmet_leader_key='<C-X>'
 let g:NERDTreeMinimalUI  = 1
 let g:NERDTreeWinPos     = 'right'
 let g:NERDTreeStatusline = -1
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '-'
 " }}}
 
 " supertab {{{

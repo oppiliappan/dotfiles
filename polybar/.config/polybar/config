@@ -27,7 +27,7 @@ override-redirect = true
 
 [bar/top]
 width    = 22%
-height   = 38
+height   = 40
 offset-x = 32
 offset-y = 710
 
@@ -70,7 +70,7 @@ module-margin-right = 0
 ; ramp-volume-1       = 
 ; ramp-volume-2       = 
 ; 
-; ramp-volume-foreground = ${colors.green}
+; ramp-volume-foreground = ${colors.cyan}
 ; 
 ; label-muted-padding    = 2
 ; label-muted            =  muted
@@ -81,7 +81,7 @@ type                     = internal/date
 interval                 = 1
 date                     = " %I:%M"
 format-prefix            = 
-format-prefix-foreground = ${colors.green}
+format-prefix-foreground = ${colors.cyan}
 format-background        = ${colors.modb}
 format-padding           = 2
 
@@ -93,7 +93,7 @@ label             = 
 exec              = echo label
 click-left        = exec cmus-remote -r -p
 click-right        = xdesktop -g 4
-format-foreground = ${colors.green}
+format-foreground = ${colors.cyan}
 format-background = ${colors.modb}
 format-padding    = 2
 
@@ -104,7 +104,7 @@ label             = 
 exec              = echo label
 click-left        = exec cmus-remote -n -p
 click-right        = xdesktop -g 4
-format-foreground = ${colors.green}
+format-foreground = ${colors.cyan}
 format-background = ${colors.modb}
 format-padding    = 2
 
@@ -116,7 +116,7 @@ click-left        = cmus-remote -u
 click-right       = xdesktop -g 4
 scroll-up         = exec amixer -D pulse sset Master 2%+
 scroll-down       = exec amixer -D pulse sset Master 2%-
-format-foreground = ${colors.green}
+format-foreground = ${colors.cyan}
 format-background = ${colors.modb}
 format-padding    = 0
 
@@ -135,6 +135,6 @@ scroll-down       = xdesktop -p
 exec = echo +
 type = custom/script
 format-padding    = 3
-format-background = ${colors.green}
+format-background = ${colors.cyan}
 format-foreground = ${colors.modb}
 click-left = ~/scripts/gitpop.sh

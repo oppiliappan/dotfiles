@@ -65,7 +65,8 @@ static void halfandcentered(const Arg *arg)
 }
 
 static const char *terminal[] = {"urxvtc", NULL};
-static const char *rofi[] = {"/home/icyphox/rofi.sh", NULL};
+static const char *rofir[] = {"/home/icyphox/rofi.sh", NULL};
+static const char *rofiw[] = {"/home/icyphox/rofiw.sh", NULL};
 #define WORKSPACES 5
 ///---Shortcuts---///
 /* Check /usr/include/X11/keysymdef.h for the list of all keys
@@ -196,13 +197,13 @@ static key keys[] = {
     {  MOD |SHIFT,        XK_Right,      cursor_move,       {.i=TWOBWM_CURSOR_RIGHT}},
     {  MOD |SHIFT,        XK_Left,       cursor_move,       {.i=TWOBWM_CURSOR_LEFT}},
     // Start programs
-    {  MOD ,              XK_w,          start,             {.com = rofi}},
+    {  MOD ,              XK_w,          start,             {.com = rofiw}},
     // Exit or restart 2bwm
     {  MOD |CONTROL,      XK_q,          twobwm_exit,       {.i=0}},
     {  MOD |CONTROL,      XK_r,          twobwm_restart,    {.i=0}},
     {  MOD ,              XK_space,      halfandcentered,   {.i=0}},
     {  MOD ,              XK_Return,     start,             {.com = terminal} },
-    {  MOD ,              XK_d,          start,             {.com = rofi} },
+    {  MOD ,              XK_d,          start,             {.com = rofir} },
     // Change current workspace
        DESKTOPCHANGE(     XK_1,                             0)
        DESKTOPCHANGE(     XK_2,                             1)

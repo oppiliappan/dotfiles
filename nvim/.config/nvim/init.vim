@@ -83,7 +83,7 @@ set laststatus=2
 set nowrap
 set noshowmode
 set cursorline
-set listchars=tab:│\ ,nbsp:␣,trail:∙,extends:>,precedes:<
+set listchars=tab:│\ ,nbsp:␣,trail:∙,extends:>,precedes:<,eol:¬
 set fillchars=vert:\│
 set scrolloff=12
 set ignorecase

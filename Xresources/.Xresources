@@ -68,8 +68,8 @@ URxvt.matcher.button  : 1
 rofi.color-enabled: true
 
 rofi.color-window:    base00 , base00 , base00 , base00 , base05
-rofi.color-normal:    base00 , base05 , base00 , base0B , base00
-rofi.color-active:    base02 , base0E , base00 , base0B , base05
+rofi.color-normal:    base00 , base05 , base00 , base0C , base00
+rofi.color-active:    base02 , base0E , base00 , base0B , base00
 rofi.color-urgent:    base00 , base03 , base00 , base00 , base05
 
 rofi.fake-transparency : true
@@ -82,7 +82,7 @@ rofi.yoffset           : 32
 rofi.xoffset           : 32
 rofi.padding           : 32
 rofi.fullscreen        : false
-rofi.width             : 200
+rofi.width             : 350
 rofi.lines             : 6
 
 Xft.dpi       : 96

@@ -2,8 +2,8 @@
 
 duration=2
 
-offsetx=32
-offsety=570
+offsetx=0
+offsety=602
 
 n30f -x $offsetx -y $offsety ~/scripts/popups/bg.png -c ~/scripts/killpop.sh &
 sleep 0.2

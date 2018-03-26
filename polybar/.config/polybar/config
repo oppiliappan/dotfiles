@@ -5,7 +5,7 @@
 ;
 
 [colors]
-foreground = ${xrdb:color15}
+foreground = ${xrdb:color7}
 background = ${xrdb:color0}
 modb       = ${xrdb:color0}
 modb1      = ${xrdb:color11}
@@ -26,10 +26,10 @@ margin-bottom     = 0
 override-redirect = true
 
 [bar/top]
-width    = 22%
+width    = 100%
 height   = 40
-offset-x = 32
-offset-y = 710
+offset-x = 0
+offset-y = 728
 
 radius = 200
 
@@ -40,9 +40,9 @@ foreground = ${colors.foreground}
 font-0 = scientifica:size=8:antialias=true;0
 font-1 = Siji:size=9:;0
 
-modules-left   = gitpop 2bws
-modules-center = date
-modules-right  = previous playpause next
+modules-left   = gitpop date
+modules-center = 2bws
+modules-right  = cmusnp previous playpause next
 
 tray-position    =
 tray-padding     = 2
@@ -138,3 +138,15 @@ format-padding    = 3
 format-background = ${colors.cyan}
 format-foreground = ${colors.modb}
 click-left = ~/scripts/gitpop.sh
+
+[module/cmusnp]
+type              = custom/script
+exec              = ~/scripts/cmusnp.sh
+interval          = 0.01
+click-left        = cmus-remote -u
+click-right       = xdesktop -g 4
+scroll-up         = exec amixer -D pulse sset Master 2%+
+scroll-down       = exec amixer -D pulse sset Master 2%-
+format-foreground = ${colors.foreground}
+format-background = ${colors.modb}
+format-padding    = 0

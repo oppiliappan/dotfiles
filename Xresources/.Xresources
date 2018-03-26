@@ -4,22 +4,22 @@
 !  /\| \|___)\_/|_|| \\_|___)
 !
 
-#define base00 #dce0ce
-#define base01 #cbcfbe
-#define base02 #b9bdad
-#define base03 #a5a89a
-#define base04 #666666
-#define base05 #525252
-#define base06 #404040
-#define base07 #323232
-#define base08 #9c4854
-#define base09 #b19575
-#define base0A #a1945c
-#define base0B #7f941a
-#define base0C #1a9767
-#define base0D #147094
-#define base0E #807b97
-#define base0F #443224
+#define base00 #1d2021
+#define base01 #3c3836
+#define base02 #504945
+#define base03 #665c54
+#define base04 #bdae93
+#define base05 #d5c4a1
+#define base06 #ebdbb2
+#define base07 #fbf1c7
+#define base08 #fb4934
+#define base09 #fe8019
+#define base0A #fabd2f
+#define base0B #b8bb26
+#define base0C #8ec07c
+#define base0D #83a598
+#define base0E #d3869b
+#define base0F #d65d0e
 
 *foreground:   base05
 *background:   base00

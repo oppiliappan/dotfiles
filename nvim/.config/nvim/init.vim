@@ -210,7 +210,6 @@ nnoremap <Leader>t : call GetTabber()<cr>
 nnoremap <Leader>n : tabnext<cr>
 nnoremap <Leader>N : tabprevious<cr>
 nnoremap <F2>      : NERDTreeToggle<cr>
-nnoremap <Leader>N : tabprevious<cr>
 nnoremap <Leader><ESC> : nohlsearch<cr>
 nnoremap <C-l> :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
 nnoremap H H:exec 'norm! '. &scrolloff . 'k'<cr>

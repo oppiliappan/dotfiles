@@ -8,9 +8,9 @@ draw(){
 	for i in {1..5}; do
 		if [[ $i -eq $ws ]]
 		then
-			echo -ne "%{F#8ec07c} ♦"
+			echo -ne "%{F#8ec07c}  ♦"
 		else
-			echo -ne "%{F#666666} ∙"
+			echo -ne "%{F#666666}  ∙"
 		fi
 	done
 }

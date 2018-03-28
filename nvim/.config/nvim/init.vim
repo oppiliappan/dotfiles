@@ -80,6 +80,7 @@ filetype indent on
 set number
 set relativenumber
 set laststatus=2
+set showtabline=2
 set nowrap
 set noshowmode
 set cursorline
@@ -124,25 +125,25 @@ set softtabstop=4    " backspace through spaces
 " statusline {{{
 
 let g:currentmode={
-    \ 'n'  : 'normal ',
-    \ 'no' : 'n·operator pending ',
-    \ 'v'  : 'visual ',
-    \ 'V'  : 'v·line ',
-    \ '' : 'v·block ',
-    \ 's'  : 'select ',
-    \ 'S'  : 's·line ',
-    \ '' : 's·block ',
-    \ 'i'  : 'insert ',
-    \ 'R'  : 'replace ',
-    \ 'Rv' : 'v·replace ',
-    \ 'c'  : 'command ',
-    \ 'cv' : 'vim ex ',
-    \ 'ce' : 'ex ',
-    \ 'r'  : 'prompt ',
-    \ 'rm' : 'more ',
-    \ 'r?' : 'confirm ',
-    \ '!'  : 'shell ',
-    \ 't'  : 'terminal '}
+    \ 'n'  : 'Normal ',
+    \ 'no' : 'N·Operator Pending ',
+    \ 'v'  : 'Visual ',
+    \ 'V'  : 'V·line ',
+    \ '' : 'V·block ',
+    \ 's'  : 'Select ',
+    \ 'S'  : 'S·line ',
+    \ '' : 'S·block ',
+    \ 'i'  : 'Insert ',
+    \ 'R'  : 'Replace ',
+    \ 'Rv' : 'V·replace ',
+    \ 'c'  : 'Command ',
+    \ 'cv' : 'Vim ex ',
+    \ 'ce' : 'Ex ',
+    \ 'r'  : 'Prompt ',
+    \ 'rm' : 'More ',
+    \ 'r?' : 'Confirm ',
+    \ '!'  : 'Shell ',
+    \ 't'  : 'Terminal '}
 
 
 set statusline=

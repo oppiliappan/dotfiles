@@ -171,7 +171,7 @@ function! StatuslineGit()
 endfunction
 " }}}
 
-" functions {{{
+" Functions {{{
 
 function! GetTabber()  " a lil function that integrates well with Tabular.vim
 	let c = nr2char(getchar())
@@ -182,13 +182,13 @@ let g:help_in_tabs = 1
 
 nmap <silent> H  :let g:help_in_tabs = !g:help_in_tabs<CR>
 
-"Only apply to .txt files...
+" Only apply to .txt files...
 augroup HelpInTabs
 	autocmd!
 	autocmd BufEnter  *.txt   call HelpInNewTab()
 augroup END
 
-"Only apply to help files...
+" Only apply to help files...
 function! HelpInNewTab ()
 	if &buftype == 'help' && g:help_in_tabs
 		"Convert the help window to a tab...
@@ -226,6 +226,7 @@ cmap w!! %!sudo tee > /dev/null %
 " vnoremap {{{
 vnoremap > >gv
 vnoremap < <gv
+vnoremap : y:<C-r>"
 " }}}
 
 " onoremap {{{
@@ -255,15 +256,6 @@ cab vg vimgrep
 " }}}
 
 " plugin settings {{{
-
-" git gutter settings {{{
-let g:gitgutter_override_sign_column_highlight = 0
-let g:gitgutter_sign_added                     = '+'
-let g:gitgutter_sign_modified                  = '±'
-let g:gitgutter_sign_removed                   = '-'
-let g:gitgutter_sign_removed_first_line        = '^'
-let g:gitgutter_sign_modified_removed          = '#'
-" }}}
 
 " emmet {{{
 let g:user_emmet_mode='a'

@@ -5,5 +5,5 @@ images/
 *~
 *.swp
 *.pyc
-*.png
+images
 weechat/sec.conf

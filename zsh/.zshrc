@@ -36,3 +36,4 @@ PERL_MB_OPT="--install_base \"/home/icyphox/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/icyphox/perl5"; export PERL_MM_OPT;
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

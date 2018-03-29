@@ -39,6 +39,7 @@ foreground = ${colors.foreground}
 
 font-0 = scientifica:size=8:antialias=true;0
 font-1 = Siji:size=9:;0
+font-2 = scientifica:size=8:weight=bold:antialias=true;0
 
 modules-left   = gitpop date
 modules-center = 2bws
@@ -141,6 +142,7 @@ click-left = ~/scripts/gitpop.sh
 
 [module/cmusnp]
 type              = custom/script
+format-text       = <label>
 exec              = ~/scripts/cmusnp.sh
 interval          = 0.01
 click-left        = cmus-remote -u

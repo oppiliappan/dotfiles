@@ -47,7 +47,7 @@ set color_win_cur_sel_fg=cyan
 
 # Color of the selected row which is also the currently playing track in inactive window.
 set color_win_inactive_cur_sel_bg=0
-set color_win_inactive_cur_sel_fg=cyan
+set color_win_inactive_cur_sel_fg=default
 
 # Color of selected row in inactive window.
 set color_win_inactive_sel_bg=0

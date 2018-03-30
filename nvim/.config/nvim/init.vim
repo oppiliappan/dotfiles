@@ -19,6 +19,7 @@ Plug 'godlygeek/tabular'
 Plug 'lambdalisue/vim-manpager'
 Plug 'scrooloose/nerdtree'
 Plug 'ervandew/supertab'
+Plug 'yuttie/comfortable-motion.vim'
 
 call plug#end()
 

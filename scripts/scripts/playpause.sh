@@ -14,5 +14,5 @@ then
 		echo -ne " %{F#8ec07c} "
 	fi
 else
-	echo -ne ""
+	echo -ne "  "
 fi

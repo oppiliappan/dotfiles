@@ -1,9 +1,10 @@
-images/
 *.txt
 *logs*
 *.log
 *~
 *.swp
 *.pyc
-images
+images/
+*gitgraph*
+*colors*
 weechat/sec.conf

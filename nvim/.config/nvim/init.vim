@@ -18,8 +18,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
 Plug 'lambdalisue/vim-manpager'
 Plug 'scrooloose/nerdtree'
-Plug 'ervandew/supertab'
 Plug 'yuttie/comfortable-motion.vim'
+Plug 'ervandew/supertab'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -94,7 +95,7 @@ set sidescroll=40
 set incsearch
 set hlsearch
 set undofile
-set undodir=~/.vim/undodir
+set undodir=~/tmp
 set path+=**
 set inccommand=split
 set backspace=indent,eol,start
@@ -274,5 +275,4 @@ let g:NERDTreeDirArrowCollapsible = '-'
 " supertab {{{
 let g:SuperTabDefaultCompletionType = "context"
 " }}}
-
 " }}}

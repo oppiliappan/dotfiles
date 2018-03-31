@@ -65,8 +65,8 @@ static void halfandcentered(const Arg *arg)
 }
 
 static const char *terminal[] = {"urxvtc", NULL};
-static const char *rofir[] = {"/home/icyphox/rofi.sh", NULL};
-static const char *rofiw[] = {"/home/icyphox/rofiw.sh", NULL};
+static const char *rofir[] = {"/home/nerdypepper/scripts/rofi.sh", NULL};
+static const char *rofiw[] = {"/home/nerdypepper/scripts/rofiw.sh", NULL};
 #define WORKSPACES 5
 ///---Shortcuts---///
 /* Check /usr/include/X11/keysymdef.h for the list of all keys

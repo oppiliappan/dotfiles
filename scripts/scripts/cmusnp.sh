@@ -7,7 +7,6 @@ then
 	then
 		artist=$( cmus-remote -Q | grep tag\ artist\ | sed 's/tag artist //' )
 		title=$( cmus-remote -Q | grep tag\ title\ | sed 's/tag title //' )
-		shuffle=$( cmus-remote -Q | grep set\ shuffle\ | sed 's/set shuffle //' )
 
 		echo -ne $title - $artist
 	elif [[ "$status" = *stopped* ]]

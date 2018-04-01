@@ -41,5 +41,5 @@ graphs.axis('off')
 
 # plt.fill_between(range(0,no_of_days), old_result, color='#323232', alpha='0.6')
 # plt.fill_between(range(0,no_of_days), result, color='#7f941a', alpha='0.8')
-plt.savefig('/home/icyphox/scripts/popups/gitgraph.png', dpi=24)
+plt.savefig('/home/nerdypepper/scripts/popups/gitgraph.png', dpi=24)
 

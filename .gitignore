@@ -7,4 +7,6 @@
 images/
 *gitgraph*
 *colors*
+scripts/scripts/graphs
+*after*
 weechat/sec.conf

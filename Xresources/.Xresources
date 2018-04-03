@@ -4,22 +4,22 @@
 !  /\| \|___)\_/|_|| \\_|___)
 !
 
-#define base00 #1d2021
-#define base01 #3c3836
-#define base02 #504945
-#define base03 #665c54
-#define base04 #bdae93
-#define base05 #d5c4a1
-#define base06 #ebdbb2
-#define base07 #fbf1c7
-#define base08 #fb4934
-#define base09 #fe8019
-#define base0A #fabd2f
-#define base0B #b8bb26
-#define base0C #8ec07c
-#define base0D #83a598
-#define base0E #d3869b
-#define base0F #d65d0e
+#define base00 #081018
+#define base01 #3a3a3a
+#define base02 #525252
+#define base03 #5c5c5c
+#define base04 #696969
+#define base05 #a3a7a8
+#define base06 #bdc1c3
+#define base07 #ccd0d2
+#define base08 #455457
+#define base09 #455457
+#define base0A #455457
+#define base0B #455457
+#define base0C #70a070
+#define base0D #455457
+#define base0E #455457
+#define base0F #455457
 
 *foreground:   base05
 *background:   base00
@@ -50,7 +50,7 @@ URxvt.font         :xft:scientifica:size=9
 URxvt.lineSpace           : 0
 URxvt.letterSpace         : 1
 URxvt.scrollBar           : false
-URxvt.internalBorder      : 34
+URxvt.internalBorder      : 25
 URxvt.cursorUnderline     : false
 URxvt.geometry            : 70x35
 URxvt.thickness           : 5
@@ -99,8 +99,8 @@ Xft.lcdfilter : lcddefault
 
 twobwm.border_width: 8
 twobwm.outer_border: 6
-twobwm.focus_color: base02
-twobwm.unfocus_color: base01
+twobwm.focus_color: base00
+twobwm.unfocus_color: base00
 twobwm.fixed_color: base0C
 twobwm.unkill_color: base08
 twobwm.fixed_unkill_color: base0E

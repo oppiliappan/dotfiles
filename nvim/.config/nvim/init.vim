@@ -21,6 +21,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
@@ -36,11 +37,11 @@ augroup indents
 augroup END
 
 
-augroup highlight_follows_focus
-	autocmd!
-	autocmd WinEnter * set cursorline
-	autocmd WinLeave * set nocursorline
-augroup END
+" augroup highlight_follows_focus
+" 	autocmd!
+" 	autocmd WinEnter * set cursorline
+" 	autocmd WinLeave * set nocursorline
+" augroup END
 
 
 augroup highlight_follows_vim
@@ -85,7 +86,6 @@ set laststatus=2
 set showtabline=2
 set nowrap
 set noshowmode
-set cursorline
 set listchars=tab:│\ ,nbsp:␣,trail:∙,extends:>,precedes:<,eol:¬
 set fillchars=vert:\│
 set scrolloff=12
@@ -153,10 +153,10 @@ set statusline+=%#PrimaryBlock#
 set statusline+=\ %{g:currentmode[mode()]}
 set statusline+=%#SecondaryBlock#
 set statusline+=%{StatuslineGit()}
-set statusline+=%#TeritaryBlock#
+set statusline+=%#Blanks#
 set statusline+=\ %f\ 
 set statusline+=%M\ 
-set statusline+=%#TeritaryBlock#
+set statusline+=%#Blanks#
 set statusline+=%=
 set statusline+=%#SecondaryBlock#
 set statusline+=\ %Y\ 

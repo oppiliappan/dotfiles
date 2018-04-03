@@ -8,6 +8,7 @@ export EDITOR=/usr/bin/nvim
 export MANPAGER="nvim -c MANPAGER -"
 export BROWSER="/usr/bin/chromium-browser"
 export PATH=$PATH":$HOME/bin"
+export PATH=$PATH":$HOME/.cargo/bin"
 
 ZSH_THEME="simple"
 

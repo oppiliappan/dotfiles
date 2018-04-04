@@ -12,4 +12,11 @@ prp="\e[35m"
 bprp="\e[35;1m"
 rst="\e[0m"
 
-echo ${SHELL: -3}
+echo
+echo
+echo -e " ${cyn} shell  ${rst}"  " zsh    "
+echo -e " ${cyn} wm     ${rst}"  " 2bwm   "
+echo -e " ${cyn} editor ${rst}"  " nvim   "
+echo -e " ${cyn} distro ${rst}"  " debian "
+echo
+echo

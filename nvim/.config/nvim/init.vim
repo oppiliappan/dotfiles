@@ -4,6 +4,7 @@
 "
 
 mapclear
+
 " vim-plugs {{{
 
 call plug#begin('~/.local/share/nvim/plugged')
@@ -18,10 +19,11 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
 Plug 'lambdalisue/vim-manpager'
 Plug 'scrooloose/nerdtree'
-Plug 'yuttie/comfortable-motion.vim'
 Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
 Plug 'rust-lang/rust.vim'
+Plug 'haya14busa/incsearch.vim'
+
 
 call plug#end()
 
@@ -67,7 +69,6 @@ augroup nerdtree
 augroup END
 
 " }}}
-
 
 " general settings {{{
 
@@ -123,7 +124,6 @@ set softtabstop=4    " backspace through spaces
 
 " }}}
 
-
 " statusline {{{
 
 let g:currentmode={
@@ -154,8 +154,6 @@ set statusline+=\ %{g:currentmode[mode()]}
 set statusline+=%#SecondaryBlock#
 set statusline+=%{StatuslineGit()}
 set statusline+=%#Blanks#
-set statusline+=\ %f\ 
-set statusline+=%M\ 
 set statusline+=%#Blanks#
 set statusline+=%=
 set statusline+=%#SecondaryBlock#
@@ -265,14 +263,24 @@ let g:user_emmet_leader_key='<C-X>'
 " }}}
 
 " nerdtree {{{
-let g:NERDTreeMinimalUI  = 1
-let g:NERDTreeWinPos     = 'right'
-let g:NERDTreeStatusline = -1
-let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeMinimalUI           = 1
+let g:NERDTreeWinPos              = 'right'
+let g:NERDTreeStatusline          = -1
+let g:NERDTreeDirArrowExpandable  = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 " }}}
 
 " supertab {{{
 let g:SuperTabDefaultCompletionType = "context"
 " }}}
+
+" gitgutter {{{
+let g:gitgutter_override_sign_column_highlight = 0
+let g:gitgutter_sign_added                     = '+'
+let g:gitgutter_sign_modified                  = '±'
+let g:gitgutter_sign_removed                   = '-'
+let g:gitgutter_sign_removed_first_line        = '^'
+let g:gitgutter_sign_modified_removed          = '#'
+" }}}
+
 " }}}

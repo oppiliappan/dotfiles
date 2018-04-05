@@ -23,6 +23,7 @@ Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
 Plug 'rust-lang/rust.vim'
 Plug 'haya14busa/incsearch.vim'
+Plug 'rhysd/open-pdf.vim'
 
 
 call plug#end()

@@ -12,11 +12,24 @@ prp="\e[35m"
 bprp="\e[35;1m"
 rst="\e[0m"
 
+
 echo
 echo
-echo -e " ${cyn} shell  ${rst}"  " zsh    "
-echo -e " ${cyn} wm     ${rst}"  " 2bwm   "
-echo -e " ${cyn} editor ${rst}"  " nvim   "
-echo -e " ${cyn} distro ${rst}"  " debian "
+echo -e "       \__    __/ "
+echo -e "       /_/ /\ \_\ "
+echo -e "      __ \ \/ / __ "
+echo -e "      \_\_\/\/_/_/ "
+echo -e "  __/\___\_\/_/___/\__ "
+echo -e "    \/ __/_/\_\__ \/ "
+echo -e "      /_/ /\/\ \_\ "
+echo -e "       __/ /\ \__ "
+echo -e "       \_\ \/ /_/ "
+echo -e "       /        \  "
+echo
+echo
+echo -e "  ${cyn}    shell  ${rst}"  " zsh    "
+echo -e "  ${cyn}    wm     ${rst}"  " 2bwm   "
+echo -e "  ${cyn}    editor ${rst}"  " nvim   "
+echo -e "  ${cyn}    distro ${rst}"  " debian "
 echo
 echo

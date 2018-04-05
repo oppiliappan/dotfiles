@@ -38,8 +38,8 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 font-0 = scientifica:size=8:antialias=true;0
-font-1 = Siji:size=9:;0
-font-2 = scientifica:size=8:weight=bold:antialias=true;0
+font-1 = Siji:size=9;0
+font-2 = scientifica:size=8:weight=bold;0
 
 modules-left   = date
 modules-center = 2bws

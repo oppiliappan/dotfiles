@@ -142,6 +142,7 @@ click-left = ~/scripts/gitpop.sh
 
 [module/cmusnp]
 type              = custom/script
+interval          = 0.01
 format-text       = <label>
 exec              = ~/scripts/cmusnp.sh
 click-left        = cmus-remote -u

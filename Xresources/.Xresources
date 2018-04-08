@@ -43,14 +43,15 @@
 *color14:      base0F
 *color15:      base07
 
-URxvt.cursorBlink  :0
-URxvt.font         :xft:scientifica:size=9
-!URxvt.boldFont     :xft:scientifica:size=9
 
-URxvt.lineSpace           : 0
+URxvt.cursorBlink  :1
+URxvt.font         :xft:scientifica:size=9
+!URxvt.boldFont     :xft:curie:size=9
+
+URxvt.lineSpace           : 1
 URxvt.letterSpace         : 1
 URxvt.scrollBar           : false
-URxvt.internalBorder      : 25
+URxvt.internalBorder      : 28
 URxvt.cursorUnderline     : false
 URxvt.geometry            : 70x35
 URxvt.thickness           : 5

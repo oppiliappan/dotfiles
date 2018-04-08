@@ -202,6 +202,10 @@ endfunction
 
 let mapleader=' '
 
+" inoremaps {{{
+inoremap ;; <esc><S-a>;
+" }}}
+
 " nnoremap {{{
 nnoremap <Leader>o : only<cr>
 nnoremap <Leader>l : Lines<cr>
@@ -250,6 +254,7 @@ xnoremap - g<C-x>
 :command! Q q
 
 " abbreviations
+abclear
 iab #i #include
 iab #d #define
 cab dst put =strftime('%d %a, %b %Y')<cr>

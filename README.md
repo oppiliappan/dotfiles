@@ -13,5 +13,5 @@ A bunch of files that are essential to my linux box configuration.
  - Editor : [neovim](https://neovim.io/)
  - Font : [scientifica](https://github.com/nerdypepper/scientifica)
  - Bar : [polybar](https://github.com/jaagr/polybar)
- - terminal : [rxvt-unicode](https://wiki.archlinux.org/index.php/rxvt-unicode)
- - shell : [zsh](https://en.wikipedia.org/wiki/Z_shell)
+ - Terminal : [rxvt-unicode](https://wiki.archlinux.org/index.php/rxvt-unicode)
+ - Shell : [zsh](https://en.wikipedia.org/wiki/Z_shell)

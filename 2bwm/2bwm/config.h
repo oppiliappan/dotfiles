@@ -1,9 +1,3 @@
-// 
-// _  _            
-//  )|_)\    /|\/| 
-// /_|_) \/\/ |  | 
-//                 
-
 #define MOD             XCB_MOD_MASK_4       /* Super/Windows key  or check xmodmap(1) with -pm  defined in /usr/include/xcb/xproto.h */
 
 ///--Speed---///
@@ -66,7 +60,7 @@ static void halfandcentered(const Arg *arg)
 
 static const char *terminal[] = {"urxvtc", NULL};
 static const char *rofir[] = {"/home/nerdypepper/scripts/rofi.sh", NULL};
-static const char *rofiw[] = {"/home/nerdypepper/scripts/rofiw.sh", NULL};
+static const char *draw[] = {"/home/nerdypepper/scripts/draw.sh", NULL};
 #define WORKSPACES 5
 ///---Shortcuts---///
 /* Check /usr/include/X11/keysymdef.h for the list of all keys
@@ -197,7 +191,7 @@ static key keys[] = {
     {  MOD |SHIFT,        XK_Right,      cursor_move,       {.i=TWOBWM_CURSOR_RIGHT}},
     {  MOD |SHIFT,        XK_Left,       cursor_move,       {.i=TWOBWM_CURSOR_LEFT}},
     // Start programs
-    {  MOD ,              XK_w,          start,             {.com = rofiw}},
+    {  MOD ,              XK_w,          start,             {.com = draw}},
     // Exit or restart 2bwm
     {  MOD |CONTROL,      XK_q,          twobwm_exit,       {.i=0}},
     {  MOD |CONTROL,      XK_r,          twobwm_restart,    {.i=0}},

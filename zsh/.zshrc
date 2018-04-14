@@ -24,7 +24,6 @@ source $ZSH/oh-my-zsh.sh
 alias cava='~/Desktop/cava/cava'
 alias nerdz='~/scripts/nerdinfo.sh'
 alias gtop='LANG=en_US.utf8 TERM=xterm-256color gtop'
-alias vim='nvim'
 alias nvime='nvim ~/.config/nvim/init.vim'
 
 [ -f ~/.fzf.zsh  ] && source ~/.fzf.zsh

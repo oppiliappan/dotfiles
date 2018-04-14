@@ -1,34 +1,38 @@
 #!/usr/bin/env bash
 
+# get the current workspace
 ws=$( xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //' )
 
+# icons
+CURRENT=▪
+OCCUPIED=▪
+UNOCCUPIED=▫
 
-draw(){
+# colors
+accent="#70a070"
+normal="#5c5c5c"
+
+# function to print workspaces to stdout
+draw() {
 	for i in {0..4}; do
+		# get the number of windows in each workspace
 		windows=$( wmctrl -l | cut -d ' ' -f3 | grep $i | wc -l )
-		if [[ $windows > 0 ]]
+
+		if [[ $i -eq $ws ]]
 		then
-			if [[ $i -eq $ws ]]
-			then
-				echo -ne "%{F#70a070} ▪  "
-			else
-				echo -ne "%{F#3a3a3a} ▪  "
-			fi
+			# current workspace
+			echo -ne "%{F${accent}} ${CURRENT}  "
 		else
-			if [[ $i -eq $ws ]]
+			if [[ $windows > 0 ]]
 			then
-				echo -ne "%{F#70a070} ▪  "
+				# occupied workspace
+				echo -ne "%{F${normal}} ${OCCUPIED}  "
 			else
-				echo -ne "%{F#3a3a3a} ▫  "
+				# unoccupied workspace
+				echo -ne "%{F${normal}} ${UNOCCUPIED}  "
 			fi
 		fi
 	done
 }
 
 draw
-#		if [[ $i -eq $ws ]]
-#		then
-#			echo -ne "%{F#70a070}  ♦"
-#		else
-#			echo -ne "%{F#3a3a3a}  ∙"
-#		fi

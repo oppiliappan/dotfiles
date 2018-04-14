@@ -15,16 +15,14 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
 Plug 'mattn/emmet-vim', { 'for': ['*html', '*css'] }
-Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
 Plug 'lambdalisue/vim-manpager'
 Plug 'scrooloose/nerdtree'
-Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
 Plug 'rust-lang/rust.vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'rhysd/open-pdf.vim'
-
+Plug 'raimondi/delimitmate'
 
 call plug#end()
 
@@ -80,6 +78,7 @@ set dir=/tmpset
 
 syntax on
 
+set omnifunc=syntaxcomplete#Complete
 set list
 filetype indent on
 set number
@@ -104,6 +103,7 @@ set backspace=indent,eol,start
 set hidden
 set wildmenu
 set foldmethod=manual
+set complete=.,w,b,i,u,t,
 
 set wildignore+=.git,.hg,.svn
 set wildignore+=*.aux,*.out,*.toc
@@ -276,10 +276,6 @@ let g:NERDTreeDirArrowExpandable  = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 " }}}
 
-" supertab {{{
-let g:SuperTabDefaultCompletionType = "context"
-" }}}
-
 " gitgutter {{{
 let g:gitgutter_override_sign_column_highlight = 0
 let g:gitgutter_sign_added                     = '+'
@@ -287,6 +283,11 @@ let g:gitgutter_sign_modified                  = '±'
 let g:gitgutter_sign_removed                   = '-'
 let g:gitgutter_sign_removed_first_line        = '^'
 let g:gitgutter_sign_modified_removed          = '#'
+" }}}
+
+" racer {{{
+set hidden
+let g:completor_racer_binary = '/home/nerdypepper/.cargo/bin/'
 " }}}
 
 " }}}

@@ -13,7 +13,7 @@ UNOCCUPIED=▫
 accent="#70a070"
 normal="#5c5c5c"
 
-# function to print workspaces to stdout
+#  print workspaces to stdout
 draw() {
 	for i in {0..5}; do
 		# get the number of windows in each workspace

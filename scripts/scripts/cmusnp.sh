@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if pgrep -x "cmus" > /dev/null
 then
@@ -8,10 +8,10 @@ then
 		artist=$( cmus-remote -Q | grep tag\ artist\ | sed 's/tag artist //' )
 		title=$( cmus-remote -Q | grep tag\ title\ | sed 's/tag title //' )
 
-		echo -ne $title - $artist
+		echo $title - $artist
 	elif [[ "$status" = *stopped* ]]
 	then
-		echo -ne " "
+		echo " "
 	fi
 else
 	echo 

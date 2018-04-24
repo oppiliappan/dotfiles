@@ -22,7 +22,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'rust-lang/rust.vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'rhysd/open-pdf.vim'
-Plug 'raimondi/delimitmate'
+Plug 'jiangmiao/auto-pairs'
+Plug 'w0rp/ale'
+Plug 'wellle/targets.vim'
 
 call plug#end()
 
@@ -89,7 +91,7 @@ set nowrap
 set noshowmode
 set listchars=tab:│\ ,nbsp:␣,trail:∙,extends:>,precedes:<,eol:¬
 set fillchars=vert:\│
-set scrolloff=12
+set scrolloff=3
 set ignorecase
 set smartcase
 set sidescroll=40
@@ -203,7 +205,11 @@ endfunction
 let mapleader=' '
 
 " inoremaps {{{
-inoremap ;; <esc><S-a>;
+augroup rustSemi
+	autocmd!
+	autocmd FileType rust inoremap ;; <esc><S-a>;
+augroup END
+
 " }}}
 
 " nnoremap {{{
@@ -235,8 +241,6 @@ vnoremap : y:<C-r>"
 " }}}
 
 " onoremap {{{
-onoremap in( :<c-u>normal! f(vi(<cr>
-onoremap in[ :<c-u>normal! f[vi[<cr>
 onoremap ax a`
 onoremap ix i`
 " }}}
@@ -285,9 +289,12 @@ let g:gitgutter_sign_removed_first_line        = '^'
 let g:gitgutter_sign_modified_removed          = '#'
 " }}}
 
-" racer {{{
-set hidden
-let g:completor_racer_binary = '/home/nerdypepper/.cargo/bin/'
+" ale {{{
+let g:ale_use_deprecated_neovim = 1
+let g:ale_sign_error            = '>>'
+let g:ale_sign_warning          = '--'
+
+let g:ale_linters = {'rust': ['cargo']}
 " }}}
 
 " }}}

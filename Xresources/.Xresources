@@ -1,8 +1,6 @@
-
-!     _  _ __ _     _  _ _ __
-!  \/|_)|_(_ / \| ||_)/ |_(_
-!  /\| \|___)\_/|_|| \\_|___)
-!
+! ------------------------------------------------------------------------------
+!  Colors
+! ------------------------------------------------------------------------------
 
 #define base00 #081018
 #define base01 #3a3a3a
@@ -12,14 +10,18 @@
 #define base05 #a3a7a8
 #define base06 #bdc1c3
 #define base07 #ccd0d2
-#define base08 #5f768a
-#define base09 #5f768a
-#define base0A #5f768a
-#define base0B #5f768a
+#define base08 #96ab98
+#define base09 #96ab98
+#define base0A #96ab98
+#define base0B #96ab98
 #define base0C #70a070
-#define base0D #5f768a
-#define base0E #5f768a
-#define base0F #5f768a
+#define base0D #96ab98
+#define base0E #96ab98
+#define base0F #96ab98
+
+! ------------------------------------------------------------------------------
+!  URxvt
+! ------------------------------------------------------------------------------
 
 *foreground:   base05
 *background:   base00
@@ -46,7 +48,6 @@
 
 URxvt.cursorBlink  :1
 URxvt.font         :xft:scientifica:size=9
-XTerm.font         :xft:scientifica:size=9
 URxvt.boldFont     :xft:scientifica:size=9
 
 URxvt.lineSpace           : 1
@@ -65,7 +66,7 @@ URxvt.url-launcher    : chromium
 URxvt.matcher.button  : 1
 
 ! ------------------------------------------------------------------------------
-! ROFI COLOR THEME
+! rofi
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
 

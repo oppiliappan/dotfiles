@@ -60,8 +60,9 @@ static void halfandcentered(const Arg *arg)
 
 static const char *terminal[] = {"urxvtc", NULL};
 static const char *rofir[] = {"/home/nerdypepper/scripts/rofi.sh", NULL};
+static const char *rofiw[] = {"/home/nerdypepper/scripts/rofiw.sh", NULL};
 static const char *draw[] = {"/home/nerdypepper/scripts/draw.sh", NULL};
-#define WORKSPACES 5
+#define WORKSPACES 6
 ///---Shortcuts---///
 /* Check /usr/include/X11/keysymdef.h for the list of all keys
  * 0x000000 is for no modkey
@@ -191,6 +192,7 @@ static key keys[] = {
     {  MOD |SHIFT,        XK_Right,      cursor_move,       {.i=TWOBWM_CURSOR_RIGHT}},
     {  MOD |SHIFT,        XK_Left,       cursor_move,       {.i=TWOBWM_CURSOR_LEFT}},
     // Start programs
+    {  MOD ,              XK_i,          start,             {.com = rofiw}},
     {  MOD ,              XK_w,          start,             {.com = draw}},
     // Exit or restart 2bwm
     {  MOD |CONTROL,      XK_q,          twobwm_exit,       {.i=0}},

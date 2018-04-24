@@ -1,14 +1,8 @@
-
-;  _  _      _      _
-; |_)/ \|\_/|_) /\ |_)
-; |  \_/|_| |_)/--\| \
-;
-
 [colors]
 foreground = ${xrdb:color7}
 background = ${xrdb:color0}
 modb       = ${xrdb:color0}
-modb1      = ${xrdb:color0}
+modb1      = ${xrdb:color11}
 modb2      = ${xrdb:color0}
 
 red     = ${xrdb:color8}
@@ -41,7 +35,7 @@ font-0 = scientifica:size=8:antialias=true;0
 font-1 = Siji:size=9;0
 font-2 = scientifica:size=8:weight=bold;0
 
-modules-left   = date
+modules-left   = time date
 modules-center = 2bws
 modules-right  = cmusnp previous playpause next
 
@@ -58,31 +52,18 @@ padding-right       = 0
 module-margin-left  = 0
 module-margin-right = 0
 
-; [module/volume]
-; type = internal/volume
-; 
-; format-volume = <ramp-volume><label-volume>
-; 
-; format-volume-background = ${colors.modb}
-; format-volume-padding    = 2
-; 
-; module-margin-right = 0
-; ramp-volume-0       = 
-; ramp-volume-1       = 
-; ramp-volume-2       = 
-; 
-; ramp-volume-foreground = ${colors.cyan}
-; 
-; label-muted-padding    = 2
-; label-muted            =  muted
-; label-muted-background = ${colors.modb}
+[module/time]
+type                     = internal/date
+interval                 = 1
+date                     = " %I:%M"
+format-foreground        = ${colors.foreground}
+format-background        = ${colors.background}
+format-padding           = 2
 
 [module/date]
 type                     = internal/date
 interval                 = 1
-date                     = " %I:%M"
-format-prefix            = 
-format-prefix-foreground = ${colors.cyan}
+date                     = " %A, %B %d"
 format-background        = ${colors.modb}
 format-padding           = 2
 
@@ -93,7 +74,7 @@ format-text       = <label>
 label             = 
 exec              = echo label
 click-left        = exec cmus-remote -r -p
-click-right       = wmctrl -s 3
+click-right       = wmctrl -s 5
 format-foreground = ${colors.cyan}
 format-background = ${colors.modb}
 format-padding    = 2
@@ -104,7 +85,7 @@ format-text       = <label>
 label             = 
 exec              = echo label
 click-left        = exec cmus-remote -n -p
-click-right       = wmctrl -s 3
+click-right       = wmctrl -s 5
 format-foreground = ${colors.cyan}
 format-background = ${colors.modb}
 format-padding    = 2
@@ -114,7 +95,7 @@ type              = custom/script
 exec              = ~/scripts/playpause.sh
 interval          = 0.01
 click-left        = cmus-remote -u
-click-right       = wmctrl -s 3
+click-right       = wmctrl -s 5
 scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
 format-foreground = ${colors.cyan}
@@ -144,7 +125,7 @@ interval          = 0.01
 format-text       = <label>
 exec              = ~/scripts/cmusnp.sh
 click-left        = cmus-remote -u
-click-right       = wmctrl -s 3
+click-right       = wmctrl -s 5
 scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
 format-foreground = ${colors.foreground}

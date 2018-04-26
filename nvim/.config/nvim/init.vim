@@ -4,6 +4,7 @@
 "
 
 mapclear
+let &t_ZM = "\e[3m"
 
 " vim-plugs {{{
 
@@ -226,6 +227,7 @@ nnoremap <Leader><ESC> : nohlsearch<cr>
 nnoremap <C-l> :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
 nnoremap H H:exec 'norm! '. &scrolloff . 'k'<cr>
 nnoremap L L:exec 'norm! '. &scrolloff . 'j'<cr>
+nnoremap  <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 			\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"

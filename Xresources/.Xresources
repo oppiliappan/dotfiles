@@ -10,14 +10,14 @@
 #define base05 #a3a7a8
 #define base06 #bdc1c3
 #define base07 #ccd0d2
-#define base08 #96ab98
-#define base09 #96ab98
-#define base0A #96ab98
-#define base0B #96ab98
+#define base08 #6d7a8b
+#define base09 #6d7a8b
+#define base0A #6d7a8b
+#define base0B #6d7a8b
 #define base0C #70a070
-#define base0D #96ab98
-#define base0E #96ab98
-#define base0F #96ab98
+#define base0D #6d7a8b
+#define base0E #6d7a8b
+#define base0F #6d7a8b
 
 ! ------------------------------------------------------------------------------
 !  URxvt
@@ -47,8 +47,8 @@
 
 
 URxvt.cursorBlink  :1
-URxvt.font         :xft:scientifica:size=9
-URxvt.boldFont     :xft:scientifica:size=9
+URxvt.font       :xft:scientifica:size=9
+URxvt.italicFont :xft:scientifica:italic:size=9
 
 URxvt.lineSpace           : 1
 URxvt.letterSpace         : 1

@@ -59,8 +59,8 @@ static void halfandcentered(const Arg *arg)
 }
 
 static const char *terminal[] = {"urxvtc", NULL};
-static const char *rofir[] = {"/home/nerdypepper/scripts/rofi.sh", NULL};
-static const char *rofiw[] = {"/home/nerdypepper/scripts/rofiw.sh", NULL};
+static const char *rofir[] = {"/home/nerdypepper/scripts/rofi.sh", "-r", NULL};
+static const char *rofiw[] = {"/home/nerdypepper/scripts/rofi.sh", "-w", NULL};
 static const char *draw[] = {"/home/nerdypepper/scripts/draw.sh", NULL};
 #define WORKSPACES 6
 ///---Shortcuts---///

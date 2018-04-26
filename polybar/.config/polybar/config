@@ -31,9 +31,9 @@ locale     = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = scientifica:size=8:antialias=true;0
+; font-0 = scientifica:size=8:antialias=true;0
+font-0 = scientifica:size=8:weight=bold;0
 font-1 = Siji:size=9;0
-font-2 = scientifica:size=8:weight=bold;0
 
 modules-left   = time date
 modules-center = 2bws
@@ -53,19 +53,19 @@ module-margin-left  = 0
 module-margin-right = 0
 
 [module/time]
-type                     = internal/date
-interval                 = 1
-date                     = " %I:%M"
-format-foreground        = ${colors.foreground}
-format-background        = ${colors.background}
-format-padding           = 2
+type              = internal/date
+interval          = 1
+date              = " %I:%M"
+format-foreground = ${colors.background}
+format-background = ${colors.cyan}
+format-padding    = 2
 
 [module/date]
-type                     = internal/date
-interval                 = 1
-date                     = " %A, %B %d"
-format-background        = ${colors.modb}
-format-padding           = 2
+type              = internal/date
+interval          = 1
+date              = " %A · %B %d"
+format-background = ${colors.modb}
+format-padding    = 2
 
 
 [module/previous]
@@ -104,20 +104,11 @@ format-padding    = 0
 
 
 [module/2bws]
-format-font       = 1
 type              = custom/script
 exec              = ~/scripts/2bws.sh
 interval          = 0.01
 format-padding    = 1
 format-background = ${colors.modb}
-
-[module/gitpop]
-exec = echo +
-type = custom/script
-format-padding    = 3
-format-background = ${colors.cyan}
-format-foreground = ${colors.modb}
-click-left = ~/scripts/gitpop.sh
 
 [module/cmusnp]
 type              = custom/script

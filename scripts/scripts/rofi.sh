@@ -1,3 +1,14 @@
 #! /usr/bin/env bash
 
-rofi -show run
+while getopts wr options
+do
+	case $options in
+		r)
+			rofi -show run
+			;;
+
+		w)
+			rofi -show window
+			;;
+	esac
+done

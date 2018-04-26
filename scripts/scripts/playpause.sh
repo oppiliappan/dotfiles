@@ -1,4 +1,6 @@
 #!/bin/bash
+# Interactive polybar icon for music controls
+# Requires cmus
 
 if pgrep -x "cmus" > /dev/null
 then

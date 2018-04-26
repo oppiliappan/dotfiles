@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
+# display workspace status
+# requires wmctrl
 
 # get the current workspace
 ws=$( xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //' )
 
 # icons
 
-CURRENT=▪
-OCCUPIED=▪
-UNOCCUPIED=▫
+CURRENT=∙
+OCCUPIED=∙
+UNOCCUPIED=⋅
 
 # colors
 accent="#70a070"

@@ -1,10 +1,12 @@
 #define MOD             XCB_MOD_MASK_4       /* Super/Windows key  or check xmodmap(1) with -pm  defined in /usr/include/xcb/xproto.h */
 
 ///--Speed---///
-/* Move this many pixels when moving or resizing with keyboard unless the window has hints saying otherwise.
- *0)move step slow   1)move step fast
- *2)mouse slow       3)mouse fast     */
-static const uint16_t movements[] = {50,100,15,400};
+static const uint16_t movements[] = {
+	50,  // move step slow
+	100, // move step fast
+	15,  // mouse slow
+	400  // mouse fast
+};
 
 /* resize by line like in mcwm -- jmbi */
 static const bool     resize_by_line          = false;
@@ -13,32 +15,37 @@ static const bool     resize_by_line          = false;
 static const float    resize_keep_aspect_ratio= 1.03;
 
 ///---Offsets---///
-/*0)offsetx          1)offsety
- *2)maxwidth         3)maxheight */
-static const uint8_t offsets[] = {0,0,0,295};
+static const uint8_t offsets[] = {
+	0,  // offsetx
+	0,  // offsety
+	0,  // maxwidth
+	295 // maxheight
+};
 
-///---Colors---///
-/*0)focuscol         1)unfocuscol
- *2)fixedcol         3)unkilcol
- *4)fixedunkilcol    5)outerbordercol
- *6)emptycol         */
-static const char *colors[] = {"#203a48","#1e2e36","#718c97","#fa9a6a","#ceb5ce","#121c21","#181818"};
+///---Colors (depcrecated)---///
+static const char *colors[] = {
+	"#203a48", // focuscol
+	"#1e2e36", // unfocuscol
+	"#718c97", // fixedcol
+	"#fa9a6a", // unkilcol
+	"#ceb5ce", // fixedunkilcol
+	"#121c21", // outerbordercol
+	"#181818"  // emptycol
+};
 
 /* if this is set to true the inner border and outer borders colors will be swapped */
 static const bool inverted_colors = false;
 
 ///---Cursor---///
-/* default position of the cursor:
- * correct values are:
- * TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT, MIDDLE
- * All these are relative to the current window. */
 #define CURSOR_POSITION MIDDLE
 
 ///---Borders---///
-/*0) Outer border size. If you put this negative it will be a square.
- *1) Full borderwidth    2) Magnet border size
- *3) Resize border size  */
-static const uint8_t borders[] = {5,7,2,3};
+static const uint8_t borders[] = {
+	5, // Outer border size
+	7, // Full borderwidth
+	2, // Magnet border size
+	3  // Resize border size
+};
 
 /* Windows that won't have a border.
  * It uses substring comparison with what is found in the WM_NAME
@@ -47,11 +54,12 @@ static const uint8_t borders[] = {5,7,2,3};
 #define LOOK_INTO "WM_NAME"
 
 static const char *ignore_names[] = {"bar", "xclock"};
+
 ///--Menus and Programs---///
 static const char *menucmd[]   = { "", NULL };
+
 ///--Custom foo---///
-static void halfandcentered(const Arg *arg)
-{
+static void halfandcentered(const Arg *arg) {
 	Arg arg2 = {.i=TWOBWM_MAXHALF_VERTICAL_LEFT};
 	maxhalf(&arg2);
 	Arg arg3 = {.i=TWOBWM_TELEPORT_CENTER};
@@ -62,7 +70,9 @@ static const char *terminal[] = {"urxvtc", NULL};
 static const char *rofir[] = {"/home/nerdypepper/scripts/rofi.sh", "-r", NULL};
 static const char *rofiw[] = {"/home/nerdypepper/scripts/rofi.sh", "-w", NULL};
 static const char *draw[] = {"/home/nerdypepper/scripts/draw.sh", NULL};
+
 #define WORKSPACES 6
+
 ///---Shortcuts---///
 /* Check /usr/include/X11/keysymdef.h for the list of all keys
  * 0x000000 is for no modkey

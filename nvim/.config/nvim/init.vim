@@ -14,14 +14,13 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-repeat'
 Plug 'mattn/emmet-vim', { 'for': ['*html', '*css'] }
+Plug 'tpope/vim-repeat'
 Plug 'godlygeek/tabular'
 Plug 'lambdalisue/vim-manpager'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'rust-lang/rust.vim'
-Plug 'haya14busa/incsearch.vim'
 Plug 'rhysd/open-pdf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'w0rp/ale'
@@ -158,12 +157,11 @@ set statusline+=\ %{g:currentmode[mode()]}
 set statusline+=%#SecondaryBlock#
 set statusline+=%{StatuslineGit()}
 set statusline+=%#Blanks#
-set statusline+=%#Blanks#
+set statusline+=\ %f\ 
+set statusline+=%(%m%)
 set statusline+=%=
-set statusline+=%#SecondaryBlock#
-set statusline+=\ %Y\ 
 set statusline+=%#PrimaryBlock#
-set statusline+=\ %P\ 
+set statusline+=\ %Y\ 
 
 function! GitBranch()
 	return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
@@ -222,8 +220,8 @@ nnoremap <Leader>w : MtaJumpToOtherTag<cr>
 nnoremap <Leader>t : call GetTabber()<cr>
 nnoremap <Leader>n : tabnext<cr>
 nnoremap <Leader>N : tabprevious<cr>
-nnoremap <F2>      : NERDTreeToggle<cr>
 nnoremap <Leader><ESC> : nohlsearch<cr>
+nnoremap <F2>      : NERDTreeToggle<cr>
 nnoremap <C-l> :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
 nnoremap H H:exec 'norm! '. &scrolloff . 'k'<cr>
 nnoremap L L:exec 'norm! '. &scrolloff . 'j'<cr>

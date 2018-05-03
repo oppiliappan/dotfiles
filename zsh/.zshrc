@@ -21,10 +21,9 @@ plugins=(git sudo zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
-alias cava='~/Desktop/cava/cava'
 alias nerdz='~/scripts/nerdinfo.sh'
-alias gtop='LANG=en_US.utf8 TERM=xterm-256color gtop'
 alias nvime='nvim ~/.config/nvim/init.vim'
+alias spdtst='curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
 
 [ -f ~/.fzf.zsh  ] && source ~/.fzf.zsh
 

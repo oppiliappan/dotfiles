@@ -10,14 +10,14 @@
 #define base05 #a3a7a8
 #define base06 #bdc1c3
 #define base07 #ccd0d2
-#define base08 #6d7a8b
-#define base09 #6d7a8b
-#define base0A #6d7a8b
-#define base0B #6d7a8b
+#define base08 #8091a6
+#define base09 #8091a6
+#define base0A #8091a6
+#define base0B #8091a6
 #define base0C #70a070
-#define base0D #6d7a8b
-#define base0E #6d7a8b
-#define base0F #6d7a8b
+#define base0D #8091a6
+#define base0E #8091a6
+#define base0F #8091a6
 
 ! ------------------------------------------------------------------------------
 !  URxvt

@@ -6,8 +6,7 @@
 mapclear
 let &t_ZM = "\e[3m"
 
-" vim-plugs {{{
-
+" vim-plugs
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -28,17 +27,14 @@ Plug 'wellle/targets.vim'
 
 call plug#end()
 
-" }}}
 
-" augroups {{{
-
+" augroups
 augroup indents
 	autocmd!
 	autocmd FileType less,css,html setlocal ts=2 sts=2 sw=2 expandtab
 	autocmd FileType text,markdown setlocal expandtab
 	autocmd FileType python setlocal ts=4 sts=4 sw=4 noexpandtab
 augroup END
-
 
 " augroup highlight_follows_focus
 " 	autocmd!
@@ -52,6 +48,13 @@ augroup highlight_follows_vim
 	autocmd FocusGained * set cursorline
 	autocmd FocusLost * set nocursorline
 augroup END
+
+augroup status
+	au InsertEnter * call InsertStatuslineColor(v:insertmode)
+	au InsertChange * call InsertStatuslineColor(v:insertmode)
+	au InsertLeave * hi PrimaryBlock ctermbg=4
+augroup END
+
 
 augroup mapppings
 	autocmd!
@@ -69,10 +72,8 @@ augroup nerdtree
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 augroup END
 
-" }}}
 
-" general settings {{{
-
+" general settings
 set nobackup
 set nowritebackup
 set noswapfile " get rid of swapfiles everywhere
@@ -86,7 +87,6 @@ filetype indent on
 set number
 set relativenumber
 set laststatus=2
-set showtabline=2
 set nowrap
 set noshowmode
 set listchars=tab:│\ ,nbsp:␣,trail:∙,extends:>,precedes:<,eol:¬
@@ -125,43 +125,54 @@ set noexpandtab      " tabs are tabs
 set tabstop=4        " tab = 4 spaces
 set softtabstop=4    " backspace through spaces
 
-" }}}
 
-" statusline {{{
-
+" statusline
 let g:currentmode={
-    \ 'n'  : 'Normal ',
-    \ 'no' : 'N·Operator Pending ',
-    \ 'v'  : 'Visual ',
-    \ 'V'  : 'V·line ',
-    \ '' : 'V·block ',
-    \ 's'  : 'Select ',
-    \ 'S'  : 'S·line ',
-    \ '' : 'S·block ',
-    \ 'i'  : 'Insert ',
-    \ 'R'  : 'Replace ',
-    \ 'Rv' : 'V·replace ',
-    \ 'c'  : 'Command ',
-    \ 'cv' : 'Vim ex ',
-    \ 'ce' : 'Ex ',
-    \ 'r'  : 'Prompt ',
-    \ 'rm' : 'More ',
-    \ 'r?' : 'Confirm ',
-    \ '!'  : 'Shell ',
-    \ 't'  : 'Terminal '}
+    \ 'n'  : 'NORMAL ',
+    \ 'no' : 'N·OPERATOR PENDING ',
+    \ 'v'  : 'VISUAL ',
+    \ 'V'  : 'V·LINE ',
+    \ '' : 'V·BLOCK ',
+    \ 's'  : 'SELECT ',
+    \ 'S'  : 'S·LINE ',
+    \ '' : 'S·BLOCK ',
+    \ 'i'  : 'INSERT ',
+    \ 'R'  : 'REPLACE ',
+    \ 'Rv' : 'V·REPLACE ',
+    \ 'c'  : 'COMMAND ',
+    \ 'cv' : 'VIM EX ',
+    \ 'ce' : 'EX ',
+    \ 'r'  : 'PROMPT ',
+    \ 'rm' : 'MORE ',
+    \ 'r?' : 'CONFIRM ',
+    \ '!'  : 'SHELL ',
+    \ 't'  : 'TERMINAL '}
 
 
 set statusline=
 set statusline+=%#PrimaryBlock#
 set statusline+=\ %{g:currentmode[mode()]}
-set statusline+=%#SecondaryBlock#
+" set statusline+=%#SecondaryBlock#
 set statusline+=%{StatuslineGit()}
-set statusline+=%#Blanks#
+" set statusline+=%#Blanks#
 set statusline+=\ %f\ 
 set statusline+=%(%m%)
 set statusline+=%=
-set statusline+=%#PrimaryBlock#
+" set statusline+=%#PrimaryBlock#
 set statusline+=\ %Y\ 
+
+function! InsertStatuslineColor(mode)
+  if a:mode == 'i'
+    hi PrimaryBlock ctermbg=2
+  elseif a:mode == 'r'
+    hi PrimaryBlock ctermbg=1
+  else
+    hi PrimaryBlock ctermbg=3
+  endif
+endfunction
+
+" default the statusline to green when entering Vim
+hi PrimaryBlock ctermbg=4
 
 function! GitBranch()
 	return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
@@ -171,10 +182,9 @@ function! StatuslineGit()
 	let l:branchname = GitBranch()
 	return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
 endfunction
-" }}}
 
-" Functions {{{
 
+" Functions
 function! GetTabber()  " a lil function that integrates well with Tabular.vim
 	let c = nr2char(getchar())
 	:execute 'Tabularize /' . c
@@ -197,21 +207,19 @@ function! HelpInNewTab ()
 		execute "normal \<C-W>T"
 	endif
 endfunction
-" }}}
 
-" mappings {{{
 
+" mappings
 let mapleader=' '
 
-" inoremaps {{{
+" inoremaps
 augroup rustSemi
 	autocmd!
 	autocmd FileType rust inoremap ;; <esc><S-a>;
 augroup END
 
-" }}}
 
-" nnoremap {{{
+" nnoremap
 nnoremap <Leader>o : only<cr>
 nnoremap <Leader>l : Lines<cr>
 nnoremap <Leader>b : Buffers<cr>
@@ -220,6 +228,7 @@ nnoremap <Leader>w : MtaJumpToOtherTag<cr>
 nnoremap <Leader>t : call GetTabber()<cr>
 nnoremap <Leader>n : tabnext<cr>
 nnoremap <Leader>N : tabprevious<cr>
+nnoremap <Leader>r : RustRun<cr>
 nnoremap <Leader><ESC> : nohlsearch<cr>
 nnoremap <F2>      : NERDTreeToggle<cr>
 nnoremap <C-l> :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
@@ -230,27 +239,21 @@ nnoremap  <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 			\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 			\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-" }}}
 
 cmap w!! %!sudo tee > /dev/null %
 
-" vnoremap {{{
+" vnoremap
 vnoremap > >gv
 vnoremap < <gv
-vnoremap : y:<C-r>"
-" }}}
 
-" onoremap {{{
+" onoremap
 onoremap ax a`
 onoremap ix i`
-" }}}
 
-" xnoremap {{{
+" xnoremap
 xnoremap + g<C-a>
 xnoremap - g<C-x>
-" }}}
 
-" I always linger on the shift key
 :command! WQ wq
 :command! Wq wq
 :command! Wqa wqa
@@ -263,39 +266,35 @@ iab #i #include
 iab #d #define
 cab dst put =strftime('%d %a, %b %Y')<cr>
 cab vg vimgrep
-" }}}
 
-" plugin settings {{{
 
-" emmet {{{
+" plugin settings
+" emmet
 let g:user_emmet_mode='a'
 let g:user_emmet_leader_key='<C-X>'
-" }}}
 
-" nerdtree {{{
+" nerdtree
 let g:NERDTreeMinimalUI           = 1
 let g:NERDTreeWinPos              = 'right'
 let g:NERDTreeStatusline          = -1
 let g:NERDTreeDirArrowExpandable  = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
-" }}}
 
-" gitgutter {{{
+" gitgutter
 let g:gitgutter_override_sign_column_highlight = 0
 let g:gitgutter_sign_added                     = '+'
 let g:gitgutter_sign_modified                  = '±'
 let g:gitgutter_sign_removed                   = '-'
 let g:gitgutter_sign_removed_first_line        = '^'
 let g:gitgutter_sign_modified_removed          = '#'
-" }}}
 
-" ale {{{
+" ale
 let g:ale_use_deprecated_neovim = 1
 let g:ale_sign_error            = '>>'
 let g:ale_sign_warning          = '--'
 
 let g:ale_linters = {'rust': ['cargo']}
-" }}}
 
+" rust.vim
+let g:rustfmt_autosave = 0
 
-" }}}

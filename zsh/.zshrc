@@ -2,6 +2,7 @@
 #  /(_ |_|
 # /___)| |
 #
+echo "\e[3m$(fortune -sa)\n"
 
 export ZSH=/home/nerdypepper/.oh-my-zsh
 export EDITOR=/usr/bin/nvim
@@ -27,4 +28,7 @@ alias spdtst='curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/t
 
 [ -f ~/.fzf.zsh  ] && source ~/.fzf.zsh
 
+# functions
+
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+

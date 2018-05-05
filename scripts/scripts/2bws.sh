@@ -12,8 +12,8 @@ OCCUPIED=∙
 UNOCCUPIED=⋅
 
 # colors
-accent="#70a070"
-normal="#5c5c5c"
+accent="#C3E88D"
+normal="#4A4A4A"
 
 #  print workspaces to stdout
 draw() {

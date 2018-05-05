@@ -2,20 +2,26 @@
 # Display currently playing song from cmus
 # Requires cmus
 
+active="$( get_xres foreground )"
+inactive="$( get_xres color8 )"
+
 if pgrep -x "cmus" > /dev/null
 then
 	status=$( cmus-remote -Q | grep status\ | sed 's/status //' )
-	if [[ "$status" = *playing* ]] || [[ "$status" = *paused* ]]
-	then
-		artist=$( cmus-remote -Q | grep tag\ artist\ | sed 's/tag artist //' )
-		title=$( cmus-remote -Q | grep tag\ title\ | sed 's/tag title //' )
+	artist=$( cmus-remote -Q | grep tag\ artist\ | sed 's/tag artist //' )
+	title=$( cmus-remote -Q | grep tag\ title\ | sed 's/tag title //' )
 
-		# output format
-		echo $title · $artist
+	if [[ "$status" = *playing* ]] 
+	then
+		echo "%{F${active}}$title · $artist"
+	elif [[ "$status" = *paused* ]]
+	then
+		echo "%{F${inactive}}$title · $artist"
 	elif [[ "$status" = *stopped* ]]
 	then
-		echo " "
+		echo "%{F${inactive}}stopped"
 	fi
+
 else
 	echo 
 fi

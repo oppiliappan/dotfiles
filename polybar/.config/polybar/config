@@ -1,9 +1,10 @@
 [colors]
-foreground = ${xrdb:color7}
-background = ${xrdb:color0}
-modb       = ${xrdb:color0}
-modb1      = ${xrdb:color11}
-modb2      = ${xrdb:color0}
+foreground        = ${xrdb:color8}
+foreground_bright = ${xrdb:color7}
+background        = ${xrdb:color0}
+modb              = ${xrdb:color0}
+modb1             = ${xrdb:color11}
+modb2             = ${xrdb:color0}
 
 red     = ${xrdb:color8}
 orange  = ${xrdb:color9}
@@ -34,7 +35,7 @@ font-1 = Siji:size=9;0
 
 modules-left   = time date
 modules-center = 2bws
-modules-right  = cmusnp previous playpause next
+modules-right  = cmusnp
 
 tray-position    =
 tray-padding     = 2
@@ -53,8 +54,8 @@ module-margin-right = 0
 type              = internal/date
 interval          = 1
 date              = " %I:%M"
-format-foreground = ${colors.background}
-format-background = ${colors.cyan}
+format-foreground = ${colors.foreground_bright}
+format-background = ${colors.background}
 format-padding    = 2
 
 [module/date]
@@ -120,4 +121,4 @@ scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
 format-foreground = ${colors.foreground}
 format-background = ${colors.modb}
-format-padding    = 0
+format-padding    = 3

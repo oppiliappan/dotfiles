@@ -2,22 +2,22 @@
 !  Colors
 ! ------------------------------------------------------------------------------
 
-#define base00 #081018
-#define base01 #3a3a3a
-#define base02 #525252
-#define base03 #5c5c5c
-#define base04 #696969
-#define base05 #a3a7a8
-#define base06 #bdc1c3
-#define base07 #ccd0d2
-#define base08 #8091a6
-#define base09 #8091a6
-#define base0A #8091a6
-#define base0B #8091a6
-#define base0C #70a070
-#define base0D #8091a6
-#define base0E #8091a6
-#define base0F #8091a6
+#define base00 #212121
+#define base01 #303030
+#define base02 #353535
+#define base03 #4A4A4A
+#define base04 #B2CCD6
+#define base05 #EEFFFF
+#define base06 #EEFFFF
+#define base07 #FFFFFF
+#define base08 #F07178
+#define base09 #F78C6C
+#define base0A #FFCB6B
+#define base0B #C3E88D
+#define base0C #89DDFF
+#define base0D #82AAFF
+#define base0E #C792EA
+#define base0F #FF5370
 
 ! ------------------------------------------------------------------------------
 !  URxvt
@@ -47,13 +47,14 @@
 
 
 URxvt.cursorBlink  :1
-URxvt.font       :xft:scientifica:size=9
-URxvt.italicFont :xft:scientifica:italic:size=9
+URxvt.font        :xft:scientifica:size=9
+URxvt.boldFont    :xft:scientifica:italic:size=9
+URxvt.italicFont  :xft:scientifica:italic:size=9
 
 URxvt.lineSpace           : 1
 URxvt.letterSpace         : 1
 URxvt.scrollBar           : false
-URxvt.internalBorder      : 28
+URxvt.internalBorder      : 10
 URxvt.cursorUnderline     : false
 URxvt.geometry            : 70x35
 URxvt.thickness           : 5
@@ -70,10 +71,10 @@ URxvt.matcher.button  : 1
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
 
-rofi.color-window:    base00 , base00 , base00 , base00 , base05
-rofi.color-normal:    base00 , base05 , base00 , base0C , base00
-rofi.color-active:    base02 , base0E , base00 , base0B , base00
-rofi.color-urgent:    base00 , base03 , base00 , base00 , base05
+rofi.color-window:    base00 , base00 , base00 , base00 , base03
+rofi.color-normal:    base00 , base03 , base00 , base00 , base07
+rofi.color-active:    base03 , base0E , base00 , base0B , base00
+rofi.color-urgent:    base00 , base03 , base00 , base00 , base03
 
 rofi.fake-transparency : true
 rofi.font              : scientifica 9
@@ -100,8 +101,8 @@ Xft.lcdfilter : lcddefault
 ! 2bwm
 ! ------------------------------------------------------------------------------
 
-twobwm.border_width: 8
-twobwm.outer_border: 6
+twobwm.border_width: 5
+twobwm.outer_border: 3
 twobwm.focus_color: base00
 twobwm.unfocus_color: base00
 twobwm.fixed_color: base0C

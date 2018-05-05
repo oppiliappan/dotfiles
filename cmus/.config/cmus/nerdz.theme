@@ -8,7 +8,7 @@
 set color_win_dir=default
 
 # Normal text
-set color_win_fg=gray
+set color_win_fg=7
 
 # Window background color.
 set color_win_bg=default
@@ -24,7 +24,7 @@ set color_error=lightred
 set color_info=lightyellow
 
 # Color of currently playing track.
-set color_win_cur=green
+set color_win_cur=5
 
 # Color of the separator line between windows in view (1).
 set color_separator=black
@@ -39,23 +39,23 @@ set color_statusline_fg=gray
 
 # Color of the line displaying currently playing track.
 set color_titleline_bg=black
-set color_titleline_fg=cyan
+set color_titleline_fg=2
 
 # Color of the selected row which is also the currently playing track in active window.
 set color_win_cur_sel_bg=0
-set color_win_cur_sel_fg=cyan
+set color_win_cur_sel_fg=2
 
 # Color of the selected row which is also the currently playing track in inactive window.
 set color_win_inactive_cur_sel_bg=0
-set color_win_inactive_cur_sel_fg=default
+set color_win_inactive_cur_sel_fg=2
 
 # Color of selected row in inactive window.
 set color_win_inactive_sel_bg=0
-set color_win_inactive_sel_fg=7
+set color_win_inactive_sel_fg=2
 
 # Color of selected row in active window.
 set color_win_sel_bg=0
-set color_win_sel_fg=cyan
+set color_win_sel_fg=2
 
 # Command line color.
 set color_cmdline_bg=default

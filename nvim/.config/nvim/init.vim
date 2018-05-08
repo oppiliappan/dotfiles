@@ -36,12 +36,6 @@ augroup indents
 	autocmd FileType python setlocal ts=4 sts=4 sw=4 noexpandtab
 augroup END
 
-" augroup highlight_follows_focus
-" 	autocmd!
-" 	autocmd WinEnter * set cursorline
-" 	autocmd WinLeave * set nocursorline
-" augroup END
-
 
 augroup highlight_follows_vim
 	autocmd!
@@ -155,11 +149,15 @@ set statusline+=\ %{g:currentmode[mode()]}
 " set statusline+=%#SecondaryBlock#
 set statusline+=%{StatuslineGit()}
 " set statusline+=%#Blanks#
-set statusline+=\ %f\ 
+set statusline+=\ %t\ 
 set statusline+=%(%m%)
-set statusline+=%=
 " set statusline+=%#PrimaryBlock#
-set statusline+=\ %Y\ 
+set statusline+=%=
+set statusline+=Ln
+set statusline+=\ %l
+set statusline+=,Col
+set statusline+=\ %c
+set statusline+=\ \ \ %Y\ 
 
 function! InsertStatuslineColor(mode)
   if a:mode == 'i'

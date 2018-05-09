@@ -5,7 +5,6 @@ background        = ${xrdb:color0}
 modb              = ${xrdb:color0}
 modb1             = ${xrdb:color11}
 modb2             = ${xrdb:color0}
-
 red     = ${xrdb:color8}
 orange  = ${xrdb:color9}
 yellow  = ${xrdb:color3}
@@ -20,22 +19,21 @@ margin-top        = 0
 margin-bottom     = 0
 override-redirect = true
 
-[bar/top]
-width    = 100%
-height   = 40
-offset-x = 0
-offset-y = 728
+[bar/music]
+width    = 400
+height   = 50
+offset-x = 40
+offset-y = 675
 
 locale     = de_DE.UTF-8
-background = ${colors.background}
+background = #00FFFFFF
 foreground = ${colors.foreground}
 
 font-0 = scientifica:size=8:antialias=true;0
-font-1 = Siji:size=9;0
 
-modules-left   = time date
-modules-center = 2bws
-modules-right  = cmusnp
+modules-left   = cmusnp
+modules-center =
+modules-right  =
 
 tray-position    =
 tray-padding     = 2
@@ -44,27 +42,90 @@ tray-detached    = false
 tray-background  = ${colors.modb}
 tray-maxsize     = 12
 
+radius = 0.0
+
 spacing             = 1
 padding-left        = 0
 padding-right       = 0
 module-margin-left  = 0
 module-margin-right = 0
 
-[module/time]
-type              = internal/date
-interval          = 1
-date              = " %I:%M"
-format-foreground = ${colors.foreground_bright}
-format-background = ${colors.background}
-format-padding    = 2
+[bar/fab]
+width    = 48
+height   = 48
+offset-x = 16
+offset-y = 700
+
+locale     = de_DE.UTF-8
+background = ${colors.orange}
+foreground = ${colors.background}
+
+font-0 = scientifica:size=8:antialias=true;0
+
+modules-left   =
+modules-center = plus
+modules-right  =
+
+tray-position    =
+tray-padding     = 2
+tray-transparent = false
+tray-detached    = false
+tray-background  = ${colors.modb}
+tray-maxsize     = 12
+
+radius = 25.0
+
+spacing             = 1
+padding-left        = 0
+padding-right       = 0
+module-margin-left  = 0
+module-margin-right = 0
+
+[module/plus]
+type           = custom/script
+format-text    = <label>
+label          = ×
+exec           = echo label
+click-left     = xdo hide -p $( pgrep -f polybar\ music )
+click-right    = xdo show -p $( pgrep -f polybar\ music )
+format-padding = 3
+
+[bar/ws]
+width    = 190
+height   = 50
+offset-x = 1155
+offset-y = 690
+
+locale     = de_DE.UTF-8
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = scientifica:size=8:antialias=true;0
+font-1 = Siji:size=9;0
+
+modules-left   =
+modules-center =
+modules-right  = 2bws
+
+tray-position    =
+tray-padding     = 2
+tray-transparent = false
+tray-detached    = false
+tray-background  = ${colors.modb}
+tray-maxsize     = 12
+
+spacing             = 0
+padding-left        = 3
+padding-right       = 3
+module-margin-left  = 0
+module-margin-right = 0
 
 [module/date]
-type              = internal/date
-interval          = 1
-date              = " %A · %B %d"
-format-background = ${colors.modb}
-format-padding    = 2
-
+type = custom/script
+interval = 1.0
+exec = ~/scripts/date.sh
+format-padding = 2
+format-foreground = ${colors.foreground_bright}
 
 [module/previous]
 type              = custom/script
@@ -100,12 +161,11 @@ format-foreground = ${colors.cyan}
 format-background = ${colors.modb}
 format-padding    = 0
 
-
 [module/2bws]
 type              = custom/script
 exec              = ~/scripts/2bws.sh
 interval          = 0.01
-format-padding    = 1
+format-padding    = 3
 format-background = ${colors.modb}
 scroll-up         = exec ~/scripts/wscycle.sh -f
 scroll-down       = exec ~/scripts/wscycle.sh -r

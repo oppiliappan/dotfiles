@@ -1,3 +1,5 @@
+; ---------- global --------------
+
 [colors]
 foreground        = ${xrdb:color8}
 foreground_bright = ${xrdb:color7}
@@ -19,20 +21,23 @@ margin-top        = 0
 margin-bottom     = 0
 override-redirect = true
 
-[bar/music]
-width    = 400
+
+; ------------ bars ---------------
+
+[bar/ws]
+width    = 200
 height   = 50
 offset-x = 40
-offset-y = 675
+offset-y = 680
 
 locale     = de_DE.UTF-8
-background = #00FFFFFF
+background = ${colors.background}
 foreground = ${colors.foreground}
 
 font-0 = scientifica:size=8:antialias=true;0
 
-modules-left   = cmusnp
-modules-center =
+modules-left   =
+modules-center = 2bws
 modules-right  =
 
 tray-position    =
@@ -81,20 +86,11 @@ padding-right       = 0
 module-margin-left  = 0
 module-margin-right = 0
 
-[module/plus]
-type           = custom/script
-format-text    = <label>
-label          = ×
-exec           = echo label
-click-left     = xdo hide -p $( pgrep -f polybar\ music )
-click-right    = xdo show -p $( pgrep -f polybar\ music )
-format-padding = 3
-
-[bar/ws]
-width    = 190
+[bar/music]
+width    = 200
 height   = 50
-offset-x = 1155
-offset-y = 690
+offset-x = 40
+offset-y = 630
 
 locale     = de_DE.UTF-8
 background = ${colors.background}
@@ -104,8 +100,8 @@ font-0 = scientifica:size=8:antialias=true;0
 font-1 = Siji:size=9;0
 
 modules-left   =
-modules-center =
-modules-right  = 2bws
+modules-center = previous cmusnp next
+modules-right  =
 
 tray-position    =
 tray-padding     = 2
@@ -115,10 +111,32 @@ tray-background  = ${colors.modb}
 tray-maxsize     = 12
 
 spacing             = 0
-padding-left        = 3
-padding-right       = 3
+padding-left        = 0
+padding-right       = 0
 module-margin-left  = 0
 module-margin-right = 0
+
+[bar/date]
+inherit = bar/ws
+width = 200
+height = 50
+offset-y = 580
+background = ${colors.background}
+modules-left   =
+modules-center = date
+modules-right  =
+
+
+; ---------- modules ---------------
+
+[module/plus]
+type           = custom/script
+format-text    = <label>
+label          = ×
+exec           = echo label
+click-left     = ~/scripts/hidebars.sh -s
+click-right    = ~/scripts/hidebars.sh -h
+format-padding = 3
 
 [module/date]
 type = custom/script
@@ -126,6 +144,7 @@ interval = 1.0
 exec = ~/scripts/date.sh
 format-padding = 2
 format-foreground = ${colors.foreground_bright}
+format-background = ${colors.background}
 
 [module/previous]
 type              = custom/script
@@ -134,9 +153,9 @@ label             = 
 exec              = echo label
 click-left        = exec cmus-remote -r -p
 click-right       = wmctrl -s 5
-format-foreground = ${colors.cyan}
+format-foreground = ${colors.orange}
 format-background = ${colors.modb}
-format-padding    = 2
+format-padding    = 0
 
 [module/next]
 type              = custom/script
@@ -145,9 +164,9 @@ label             = 
 exec              = echo label
 click-left        = exec cmus-remote -n -p
 click-right       = wmctrl -s 5
-format-foreground = ${colors.cyan}
+format-foreground = ${colors.orange}
 format-background = ${colors.modb}
-format-padding    = 2
+format-padding    = 0
 
 [module/playpause]
 type              = custom/script
@@ -157,7 +176,7 @@ click-left        = cmus-remote -u
 click-right       = wmctrl -s 5
 scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
-format-foreground = ${colors.cyan}
+format-foreground = ${colors.orange}
 format-background = ${colors.modb}
 format-padding    = 0
 

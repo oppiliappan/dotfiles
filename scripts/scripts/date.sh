@@ -18,4 +18,3 @@ day_of_month=$( date +%d  )
 month_short=$( date +%b )
 
 echo -n ", ${day_of_month} ${month_short} "
-

@@ -2,22 +2,22 @@
 !  Colors
 ! ------------------------------------------------------------------------------
 
-#define base00 #212121
-#define base01 #303030
-#define base02 #353535
-#define base03 #4A4A4A
-#define base04 #B2CCD6
-#define base05 #EEFFFF
-#define base06 #EEFFFF
-#define base07 #FFFFFF
-#define base08 #F07178
-#define base09 #F78C6C
-#define base0A #FFCB6B
-#define base0B #C3E88D
-#define base0C #89DDFF
-#define base0D #82AAFF
-#define base0E #C792EA
-#define base0F #FF5370
+#define base00 #30353a
+#define base01 #3b4147
+#define base02 #464d54
+#define base03 #505961
+#define base04 #8ba0b9
+#define base05 #d1d2cb
+#define base06 #dfe0d9
+#define base07 #fefff7
+#define base08 #a2b1a8
+#define base09 #a2b1a8
+#define base0A #b6c6b8
+#define base0B #66a8b1
+#define base0C #75bec3
+#define base0D #5895a7
+#define base0E #9fabbf
+#define base0F #d0decf
 
 ! ------------------------------------------------------------------------------
 !  URxvt
@@ -101,10 +101,10 @@ Xft.lcdfilter : lcddefault
 ! 2bwm
 ! ------------------------------------------------------------------------------
 
-twobwm.border_width: 5
+twobwm.border_width: 7
 twobwm.outer_border: 5
-twobwm.focus_color: base00
-twobwm.unfocus_color: base00
+twobwm.focus_color: base02
+twobwm.unfocus_color: base01
 twobwm.fixed_color: base0D
 twobwm.unkill_color: base08
 twobwm.fixed_unkill_color: base0E

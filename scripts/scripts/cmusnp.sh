@@ -3,8 +3,8 @@
 # Requires cmus
 
 # colors
-active="$( get_xres foreground )"
-inactive="$( get_xres color8 )"
+active="$( get_xres color0 )"
+inactive="$( get_xres color9)"
 
 np_string=""
 
@@ -22,7 +22,7 @@ then
 	status=$( cmus-remote -Q | grep status\ | sed 's/status //' )
 	artist=$( cmus-remote -Q | grep tag\ artist\ | sed 's/tag artist //' )
 	title=$( cmus-remote -Q | grep tag\ title\ | sed 's/tag title //' )
-	np_string="$title · $artist"
+	np_string="$title - $artist"
 	np_string=$( trunc 22 "$np_string" )
 
 	if [[ "$status" = *playing* ]]

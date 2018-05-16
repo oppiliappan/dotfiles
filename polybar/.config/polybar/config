@@ -1,10 +1,10 @@
 ; ---------- global --------------
 
 [colors]
-foreground        = ${xrdb:color8}
-foreground_bright = ${xrdb:color7}
-background        = ${xrdb:color0}
-modb              = ${xrdb:color0}
+foreground        = ${xrdb:color0}
+foreground_bright = ${xrdb:color8}
+background        = ${xrdb:color14}
+modb              = ${xrdb:color14}
 modb1             = ${xrdb:color11}
 modb2             = ${xrdb:color0}
 red     = ${xrdb:color8}
@@ -26,26 +26,21 @@ override-redirect = true
 
 [bar/ws]
 width    = 200
-height   = 50
+height   = 25
 offset-x = 40
-offset-y = 680
+offset-y = 655
 
 locale     = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = scientifica:size=8:antialias=true;0
+font-0 = scientifica:size=8:antialias=true;2
 
 modules-left   =
 modules-center = 2bws
 modules-right  =
 
 tray-position    =
-tray-padding     = 2
-tray-transparent = false
-tray-detached    = false
-tray-background  = ${colors.modb}
-tray-maxsize     = 12
 
 radius = 0.0
 
@@ -62,7 +57,7 @@ offset-x = 16
 offset-y = 700
 
 locale     = de_DE.UTF-8
-background = ${colors.orange}
+background = ${colors.blue}
 foreground = ${colors.background}
 
 font-0 = scientifica:size=8:antialias=true;0
@@ -72,11 +67,6 @@ modules-center = plus
 modules-right  =
 
 tray-position    =
-tray-padding     = 2
-tray-transparent = false
-tray-detached    = false
-tray-background  = ${colors.modb}
-tray-maxsize     = 12
 
 radius = 25.0
 
@@ -90,7 +80,7 @@ module-margin-right = 0
 width    = 200
 height   = 50
 offset-x = 40
-offset-y = 630
+offset-y = 605
 
 locale     = de_DE.UTF-8
 background = ${colors.background}
@@ -104,11 +94,6 @@ modules-center = previous cmusnp next
 modules-right  =
 
 tray-position    =
-tray-padding     = 2
-tray-transparent = false
-tray-detached    = false
-tray-background  = ${colors.modb}
-tray-maxsize     = 12
 
 spacing             = 0
 padding-left        = 0
@@ -120,7 +105,7 @@ module-margin-right = 0
 inherit = bar/ws
 width = 200
 height = 50
-offset-y = 580
+offset-y = 680
 background = ${colors.background}
 modules-left   =
 modules-center = date
@@ -131,9 +116,8 @@ modules-right  =
 
 [module/plus]
 type           = custom/script
-format-text    = <label>
-label          = ×
-exec           = echo label
+interval       = 0.01
+exec           = echo $(( $(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //') + 1))
 click-left     = ~/scripts/hidebars.sh -s
 click-right    = ~/scripts/hidebars.sh -h
 format-padding = 3
@@ -153,7 +137,7 @@ label             = 
 exec              = echo label
 click-left        = exec cmus-remote -r -p
 click-right       = wmctrl -s 5
-format-foreground = ${colors.orange}
+format-foreground = ${colors.blue}
 format-background = ${colors.modb}
 format-padding    = 0
 
@@ -164,7 +148,7 @@ label             = 
 exec              = echo label
 click-left        = exec cmus-remote -n -p
 click-right       = wmctrl -s 5
-format-foreground = ${colors.orange}
+format-foreground = ${colors.blue}
 format-background = ${colors.modb}
 format-padding    = 0
 
@@ -176,7 +160,7 @@ click-left        = cmus-remote -u
 click-right       = wmctrl -s 5
 scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
-format-foreground = ${colors.orange}
+format-foreground = ${colors.blue}
 format-background = ${colors.modb}
 format-padding    = 0
 

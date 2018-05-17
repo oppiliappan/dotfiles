@@ -13,7 +13,7 @@ UNOCCUPIED=⋅
 
 # colors
 fg="$( get_xres color15 )"
-fg1="$( get_xres color0 )"
+fg1="$( get_xres color8 )"
 
 accent="$( get_xres color4 )"
 normal="$( get_xres color3 )"

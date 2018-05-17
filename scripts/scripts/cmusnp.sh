@@ -3,7 +3,7 @@
 # Requires cmus
 
 # colors
-active="$( get_xres color0 )"
+active="$( get_xres color8 )"
 inactive="$( get_xres color9)"
 
 np_string=""
@@ -22,15 +22,19 @@ then
 	status=$( cmus-remote -Q | grep status\ | sed 's/status //' )
 	artist=$( cmus-remote -Q | grep tag\ artist\ | sed 's/tag artist //' )
 	title=$( cmus-remote -Q | grep tag\ title\ | sed 's/tag title //' )
+
 	np_string="$title - $artist"
-	np_string=$( trunc 22 "$np_string" )
+	np_string=$( trunc 25 "$np_string" )
+
+	spc=$(( $(( 25 -${#np_string} ))/2 ))
+	spc="$( printf "%${spc}s" )"
 
 	if [[ "$status" = *playing* ]]
 	then
-		echo "%{F${active}}$np_string"
+		echo "$spc%{F${active}}$np_string$spc"
 	elif [[ "$status" = *paused* ]]
 	then
-		echo "%{F${inactive}}$np_string"
+		echo "$spc%{F${inactive}}$np_string$spc"
 	elif [[ "$status" = *stopped* ]]
 	then
 		echo "%{F${inactive}}stopped"

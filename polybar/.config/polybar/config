@@ -1,13 +1,13 @@
 ; ---------- global --------------
 
 [colors]
-foreground        = ${xrdb:color0}
+foreground        = ${xrdb:color7}
 foreground_bright = ${xrdb:color8}
-background        = ${xrdb:color14}
-modb              = ${xrdb:color14}
-modb1             = ${xrdb:color11}
+background        = ${xrdb:color0}
+modb              = ${xrdb:color0}
+modb1             = ${xrdb:color0}
 modb2             = ${xrdb:color0}
-red     = ${xrdb:color8}
+red     = ${xrdb:color1}
 orange  = ${xrdb:color9}
 yellow  = ${xrdb:color3}
 green   = ${xrdb:color2}
@@ -57,7 +57,7 @@ offset-x = 16
 offset-y = 700
 
 locale     = de_DE.UTF-8
-background = ${colors.blue}
+background = ${colors.orange}
 foreground = ${colors.background}
 
 font-0 = scientifica:size=8:antialias=true;0
@@ -120,6 +120,8 @@ interval       = 0.01
 exec           = echo $(( $(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //') + 1))
 click-left     = ~/scripts/hidebars.sh -s
 click-right    = ~/scripts/hidebars.sh -h
+scroll-up      = ~/scripts/wscycle.sh -f
+scroll-down    = ~/scripts/wscycle.sh -r
 format-padding = 3
 
 [module/date]
@@ -127,7 +129,7 @@ type = custom/script
 interval = 1.0
 exec = ~/scripts/date.sh
 format-padding = 2
-format-foreground = ${colors.foreground_bright}
+format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
 [module/previous]
@@ -135,9 +137,9 @@ type              = custom/script
 format-text       = <label>
 label             = 
 exec              = echo label
-click-left        = exec cmus-remote -r -p
+click-left        = cmus-remote -r -p && ~/scripts/popups/cover.sh
 click-right       = wmctrl -s 5
-format-foreground = ${colors.blue}
+format-foreground = ${colors.orange}
 format-background = ${colors.modb}
 format-padding    = 0
 
@@ -146,9 +148,9 @@ type              = custom/script
 format-text       = <label>
 label             = 
 exec              = echo label
-click-left        = exec cmus-remote -n -p
+click-left        = cmus-remote -n -p && ~/scripts/popups/cover.sh
 click-right       = wmctrl -s 5
-format-foreground = ${colors.blue}
+format-foreground = ${colors.orange}
 format-background = ${colors.modb}
 format-padding    = 0
 
@@ -160,7 +162,7 @@ click-left        = cmus-remote -u
 click-right       = wmctrl -s 5
 scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
-format-foreground = ${colors.blue}
+format-foreground = ${colors.orange}
 format-background = ${colors.modb}
 format-padding    = 0
 

@@ -12,11 +12,11 @@ OCCUPIED=∙
 UNOCCUPIED=⋅
 
 # colors
-fg="$( get_xres color15 )"
-fg1="$( get_xres color8 )"
+fg="$( get_xres color0 )"
+fg1="$( get_xres color7 )"
 
-accent="$( get_xres color4 )"
-normal="$( get_xres color3 )"
+accent="$( get_xres color9 )"
+normal="$( get_xres color10 )"
 
 #  print workspaces to stdout
 draw() {

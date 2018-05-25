@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# cycle through workspaces
 
 # get the current ws
 ws=$( xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //' )

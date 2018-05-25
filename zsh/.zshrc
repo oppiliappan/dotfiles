@@ -10,6 +10,7 @@ export MANPAGER="nvim -c MANPAGER -"
 export BROWSER="/usr/bin/chromium-browser"
 export PATH=$PATH":$HOME/bin"
 export PATH=$PATH":$HOME/.cargo/bin"
+export GPG_TTY=$(tty)
 
 ZSH_THEME="simple"
 

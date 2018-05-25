@@ -24,6 +24,8 @@ Plug 'rhysd/open-pdf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
+Plug 'ervandew/supertab'
+Plug 'andymass/vim-matchup'
 
 call plug#end()
 
@@ -33,7 +35,7 @@ augroup indents
 	autocmd!
 	autocmd FileType less,css,html setlocal ts=2 sts=2 sw=2 expandtab
 	autocmd FileType text,markdown setlocal expandtab
-	autocmd FileType python setlocal ts=4 sts=4 sw=4 noexpandtab
+	autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
 augroup END
 
 
@@ -42,13 +44,6 @@ augroup highlight_follows_vim
 	autocmd FocusGained * set cursorline
 	autocmd FocusLost * set nocursorline
 augroup END
-
-augroup status
-	au InsertEnter * call InsertStatuslineColor(v:insertmode)
-	au InsertChange * call InsertStatuslineColor(v:insertmode)
-	au InsertLeave * hi PrimaryBlock ctermbg=4
-augroup END
-
 
 augroup mapppings
 	autocmd!
@@ -76,6 +71,7 @@ set dir=/tmpset
 syntax on
 
 set omnifunc=syntaxcomplete#Complete
+set completefunc=LanguageClient#complete
 set list
 filetype indent on
 set number
@@ -146,31 +142,19 @@ let g:currentmode={
 set statusline=
 set statusline+=%#PrimaryBlock#
 set statusline+=\ %{g:currentmode[mode()]}
-" set statusline+=%#SecondaryBlock#
+set statusline+=%#SecondaryBlock#
 set statusline+=%{StatuslineGit()}
-" set statusline+=%#Blanks#
+set statusline+=%#Blanks#
 set statusline+=\ %t\ 
 set statusline+=%(%m%)
-" set statusline+=%#PrimaryBlock#
 set statusline+=%=
-set statusline+=Ln
+set statusline+=%#SecondaryBlock#
+set statusline+=\ Ln
 set statusline+=\ %l
 set statusline+=,Col
-set statusline+=\ %c
-set statusline+=\ \ \ %Y\ 
-
-function! InsertStatuslineColor(mode)
-  if a:mode == 'i'
-    hi PrimaryBlock ctermbg=2
-  elseif a:mode == 'r'
-    hi PrimaryBlock ctermbg=1
-  else
-    hi PrimaryBlock ctermbg=3
-  endif
-endfunction
-
-" default the statusline to green when entering Vim
-hi PrimaryBlock ctermbg=4
+set statusline+=\ %c\ 
+set statusline+=%#PrimaryBlock#
+set statusline+=\ %Y\ 
 
 function! GitBranch()
 	return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
@@ -209,12 +193,6 @@ endfunction
 
 " mappings
 let mapleader=' '
-
-" inoremaps
-augroup rustSemi
-	autocmd!
-	autocmd FileType rust inoremap ;; <esc><S-a>;
-augroup END
 
 
 " nnoremap
@@ -280,19 +258,19 @@ let g:NERDTreeDirArrowCollapsible = '-'
 
 " gitgutter
 let g:gitgutter_override_sign_column_highlight = 0
-let g:gitgutter_sign_added                     = '+'
-let g:gitgutter_sign_modified                  = '±'
-let g:gitgutter_sign_removed                   = '-'
-let g:gitgutter_sign_removed_first_line        = '^'
-let g:gitgutter_sign_modified_removed          = '#'
+let g:gitgutter_sign_added                     = '│'
+let g:gitgutter_sign_modified                  = '│'
+let g:gitgutter_sign_removed                   = '│'
+let g:gitgutter_sign_removed_first_line        = '│'
+let g:gitgutter_sign_modified_removed          = '│'
 
 " ale
 let g:ale_use_deprecated_neovim = 1
 let g:ale_sign_error            = '>>'
 let g:ale_sign_warning          = '--'
 
-let g:ale_linters = {'rust': ['cargo']}
-
 " rust.vim
 let g:rustfmt_autosave = 0
 
+" supertab
+let g:SuperTabDefaultCompletionType = "<c-n>"

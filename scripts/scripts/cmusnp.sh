@@ -3,8 +3,8 @@
 # Requires cmus
 
 # colors
-active="$( get_xres color8 )"
-inactive="$( get_xres color9)"
+active="$( get_xres color7 )"
+inactive="$( get_xres color11 )"
 
 np_string=""
 
@@ -24,9 +24,9 @@ then
 	title=$( cmus-remote -Q | grep tag\ title\ | sed 's/tag title //' )
 
 	np_string="$title - $artist"
-	np_string=$( trunc 25 "$np_string" )
+	np_string=$( trunc 20 "$np_string" )
 
-	spc=$(( $(( 25 -${#np_string} ))/2 ))
+	spc=$(( $(( 20 -${#np_string} ))/2 ))
 	spc="$( printf "%${spc}s" )"
 
 	if [[ "$status" = *playing* ]]

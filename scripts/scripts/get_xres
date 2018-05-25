@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-xrdb -query | grep $1 | awk '{print $2}'
+xrdb -query | grep -w $1 | awk '{print $2}'

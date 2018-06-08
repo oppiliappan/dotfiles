@@ -21,11 +21,13 @@ Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'rust-lang/rust.vim'
 Plug 'rhysd/open-pdf.vim'
-Plug 'jiangmiao/auto-pairs'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
 Plug 'ervandew/supertab'
 Plug 'andymass/vim-matchup'
+Plug 'andreypopp/vim-colors-plain'
+Plug 'jiangmiao/auto-pairs'
+Plug 'nerdypepper/agila.vim'
 
 call plug#end()
 
@@ -52,9 +54,9 @@ augroup END
 
 augroup restorecursor
 	autocmd BufReadPost *
-		\ if line("'\"") > 1 && line("'\"") <= line("$") |
-		\   execute "normal! g`\"" |
-		\ endif
+				\ if line("'\"") > 1 && line("'\"") <= line("$") |
+				\   execute "normal! g`\"" |
+				\ endif
 augroup END
 
 augroup nerdtree
@@ -73,9 +75,8 @@ syntax on
 set omnifunc=syntaxcomplete#Complete
 set completefunc=LanguageClient#complete
 set list
+set cursorline
 filetype indent on
-set number
-set relativenumber
 set laststatus=2
 set nowrap
 set noshowmode
@@ -96,6 +97,7 @@ set hidden
 set wildmenu
 set foldmethod=manual
 set complete=.,w,b,i,u,t,
+set background=dark
 
 set wildignore+=.git,.hg,.svn
 set wildignore+=*.aux,*.out,*.toc
@@ -118,43 +120,42 @@ set softtabstop=4    " backspace through spaces
 
 " statusline
 let g:currentmode={
-    \ 'n'  : 'NORMAL ',
-    \ 'no' : 'N·OPERATOR PENDING ',
-    \ 'v'  : 'VISUAL ',
-    \ 'V'  : 'V·LINE ',
-    \ '' : 'V·BLOCK ',
-    \ 's'  : 'SELECT ',
-    \ 'S'  : 'S·LINE ',
-    \ '' : 'S·BLOCK ',
-    \ 'i'  : 'INSERT ',
-    \ 'R'  : 'REPLACE ',
-    \ 'Rv' : 'V·REPLACE ',
-    \ 'c'  : 'COMMAND ',
-    \ 'cv' : 'VIM EX ',
-    \ 'ce' : 'EX ',
-    \ 'r'  : 'PROMPT ',
-    \ 'rm' : 'MORE ',
-    \ 'r?' : 'CONFIRM ',
-    \ '!'  : 'SHELL ',
-    \ 't'  : 'TERMINAL '}
-
+			\ 'n'  : 'NORMAL ',
+			\ 'no' : 'N·OPERATOR PENDING ',
+			\ 'v'  : 'VISUAL ',
+			\ 'V'  : 'V·LINE ',
+			\ '' : 'V·BLOCK ',
+			\ 's'  : 'SELECT ',
+			\ 'S'  : 'S·LINE ',
+			\ '' : 'S·BLOCK ',
+			\ 'i'  : 'INSERT ',
+			\ 'R'  : 'REPLACE ',
+			\ 'Rv' : 'V·REPLACE ',
+			\ 'c'  : 'COMMAND ',
+			\ 'cv' : 'VIM EX ',
+			\ 'ce' : 'EX ',
+			\ 'r'  : 'PROMPT ',
+			\ 'rm' : 'MORE ',
+			\ 'r?' : 'CONFIRM ',
+			\ '!'  : 'SHELL ',
+			\ 't'  : 'TERMINAL '}
 
 set statusline=
 set statusline+=%#PrimaryBlock#
 set statusline+=\ %{g:currentmode[mode()]}
-set statusline+=%#SecondaryBlock#
+" set statusline+=%#SecondaryBlock#
 set statusline+=%{StatuslineGit()}
-set statusline+=%#Blanks#
+" set statusline+=%#Blanks#
 set statusline+=\ %t\ 
 set statusline+=%(%m%)
 set statusline+=%=
-set statusline+=%#SecondaryBlock#
+" set statusline+=%#SecondaryBlock#
 set statusline+=\ Ln
 set statusline+=\ %l
 set statusline+=,Col
 set statusline+=\ %c\ 
-set statusline+=%#PrimaryBlock#
-set statusline+=\ %Y\ 
+" set statusline+=%#PrimaryBlock#
+set statusline+=\ \ \ \ %Y\ 
 
 function! GitBranch()
 	return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
@@ -258,16 +259,20 @@ let g:NERDTreeDirArrowCollapsible = '-'
 
 " gitgutter
 let g:gitgutter_override_sign_column_highlight = 0
-let g:gitgutter_sign_added                     = '│'
-let g:gitgutter_sign_modified                  = '│'
-let g:gitgutter_sign_removed                   = '│'
-let g:gitgutter_sign_removed_first_line        = '│'
-let g:gitgutter_sign_modified_removed          = '│'
+let g:gitgutter_sign_added                     = '+'
+let g:gitgutter_sign_modified                  = '±'
+let g:gitgutter_sign_removed                   = '-'
+let g:gitgutter_sign_removed_first_line        = '×'
+let g:gitgutter_sign_modified_removed          = '×'
 
 " ale
+let g:ale_set_signs             = 1
 let g:ale_use_deprecated_neovim = 1
-let g:ale_sign_error            = '>>'
-let g:ale_sign_warning          = '--'
+let g:ale_sign_error            = '❯ '
+let g:ale_sign_warning          = '❯ '
+
+hi ALEErrorSign ctermfg=01 ctermbg=00
+hi ALEWarningSign ctermfg=06 ctermbg=00
 
 " rust.vim
 let g:rustfmt_autosave = 0

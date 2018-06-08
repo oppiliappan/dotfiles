@@ -57,7 +57,7 @@ offset-x = 16
 offset-y = 700
 
 locale     = de_DE.UTF-8
-background = ${colors.orange}
+background = ${colors.yellow}
 foreground = ${colors.background}
 
 font-0 = scientifica:size=8:antialias=true;0
@@ -139,7 +139,7 @@ label             = 
 exec              = echo label
 click-left        = cmus-remote -r -p && ~/scripts/popups/cover.sh
 click-right       = wmctrl -s 5
-format-foreground = ${colors.orange}
+format-foreground = ${colors.yellow}
 format-background = ${colors.modb}
 format-padding    = 0
 
@@ -150,7 +150,7 @@ label             = 
 exec              = echo label
 click-left        = cmus-remote -n -p && ~/scripts/popups/cover.sh
 click-right       = wmctrl -s 5
-format-foreground = ${colors.orange}
+format-foreground = ${colors.yellow}
 format-background = ${colors.modb}
 format-padding    = 0
 
@@ -162,7 +162,7 @@ click-left        = cmus-remote -u
 click-right       = wmctrl -s 5
 scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
-format-foreground = ${colors.orange}
+format-foreground = ${colors.yellow}
 format-background = ${colors.modb}
 format-padding    = 0
 

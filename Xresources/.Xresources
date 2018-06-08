@@ -2,22 +2,22 @@
 !  Colors
 ! ------------------------------------------------------------------------------
 
-#define base00 #101e22
-#define base01 #203338
-#define base02 #32454a
-#define base03 #49575a
-#define base04 #929c9e
-#define base05 #d0d0d0
-#define base06 #bbc8cc
-#define base07 #dbeaef
-#define base08 #ec563b
-#define base09 #ee843e
-#define base0A #eead3e
-#define base0B #d2ca93
-#define base0C #d2ca93
-#define base0D #d2ca93
-#define base0E #d2ca93
-#define base0F #d2ca93
+#define base00 #212121
+#define base01 #303030
+#define base02 #353535
+#define base03 #4A4A4A
+#define base04 #B2CCD6
+#define base05 #EEFFFF
+#define base06 #EEFFFF
+#define base07 #FFFFFF
+#define base08 #F07178
+#define base09 #F78C6C
+#define base0A #FFCB6B
+#define base0B #C3E88D
+#define base0C #89DDFF
+#define base0D #82AAFF
+#define base0E #C792EA
+#define base0F #FF5370
 
 ! ------------------------------------------------------------------------------
 !  URxvt
@@ -89,13 +89,12 @@ rofi.fullscreen        : false
 rofi.width             : 250
 rofi.lines             : 6
 
-Xft.dpi       : 96
-Xft.antialias : true
-Xft.rgba      : rgb
-Xft.hinting   : true
-Xft.hintstyle : hintslight
-Xft.autohint  : false
-Xft.lcdfilter : lcddefault
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.rgba: rgb
+Xft.dpi: 96
 
 ! ------------------------------------------------------------------------------
 ! 2bwm

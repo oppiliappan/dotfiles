@@ -15,7 +15,7 @@ UNOCCUPIED=⋅
 fg="$( get_xres color0 )"
 fg1="$( get_xres color7 )"
 
-accent="$( get_xres color9 )"
+accent="$( get_xres color3 )"
 normal="$( get_xres color10 )"
 
 #  print workspaces to stdout

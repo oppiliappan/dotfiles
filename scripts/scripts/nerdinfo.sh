@@ -27,9 +27,9 @@ echo -e "       \_\ \/ /_/ "
 echo -e "       /        \  "
 echo
 echo
-echo -e "  ${cyn}    shell  ${rst}"  " zsh    "
-echo -e "  ${cyn}    wm     ${rst}"  " 2bwm   "
-echo -e "  ${cyn}    editor ${rst}"  " nvim   "
-echo -e "  ${cyn}    distro ${rst}"  " debian "
+echo -e "  ${grn}    shell  ${rst}"  " zsh    "
+echo -e "  ${grn}    wm     ${rst}"  " 2bwm   "
+echo -e "  ${grn}    editor ${rst}"  " nvim   "
+echo -e "  ${grn}    distro ${rst}"  " debian "
 echo
 echo

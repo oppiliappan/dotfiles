@@ -25,9 +25,9 @@ Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
 Plug 'ervandew/supertab'
 Plug 'andymass/vim-matchup'
-Plug 'andreypopp/vim-colors-plain'
 Plug 'jiangmiao/auto-pairs'
 Plug 'nerdypepper/agila.vim'
+Plug 'nerdypepper/vim-colors-plain'
 
 call plug#end()
 
@@ -98,6 +98,7 @@ set wildmenu
 set foldmethod=manual
 set complete=.,w,b,i,u,t,
 set background=dark
+set mouse=a
 
 set wildignore+=.git,.hg,.svn
 set wildignore+=*.aux,*.out,*.toc
@@ -110,7 +111,7 @@ set wildignore+=*.doc,*.pdf,*.cbr,*.cbz
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.kgb
 set wildignore+=*.swp,.lock,.DS_Store,._*
 
-colorscheme agila
+colorscheme plain
 
 set shiftwidth=4     " indent = 4 spaces
 set noexpandtab      " tabs are tabs
@@ -139,23 +140,26 @@ let g:currentmode={
 			\ 'r?' : 'CONFIRM ',
 			\ '!'  : 'SHELL ',
 			\ 't'  : 'TERMINAL '}
+hi PrimaryBlock ctermfg=00 ctermbg=02
+hi SecondaryBlock ctermfg=07 ctermbg=11
+hi Blanks ctermfg=8 ctermbg=00
 
 set statusline=
 set statusline+=%#PrimaryBlock#
 set statusline+=\ %{g:currentmode[mode()]}
-" set statusline+=%#SecondaryBlock#
+set statusline+=%#SecondaryBlock#
 set statusline+=%{StatuslineGit()}
-" set statusline+=%#Blanks#
+set statusline+=%#Blanks#
 set statusline+=\ %t\ 
 set statusline+=%(%m%)
 set statusline+=%=
-" set statusline+=%#SecondaryBlock#
+set statusline+=%#SecondaryBlock#
 set statusline+=\ Ln
 set statusline+=\ %l
 set statusline+=,Col
 set statusline+=\ %c\ 
-" set statusline+=%#PrimaryBlock#
-set statusline+=\ \ \ \ %Y\ 
+set statusline+=%#PrimaryBlock#
+set statusline+=\ %Y\ 
 
 function! GitBranch()
 	return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
@@ -268,8 +272,8 @@ let g:gitgutter_sign_modified_removed          = '×'
 " ale
 let g:ale_set_signs             = 1
 let g:ale_use_deprecated_neovim = 1
-let g:ale_sign_error            = '❯ '
-let g:ale_sign_warning          = '❯ '
+let g:ale_sign_error            = '>>'
+let g:ale_sign_warning          = '->'
 
 hi ALEErrorSign ctermfg=01 ctermbg=00
 hi ALEWarningSign ctermfg=06 ctermbg=00

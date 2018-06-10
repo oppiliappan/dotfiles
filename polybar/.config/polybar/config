@@ -24,105 +24,37 @@ override-redirect = true
 
 ; ------------ bars ---------------
 
-[bar/ws]
-width    = 200
-height   = 25
-offset-x = 40
-offset-y = 655
-
-locale     = de_DE.UTF-8
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-font-0 = scientifica:size=8:antialias=true;2
-
-modules-left   =
-modules-center = 2bws
-modules-right  =
-
-tray-position    =
-
-radius = 0.0
-
-spacing             = 1
-padding-left        = 0
-padding-right       = 0
-module-margin-left  = 0
-module-margin-right = 0
-
-[bar/fab]
-width    = 48
-height   = 48
-offset-x = 16
-offset-y = 700
-
-locale     = de_DE.UTF-8
-background = ${colors.yellow}
-foreground = ${colors.background}
-
-font-0 = scientifica:size=8:antialias=true;0
-
-modules-left   =
-modules-center = plus
-modules-right  =
-
-tray-position    =
-
-radius = 25.0
-
-spacing             = 1
-padding-left        = 0
-padding-right       = 0
-module-margin-left  = 0
-module-margin-right = 0
-
-[bar/music]
-width    = 200
+[bar/top]
+width    = 50%
 height   = 50
-offset-x = 40
-offset-y = 605
+offset-x = 25%
+offset-y = 1030
 
 locale     = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = scientifica:size=8:antialias=true;0
-font-1 = Siji:size=9;0
+font-0 = Iosevka Term:size=13:weight=medium:antialias=true;2
+font-1 = Material Icons:size=12:;3
 
-modules-left   =
-modules-center = previous cmusnp next
-modules-right  =
+modules-left   = bat vol brit
+modules-center = time 
+modules-right  = net 2bws 
 
 tray-position    =
+tray-padding     = 2
+tray-transparent = false
+tray-detached    = false
+tray-background  = ${colors.modb}
+tray-maxsize     = 12
 
-spacing             = 0
+spacing             = 1
 padding-left        = 0
 padding-right       = 0
 module-margin-left  = 0
 module-margin-right = 0
-
-[bar/date]
-inherit = bar/ws
-width = 200
-height = 50
-offset-y = 680
-background = ${colors.background}
-modules-left   =
-modules-center = date
-modules-right  =
-
 
 ; ---------- modules ---------------
-
-[module/plus]
-type           = custom/script
-interval       = 0.01
-exec           = echo $(( $(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //') + 1))
-click-left     = ~/scripts/hidebars.sh -s
-click-right    = ~/scripts/hidebars.sh -h
-scroll-up      = ~/scripts/wscycle.sh -f
-scroll-down    = ~/scripts/wscycle.sh -r
-format-padding = 3
 
 [module/date]
 type = custom/script
@@ -132,10 +64,18 @@ format-padding = 2
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
+[module/time]
+type              = custom/script
+interval          = 1.0
+exec              = date +%I:%M
+format-padding    = 2
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
 [module/previous]
 type              = custom/script
 format-text       = <label>
-label             = 
+label             = 
 exec              = echo label
 click-left        = cmus-remote -r -p && ~/scripts/popups/cover.sh
 click-right       = wmctrl -s 5
@@ -146,18 +86,17 @@ format-padding    = 0
 [module/next]
 type              = custom/script
 format-text       = <label>
-label             = 
+label             = 
 exec              = echo label
 click-left        = cmus-remote -n -p && ~/scripts/popups/cover.sh
 click-right       = wmctrl -s 5
 format-foreground = ${colors.yellow}
 format-background = ${colors.modb}
 format-padding    = 0
-
+up
 [module/playpause]
 type              = custom/script
 exec              = ~/scripts/playpause.sh
-interval          = 0.01
 click-left        = cmus-remote -u
 click-right       = wmctrl -s 5
 scroll-up         = exec amixer sset Master 2%+
@@ -168,16 +107,44 @@ format-padding    = 0
 
 [module/2bws]
 type              = custom/script
-exec              = ~/scripts/2bws.sh
+exec              = echo $(( $(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //') + 1))
 interval          = 0.01
 format-padding    = 3
-format-background = ${colors.modb}
+format-background = ${colors.green}
+format-foreground = ${colors.background}
 scroll-up         = exec ~/scripts/wscycle.sh -f
 scroll-down       = exec ~/scripts/wscycle.sh -r
 
+[module/bat]
+type              = custom/script
+exec              = cat /sys/class/power_supply/BAT0/capacity
+interval          = 10
+format-prefix     = "♥ "
+format-suffix     = "%"
+format-padding    = 2
+format-background = ${colors.modb}
+
+[module/vol]
+type              = custom/script
+exec              = exec ~/scripts/vol -q
+interval          = 0.1
+format-prefix     = " "
+format-padding    = 2
+format-background = ${colors.modb}
+scroll-up         = ~/scripts/vol -i
+scroll-down       = ~/scripts/vol -d
+
+[module/net]
+type              = custom/script
+exec              = exec ~/scripts/netwrk.sh
+interval          = 5
+format-padding    = 2
+format-background = ${colors.modb}
+click-left        = urxvtc -g 50x22 -b 0 -e nmtui
+
 [module/cmusnp]
 type              = custom/script
-interval          = 0.01
+interval          = 1
 format-text       = <label>
 exec              = ~/scripts/cmusnp.sh
 click-left        = cmus-remote -u
@@ -186,4 +153,15 @@ scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
 format-foreground = ${colors.foreground}
 format-background = ${colors.modb}
-format-padding    = 3
+
+[module/brit]
+type              = custom/script
+exec              = light -b
+interval          = 1
+format-padding    = 2
+format-prefix     = "⏾ "
+format-background = ${colors.modb}
+scroll-up         = light -A 5
+scroll-down       = light -U 5
+click-left = redshift -O 4000
+click-right = redshift -O 6500

@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+red="\e[31m"
+grn="\e[32m"
+ylw="\e[33m"
+cyn="\e[36m"
+blu="\e[34m"
+prp="\e[35m"
+bprp="\e[35;1m"
+rst="\e[0m"
+
+bat_status=""
+bat_status=$( cat /sys/class/power_supply/BAT0/capacity )
+model_name=$( cat /sys/class/power_supply/BAT0/model_name )
+charging_status=$( cat /sys/class/power_supply/BAT0/status )
+cycle_count=$( cat /sys/class/power_supply/BAT0/cycle_count )
+
+health() {
+	for i in {1..5}
+	do
+		if [[ $i -le $(( $bat_status/20 )) ]]; then
+			echo -ne "${red}♥${rst}"
+		else
+			echo -ne "${ylw}♥${rst}"
+		fi
+	done
+	echo
+}
+
+echo "----$model_name----"
+echo "Manufacturer : $( cat /sys/class/power_supply/BAT0/manufacturer )"
+echo "Status       : $charging_status"
+echo "Capacity     : $bat_status%"
+echo "Health       : "$( health )
+echo "Cycle Count  : $cycle_count"

@@ -8,7 +8,7 @@ export ZSH=/home/nerdypepper/.oh-my-zsh
 export EDITOR=/usr/bin/nvim
 export MANPAGER="nvim -c MANPAGER -"
 export BROWSER="/usr/bin/chromium-browser"
-export PATH=$PATH":$HOME/bin"
+export PATH=$PATH":$HOME/scripts"
 export PATH=$PATH":$HOME/.cargo/bin"
 export GPG_TTY=$(tty)
 
@@ -33,4 +33,4 @@ alias tg='chromium --app=https://web.telegram.org'
 # functions
 
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh

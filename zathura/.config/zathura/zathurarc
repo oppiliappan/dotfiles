@@ -1,0 +1,23 @@
+set incremental-search true
+
+set default-bg "#212121"
+set default-fg "#ffffff"
+
+set completion-bg "#212121"
+set completion-fg "#ffffff"
+set completion-highlight-bg "#82AAFF"
+set completion-highlight-fg "#212121"
+
+set statusbar-bg "#82AAFF"
+set statusbar-fg "#000"
+
+set inputbar-bg "#212121"
+set inputbar-fg "#ffffff"
+
+set window-height "400"
+set window-width "300"
+
+set adjust-open "width"
+set smooth-scroll true
+
+set font "PragmataPro normal 13"

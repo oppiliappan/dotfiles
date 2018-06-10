@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-time=$( date +%H:%M )
-
-echo -n "${time}  "
-
 case $( date +%u ) in
 	1) echo -n "Mon";;
 	2) echo -n "Tue";;

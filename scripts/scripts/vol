@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+while getopts idq options
+do
+	case $options in
+		i)
+			amixer sset Master 2%+
+			;;
+
+		d)
+			amixer sset Master 2%-
+			;;
+		q)
+			cur_vol=$(  amixer sget Master | awk -F"[][]" '/dB/ { print $2 }'  )
+			echo $cur_vol
+			;;
+	esac
+done

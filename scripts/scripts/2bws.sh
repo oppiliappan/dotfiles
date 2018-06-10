@@ -27,15 +27,15 @@ draw() {
 		if [[ $i -eq $ws ]]
 		then
 			# current workspace
-			echo -ne "%{B$accent}%{F$fg}  $(( i + 1 ))  %{B-}"
+			echo -ne "%{B$accent}%{F$fg}   $(( i + 1 ))   %{B-}"
 		else
 			if [[ $windows > 0 ]]
 			then
 				# occupied workspace
-				echo -ne "%{B$normal}%{F$fg1}  $(( i + 1 ))  %{B-}"
+				echo -ne "%{B$normal}%{F$fg1}   $(( i + 1 ))   %{B-}"
 			else
 				# unoccupied workspace
-				echo -ne "%{F$fg1}  $(( i + 1 ))  "
+				echo -ne "%{F$fg1}   $(( i + 1 ))   "
 			fi
 		fi
 	done

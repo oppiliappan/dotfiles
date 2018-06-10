@@ -2,14 +2,14 @@
 
 ///--Speed---///
 static const uint16_t movements[] = {
-	50,  // move step slow
-	100, // move step fast
-	15,  // mouse slow
+	300,  // move step slow
+	600, // move step fast
+	40,  // mouse slow
 	400  // mouse fast
 };
 
 /* resize by line like in mcwm -- jmbi */
-static const bool     resize_by_line          = false;
+static const bool     resize_by_line          = true;
 
 /* the ratio used when resizing and keeping the aspect */
 static const float    resize_keep_aspect_ratio= 1.03;
@@ -70,6 +70,8 @@ static const char *terminal[] = {"urxvtc", NULL};
 static const char *rofir[] = {"/home/nerdypepper/scripts/rofi.sh", "-r", NULL};
 static const char *rofiw[] = {"/home/nerdypepper/scripts/rofi.sh", "-w", NULL};
 static const char *draw[] = {"/home/nerdypepper/scripts/draw.sh", NULL};
+static const char *volup[] = {"/home/nerdypepper/scripts/vol", "-i", NULL};
+static const char *voldn[] = {"/home/nerdypepper/scripts/vol", "-d", NULL};
 
 #define WORKSPACES 6
 
@@ -210,6 +212,8 @@ static key keys[] = {
     {  MOD ,              XK_space,      halfandcentered,   {.i=0}},
     {  MOD ,              XK_Return,     start,             {.com = terminal} },
     {  MOD ,              XK_d,          start,             {.com = rofir} },
+    {  MOD ,              XK_F8,          start,    {.com = volup} },
+    {  MOD ,              XK_F7,          start,  {.com = voldn} },
     // Change current workspace
        DESKTOPCHANGE(     XK_1,                             0)
        DESKTOPCHANGE(     XK_2,                             1)

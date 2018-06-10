@@ -6,8 +6,8 @@
 #define base01 #303030
 #define base02 #353535
 #define base03 #4A4A4A
-#define base04 #B2CCD6
-#define base05 #EEFFFF
+#define base04 #B3B3B3
+#define base05 #DADADA
 #define base06 #EEFFFF
 #define base07 #FFFFFF
 #define base08 #F07178
@@ -46,15 +46,13 @@
 *color15:      base07
 
 
-URxvt.cursorBlink  :1
-URxvt.font        :xft:scientifica:size=9
-URxvt.boldFont    :xft:scientifica:italic:size=9
-URxvt.italicFont  :xft:scientifica:italic:size=9
+URxvt.cursorBlink : 1
+URxvt.font        : xft:PragmataPro for Powerline:size=11
 
-URxvt.lineSpace           : 1
-URxvt.letterSpace         : 1
+URxvt.lineSpace           : 0
+URxvt.letterSpace         : 0
 URxvt.scrollBar           : false
-URxvt.internalBorder      : 18
+URxvt.internalBorder      : 32
 URxvt.cursorUnderline     : false
 URxvt.geometry            : 70x35
 URxvt.thickness           : 5
@@ -63,7 +61,7 @@ URxvt.intensityStyles     : false
 
 
 URxvt.perl-ext-common : default,matcher
-URxvt.url-launcher    : chromium
+URxvt.url-launcher    : firefox
 URxvt.matcher.button  : 1
 
 ! ------------------------------------------------------------------------------
@@ -77,16 +75,16 @@ rofi.color-active:    base03 , base0E , base00 , base0B , base00
 rofi.color-urgent:    base00 , base03 , base00 , base00 , base03
 
 rofi.fake-transparency : true
-rofi.font              : scientifica 9
+rofi.font              : Iosevka Term 12
 rofi.columns           : 1
 rofi.separator-style   : none
 rofi.hide-scrollbar    : true
 rofi.location          : 1
-rofi.yoffset           : 32
-rofi.xoffset           : 32
+rofi.yoffset           : 48
+rofi.xoffset           : 48
 rofi.padding           : 32
 rofi.fullscreen        : false
-rofi.width             : 250
+rofi.width             : 300
 rofi.lines             : 6
 
 Xft.autohint: 0
@@ -94,18 +92,18 @@ Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintslight
 Xft.hinting: 1
 Xft.rgba: rgb
-Xft.dpi: 96
+Xft.dpi: 110
 
 ! ------------------------------------------------------------------------------
 ! 2bwm
 ! ------------------------------------------------------------------------------
 
-twobwm.border_width: 3
-twobwm.outer_border: 3
-twobwm.focus_color: base00
-twobwm.unfocus_color: base00
+twobwm.border_width: 10
+twobwm.outer_border: 8
+twobwm.focus_color: base02
+twobwm.unfocus_color: base01
 twobwm.fixed_color: base0D
 twobwm.unkill_color: base08
 twobwm.fixed_unkill_color: base0E
 twobwm.outer_border_color: base00
-twobwm.inverted_colors: false
+twobwm.inverted_colors: true

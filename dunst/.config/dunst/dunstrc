@@ -5,7 +5,7 @@
 #                  
 
 [global]
-    font = scientifica 8
+    font = Iosevka Term 10
     allow_markup = no
     format = "<b>%s</b>\n%b"
     sort = yes

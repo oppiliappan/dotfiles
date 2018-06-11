@@ -1,9 +1,9 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 pkill polybar
 
 polybar ws &
-polybar date &
+polybar stats &
 polybar music &
 
 sleep 0.2

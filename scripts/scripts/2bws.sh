@@ -15,7 +15,7 @@ UNOCCUPIED=⋅
 fg="$( get_xres color0 )"
 fg1="$( get_xres color7 )"
 
-accent="$( get_xres color3 )"
+accent="$( get_xres color2 )"
 normal="$( get_xres color10 )"
 
 #  print workspaces to stdout
@@ -27,15 +27,15 @@ draw() {
 		if [[ $i -eq $ws ]]
 		then
 			# current workspace
-			echo -ne "%{B$accent}%{F$fg}   $(( i + 1 ))   %{B-}"
+			echo -ne "%{B$accent}%{F$fg}  $(( i + 1 ))  %{B-}"
 		else
 			if [[ $windows > 0 ]]
 			then
 				# occupied workspace
-				echo -ne "%{B$normal}%{F$fg1}   $(( i + 1 ))   %{B-}"
+				echo -ne "%{B$normal}%{F$fg1}  $(( i + 1 ))  %{B-}"
 			else
 				# unoccupied workspace
-				echo -ne "%{F$fg1}   $(( i + 1 ))   "
+				echo -ne "%{F$fg1}  $(( i + 1 ))  "
 			fi
 		fi
 	done

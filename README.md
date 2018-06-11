@@ -1,4 +1,4 @@
-![neet.png](https://0x0.st/s_lI.png)
+![neet.png](https://i.redditmedia.com/ajjRBOMzr2hRmfZTgfpLtNGBWlaTnlOw5Xga8xVrdjc.png?s=e3146967e038a3acabdafd11f0be1ced)
 
 ```
 █▀▀▄ █▀▀█ ▀▀█▀▀ █▀▀ ▀█▀ █   █▀▀ █▀▀ 

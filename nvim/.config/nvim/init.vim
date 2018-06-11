@@ -13,7 +13,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'mattn/emmet-vim', { 'for': ['*html', '*css'] }
+Plug 'mattn/emmet-vim', { 'for': ['*html', '*css', 'vue'] }
 Plug 'tpope/vim-repeat'
 Plug 'godlygeek/tabular'
 Plug 'lambdalisue/vim-manpager'
@@ -28,6 +28,7 @@ Plug 'andymass/vim-matchup'
 Plug 'jiangmiao/auto-pairs'
 Plug 'nerdypepper/agila.vim'
 Plug 'nerdypepper/vim-colors-plain'
+Plug 'posva/vim-vue'
 
 call plug#end()
 
@@ -144,6 +145,8 @@ hi PrimaryBlock ctermfg=00 ctermbg=02
 hi SecondaryBlock ctermfg=07 ctermbg=11
 hi Blanks ctermfg=8 ctermbg=00
 
+highlight EndOfBuffer ctermfg=black ctermbg=black
+
 set statusline=
 set statusline+=%#PrimaryBlock#
 set statusline+=\ %{g:currentmode[mode()]}
@@ -257,6 +260,7 @@ let g:user_emmet_leader_key='<C-X>'
 " nerdtree
 let g:NERDTreeMinimalUI           = 1
 let g:NERDTreeWinPos              = 'right'
+let g:NERDTreeWinSize             = 20
 let g:NERDTreeStatusline          = -1
 let g:NERDTreeDirArrowExpandable  = '+'
 let g:NERDTreeDirArrowCollapsible = '-'

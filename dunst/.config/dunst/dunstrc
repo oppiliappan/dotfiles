@@ -26,7 +26,7 @@
     show_indicators = yes
     line_height = 0
     separator_height = 0
-    padding = 16
+    padding = 32
     horizontal_padding = 16
     separator_color = auto
     startup_notification = false

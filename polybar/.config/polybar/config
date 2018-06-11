@@ -24,29 +24,99 @@ override-redirect = true
 
 ; ------------ bars ---------------
 
-[bar/top]
-width    = 50%
-height   = 50
-offset-x = 25%
-offset-y = 1030
+[bar/fab]
+width    = 75
+height   = 75
+offset-x = 40
+offset-y = 965
+
+locale     = de_DE.UTF-8
+background = ${colors.green}
+foreground = ${colors.background}
+
+font-0 = Iosevka Term:size=12:antialias=true;0
+
+modules-left   =
+modules-center = plus
+modules-right  =
+
+tray-position    =
+
+radius = 37.5
+
+spacing             = 1
+padding-left        = 0
+padding-right       = 0
+module-margin-left  = 0
+module-margin-right = 0
+
+[bar/stats]
+width    = 350
+height   = 60
+offset-x = 77
+offset-y = 935
 
 locale     = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = Iosevka Term:size=13:weight=medium:antialias=true;2
-font-1 = Material Icons:size=12:;3
+font-0 = Iosevka Term:size=12:antialias=true;0
+font-1 = Material Icons:size=11:antialias=true;2
 
-modules-left   = bat vol brit
-modules-center = time 
-modules-right  = net 2bws 
+modules-left   =
+modules-center = bat vol brit
+modules-right  =
 
 tray-position    =
-tray-padding     = 2
-tray-transparent = false
-tray-detached    = false
-tray-background  = ${colors.modb}
-tray-maxsize     = 12
+
+spacing             = 1
+padding-left        = 0
+padding-right       = 0
+module-margin-left  = 0
+module-margin-right = 0
+
+[bar/ws]
+width    = 350
+height   = 40
+offset-x = 77
+offset-y = 895
+
+locale     = de_DE.UTF-8
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = Iosevka Term:size=12:antialias=true;2
+
+modules-left   =
+modules-center = 2bws
+modules-right  =
+
+tray-position    =
+
+spacing             = 1
+padding-left        = 0
+padding-right       = 0
+module-margin-left  = 0
+module-margin-right = 0
+
+[bar/music]
+width    = 350
+height   = 60
+offset-x = 77
+offset-y = 835
+
+locale     = de_DE.UTF-8
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = Iosevka Term:size=12:antialias=true;0
+font-1 = Material Icons:size=12:antialias=true;2
+
+modules-left   =
+modules-center = previous cmusnp next
+modules-right  =
+
+tray-position    =
 
 spacing             = 1
 padding-left        = 0
@@ -55,6 +125,16 @@ module-margin-left  = 0
 module-margin-right = 0
 
 ; ---------- modules ---------------
+
+[module/plus]
+type           = custom/script
+interval       = 0.01
+exec           = echo $(( $(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //') + 1))
+click-left     = ~/scripts/hidebars.sh -s
+click-right    = ~/scripts/hidebars.sh -h
+scroll-up      = ~/scripts/wscycle.sh -f
+scroll-down    = ~/scripts/wscycle.sh -r
+format-padding = 3
 
 [module/date]
 type = custom/script
@@ -72,6 +152,7 @@ format-padding    = 2
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
+ 
 [module/previous]
 type              = custom/script
 format-text       = <label>
@@ -79,7 +160,7 @@ label             = 
 exec              = echo label
 click-left        = cmus-remote -r -p && ~/scripts/popups/cover.sh
 click-right       = wmctrl -s 5
-format-foreground = ${colors.yellow}
+format-foreground = ${colors.green}
 format-background = ${colors.modb}
 format-padding    = 0
 
@@ -90,7 +171,7 @@ label             = 
 exec              = echo label
 click-left        = cmus-remote -n -p && ~/scripts/popups/cover.sh
 click-right       = wmctrl -s 5
-format-foreground = ${colors.yellow}
+format-foreground = ${colors.green}
 format-background = ${colors.modb}
 format-padding    = 0
 up
@@ -101,16 +182,15 @@ click-left        = cmus-remote -u
 click-right       = wmctrl -s 5
 scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
-format-foreground = ${colors.yellow}
+format-foreground = ${colors.green}
 format-background = ${colors.modb}
 format-padding    = 0
 
 [module/2bws]
 type              = custom/script
-exec              = echo $(( $(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //') + 1))
+exec              = ~/scripts/2bws.sh
 interval          = 0.01
 format-padding    = 3
-format-background = ${colors.green}
 format-foreground = ${colors.background}
 scroll-up         = exec ~/scripts/wscycle.sh -f
 scroll-down       = exec ~/scripts/wscycle.sh -r
@@ -130,7 +210,6 @@ exec              = exec ~/scripts/vol -q
 interval          = 0.1
 format-prefix     = " "
 format-padding    = 2
-format-background = ${colors.modb}
 scroll-up         = ~/scripts/vol -i
 scroll-down       = ~/scripts/vol -d
 
@@ -144,7 +223,7 @@ click-left        = urxvtc -g 50x22 -b 0 -e nmtui
 
 [module/cmusnp]
 type              = custom/script
-interval          = 1
+interval          = 0.1
 format-text       = <label>
 exec              = ~/scripts/cmusnp.sh
 click-left        = cmus-remote -u

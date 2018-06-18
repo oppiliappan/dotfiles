@@ -8,7 +8,7 @@ convert "$cover" -resize 350x350 ~/tmp/cover.png
 if pgrep n30f > /dev/null
 then
 	pkill n30f
-	n30f -x 77 -y 485 ~/tmp/cover.png -d
+	n30f -x 77 -y 475 ~/tmp/cover.png -d
 else
-	n30f -x 77 -y 485 ~/tmp/cover.png -d
+	n30f -x 77 -y 475 ~/tmp/cover.png -d
 fi

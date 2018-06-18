@@ -1,7 +1,3 @@
-# __ __
-#  /(_ |_|
-# /___)| |
-#
 echo "\e[3m$(fortune -sa)\n"
 
 export ZSH=/home/nerdypepper/.oh-my-zsh
@@ -11,6 +7,7 @@ export BROWSER="/usr/bin/chromium-browser"
 export PATH=$PATH":$HOME/scripts"
 export PATH=$PATH":$HOME/.cargo/bin"
 export GPG_TTY=$(tty)
+export TERM=xterm-256color-italic
 
 ZSH_THEME="simple"
 
@@ -33,3 +30,4 @@ alias spdtst='curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/t
 
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source /usr/share/autojump/autojump.zsh

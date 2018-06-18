@@ -2,22 +2,22 @@
 !  Colors
 ! ------------------------------------------------------------------------------
 
-#define base00 #212121
-#define base01 #303030
-#define base02 #353535
-#define base03 #4A4A4A
-#define base04 #B3B3B3
-#define base05 #C9C9C9
-#define base06 #DADADA
-#define base07 #FFFFFF
-#define base08 #F07178
-#define base09 #F78C6C
-#define base0A #FFCB6B
-#define base0B #C3E88D
-#define base0C #89DDFF
-#define base0D #82AAFF
-#define base0E #C792EA
-#define base0F #FF5370
+#define base00 #ffffff
+#define base01 #e0e0e0
+#define base02 #d6d6d6
+#define base03 #8e908c
+#define base04 #969896
+#define base05 #4d4d4c
+#define base06 #282a2e
+#define base07 #1d1f21
+#define base08 #c82829
+#define base09 #f5871f
+#define base0A #eab700
+#define base0B #718c00
+#define base0C #3e999f
+#define base0D #4271ae
+#define base0E #8959a8
+#define base0F #a3685a
 
 ! ------------------------------------------------------------------------------
 !  URxvt
@@ -46,9 +46,9 @@
 *color15:      base07
 
 
-URxvt.cursorBlink : 1
-URxvt.font        : xft:Iosevka Term:size=12
-URxvt.italicFont  : xft:Iosevka Term:style=italic:size=12
+URxvt.cursorBlink : 0
+URxvt.font        : xft:Iosevka Term:size=13
+URxvt.italicFont  : xft:Iosevka Term:style=italic:size=13
 
 URxvt.lineSpace           : 0
 URxvt.letterSpace         : 0
@@ -61,7 +61,7 @@ URxvt.titleBar            : false
 URxvt.intensityStyles     : false
 
 
-URxvt.perl-ext-common : default,matcher,font-size
+URxvt.perl-ext-common : default,matcher
 URxvt.url-launcher    : firefox
 URxvt.matcher.button  : 1
 
@@ -99,8 +99,8 @@ Xft.dpi: 110
 ! 2bwm
 ! ------------------------------------------------------------------------------
 
-twobwm.border_width: 5
-twobwm.outer_border: 4
+twobwm.border_width: 8
+twobwm.outer_border: 5
 twobwm.focus_color: base00
 twobwm.unfocus_color: base00
 twobwm.fixed_color: base0D

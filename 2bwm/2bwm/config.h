@@ -4,7 +4,7 @@
 static const uint16_t movements[] = {
 	300,  // move step slow
 	600, // move step fast
-	40,  // mouse slow
+	400,  // mouse slow
 	400  // mouse fast
 };
 

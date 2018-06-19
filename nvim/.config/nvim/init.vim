@@ -1,8 +1,3 @@
-"        ___
-" |\ |\  /| |\/|
-" | \| \/_|_|  |
-"
-
 mapclear
 let &t_ZM = "\e[3m"
 
@@ -23,12 +18,16 @@ Plug 'rust-lang/rust.vim'
 Plug 'rhysd/open-pdf.vim'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
-Plug 'ervandew/supertab'
 Plug 'andymass/vim-matchup'
 Plug 'jiangmiao/auto-pairs'
 Plug 'nerdypepper/agila.vim'
 Plug 'nerdypepper/vim-colors-plain'
 Plug 'posva/vim-vue'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'sebastianmarkow/deoplete-rust'
+Plug 'junegunn/goyo.vim'
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
@@ -76,12 +75,11 @@ syntax on
 set omnifunc=syntaxcomplete#Complete
 set completefunc=LanguageClient#complete
 set list
-set cursorline
 filetype indent on
 set laststatus=2
 set nowrap
 set noshowmode
-set listchars=tab:│\ ,nbsp:␣,trail:∙,extends:>,precedes:<,eol:¬
+set listchars=tab:│\ ,nbsp:␣,trail:∙,extends:>,precedes:<
 set fillchars=vert:\│
 set scrolloff=3
 set ignorecase
@@ -115,7 +113,7 @@ set wildignore+=*.swp,.lock,.DS_Store,._*
 colorscheme plain
 
 set shiftwidth=4     " indent = 4 spaces
-set noexpandtab      " tabs are tabs
+set expandtab
 set tabstop=4        " tab = 4 spaces
 set softtabstop=4    " backspace through spaces
 
@@ -141,7 +139,7 @@ let g:currentmode={
 			\ 'r?' : 'CONFIRM ',
 			\ '!'  : 'SHELL ',
 			\ 't'  : 'TERMINAL '}
-hi PrimaryBlock ctermfg=00 ctermbg=02
+hi PrimaryBlock ctermfg=00 ctermbg=02 cterm=bold
 hi SecondaryBlock ctermfg=07 ctermbg=11
 hi Blanks ctermfg=8 ctermbg=00
 
@@ -210,8 +208,6 @@ nnoremap <Leader>b : Buffers<cr>
 nnoremap <Leader>z : FZF<cr>
 nnoremap <Leader>w : MtaJumpToOtherTag<cr>
 nnoremap <Leader>t : call GetTabber()<cr>
-nnoremap <Leader>n : tabnext<cr>
-nnoremap <Leader>N : tabprevious<cr>
 nnoremap <Leader>r : RustRun<cr>
 nnoremap <Leader><ESC> : nohlsearch<cr>
 nnoremap <F2>      : NERDTreeToggle<cr>
@@ -261,7 +257,7 @@ let g:user_emmet_leader_key='<C-X>'
 let g:NERDTreeMinimalUI           = 1
 let g:NERDTreeWinPos              = 'right'
 let g:NERDTreeWinSize             = 20
-let g:NERDTreeStatusline          = -1
+let g:NERDTreeStatusline          = "  "
 let g:NERDTreeDirArrowExpandable  = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 
@@ -276,8 +272,8 @@ let g:gitgutter_sign_modified_removed          = '×'
 " ale
 let g:ale_set_signs             = 1
 let g:ale_use_deprecated_neovim = 1
-let g:ale_sign_error            = '>>'
-let g:ale_sign_warning          = '->'
+let g:ale_sign_error            = '> '
+let g:ale_sign_warning          = '! '
 
 hi ALEErrorSign ctermfg=01 ctermbg=00
 hi ALEWarningSign ctermfg=06 ctermbg=00
@@ -285,5 +281,27 @@ hi ALEWarningSign ctermfg=06 ctermbg=00
 " rust.vim
 let g:rustfmt_autosave = 0
 
-" supertab
-let g:SuperTabDefaultCompletionType = "<c-n>"
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
+" deoplete rust
+let g:deoplete#sources#rust#racer_binary='/home/nerdypepper/.cargo/bin/racer'
+let g:deoplete#sources#rust#rust_source_path='/home/nerdypepper/leet/rust-lang/src'
+nmap <buffer> gd <plug>DeopleteRustGoToDefinitionTab
+
+" fzf colors
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+

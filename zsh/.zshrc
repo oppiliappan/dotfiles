@@ -31,3 +31,7 @@ alias spdtst='curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/t
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source /usr/share/autojump/autojump.zsh
+
+_prompt_pwd () {
+  echo "${PWD/#$HOME/~}" | sed -e 's-\(\.*[^/]\)[^/]*/-\1/-g'
+}

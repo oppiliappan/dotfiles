@@ -5,10 +5,10 @@ devices=$( hcitool dev | wc -l )
 
 if [ $devices = 1 ] 
 then
-	echo -n ""
+	echo -n ""
 elif [[ $devices > 1 && $connections = "Connections:" ]]
 then
-	echo -n ""
+	echo -n ""
 else
-	echo -n ""
+	echo -n ""
 fi

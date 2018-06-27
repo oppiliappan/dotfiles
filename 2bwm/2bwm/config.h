@@ -19,7 +19,7 @@ static const uint8_t offsets[] = {
 	0,  // offsetx
 	0,  // offsety
 	0,  // maxwidth
-	0 // maxheight
+	40 // maxheight
 };
 
 ///---Colors (depcrecated)---///

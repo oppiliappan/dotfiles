@@ -1,23 +1,23 @@
 set incremental-search true
 
-set default-bg "#212121"
-set default-fg "#ffffff"
+set default-bg "#ffffff"
+set default-fg "#4d4d4c"
 
-set completion-bg "#212121"
-set completion-fg "#ffffff"
-set completion-highlight-bg "#C3E88D"
-set completion-highlight-fg "#212121"
+set completion-bg "#ffffff"
+set completion-fg "#4d4d4c"
+set completion-highlight-bg "#90a959"
+set completion-highlight-fg "#4d4d4c"
 
-set statusbar-bg "#C3E88D"
-set statusbar-fg "#000"
+set statusbar-bg "#90a959"
+set statusbar-fg "#ffffff"
 
-set inputbar-bg "#212121"
-set inputbar-fg "#ffffff"
+set inputbar-bg "#ffffff"
+set inputbar-fg "#4d4d4c"
 
-set window-height "400"
-set window-width "300"
+set window-height "800"
+set window-width "600"
 
 set adjust-open "width"
 set smooth-scroll true
 
-set font "PragmataPro normal 12"
+set font "PragmataPro italic 12"

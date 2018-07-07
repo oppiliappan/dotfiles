@@ -2,22 +2,22 @@
 !  Colors
 ! ------------------------------------------------------------------------------
 
-#define base00 #2d2d2d
-#define base01 #393939
-#define base02 #515151
-#define base03 #747369
-#define base04 #a09f93
-#define base05 #d3d0c8
-#define base06 #e8e6df
-#define base07 #f2f0ec
-#define base08 #F07178
-#define base09 #F78C6C
-#define base0A #FFCB6B
-#define base0B #C3E88D
-#define base0C #89DDFF
-#define base0D #82AAFF
-#define base0E #C792EA
-#define base0F #FF5370
+#define base00 #263238
+#define base01 #2e3c43
+#define base02 #314549
+#define base03 #546e7a
+#define base04 #b2ccd6
+#define base05 #eeffff
+#define base06 #eeffff
+#define base07 #ffffff
+#define base08 #f07178
+#define base09 #f78c6c
+#define base0A #ffcb6b
+#define base0B #c3e88d
+#define base0C #89ddff
+#define base0D #82aaff
+#define base0E #c792ea
+#define base0F #ff5370
 
 ! ------------------------------------------------------------------------------
 !  URxvt
@@ -47,11 +47,11 @@
 
 
 URxvt.cursorBlink : 0
-URxvt.font        : xft:Iosevka Term:size=12,xft:icomoon:size=15
+URxvt.font        : xft:Iosevka Term:size=12
 URxvt.italicFont  : xft:Iosevka Term:style=italic:size=12
 
 URxvt.lineSpace           : 0
-URxvt.letterSpace         : -1
+URxvt.letterSpace         : 0
 URxvt.scrollBar           : false
 URxvt.internalBorder      : 32
 URxvt.cursorUnderline     : false
@@ -76,7 +76,7 @@ rofi.color-active:    base03 , base0E , base00 , base0B , base00
 rofi.color-urgent:    base00 , base03 , base00 , base00 , base03
 
 rofi.fake-transparency : true
-rofi.font              : Iosevka Term 12
+rofi.font              : Roboto 12
 rofi.columns           : 1
 rofi.separator-style   : none
 rofi.hide-scrollbar    : true
@@ -101,8 +101,8 @@ Xft.dpi: 110
 
 twobwm.border_width: 12
 twobwm.outer_border: 9
-twobwm.focus_color: base02
-twobwm.unfocus_color: base01
+twobwm.focus_color: base00
+twobwm.unfocus_color: base00
 twobwm.fixed_color: base0D
 twobwm.unkill_color: base08
 twobwm.fixed_unkill_color: base0E

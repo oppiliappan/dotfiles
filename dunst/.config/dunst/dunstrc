@@ -5,7 +5,7 @@
 #                  
 
 [global]
-    font = Iosevka Term 10
+    font = Roboto 10
     allow_markup = no
     format = "<b>%s</b>\n%b"
     sort = yes
@@ -50,18 +50,18 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#2d2d2d"
-    foreground = "#a09f93"
+    background = "#263238"
+    foreground = "#eeffff"
     timeout = 2
 
 [urgency_normal]
-    background = "#2d2d2d"
-    foreground = "#a09f93"
+    background = "#263238"
+    foreground = "#eeffff"
     timeout = 10
 
 [urgency_critical]
-    background = "#2d2d2d"
-    foreground = "#a09f93"
+    background = "#263238"
+    foreground = "#eeffff"
     timeout = 0
 
 

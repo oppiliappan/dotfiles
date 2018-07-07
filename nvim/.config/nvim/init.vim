@@ -28,6 +28,8 @@ Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'sebastianmarkow/deoplete-rust'
 Plug 'junegunn/goyo.vim'
 Plug 'plasticboy/vim-markdown'
+Plug 'yuttie/comfortable-motion.vim'
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
@@ -68,7 +70,7 @@ augroup END
 set nobackup
 set nowritebackup
 set noswapfile " get rid of swapfiles everywhere
-set dir=/tmpset
+set dir=/tmp
 
 syntax on
 
@@ -81,7 +83,6 @@ set nowrap
 set noshowmode
 set listchars=tab:│\ ,nbsp:␣,trail:∙,extends:>,precedes:<
 set fillchars=vert:\│
-set scrolloff=3
 set ignorecase
 set smartcase
 set sidescroll=40
@@ -110,7 +111,7 @@ set wildignore+=*.doc,*.pdf,*.cbr,*.cbz
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.kgb
 set wildignore+=*.swp,.lock,.DS_Store,._*
 
-colorscheme plain
+colorscheme agila
 
 set shiftwidth=4     " indent = 4 spaces
 set expandtab
@@ -139,9 +140,9 @@ let g:currentmode={
 			\ 'r?' : 'CONFIRM ',
 			\ '!'  : 'SHELL ',
 			\ 't'  : 'TERMINAL '}
-hi PrimaryBlock ctermfg=00 ctermbg=02 cterm=bold
-hi SecondaryBlock ctermfg=07 ctermbg=11
-hi Blanks ctermfg=8 ctermbg=00
+" hi PrimaryBlock ctermfg=00 ctermbg=02 cterm=bold
+" hi SecondaryBlock ctermfg=07 ctermbg=11
+" hi Blanks ctermfg=8 ctermbg=00
 
 highlight EndOfBuffer ctermfg=black ctermbg=black
 
@@ -256,7 +257,7 @@ let g:user_emmet_leader_key='<C-X>'
 
 " nerdtree
 let g:NERDTreeMinimalUI           = 1
-let g:NERDTreeWinPos              = 'right'
+let g:NERDTreeWinPos              = 'left'
 let g:NERDTreeWinSize             = 20
 let g:NERDTreeStatusline          = "  "
 let g:NERDTreeDirArrowExpandable  = '+'
@@ -306,3 +307,6 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+" indentLine
+let g:indentLine_setColors = 0
+let g:indentLine_char      = '┊'

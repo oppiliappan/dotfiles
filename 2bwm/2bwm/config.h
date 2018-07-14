@@ -19,7 +19,7 @@ static const uint8_t offsets[] = {
 	0,  // offsetx
 	0,  // offsety
 	0,  // maxwidth
-	40 // maxheight
+	0  // maxheight
 };
 
 ///---Colors (depcrecated)---///
@@ -73,7 +73,7 @@ static const char *draw[] = {"/home/nerdypepper/scripts/draw.sh", NULL};
 static const char *volup[] = {"/home/nerdypepper/scripts/vol", "-i", NULL};
 static const char *voldn[] = {"/home/nerdypepper/scripts/vol", "-d", NULL};
 
-#define WORKSPACES 6
+#define WORKSPACES 4
 
 ///---Shortcuts---///
 /* Check /usr/include/X11/keysymdef.h for the list of all keys

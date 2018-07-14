@@ -34,20 +34,20 @@ locale     = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = Iosevka Term:size=11:antialias=true;0
-font-1 = icomoon:size=16:antialias=true;1
+font-0 = Iosevka Term:size=12:antialias=true;0
+font-1 = icomoon:size=13:antbalias=true;1
 
-modules-left   = bat vol brit 
+modules-left   = net vol brit bat
 modules-center = 2bws 
-modules-right  = time blth net
+modules-right  = date time
 
 tray-position    =
 
 radius-top = 0
 
 spacing             = 1
-padding-left        = 0
-padding-right       = 0
+padding-left        = 2
+padding-right       = 2
 module-margin-left  = 0
 module-margin-right = 0
 
@@ -69,6 +69,7 @@ interval = 1.0
 exec = ~/scripts/date.sh
 format-padding = 2
 format-foreground = ${colors.foreground}
+format-background = ${colors.background}
 
 [module/time]
 type              = custom/script
@@ -76,77 +77,91 @@ interval          = 1.0
 exec              = date +%I:%M
 format-padding    = 2
 format-foreground = ${colors.foreground}
+format-background = ${colors.background}
 
  
 [module/previous]
 type              = custom/script
 format-text       = <label>
-label             = 
+label             = 
 exec              = echo label
-click-left        = cmus-remote -r -p && ~/scripts/popups/cover.sh
+click-left        = cmus-remote -r -p
 click-right       = wmctrl -s 5
-format-foreground = ${colors.green}
+format-foreground = ${colors.foreground}
+format-background = ${colors.modb}
 format-padding    = 2
 
 [module/next]
 type              = custom/script
 format-text       = <label>
-label             = 
+label             = 
 exec              = echo label
-click-left        = cmus-remote -n -p && ~/scripts/popups/cover.sh
+click-left        = cmus-remote -n -p
 click-right       = wmctrl -s 5
-format-foreground = ${colors.green}
+format-foreground = ${colors.foreground}
+format-background = ${colors.modb}
 format-padding    = 2
 
 [module/playpause]
 type              = custom/script
 exec              = ~/scripts/playpause.sh
-interval          = 0.4
 click-left        = cmus-remote -u
 click-right       = wmctrl -s 5
 scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
 format-foreground = ${colors.green}
+format-background = ${colors.modb}
 format-padding    = 2
 
 [module/2bws]
 type              = custom/script
 exec              = exec ~/scripts/2bws.sh
 interval          = 0.01
-format-padding    = 3
+format-padding    = 2
 scroll-up         = exec ~/scripts/wscycle.sh -f
 scroll-down       = exec ~/scripts/wscycle.sh -r
+format-font       = 3
 
 [module/bat]
-type              = custom/script
-exec              = cat /sys/class/power_supply/BAT0/capacity
-interval          = 10
-format-prefix     = " "
-format-suffix     = "%"
-format-padding    = 2
+type                       = internal/battery
+battery                    = BAT0
+adapter                    = ADP1
+format-charging            =<label-charging>
+format-discharging         =<ramp-capacity>
+label-charging             = %percentage%%
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-0-foreground = ${colors.red}
+ramp-capacity-1-foreground = ${colors.orange}
+ramp-capacity-2-foreground = ${colors.foreground}
+ramp-capacity-3-foreground = ${colors.foreground}
+ramp-capacity-4-foreground = ${colors.green}
+format-background          = ${colors.background}
+format-charging-padding    = 1
+format-discharging-padding = 1
 
 [module/vol]
-type              = custom/script
-exec              = exec ~/scripts/vol -q
-interval          = 0.1
-format-prefix     = " "
-format-padding    = 2
-scroll-up         = ~/scripts/vol -i
-scroll-down       = ~/scripts/vol -d
+type                  = internal/alsa
+format-volume         = <ramp-volume>
+label-muted           =  muted
+ramp-volume-0         = 
+ramp-volume-1         = 
+ramp-volume-2         = 
+ramp-headphones-0     = 
+ramp-headphones-1     = 
+format-volume-padding = 2
+label-muted-padding   = 2
 
 [module/net]
 type              = custom/script
 exec              = exec ~/scripts/netwrk.sh
-interval          = 5
-format-padding    = 1
+interval          = 1
+format-padding    = 2
+format-background = ${colors.modb}
 click-left        = urxvtc -g 50x22 -b 0 -e nmtui
-
-
-[module/blth]
-type              = custom/script
-exec              = exec ~/scripts/bluetooth.sh
-interval          = 5
-format-padding    = 1
 
 [module/cmusnp]
 type              = custom/script
@@ -158,14 +173,16 @@ click-right       = wmctrl -s 5
 scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
 format-foreground = ${colors.foreground}
+format-background = ${colors.modb}
 
 [module/brit]
 type              = custom/script
-exec              = light -b
+exec              = echo "  "
 interval          = 1
 format-padding    = 2
-format-prefix     = " "
+format-background = ${colors.modb}
 scroll-up         = light -A 5
 scroll-down       = light -U 5
 click-left = redshift -O 4000
 click-right = redshift -O 6500
+

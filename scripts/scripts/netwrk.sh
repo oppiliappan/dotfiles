@@ -4,7 +4,7 @@ status=$( nmcli | sed -n 1p | awk '{print $2}' )
 
 if [ $status = "connected" ]
 then
-	echo ''
+	echo -n ''
 else
-	echo ''
+	echo -n ''
 fi

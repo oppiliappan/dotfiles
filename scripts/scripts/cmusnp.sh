@@ -3,8 +3,8 @@
 # Requires cmus
 
 # colors
-active="$( get_xres color7 )"
-inactive="$( get_xres color11 )"
+active="$( ~/scripts/get_xres color7 )"
+inactive="$( ~/scripts/get_xres color11 )"
 
 np_string=""
 

@@ -2,14 +2,14 @@
 !  Colors
 ! ------------------------------------------------------------------------------
 
-#define base00 #263238
-#define base01 #2e3c43
-#define base02 #314549
-#define base03 #546e7a
-#define base04 #b2ccd6
-#define base05 #eeffff
-#define base06 #eeffff
-#define base07 #ffffff
+#define base00 #101010
+#define base01 #252525
+#define base02 #464646
+#define base03 #525252
+#define base04 #ababab
+#define base05 #b9b9b9
+#define base06 #e3e3e3
+#define base07 #f7f7f7
 #define base08 #f07178
 #define base09 #f78c6c
 #define base0A #ffcb6b
@@ -76,7 +76,7 @@ rofi.color-active:    base03 , base0E , base00 , base0B , base00
 rofi.color-urgent:    base00 , base03 , base00 , base00 , base03
 
 rofi.fake-transparency : true
-rofi.font              : Roboto 12
+rofi.font              : Iosevka Term 11
 rofi.columns           : 1
 rofi.separator-style   : none
 rofi.hide-scrollbar    : true
@@ -99,10 +99,10 @@ Xft.dpi: 110
 ! 2bwm
 ! ------------------------------------------------------------------------------
 
-twobwm.border_width: 12
-twobwm.outer_border: 9
-twobwm.focus_color: base00
-twobwm.unfocus_color: base00
+twobwm.border_width: 8
+twobwm.outer_border: 6
+twobwm.focus_color: base02
+twobwm.unfocus_color: base01
 twobwm.fixed_color: base0D
 twobwm.unkill_color: base08
 twobwm.fixed_unkill_color: base0E

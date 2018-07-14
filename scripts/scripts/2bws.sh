@@ -12,33 +12,23 @@ OCCUPIED=∙
 UNOCCUPIED=⋅
 
 # colors
-fg="$( ~/scripts/get_xres color2 )"
+fg="$( ~/scripts/get_xres color7 )"
 fg1="$( ~/scripts/get_xres color8 )"
-
-accent="$( ~/scripts/get_xres color2 )"
-normal="$( ~/scripts/get_xres color10 )"
 
 #  print workspaces to stdout
 draw() {
-	for i in {0..5}; do
-		# get the number of windows in each workspace
-		windows=$( wmctrl -l | cut -d ' ' -f3 | grep $i | wc -l )
+    for i in {0..3}; do
+        # get the number of windows in each workspace
+        windows=$( wmctrl -l | cut -d ' ' -f3 | grep $i | wc -l )
 
-		if [[ $i -eq $ws ]]
-		then
-			# current workspace
-			echo -ne "%{F$fg}  ●  "
-		else
-			if [[ $windows > 0 ]]
-			then
-				# occupied workspace
-				echo -ne "%{F$fg1}  ●  "
-			else
-				# unoccupied workspace
-				echo -ne "%{F$fg1}  ·  "
-			fi
-		fi
-	done
+        if [[ $i -eq $ws ]]
+        then
+            # current workspace
+            echo -ne "%{F$fg}  ●  "
+        else
+            echo -ne "%{F$fg1}  ●  "
+        fi
+    done
 }
 
 draw

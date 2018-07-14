@@ -111,7 +111,7 @@ set wildignore+=*.doc,*.pdf,*.cbr,*.cbz
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.kgb
 set wildignore+=*.swp,.lock,.DS_Store,._*
 
-colorscheme agila
+colorscheme plain
 
 set shiftwidth=4     " indent = 4 spaces
 set expandtab
@@ -140,9 +140,9 @@ let g:currentmode={
 			\ 'r?' : 'CONFIRM ',
 			\ '!'  : 'SHELL ',
 			\ 't'  : 'TERMINAL '}
-" hi PrimaryBlock ctermfg=00 ctermbg=02 cterm=bold
-" hi SecondaryBlock ctermfg=07 ctermbg=11
-" hi Blanks ctermfg=8 ctermbg=00
+hi PrimaryBlock ctermfg=00 ctermbg=02 cterm=bold
+hi SecondaryBlock ctermfg=07 ctermbg=11
+hi Blanks ctermfg=8 ctermbg=00
 
 highlight EndOfBuffer ctermfg=black ctermbg=black
 

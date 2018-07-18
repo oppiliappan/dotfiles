@@ -13,7 +13,7 @@ UNOCCUPIED=⋅
 
 # colors
 fg="$( ~/scripts/get_xres color7 )"
-fg1="$( ~/scripts/get_xres color8 )"
+fg1="$( ~/scripts/get_xres color11 )"
 
 #  print workspaces to stdout
 draw() {

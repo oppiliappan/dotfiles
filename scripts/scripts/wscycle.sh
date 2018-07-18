@@ -3,7 +3,7 @@
 
 # get the current ws
 ws=$( xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //' )
-total=4
+total=3
 
 while getopts fr options
 do

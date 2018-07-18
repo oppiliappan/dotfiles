@@ -2,8 +2,8 @@
 
 ///--Speed---///
 static const uint16_t movements[] = {
-	300,  // move step slow
-	600, // move step fast
+	60,  // move step slow
+	120, // move step fast
 	400,  // mouse slow
 	400  // mouse fast
 };
@@ -19,7 +19,7 @@ static const uint8_t offsets[] = {
 	0,  // offsetx
 	0,  // offsety
 	0,  // maxwidth
-	0  // maxheight
+	40  // maxheight
 };
 
 ///---Colors (depcrecated)---///
@@ -43,8 +43,8 @@ static const bool inverted_colors = false;
 static const uint8_t borders[] = {
 	5, // Outer border size
 	7, // Full borderwidth
-	2, // Magnet border size
-	3  // Resize border size
+	25, // Magnet border size
+	25  // Resize border size
 };
 
 /* Windows that won't have a border.

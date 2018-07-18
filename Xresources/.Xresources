@@ -2,14 +2,14 @@
 !  Colors
 ! ------------------------------------------------------------------------------
 
-#define base00 #101010
-#define base01 #252525
-#define base02 #464646
-#define base03 #525252
-#define base04 #ababab
-#define base05 #b9b9b9
-#define base06 #e3e3e3
-#define base07 #f7f7f7
+#define base00 #1d1f21
+#define base01 #282a2e
+#define base02 #373b41
+#define base03 #969896
+#define base04 #b4b7b4
+#define base05 #c5c8c6
+#define base06 #e0e0e0
+#define base07 #ffffff
 #define base08 #f07178
 #define base09 #f78c6c
 #define base0A #ffcb6b
@@ -47,11 +47,11 @@
 
 
 URxvt.cursorBlink : 0
-URxvt.font        : xft:Iosevka Term:size=12
-URxvt.italicFont  : xft:Iosevka Term:style=italic:size=12
+URxvt.font        : xft:Iosevka Term:size=11
+URxvt.italicFont  : xft:Iosevka Term:style=italic:size=11
 
 URxvt.lineSpace           : 0
-URxvt.letterSpace         : 0
+URxvt.letterSpace         : -1
 URxvt.scrollBar           : false
 URxvt.internalBorder      : 32
 URxvt.cursorUnderline     : false
@@ -99,8 +99,8 @@ Xft.dpi: 110
 ! 2bwm
 ! ------------------------------------------------------------------------------
 
-twobwm.border_width: 8
-twobwm.outer_border: 6
+twobwm.border_width: 14
+twobwm.outer_border: 10
 twobwm.focus_color: base02
 twobwm.unfocus_color: base01
 twobwm.fixed_color: base0D

@@ -5,7 +5,7 @@
 #                  
 
 [global]
-    font = Roboto 10
+    font = Iosevka Term 10
     allow_markup = no
     format = "<b>%s</b>\n%b"
     sort = yes
@@ -36,8 +36,8 @@
     icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
 [frame]
-    width = 0
-    color = "#aeb38c"
+    width = 4
+    color = "#282a2e"
 
 [shortcuts]
 
@@ -50,18 +50,18 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#263238"
-    foreground = "#eeffff"
+    background = "#1d1f21"
+    foreground = "#c5c8c6"
     timeout = 2
 
 [urgency_normal]
-    background = "#263238"
-    foreground = "#eeffff"
+    background = "#1d1f21"
+    foreground = "#c5c8c6"
     timeout = 10
 
 [urgency_critical]
-    background = "#263238"
-    foreground = "#eeffff"
+    background = "#1d1f21"
+    foreground = "#c5c8c6"
     timeout = 0
 
 

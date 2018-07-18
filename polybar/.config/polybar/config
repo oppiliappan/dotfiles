@@ -4,9 +4,8 @@
 foreground        = ${xrdb:color7}
 foreground_bright = ${xrdb:color8}
 background        = ${xrdb:color0}
-modb              = ${xrdb:color0}
-modb1             = ${xrdb:color0}
-modb2             = ${xrdb:color0}
+background_bright = ${xrdb:color10}
+
 red     = ${xrdb:color1}
 orange  = ${xrdb:color9}
 yellow  = ${xrdb:color3}
@@ -26,15 +25,15 @@ override-redirect = true
 
 [bar/bot]
 width    = 100%
-height   = 50
+height   = 41
 offset-x = 0%
-offset-y = 1035
+offset-y = 1039
 
 locale     = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = Iosevka Term:size=12:antialias=true;0
+font-0 = Iosevka Term:size=11:antialias=true;0
 font-1 = icomoon:size=13:antbalias=true;1
 
 modules-left   = net vol brit bat
@@ -44,6 +43,8 @@ modules-right  = date time
 tray-position    =
 
 radius-top = 0
+border-top-size = 4
+border-top-color = ${colors.background_bright}
 
 spacing             = 1
 padding-left        = 2
@@ -88,7 +89,6 @@ exec              = echo label
 click-left        = cmus-remote -r -p
 click-right       = wmctrl -s 5
 format-foreground = ${colors.foreground}
-format-background = ${colors.modb}
 format-padding    = 2
 
 [module/next]
@@ -99,7 +99,6 @@ exec              = echo label
 click-left        = cmus-remote -n -p
 click-right       = wmctrl -s 5
 format-foreground = ${colors.foreground}
-format-background = ${colors.modb}
 format-padding    = 2
 
 [module/playpause]
@@ -110,7 +109,6 @@ click-right       = wmctrl -s 5
 scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
 format-foreground = ${colors.green}
-format-background = ${colors.modb}
 format-padding    = 2
 
 [module/2bws]
@@ -160,7 +158,6 @@ type              = custom/script
 exec              = exec ~/scripts/netwrk.sh
 interval          = 1
 format-padding    = 2
-format-background = ${colors.modb}
 click-left        = urxvtc -g 50x22 -b 0 -e nmtui
 
 [module/cmusnp]
@@ -173,14 +170,12 @@ click-right       = wmctrl -s 5
 scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
 format-foreground = ${colors.foreground}
-format-background = ${colors.modb}
 
 [module/brit]
 type              = custom/script
 exec              = echo "  "
 interval          = 1
 format-padding    = 2
-format-background = ${colors.modb}
 scroll-up         = light -A 5
 scroll-down       = light -U 5
 click-left = redshift -O 4000

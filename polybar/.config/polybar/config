@@ -4,8 +4,9 @@
 foreground        = ${xrdb:color7}
 foreground_bright = ${xrdb:color8}
 background        = ${xrdb:color0}
-background_bright = ${xrdb:color10}
-
+modb              = ${xrdb:color0}
+modb1             = ${xrdb:color0}
+modb2             = ${xrdb:color0}
 red     = ${xrdb:color1}
 orange  = ${xrdb:color9}
 yellow  = ${xrdb:color3}
@@ -23,32 +24,102 @@ override-redirect = true
 
 ; ------------ bars ---------------
 
-[bar/bot]
-width    = 100%
-height   = 41
-offset-x = 0%
-offset-y = 1039
+[bar/fab]
+width    = 75
+height   = 75
+offset-x = 40
+offset-y = 965
 
 locale     = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = Iosevka Term:size=11:antialias=true;0
-font-1 = icomoon:size=13:antbalias=true;1
+font-0 = envypn:size=12:antialias=true;0
 
-modules-left   = net vol brit bat
-modules-center = 2bws 
-modules-right  = date time
+modules-left   =
+modules-center = plus
+modules-right  =
 
 tray-position    =
 
-radius-top = 0
-border-top-size = 4
-border-top-color = ${colors.background_bright}
+radius = 37.5
 
 spacing             = 1
-padding-left        = 2
-padding-right       = 2
+padding-left        = 0
+padding-right       = 0
+module-margin-left  = 0
+module-margin-right = 0
+
+[bar/np]
+width    = 350
+height   = 40
+offset-x = 40
+offset-y = 905
+
+locale     = de_DE.UTF-8
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = GohuFont:size=12:antialias=true;0
+
+modules-left   =
+modules-center = cmusnp
+modules-right  =
+
+tray-position    =
+
+spacing             = 1
+padding-left        = 0
+padding-right       = 0
+module-margin-left  = 0
+module-margin-right = 0
+
+[bar/music]
+width    = 350
+height   = 50
+offset-x = 40
+offset-y = 855
+
+locale     = de_DE.UTF-8
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = GohuFont:size=12:antialias=true;0
+font-1 = Siji:size=12:antialias=true;2
+
+modules-left   =
+modules-center = previous playpause next
+modules-right  =
+
+tray-position    =
+
+spacing             = 3
+padding-left        = 0
+padding-right       = 0
+module-margin-left  = 0
+module-margin-right = 0
+
+[bar/stats]
+width    = 200
+height   = 60
+offset-x = 1680
+offset-y = 965
+
+locale     = de_DE.UTF-8
+background = ${colors.background}
+foreground = ${colors.background}
+
+font-0 = GohuFont:size=12:antialias=true;2
+
+modules-left   =
+modules-center = time separator bat
+modules-right  =
+
+tray-position    =
+
+spacing             = 1
+padding-left        = 0
+padding-right       = 0
 module-margin-left  = 0
 module-margin-right = 0
 
@@ -76,7 +147,7 @@ format-background = ${colors.background}
 type              = custom/script
 interval          = 1.0
 exec              = date +%I:%M
-format-padding    = 2
+format-padding    = 0
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
@@ -84,21 +155,23 @@ format-background = ${colors.background}
 [module/previous]
 type              = custom/script
 format-text       = <label>
-label             = 
+label             = 
 exec              = echo label
-click-left        = cmus-remote -r -p
+click-left        = cmus-remote -r -p && ~/scripts/popups/cover.sh
 click-right       = wmctrl -s 5
-format-foreground = ${colors.foreground}
+format-foreground = ${colors.green}
+format-background = ${colors.modb}
 format-padding    = 2
 
 [module/next]
 type              = custom/script
 format-text       = <label>
-label             = 
+label             = 
 exec              = echo label
-click-left        = cmus-remote -n -p
+click-left        = cmus-remote -n -p && ~/scripts/popups/cover.sh
 click-right       = wmctrl -s 5
-format-foreground = ${colors.foreground}
+format-foreground = ${colors.green}
+format-background = ${colors.modb}
 format-padding    = 2
 
 [module/playpause]
@@ -106,58 +179,45 @@ type              = custom/script
 exec              = ~/scripts/playpause.sh
 click-left        = cmus-remote -u
 click-right       = wmctrl -s 5
+interval          = 1
 scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
 format-foreground = ${colors.green}
+format-background = ${colors.modb}
 format-padding    = 2
 
 [module/2bws]
 type              = custom/script
-exec              = exec ~/scripts/2bws.sh
+exec              = ~/scripts/2bws.sh
 interval          = 0.01
-format-padding    = 2
+format-padding    = 3
+format-foreground = ${colors.background}
 scroll-up         = exec ~/scripts/wscycle.sh -f
 scroll-down       = exec ~/scripts/wscycle.sh -r
-format-font       = 3
 
 [module/bat]
-type                       = internal/battery
-battery                    = BAT0
-adapter                    = ADP1
-format-charging            =<label-charging>
-format-discharging         =<ramp-capacity>
-label-charging             = %percentage%%
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-ramp-capacity-0-foreground = ${colors.red}
-ramp-capacity-1-foreground = ${colors.orange}
-ramp-capacity-2-foreground = ${colors.foreground}
-ramp-capacity-3-foreground = ${colors.foreground}
-ramp-capacity-4-foreground = ${colors.green}
-format-background          = ${colors.background}
-format-charging-padding    = 1
-format-discharging-padding = 1
+type              = custom/script
+exec              = ~/scripts/bat
+interval          = 100
+format-padding    = 0
+format-background = ${colors.modb}
+format-foreground = ${colors.foreground}
 
 [module/vol]
-type                  = internal/alsa
-format-volume         = <ramp-volume>
-label-muted           =  muted
-ramp-volume-0         = 
-ramp-volume-1         = 
-ramp-volume-2         = 
-ramp-headphones-0     = 
-ramp-headphones-1     = 
-format-volume-padding = 2
-label-muted-padding   = 2
+type              = custom/script
+exec              = exec ~/scripts/vol -q
+interval          = 0.1
+format-prefix     = " "
+format-padding    = 2
+scroll-up         = ~/scripts/vol -i
+scroll-down       = ~/scripts/vol -d
 
 [module/net]
 type              = custom/script
 exec              = exec ~/scripts/netwrk.sh
-interval          = 1
+interval          = 5
 format-padding    = 2
+format-background = ${colors.modb}
 click-left        = urxvtc -g 50x22 -b 0 -e nmtui
 
 [module/cmusnp]
@@ -170,14 +230,23 @@ click-right       = wmctrl -s 5
 scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
 format-foreground = ${colors.foreground}
+format-background = ${colors.modb}
 
 [module/brit]
 type              = custom/script
-exec              = echo "  "
+exec              = light -b
 interval          = 1
 format-padding    = 2
+format-prefix     = "⏾ "
+format-background = ${colors.modb}
 scroll-up         = light -A 5
 scroll-down       = light -U 5
 click-left = redshift -O 4000
 click-right = redshift -O 6500
 
+[module/separator]
+type              = custom/script
+format-text       = <label>
+label             = "  |  "
+exec              = echo label
+format-foreground = ${colors.foreground}

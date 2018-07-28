@@ -4,7 +4,7 @@
 
 # colors
 active="$( ~/scripts/get_xres color7 )"
-inactive="$( ~/scripts/get_xres color11 )"
+inactive="$( ~/scripts/get_xres color12 )"
 
 np_string=""
 
@@ -13,7 +13,7 @@ trunc() {
     text=$2
     length=${#text}
     (( length > max_length )) &&
-        text=${text::$(( max_length ))}…
+        text=${text::$(( max_length ))}...
     echo "$text"
 }
 

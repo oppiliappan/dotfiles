@@ -1,20 +1,22 @@
 #!/usr/bin/env bash
 
+pkill n30f
 while getopts hs options
 do
 	case $options in
 		h)  # hide
-			xdo hide -p  $( pgrep -f polybar\ music )
-			xdo hide -p  $( pgrep -f polybar\ stats )
-			xdo hide -p  $( pgrep -f polybar\ ws )
-			pkill n30f
+            pkill -f polybar\ music
+            pkill -f polybar\ np
 			;;
 		s)  # show
-			xdo show -p  $( pgrep -f polybar\ music)
-			xdo show -p  $( pgrep -f polybar\ stats )
-			xdo show -p  $( pgrep -f polybar\ ws )
-			pkill n30f
-			~/scripts/popups/cover.sh
+            if pgrep -f polybar\ np > /dev/null; then
+                ~/scripts/popups/cover.sh
+            else
+                polybar np &
+                polybar music &
+                ~/scripts/popups/cover.sh
+            fi
 			;;
 	esac
 done
+

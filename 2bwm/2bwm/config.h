@@ -19,7 +19,7 @@ static const uint8_t offsets[] = {
 	0,  // offsetx
 	0,  // offsety
 	0,  // maxwidth
-	40  // maxheight
+	0  // maxheight
 };
 
 ///---Colors (depcrecated)---///
@@ -73,7 +73,7 @@ static const char *draw[] = {"/home/nerdypepper/scripts/draw.sh", NULL};
 static const char *volup[] = {"/home/nerdypepper/scripts/vol", "-i", NULL};
 static const char *voldn[] = {"/home/nerdypepper/scripts/vol", "-d", NULL};
 
-#define WORKSPACES 4
+#define WORKSPACES 6
 
 ///---Shortcuts---///
 /* Check /usr/include/X11/keysymdef.h for the list of all keys
@@ -194,10 +194,10 @@ static key keys[] = {
     // Make the window stay on all workspaces
     {  MOD ,              XK_f,          fix,               {}},
     // Move the cursor
-    {  MOD ,              XK_Up,         cursor_move,       {.i=TWOBWM_CURSOR_UP_SLOW}},
-    {  MOD ,              XK_Down,       cursor_move,       {.i=TWOBWM_CURSOR_DOWN_SLOW}},
-    {  MOD ,              XK_Right,      cursor_move,       {.i=TWOBWM_CURSOR_RIGHT_SLOW}},
-    {  MOD ,              XK_Left,       cursor_move,       {.i=TWOBWM_CURSOR_LEFT_SLOW}},
+    // {  MOD ,              XK_Up,         cursor_move,       {.i=TWOBWM_CURSOR_UP_SLOW}},
+    // {  MOD ,              XK_Down,       cursor_move,       {.i=TWOBWM_CURSOR_DOWN_SLOW}},
+    // {  MOD ,              XK_Right,      cursor_move,       {.i=TWOBWM_CURSOR_RIGHT_SLOW}},
+    // {  MOD ,              XK_Left,       cursor_move,       {.i=TWOBWM_CURSOR_LEFT_SLOW}},
     // Move the cursor faster
     {  MOD |SHIFT,        XK_Up,         cursor_move,       {.i=TWOBWM_CURSOR_UP}},
     {  MOD |SHIFT,        XK_Down,       cursor_move,       {.i=TWOBWM_CURSOR_DOWN}},

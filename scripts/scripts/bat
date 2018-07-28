@@ -27,9 +27,8 @@ health() {
 	echo
 }
 
-echo "----$model_name----"
-echo "Manufacturer : $( cat /sys/class/power_supply/BAT0/manufacturer )"
-echo "Status       : $charging_status"
-echo "Capacity     : $bat_status%"
-echo "Health       : "$( health )
-echo "Cycle Count  : $cycle_count"
+if [[ "$charging_status" == "Charging" ]]; then
+    echo "$bat_status%+"
+else
+    echo "$bat_status%"
+fi

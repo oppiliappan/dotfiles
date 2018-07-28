@@ -2,9 +2,9 @@
 
 pkill polybar
 
-polybar ws &
-polybar stats &
+polybar np &
 polybar music &
+polybar stats &
 
 sleep 0.2
 polybar fab &

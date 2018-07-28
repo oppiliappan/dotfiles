@@ -2,22 +2,22 @@
 !  Colors
 ! ------------------------------------------------------------------------------
 
-#define base00 #1d1f21
-#define base01 #282a2e
-#define base02 #373b41
-#define base03 #969896
-#define base04 #b4b7b4
-#define base05 #c5c8c6
-#define base06 #e0e0e0
-#define base07 #ffffff
-#define base08 #f07178
-#define base09 #f78c6c
-#define base0A #ffcb6b
-#define base0B #c3e88d
-#define base0C #89ddff
-#define base0D #82aaff
-#define base0E #c792ea
-#define base0F #ff5370
+#define base00 #f7f7f7
+#define base01 #e3e3e3
+#define base02 #b9b9b9
+#define base03 #ababab
+#define base04 #525252
+#define base05 #464646
+#define base06 #252525
+#define base07 #101010
+#define base08 #7c7c7c
+#define base09 #999999
+#define base0A #a0a0a0
+#define base0B #3A4D62
+#define base0C #868686
+#define base0D #686868
+#define base0E #747474
+#define base0F #5e5e5e
 
 ! ------------------------------------------------------------------------------
 !  URxvt
@@ -47,11 +47,12 @@
 
 
 URxvt.cursorBlink : 0
-URxvt.font        : xft:Iosevka Term:size=11
-URxvt.italicFont  : xft:Iosevka Term:style=italic:size=11
+URxvt.font        : xft:envypn:size=11
+URxvt.boldFont    : xft:envypn:size=11
+URxvt.italicFont  : xft:envypn:size=11
 
-URxvt.lineSpace           : 0
-URxvt.letterSpace         : -1
+URxvt.lineSpace           : 3
+URxvt.letterSpace         : 2
 URxvt.scrollBar           : false
 URxvt.internalBorder      : 32
 URxvt.cursorUnderline     : false
@@ -76,7 +77,7 @@ rofi.color-active:    base03 , base0E , base00 , base0B , base00
 rofi.color-urgent:    base00 , base03 , base00 , base00 , base03
 
 rofi.fake-transparency : true
-rofi.font              : Iosevka Term 11
+rofi.font              : GohuFont 14
 rofi.columns           : 1
 rofi.separator-style   : none
 rofi.hide-scrollbar    : true
@@ -99,8 +100,8 @@ Xft.dpi: 110
 ! 2bwm
 ! ------------------------------------------------------------------------------
 
-twobwm.border_width: 14
-twobwm.outer_border: 10
+twobwm.border_width: 12
+twobwm.outer_border: 11
 twobwm.focus_color: base02
 twobwm.unfocus_color: base01
 twobwm.fixed_color: base0D

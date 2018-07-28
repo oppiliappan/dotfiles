@@ -17,7 +17,7 @@ fg1="$( ~/scripts/get_xres color11 )"
 
 #  print workspaces to stdout
 draw() {
-    for i in {0..3}; do
+    for i in {0..5}; do
         # get the number of windows in each workspace
         windows=$( wmctrl -l | cut -d ' ' -f3 | grep $i | wc -l )
 

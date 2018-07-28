@@ -140,9 +140,9 @@ let g:currentmode={
 			\ 'r?' : 'CONFIRM ',
 			\ '!'  : 'SHELL ',
 			\ 't'  : 'TERMINAL '}
-hi PrimaryBlock ctermfg=00 ctermbg=02 cterm=bold
-hi SecondaryBlock ctermfg=07 ctermbg=11
-hi Blanks ctermfg=8 ctermbg=00
+hi PrimaryBlock ctermfg=03 ctermbg=00
+hi SecondaryBlock ctermfg=03 ctermbg=00
+hi Blanks ctermfg=03 ctermbg=00
 
 highlight EndOfBuffer ctermfg=black ctermbg=black
 

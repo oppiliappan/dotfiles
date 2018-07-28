@@ -5,9 +5,9 @@
 #                  
 
 [global]
-    font = Iosevka Term 10
+    font = GohuFont 10
     allow_markup = no
-    format = "<b>%s</b>\n%b"
+    format = "%s\n%b"
     sort = yes
     indicate_hidden = yes
     alignment = right
@@ -36,8 +36,8 @@
     icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
 [frame]
-    width = 4
-    color = "#282a2e"
+    width = 0
+    color = "#303030"
 
 [shortcuts]
 
@@ -50,18 +50,18 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#1d1f21"
-    foreground = "#c5c8c6"
+    background = "#f7f7f7"
+    foreground = "#464646"
     timeout = 2
 
 [urgency_normal]
-    background = "#1d1f21"
-    foreground = "#c5c8c6"
+    background = "#f7f7f7"
+    foreground = "#464646"
     timeout = 10
 
 [urgency_critical]
-    background = "#1d1f21"
-    foreground = "#c5c8c6"
+    background = "#f7f7f7"
+    foreground = "#464646"
     timeout = 0
 
 

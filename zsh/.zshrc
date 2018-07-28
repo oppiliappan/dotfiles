@@ -1,5 +1,3 @@
-echo "\e[3m$(fortune -sa)\n"
-
 export ZSH=/home/nerdypepper/.oh-my-zsh
 export EDITOR=/usr/bin/nvim
 export MANPAGER="nvim -c MANPAGER -"

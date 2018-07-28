@@ -30,7 +30,7 @@ static const char *colors[] = {
 	"#fa9a6a", // unkilcol
 	"#ceb5ce", // fixedunkilcol
 	"#121c21", // outerbordercol
-	"#181818"  // emptycol
+	"#f7f7f7"  // emptycol
 };
 
 /* if this is set to true the inner border and outer borders colors will be swapped */
@@ -44,7 +44,7 @@ static const uint8_t borders[] = {
 	5, // Outer border size
 	7, // Full borderwidth
 	25, // Magnet border size
-	25  // Resize border size
+	1  // Resize border size
 };
 
 /* Windows that won't have a border.

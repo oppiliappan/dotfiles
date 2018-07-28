@@ -31,8 +31,8 @@ offset-x = 40
 offset-y = 965
 
 locale     = de_DE.UTF-8
-background = ${colors.background}
-foreground = ${colors.foreground}
+background = ${colors.green}
+foreground = ${colors.background}
 
 font-0 = envypn:size=12:antialias=true;0
 
@@ -176,7 +176,7 @@ format-padding    = 2
 
 [module/playpause]
 type              = custom/script
-exec              = ~/scripts/playpause.sh
+exec              = exec ~/scripts/playpause.sh
 click-left        = cmus-remote -u
 click-right       = wmctrl -s 5
 interval          = 1

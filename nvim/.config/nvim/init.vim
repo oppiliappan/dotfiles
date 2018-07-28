@@ -111,7 +111,7 @@ set wildignore+=*.doc,*.pdf,*.cbr,*.cbz
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.kgb
 set wildignore+=*.swp,.lock,.DS_Store,._*
 
-colorscheme plain
+colorscheme agila
 
 set shiftwidth=4     " indent = 4 spaces
 set expandtab

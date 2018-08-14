@@ -13,7 +13,7 @@
 #define base08 #7c7c7c
 #define base09 #999999
 #define base0A #a0a0a0
-#define base0B #cc773f
+#define base0B #6182b8
 #define base0C #868686
 #define base0D #686868
 #define base0E #747474
@@ -47,12 +47,12 @@
 
 
 URxvt.cursorBlink : 0
-URxvt.font        : xft:envypn:size=11
-URxvt.boldFont    : xft:envypn:size=11
-URxvt.italicFont  : xft:envypn:size=11
+URxvt.font        : xft:PT Mono:size=10
+URxvt.boldFont    : xft:PT Mono:size=10
+URxvt.italicFont  : xft:PT Mono:size=10
 
-URxvt.lineSpace           : 3
-URxvt.letterSpace         : 2
+URxvt.lineSpace           : 5
+URxvt.letterSpace         : -1
 URxvt.scrollBar           : false
 URxvt.internalBorder      : 32
 URxvt.cursorUnderline     : false
@@ -77,7 +77,7 @@ rofi.color-active:    base03 , base0E , base00 , base0B , base00
 rofi.color-urgent:    base00 , base03 , base00 , base00 , base03
 
 rofi.fake-transparency : true
-rofi.font              : GohuFont 14
+rofi.font              : PT Mono 10
 rofi.columns           : 1
 rofi.separator-style   : none
 rofi.hide-scrollbar    : true
@@ -100,10 +100,10 @@ Xft.dpi: 110
 ! 2bwm
 ! ------------------------------------------------------------------------------
 
-twobwm.border_width: 12
-twobwm.outer_border: 11
-twobwm.focus_color: base02
-twobwm.unfocus_color: base01
+twobwm.border_width: 0
+twobwm.outer_border: 1
+twobwm.focus_color: base00
+twobwm.unfocus_color: base00
 twobwm.fixed_color: base0D
 twobwm.unkill_color: base08
 twobwm.fixed_unkill_color: base0E

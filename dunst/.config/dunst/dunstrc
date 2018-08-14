@@ -5,7 +5,7 @@
 #                  
 
 [global]
-    font = GohuFont 10
+    font = PT Mono 9
     allow_markup = no
     format = "%s\n%b"
     sort = yes

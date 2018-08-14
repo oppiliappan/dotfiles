@@ -5,10 +5,10 @@ set default-fg "#464646"
 
 set completion-bg "#f7f7f7"
 set completion-fg "#464646"
-set completion-highlight-bg "#cc773f"
+set completion-highlight-bg "#336699"
 set completion-highlight-fg "#464646"
 
-set statusbar-bg "#cc773f"
+set statusbar-bg "#336699"
 set statusbar-fg "#f7f7f7"
 
 set inputbar-bg "#f7f7f7"
@@ -20,4 +20,4 @@ set window-width "600"
 set adjust-open "width"
 set smooth-scroll true
 
-set font "GohuFont 11"
+set font "PT Mono 11"

@@ -7,7 +7,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
 Plug 'mattn/emmet-vim', { 'for': ['*html', '*css', 'vue'] }
 Plug 'tpope/vim-repeat'
 Plug 'godlygeek/tabular'
@@ -15,21 +14,18 @@ Plug 'lambdalisue/vim-manpager'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'rust-lang/rust.vim'
-Plug 'rhysd/open-pdf.vim'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
 Plug 'andymass/vim-matchup'
 Plug 'jiangmiao/auto-pairs'
-Plug 'nerdypepper/agila.vim'
-Plug 'nerdypepper/vim-colors-plain'
 Plug 'posva/vim-vue'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'sebastianmarkow/deoplete-rust'
-Plug 'junegunn/goyo.vim'
-Plug 'plasticboy/vim-markdown'
-Plug 'yuttie/comfortable-motion.vim'
 Plug 'Yggdroot/indentLine'
+Plug 'nerdypepper/agila.vim'
+Plug 'nerdypepper/vim-colors-plain'
+Plug 'skywind3000/vim-keysound'
 
 call plug#end()
 
@@ -310,3 +306,9 @@ let g:fzf_colors =
 " indentLine
 let g:indentLine_setColors = 0
 let g:indentLine_char      = '┊'
+
+" keysound
+let g:keysound_enable = 1
+let g:keysound_volume = 1000
+let g:keysound_py_version = 3
+let g:keysound_theme = 'typewriter'

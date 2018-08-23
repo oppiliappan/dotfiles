@@ -1,18 +1,18 @@
 set incremental-search true
 
-set default-bg "#f7f7f7"
-set default-fg "#464646"
+set default-bg "#212121"
+set default-fg "#eeffff"
 
-set completion-bg "#f7f7f7"
-set completion-fg "#464646"
-set completion-highlight-bg "#336699"
-set completion-highlight-fg "#464646"
+set completion-bg "#212121"
+set completion-fg "#eeffff"
+set completion-highlight-bg "#7ece91"
+set completion-highlight-fg "#eeffff"
 
-set statusbar-bg "#336699"
-set statusbar-fg "#f7f7f7"
+set statusbar-bg "#7ece91"
+set statusbar-fg "#212121"
 
-set inputbar-bg "#f7f7f7"
-set inputbar-fg "#464646"
+set inputbar-bg "#212121"
+set inputbar-fg "#eeffff"
 
 set window-height "800"
 set window-width "600"
@@ -20,4 +20,4 @@ set window-width "600"
 set adjust-open "width"
 set smooth-scroll true
 
-set font "PT Mono 11"
+set font "SF Mono 11"

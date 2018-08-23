@@ -27,6 +27,7 @@ Plug 'nerdypepper/agila.vim'
 Plug 'nerdypepper/vim-colors-plain'
 Plug 'skywind3000/vim-keysound'
 
+
 call plug#end()
 
 
@@ -107,7 +108,7 @@ set wildignore+=*.doc,*.pdf,*.cbr,*.cbz
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.kgb
 set wildignore+=*.swp,.lock,.DS_Store,._*
 
-colorscheme agila
+colorscheme plain
 
 set shiftwidth=4     " indent = 4 spaces
 set expandtab
@@ -136,9 +137,9 @@ let g:currentmode={
 			\ 'r?' : 'CONFIRM ',
 			\ '!'  : 'SHELL ',
 			\ 't'  : 'TERMINAL '}
-hi PrimaryBlock ctermfg=03 ctermbg=00
-hi SecondaryBlock ctermfg=03 ctermbg=00
-hi Blanks ctermfg=03 ctermbg=00
+hi PrimaryBlock   ctermfg =00 ctermbg=02
+hi SecondaryBlock ctermfg =00 ctermbg=02
+hi Blanks         ctermfg =00 ctermbg=02
 
 highlight EndOfBuffer ctermfg=black ctermbg=black
 

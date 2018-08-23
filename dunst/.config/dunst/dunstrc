@@ -5,7 +5,7 @@
 #                  
 
 [global]
-    font = PT Mono 9
+    font = SF Mono 10
     allow_markup = no
     format = "%s\n%b"
     sort = yes
@@ -50,18 +50,18 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#f7f7f7"
-    foreground = "#464646"
+    background = "#212121"
+    foreground = "#eeffff"
     timeout = 2
 
 [urgency_normal]
-    background = "#f7f7f7"
-    foreground = "#464646"
+    background = "#212121"
+    foreground = "#eeffff"
     timeout = 10
 
 [urgency_critical]
-    background = "#f7f7f7"
-    foreground = "#464646"
+    background = "#212121"
+    foreground = "#eeffff"
     timeout = 0
 
 

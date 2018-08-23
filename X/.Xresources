@@ -2,18 +2,18 @@
 !  Colors
 ! ------------------------------------------------------------------------------
 
-#define base00 #f7f7f7
-#define base01 #e3e3e3
-#define base02 #b9b9b9
-#define base03 #ababab
-#define base04 #525252
-#define base05 #464646
-#define base06 #252525
-#define base07 #101010
+#define base00 #212121
+#define base01 #303030
+#define base02 #353535
+#define base03 #4a4a4a
+#define base04 #b2ccd6
+#define base05 #eeffff
+#define base06 #eeffff
+#define base07 #ffffff
 #define base08 #7c7c7c
 #define base09 #999999
 #define base0A #a0a0a0
-#define base0B #6182b8
+#define base0B #7ece91
 #define base0C #868686
 #define base0D #686868
 #define base0E #747474
@@ -47,14 +47,12 @@
 
 
 URxvt.cursorBlink : 0
-URxvt.font        : xft:PT Mono:size=10
-URxvt.boldFont    : xft:PT Mono:size=10
-URxvt.italicFont  : xft:PT Mono:size=10
+URxvt.font        : xft:SF Mono:size=10
 
-URxvt.lineSpace           : 5
-URxvt.letterSpace         : -1
+URxvt.lineSpace           : -2
+URxvt.letterSpace         : -2
 URxvt.scrollBar           : false
-URxvt.internalBorder      : 32
+URxvt.internalBorder      : 44
 URxvt.cursorUnderline     : false
 URxvt.geometry            : 70x35
 URxvt.thickness           : 5
@@ -77,7 +75,7 @@ rofi.color-active:    base03 , base0E , base00 , base0B , base00
 rofi.color-urgent:    base00 , base03 , base00 , base00 , base03
 
 rofi.fake-transparency : true
-rofi.font              : PT Mono 10
+rofi.font              : SF Mono 11
 rofi.columns           : 1
 rofi.separator-style   : none
 rofi.hide-scrollbar    : true

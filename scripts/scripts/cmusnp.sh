@@ -4,7 +4,7 @@
 
 # colors
 active="$( ~/scripts/get_xres color7 )"
-inactive="$( ~/scripts/get_xres color12 )"
+inactive="$( ~/scripts/get_xres color7 )"
 
 np_string=""
 

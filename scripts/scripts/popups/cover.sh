@@ -3,10 +3,7 @@
 folder=$( cmus-remote -Q | grep -w file | sed 's/file //' )
 cover=${folder%/*}/cover.png
 
-convert "$cover" \
-    -resize 350x350 \
-    \( +clone -threshold -1 -negate -fill white -draw "circle 175,175 175,20" \) \
-    -alpha off -compose copy_opacity -composite -background $( get_xres color0 ) -alpha remove ~/tmp/cover.png
+convert "$cover" -resize 350x350 ~/tmp/cover.png
 
 if pgrep n30f > /dev/null
 then

@@ -2,22 +2,22 @@
 !  Colors
 ! ------------------------------------------------------------------------------
 
-#define base00 #212121
-#define base01 #303030
-#define base02 #353535
-#define base03 #4a4a4a
+#define base00 #263238
+#define base01 #2e3c43
+#define base02 #314549
+#define base03 #546e7a
 #define base04 #b2ccd6
 #define base05 #eeffff
 #define base06 #eeffff
 #define base07 #ffffff
-#define base08 #7c7c7c
-#define base09 #999999
-#define base0A #a0a0a0
-#define base0B #7ece91
-#define base0C #868686
-#define base0D #686868
-#define base0E #747474
-#define base0F #5e5e5e
+#define base08 #f07178
+#define base09 #f78c6c
+#define base0A #ffcb6b
+#define base0B #c3e88d
+#define base0C #89ddff
+#define base0D #82aaff
+#define base0E #c792ea
+#define base0F #ff5370
 
 ! ------------------------------------------------------------------------------
 !  URxvt
@@ -98,10 +98,10 @@ Xft.dpi: 110
 ! 2bwm
 ! ------------------------------------------------------------------------------
 
-twobwm.border_width: 0
-twobwm.outer_border: 1
-twobwm.focus_color: base00
-twobwm.unfocus_color: base00
+twobwm.border_width: 16
+twobwm.outer_border: 14
+twobwm.focus_color: base02
+twobwm.unfocus_color: base01
 twobwm.fixed_color: base0D
 twobwm.unkill_color: base08
 twobwm.fixed_unkill_color: base0E

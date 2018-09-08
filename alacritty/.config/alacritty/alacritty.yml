@@ -1,13 +1,14 @@
 env:
   TERM: xterm-256color
 
-dimensions:
-  columns: 50
-  lines: 17
+window:
+    dimensions:
+        columns: 100
+        lines: 40
 
-padding:
-  x: 25
-  y: 25
+    padding:
+        x: 44
+        y: 44
 
 # Display tabs using this many cells (changes require restart)
 tabspaces: 4
@@ -37,84 +38,84 @@ draw_bold_text_with_bright_colors: false
 font:
   # The normal (roman) font face to use.
   normal:
-    family: cherry # should be "Menlo" or something on macOS.
+    family: SF Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Regular
 
   # The bold font face
   bold:
-    family: cherry # should be "Menlo" or something on macOS.
+    family: SF Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
   italic:
-    family: cherry # should be "Menlo" or something on macOS.
+    family: SF Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Italic
 
   # Point size of the font
-  size: 9.0
+  size: 7.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
-    x: 0.0
-    y: 0.0
+    x: 0
+    y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increase the x offset to move the glyph to
   # the right, increase the y offset to move the glyph upward.
   glyph_offset:
-    x: 0.0
-    y: 0.0
+    x: 0
+    y: 0
 
   # OS X only: use thin stroke font rendering. Thin strokes are suitable
   # for retina displays, but for non-retina you probably want this set to
   # false.
-  use_thin_strokes: true
+  use_thin_strokes: false
 
 # Should display the render timer
 render_timer: false
 
 # Use custom cursor colors. If true, display the cursor in the cursor.foreground
 # and cursor.background colors, otherwise invert the colors of the cursor.
-custom_cursor_colors: false
+custom_cursor_colors: true
 
 # Colorscheme (gruvbox)
 
 colors:
   # Default colors
-  primary:
-    background: '0x121c21'
-    foreground: '0xaaafb2'
+    primary:
+        background: '0x212121'
+        foreground: '0xeeffff'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
-  cursor:
-    text:   '0x121c21'
-    cursor: '0x121c21'
+    cursor:
+        text:   '0x212121'
+        cursor: '0xeeffff'
 
   # Normal colors
-  normal:
-    black:   '0x121c21'
-    red:     '0x1e2e36'
-    green:   '0x304b59'
-    yellow:  '0x3f6173'
-    blue:    '0x7b8e98'
-    magenta: '0xaaafb2'
-    cyan:    '0xbcd9e8'
-    white:   '0xcfefff'
+    normal:
+        black:   '0x212121'
+        red:     '0x7c7c7c'
+        green:   '0x7ece91'
+        yellow:  '0xa0a0a0'
+        blue:    '0x686868'
+        magenta: '0x747474'
+        cyan:    '0x868686'
+        white:   '0xeeffff'
 
   # Bright colors
-  bright:
-    black:   '0xf0696f'
-    red:     '0xfa9a6a'
-    green:   '0xf7cca1'
-    yellow:  '0x76a08c'
-    blue:    '0x5f9993'
-    magenta: '0x718c97'
-    cyan:    '0xceb5ce'
-    white:   '0x877366'
+    bright:
+        black:   '0x4a4a4a'
+        red:     '0x999999'
+        green:   '0x303030'
+        yellow:  '0x353535'
+        blue:    '0xb2ccd6'
+        magenta: '0xeeffff'
+        cyan:    '0x5e5e5e'
+        white:   '0xeeffff'
 
 #*.color0:       #121c21
 #*.color1:       #1e2e36

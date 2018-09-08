@@ -31,7 +31,7 @@ offset-x = 40
 offset-y = 965
 
 locale     = de_DE.UTF-8
-background = ${colors.green}
+background = ${colors.blue}
 foreground = ${colors.background}
 
 font-0 = SF Mono:size=12:antialias=true;2
@@ -159,7 +159,7 @@ label             = 
 exec              = echo label
 click-left        = cmus-remote -r -p && ~/scripts/popups/cover.sh
 click-right       = wmctrl -s 5
-format-foreground = ${colors.green}
+format-foreground = ${colors.blue}
 format-background = ${colors.modb}
 format-padding    = 2
 
@@ -170,7 +170,7 @@ label             = 
 exec              = echo label
 click-left        = cmus-remote -n -p && ~/scripts/popups/cover.sh
 click-right       = wmctrl -s 5
-format-foreground = ${colors.green}
+format-foreground = ${colors.blue}
 format-background = ${colors.modb}
 format-padding    = 2
 
@@ -182,7 +182,7 @@ click-right       = wmctrl -s 5
 interval          = 1
 scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
-format-foreground = ${colors.green}
+format-foreground = ${colors.blue}
 format-background = ${colors.modb}
 format-padding    = 2
 

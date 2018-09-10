@@ -202,7 +202,8 @@ let mapleader=' '
 " nnoremap
 nnoremap <Leader>o : only<cr>
 nnoremap <Leader>l : Lines<cr>
-nnoremap <Leader>b : Buffers<cr>
+nnoremap <Leader>b : bnext<cr>
+nnoremap <Leader>B : bprev<cr>
 nnoremap <Leader>z : FZF<cr>
 nnoremap <Leader>w : MtaJumpToOtherTag<cr>
 nnoremap <Leader>t : call GetTabber()<cr>

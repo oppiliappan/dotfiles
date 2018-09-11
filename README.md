@@ -1,4 +1,4 @@
-![neet.png](https://0x0.st/syve.png)
+![neet.png](https://0x0.st/swVc.png)
 
 ```
 █▀▀▄ █▀▀█ ▀▀█▀▀ █▀▀ ▀█▀ █   █▀▀ █▀▀

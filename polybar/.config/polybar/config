@@ -24,86 +24,11 @@ override-redirect = true
 
 ; ------------ bars ---------------
 
-[bar/fab]
-width    = 75
-height   = 75
-offset-x = 40
-offset-y = 965
-
-locale     = de_DE.UTF-8
-background = ${colors.blue}
-foreground = ${colors.background}
-
-font-0 = SF Mono:size=12:antialias=true;2
-
-modules-left   =
-modules-center = plus
-modules-right  =
-
-tray-position    =
-
-radius = 37.5
-
-spacing             = 1
-padding-left        = 0
-padding-right       = 0
-module-margin-left  = 0
-module-margin-right = 0
-
-[bar/np]
-width    = 350
-height   = 45
-offset-x = 40
-offset-y = 905
-
-locale     = de_DE.UTF-8
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-font-0 = SF Mono:size=11:antialias=true;2
-
-modules-left   =
-modules-center = cmusnp
-modules-right  =
-
-tray-position    =
-
-spacing             = 1
-padding-left        = 0
-padding-right       = 0
-module-margin-left  = 0
-module-margin-right = 0
-
-[bar/music]
-width    = 350
+[bar/bot]
+width    = 25%
 height   = 60
-offset-x = 40
-offset-y = 855
-
-locale     = de_DE.UTF-8
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-font-0 = SF Mono:size=11:antialias=true;2
-font-1 = Siji:size=12:antialias=true;2
-
-modules-left   =
-modules-center = previous playpause next
-modules-right  =
-
-tray-position    =
-
-spacing             = 3
-padding-left        = 0
-padding-right       = 0
-module-margin-left  = 0
-module-margin-right = 0
-
-[bar/stats]
-width    = 200
-height   = 60
-offset-x = 1680
-offset-y = 965
+offset-x = 37.5%
+offset-y = 1020
 
 locale     = de_DE.UTF-8
 background = ${colors.background}
@@ -111,29 +36,29 @@ foreground = ${colors.background}
 
 font-0 = SF Mono:size=11:antialias=true;2
 
-modules-left   =
-modules-center = time separator bat
-modules-right  =
+modules-left   = time 
+modules-center = 2bws
+modules-right  = bat
 
 tray-position    =
 
 spacing             = 1
-padding-left        = 0
-padding-right       = 0
+padding-left        = 6
+padding-right       = 6
 module-margin-left  = 0
 module-margin-right = 0
 
 ; ---------- modules ---------------
 
-[module/plus]
+[module/workspace]
 type           = custom/script
 interval       = 0.01
 exec           = echo $(( $(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //') + 1))
-click-left     = ~/scripts/hidebars.sh -s
-click-right    = ~/scripts/hidebars.sh -h
 scroll-up      = ~/scripts/wscycle.sh -f
 scroll-down    = ~/scripts/wscycle.sh -r
 format-padding = 3
+format-foreground = ${colors.background}
+format-background = ${colors.yellow}
 
 [module/date]
 type = custom/script
@@ -247,6 +172,6 @@ click-right = redshift -O 6500
 [module/separator]
 type              = custom/script
 format-text       = <label>
-label             = "  |  "
+label             = " | "
 exec              = echo label
 format-foreground = ${colors.foreground}

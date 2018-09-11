@@ -2,10 +2,10 @@
 !  Colors
 ! ------------------------------------------------------------------------------
 
-#define base00 #263238
-#define base01 #2e3c43
-#define base02 #314549
-#define base03 #546e7a
+#define base00 #212121
+#define base01 #303030
+#define base02 #353535
+#define base03 #4a4a4a
 #define base04 #b2ccd6
 #define base05 #eeffff
 #define base06 #eeffff
@@ -98,10 +98,10 @@ Xft.dpi: 110
 ! 2bwm
 ! ------------------------------------------------------------------------------
 
-twobwm.border_width: 16
-twobwm.outer_border: 14
-twobwm.focus_color: base02
-twobwm.unfocus_color: base01
+twobwm.border_width: 3
+twobwm.outer_border: 2
+twobwm.focus_color: base00
+twobwm.unfocus_color: base00
 twobwm.fixed_color: base0D
 twobwm.unkill_color: base08
 twobwm.fixed_unkill_color: base0E

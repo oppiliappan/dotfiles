@@ -12,8 +12,8 @@ OCCUPIED=∙
 UNOCCUPIED=⋅
 
 # colors
-fg="$( ~/scripts/get_xres color7 )"
-fg1="$( ~/scripts/get_xres color11 )"
+fg="$( ~/scripts/get_xres color3 )"
+fg1="$( ~/scripts/get_xres color7 )"
 
 #  print workspaces to stdout
 draw() {
@@ -24,9 +24,9 @@ draw() {
         if [[ $i -eq $ws ]]
         then
             # current workspace
-            echo -ne "%{F$fg}  ●  "
+            echo -ne "%{F$fg} × "
         else
-            echo -ne "%{F$fg1}  ●  "
+            echo -ne "%{F$fg1} · "
         fi
     done
 }

@@ -27,6 +27,9 @@ set window-width "600"
 
 set adjust-open "width"
 set smooth-scroll true
+set statusbar-home-tilde "true"
+set statusbar-h-padding "50"
+set statusbar-v-padding "50"
 
 set font "SF Mono 11"
 

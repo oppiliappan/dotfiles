@@ -137,28 +137,42 @@ let g:currentmode={
 			\ 'r?' : 'CONFIRM ',
 			\ '!'  : 'SHELL ',
 			\ 't'  : 'TERMINAL '}
-hi PrimaryBlock   ctermfg =00 ctermbg=03
-hi SecondaryBlock ctermfg =07 ctermbg=10
-hi Blanks         ctermfg =07 ctermbg=0
+
+hi PrimaryBlock        ctermfg=00 ctermbg=03
+hi PrimaryBlockReverse ctermfg=03 ctermbg=00
+
+hi SecondaryBlock      ctermfg=07 ctermbg=10
+
+hi Blanks              ctermfg=07 ctermbg=0
 
 highlight EndOfBuffer ctermfg=black ctermbg=black
 
 set statusline=
+
+set statusline+=%#PrimaryBlockReverse#
+set statusline+=\ 
 set statusline+=%#PrimaryBlock#
 set statusline+=\ %{g:currentmode[mode()]}
-set statusline+=%#SecondaryBlock#
+set statusline+=%#PrimaryBlockReverse#
+set statusline+=
+
+set statusline+=%#Blanks#
 set statusline+=%{StatuslineGit()}
 set statusline+=%#Blanks#
 set statusline+=\ %t\ 
 set statusline+=%(%m%)
 set statusline+=%=
-set statusline+=%#SecondaryBlock#
 set statusline+=\ Ln
 set statusline+=\ %l
 set statusline+=,Col
 set statusline+=\ %c\ 
+
+set statusline+=%#PrimaryBlockReverse#
+set statusline+=\ 
 set statusline+=%#PrimaryBlock#
 set statusline+=\ %Y\ 
+set statusline+=%#PrimaryBlockReverse#
+set statusline+=
 
 function! GitBranch()
 	return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")

@@ -24,9 +24,9 @@ draw() {
         if [[ $i -eq $ws ]]
         then
             # current workspace
-            echo -ne "%{F$fg} × "
+            echo -ne "%{F$fg} • "
         else
-            echo -ne "%{F$fg1} · "
+            echo -ne "%{F$fg1} ∙ "
         fi
     done
 }

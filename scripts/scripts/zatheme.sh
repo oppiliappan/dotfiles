@@ -10,10 +10,10 @@ set default-fg "'$( get_xres color7 )'"
 
 set completion-bg "'$( get_xres color0 )'"
 set completion-fg "'$( get_xres color7 )'"
-set completion-highlight-bg "'$( get_xres color3 )'"
+set completion-highlight-bg "'$( get_xres color2 )'"
 set completion-highlight-fg "'$( get_xres color7 )'"
 
-set statusbar-bg "'$( get_xres color3 )'"
+set statusbar-bg "'$( get_xres color2 )'"
 set statusbar-fg "'$( get_xres color0 )'"
 
 set inputbar-bg "'$( get_xres color0 )'"
@@ -31,6 +31,6 @@ set statusbar-home-tilde "true"
 set statusbar-h-padding "50"
 set statusbar-v-padding "50"
 
-set font "SF Mono 11"
+set font "FantasqueSansMono Nerd Font Mono 13"
 
 ' > ~/.config/zathura/zathurarc

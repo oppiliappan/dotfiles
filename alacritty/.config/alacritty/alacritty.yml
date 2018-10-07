@@ -4,7 +4,7 @@ env:
 window:
     dimensions:
         columns: 100
-        lines: 40
+        lines: 60
 
     padding:
         x: 44
@@ -38,19 +38,19 @@ draw_bold_text_with_bright_colors: false
 font:
   # The normal (roman) font face to use.
   normal:
-    family: FuraMono Nerd Font Mono # should be "Menlo" or something on macOS.
+    family: FantasqueSansMono Nerd Font Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Regular
 
   # The bold font face
   bold:
-    family: FuraMono Nerd Font Mono # should be "Menlo" or something on macOS.
+    family: FantasqueSansMono Nerd Font Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
   italic:
-    family: FuraMono Nerd Font Mono # should be "Menlo" or something on macOS.
+    family: FantasqueSansMono Nerd Font Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Italic
 
@@ -60,8 +60,8 @@ font:
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
-    x: -1
-    y: 1
+    x: 0
+    y: 2
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increase the x offset to move the glyph to
@@ -99,7 +99,7 @@ colors:
     normal:
         black:   '0x212121'
         red:     '0xf07178'
-        green:   '0xc3e88d'
+        green:   '0x7ece91'
         yellow:  '0xffcb6b'
         blue:    '0x82aaff'
         magenta: '0xc792ea'
@@ -189,7 +189,7 @@ mouse:
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
-hide_cursor_when_typing: true
+hide_cursor_when_typing: false
 
 # Style of the cursor
 #

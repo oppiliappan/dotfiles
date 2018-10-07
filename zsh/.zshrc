@@ -4,6 +4,7 @@ export MANPAGER="nvim -c MANPAGER -"
 export BROWSER="/usr/bin/chromium-browser"
 export PATH=$PATH":$HOME/scripts"
 export PATH=$PATH":$HOME/.cargo/bin"
+export PATH=$PATH":$HOME/anaconda3/bin"
 export GPG_TTY=$(tty)
 export TERM=xterm-256color-italic
 
@@ -32,6 +33,7 @@ zle -N down-line-or-beginning-search
 [[ -n "$key[Down]" ]] && bindkey -- "$key[Down]" down-line-or-beginning-search
 
 [ -f ~/.fzf.zsh  ] && source ~/.fzf.zsh
+
 
 # functions
 

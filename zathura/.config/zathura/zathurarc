@@ -7,10 +7,10 @@ set default-fg "#eeffff"
 
 set completion-bg "#212121"
 set completion-fg "#eeffff"
-set completion-highlight-bg "#ffcb6b"
+set completion-highlight-bg "#7ece91"
 set completion-highlight-fg "#eeffff"
 
-set statusbar-bg "#ffcb6b"
+set statusbar-bg "#7ece91"
 set statusbar-fg "#212121"
 
 set inputbar-bg "#212121"
@@ -28,6 +28,6 @@ set statusbar-home-tilde "true"
 set statusbar-h-padding "50"
 set statusbar-v-padding "50"
 
-set font "SF Mono 11"
+set font "FantasqueSansMono Nerd Font Mono 13"
 
 

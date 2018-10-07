@@ -138,8 +138,8 @@ let g:currentmode={
 			\ '!'  : 'SHELL ',
 			\ 't'  : 'TERMINAL '}
 
-hi PrimaryBlock        ctermfg=00 ctermbg=03
-hi PrimaryBlockReverse ctermfg=03 ctermbg=00
+hi PrimaryBlock        ctermfg=00 ctermbg=02
+hi PrimaryBlockReverse ctermfg=02 ctermbg=00
 
 hi SecondaryBlock      ctermfg=07 ctermbg=10
 

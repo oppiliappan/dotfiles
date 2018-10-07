@@ -34,7 +34,7 @@ locale     = de_DE.UTF-8
 background = ${colors.green}
 foreground = ${colors.background}
 
-font-0 = FantasqueSansMono Nerd Font Mono:size=14:antialias=true;2
+font-0 = SF Mono:size=12:antialias=true;2
 
 modules-left   =
 modules-center = plus
@@ -60,14 +60,13 @@ locale     = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = FantasqueSansMono Nerd Font Mono:size=14:antialias=true;2
+font-0 = SF Mono:size=11:antialias=true;2
 
 modules-left   =
 modules-center = cmusnp
 modules-right  =
 
 tray-position    =
-radius-bottom = 23
 
 spacing             = 1
 padding-left        = 0
@@ -85,8 +84,8 @@ locale     = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = FantasqueSansMono Nerd Font Mono:size=14:antialias=true;2
-font-1 = Siji:size=14:antialias=true;2
+font-0 = SF Mono:size=11:antialias=true;2
+font-1 = Siji:size=12:antialias=true;2
 
 modules-left   =
 modules-center = previous playpause next
@@ -110,14 +109,13 @@ locale     = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.background}
 
-font-0 = FantasqueSansMono Nerd Font Mono:size=14:antialias=true;2
+font-0 = SF Mono:size=11:antialias=true;2
 
 modules-left   =
 modules-center = time separator bat
 modules-right  =
 
 tray-position    =
-radius = 30
 
 spacing             = 1
 padding-left        = 0
@@ -252,3 +250,4 @@ format-text       = <label>
 label             = "  |  "
 exec              = echo label
 format-foreground = ${colors.foreground}
+

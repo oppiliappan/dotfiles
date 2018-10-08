@@ -31,6 +31,6 @@ set statusbar-home-tilde "true"
 set statusbar-h-padding "50"
 set statusbar-v-padding "50"
 
-set font "FantasqueSansMono Nerd Font Mono 13"
+set font "SF Mono 11"
 
 ' > ~/.config/zathura/zathurarc

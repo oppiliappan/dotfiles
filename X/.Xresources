@@ -1,22 +1,24 @@
 ! ------------------------------------------------------------------------------
 !  Colors
 ! ------------------------------------------------------------------------------
+!
 
-#define base00 #212121
-#define base01 #303030
-#define base02 #353535
-#define base03 #4a4a4a
-#define base04 #b2ccd6
-#define base05 #eeffff
-#define base06 #eeffff
+#define base00 #1e2541
+#define base01 #3d4463
+#define base02 #4d567d
+#define base03 #57618c
+#define base04 #b8b8c5
+#define base05 #cccccc
+#define base06 #d9d9d9
 #define base07 #ffffff
-#define base08 #f07178
-#define base09 #f78c6c
+
+#define base08 #F0719B
+#define base09 #FFA56B
 #define base0A #ffcb6b
-#define base0B #7ece91
-#define base0C #89ddff
-#define base0D #82aaff
-#define base0E #c792ea
+#define base0B #5AF7B0
+#define base0C #89DDFF
+#define base0D #57C7FF
+#define base0E #C792EA
 #define base0F #ff5370
 
 ! ------------------------------------------------------------------------------
@@ -47,11 +49,11 @@
 
 
 URxvt.cursorBlink : 0
-URxvt.font        : xft:FuraMono Nerd Font Mono:size=11
-URxvt.italicFont  : xft:FuraMono Nerd Font Mono:size=11
-URxvt.boldFont    : xft:FuraMono Nerd Font Mono:size=11
+URxvt.font        : xft:FantasqueSansMono Nerd Font Mono:size=11
+URxvt.italicFont  : xft:FantasqueSansMono Nerd Font Mono:size=11
+URxvt.boldFont    : xft:FantasqueSansMono Nerd Font Mono:size=11
 
-URxvt.lineSpace           : -2
+URxvt.lineSpace           : -1
 URxvt.letterSpace         : -1
 URxvt.scrollBar           : false
 URxvt.internalBorder      : 44
@@ -77,7 +79,7 @@ rofi.color-active:    base03 , base0E , base00 , base0B , base00
 rofi.color-urgent:    base00 , base03 , base00 , base00 , base03
 
 rofi.fake-transparency : true
-rofi.font              : SF Mono 11
+rofi.font              : SF Mono 12
 rofi.columns           : 1
 rofi.separator-style   : none
 rofi.hide-scrollbar    : true

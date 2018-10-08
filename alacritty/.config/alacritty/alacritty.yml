@@ -38,30 +38,30 @@ draw_bold_text_with_bright_colors: false
 font:
   # The normal (roman) font face to use.
   normal:
-    family: FantasqueSansMono Nerd Font Mono # should be "Menlo" or something on macOS.
+    family: SF Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Regular
 
   # The bold font face
   bold:
-    family: FantasqueSansMono Nerd Font Mono # should be "Menlo" or something on macOS.
+    family: SF Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
   italic:
-    family: FantasqueSansMono Nerd Font Mono # should be "Menlo" or something on macOS.
+    family: SF Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Italic
 
   # Point size of the font
-  size: 8.0
+  size: 7.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
     x: 0
-    y: 2
+    y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increase the x offset to move the glyph to

@@ -2,6 +2,7 @@
 !  Colors
 ! ------------------------------------------------------------------------------
 !
+!------------------------------------------------------------------------------se00 #ffffff
 
 #define base00 #212121
 #define base01 #303030
@@ -20,7 +21,6 @@
 #define base0E #c792ea
 #define base0F #ff5370
 
-! ------------------------------------------------------------------------------
 !  URxvt
 ! ------------------------------------------------------------------------------
 
@@ -49,8 +49,6 @@
 
 URxvt.cursorBlink : 0
 URxvt.font        : xft:SF Mono:size=11
-URxvt.italicFont  : xft:SF Mono:size=11
-URxvt.boldFont    : xft:SF Mono:size=11
 
 URxvt.lineSpace           : -1
 URxvt.letterSpace         : -2

@@ -24,7 +24,6 @@ alias nerdz='~/scripts/nerdinfo.sh'
 alias nvime='nvim ~/.config/nvim/init.vim'
 alias spdtst='curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
 alias tmux='tmux -u'
-alias chromium-browser='chromium-browser --force-device-scale-factor=1.2'
 
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search
@@ -45,8 +44,3 @@ source /usr/share/autojump/autojump.zsh
 _prompt_pwd () {
   echo "${PWD/#$HOME/~}" | sed -e 's-\(\.*[^/]\)[^/]*/-\1/-g'
 }
-
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"

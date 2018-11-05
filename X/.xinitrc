@@ -7,8 +7,6 @@ setxkbmap -option caps:escape
 urxvtd &
 
 pkill polybar
-polybar np &
-polybar music &
 polybar stats &
 sleep 0.2
 polybar fab &

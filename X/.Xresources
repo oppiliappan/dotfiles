@@ -48,7 +48,7 @@
 
 
 URxvt.cursorBlink : 0
-URxvt.font        : xft:SF Mono:size=11
+URxvt.font        : xft:Iosevka Term:size=11
 
 URxvt.lineSpace           : -1
 URxvt.letterSpace         : -2

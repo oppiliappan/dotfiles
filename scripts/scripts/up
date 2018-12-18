@@ -8,7 +8,7 @@ else
     if [ -f "$1" ]; then
         ext="${1##*.}"
         id="$id.$ext"
-        scp -P 443 "$1" emerald:pics/"$id"
+        scp -P 443 "$1" emerald:files/"$id"
         echo "https://files.nerdypepper.me/$id"
         echo "https://files.nerdypepper.me/$id" | xclip -selection clipboard
         echo "https://files.nerdypepper.me/$id" | xclip -i

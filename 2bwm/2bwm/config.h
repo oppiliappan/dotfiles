@@ -66,7 +66,7 @@ static void halfandcentered(const Arg *arg) {
 	teleport(&arg3);
 }
 
-static const char *terminal[] = {"alacritty", NULL};
+static const char *terminal[] = {"urxvtc", NULL};
 static const char *rofir[] = {"/home/nerdypepper/scripts/rofi.sh", "-r", NULL};
 static const char *rofiw[] = {"/home/nerdypepper/scripts/rofi.sh", "-w", NULL};
 static const char *draw[] = {"/home/nerdypepper/scripts/draw.sh", NULL};

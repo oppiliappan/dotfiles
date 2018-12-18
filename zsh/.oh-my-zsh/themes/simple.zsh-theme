@@ -1,8 +1,8 @@
 precmd() { 
     print ''
-    print -rP "%{$fg[green]%}$(_prompt_pwd)%F{8}$(git_prompt_info)%{$reset_color%}" 
+    print -rP "%{$fg[blue]%}$(_prompt_pwd)%F{8}$(git_prompt_info)%{$reset_color%}" 
 }
-PROMPT='▴ '
+PROMPT='> '
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" "
 ZSH_THEME_GIT_PROMPT_SUFFIX=""

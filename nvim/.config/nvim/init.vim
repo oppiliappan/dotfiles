@@ -78,7 +78,7 @@ filetype indent on
 set laststatus=2
 set nowrap
 set noshowmode
-set listchars=tab:│\ ,nbsp:␣,trail:∙,extends:>,precedes:<
+set listchars=tab:┊\ ,nbsp:␣,trail:∙,extends:>,precedes:<
 set fillchars=vert:\│
 set ignorecase
 set smartcase
@@ -138,8 +138,8 @@ let g:currentmode={
 			\ '!'  : 'SHELL ',
 			\ 't'  : 'TERMINAL '}
 
-hi PrimaryBlock        ctermfg=00 ctermbg=02
-hi SecondaryBlock      ctermfg=00 ctermbg=10
+hi PrimaryBlock        ctermfg=00 ctermbg=04
+hi SecondaryBlock      ctermfg=07 ctermbg=10
 hi Blanks              ctermfg=07 ctermbg=0
 highlight EndOfBuffer ctermfg=black ctermbg=black
 
@@ -309,7 +309,7 @@ let g:fzf_colors =
 
 " indentLine
 let g:indentLine_setColors = 0
-let g:indentLine_char      = '┊'
+let g:indentLine_char      = '┆'
 
 " keysound
 let g:keysound_enable = 1

@@ -29,4 +29,7 @@ super + {Up, Down}
     light -{A,U} 5
 
 super +  {Right, Left}
-    /home/nerdypepper/scripts/vol -{i,d} && notify-send $( vol -q )
+    /home/nerdypepper/scripts/vol -{i,d}
+
+@button{10,11}
+    /home/nerdypepper/scripts/wscycle.sh -{f,r}

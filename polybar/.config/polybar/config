@@ -66,6 +66,12 @@ modules-left   =
 modules-center = cmusnp
 modules-right  =
 
+border-left-size = 1
+border-bottom-size = 1
+border-right-size = 1
+border-color = ${colors.foreground}
+
+
 tray-position    =
 
 spacing             = 1
@@ -91,6 +97,10 @@ modules-left   =
 modules-center = previous playpause next
 modules-right  =
 
+border-left-size = 1
+border-right-size = 1
+border-color = ${colors.foreground}
+
 tray-position    =
 
 spacing             = 3
@@ -114,6 +124,9 @@ font-0 = SF Mono:size=11:antialias=true;2
 modules-left   =
 modules-center = time separator bat
 modules-right  =
+
+border-size = 1
+border-color = ${colors.foreground}
 
 tray-position    =
 

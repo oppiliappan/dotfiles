@@ -101,8 +101,8 @@ Xft.dpi: 110
 ! 2bwm
 ! ------------------------------------------------------------------------------
 
-twobwm.border_width: 8
-twobwm.outer_border: 7
+twobwm.border_width: 12
+twobwm.outer_border: 11
 twobwm.focus_color: base07
 twobwm.unfocus_color: base07
 twobwm.fixed_color: base0D

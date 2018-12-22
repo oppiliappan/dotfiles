@@ -10,4 +10,4 @@ images/
 scripts/scripts/graphs
 *after*
 weechat/sec.conf
-vim/**/plug.vim
+plug.vim

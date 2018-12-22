@@ -3,7 +3,6 @@ let &t_ZM = "\e[3m"
 
 " vim-plugs
 call plug#begin('~/.local/share/nvim/plugged')
-
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
@@ -22,10 +21,7 @@ Plug 'posva/vim-vue'
 Plug 'Yggdroot/indentLine'
 Plug 'nerdypepper/agila.vim'
 Plug 'nerdypepper/vim-colors-plain'
-
-
 call plug#end()
-
 
 " augroups
 augroup indents
@@ -34,7 +30,6 @@ augroup indents
 	autocmd FileType text,markdown setlocal expandtab
 	autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
 augroup END
-
 
 augroup highlight_follows_vim
 	autocmd!
@@ -92,17 +87,6 @@ set complete=.,w,b,i,u,t,
 set background=dark
 set mouse=a
 
-set wildignore+=.git,.hg,.svn
-set wildignore+=*.aux,*.out,*.toc
-set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest,*.rbc,*.class
-set wildignore+=*.ai,*.bmp,*.gif,*.ico,*.jpg,*.jpeg,*.png,*.psd,*.webp
-set wildignore+=*.avi,*.divx,*.mp4,*.webm,*.mov,*.m2ts,*.mkv,*.vob,*.mpg,*.mpeg
-set wildignore+=*.mp3,*.oga,*.ogg,*.wav,*.flac
-set wildignore+=*.eot,*.otf,*.ttf,*.woff
-set wildignore+=*.doc,*.pdf,*.cbr,*.cbz
-set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.kgb
-set wildignore+=*.swp,.lock,.DS_Store,._*
-
 colorscheme plain
 
 set shiftwidth=4     " indent = 4 spaces
@@ -115,44 +99,6 @@ function! GetTabber()  " a lil function that integrates well with Tabular.vim
 	let c = nr2char(getchar())
 	:execute 'Tabularize /' . c
 endfunction
-
-
-" mappings
-let mapleader=' '
-" nnoremap
-nnoremap <Leader>o : only<cr>
-nnoremap <Leader>l : Lines<cr>
-nnoremap <Leader>b : bnext<cr>
-nnoremap <Leader>B : bprev<cr>
-nnoremap <Leader>z : FZF<cr>
-nnoremap <Leader>w : MtaJumpToOtherTag<cr>
-nnoremap <Leader>t : call GetTabber()<cr>
-nnoremap <Leader>r : RustRun<cr>
-nnoremap <Leader><ESC> : nohlsearch<cr>
-nnoremap <F2>      : NERDTreeToggle<cr>
-nnoremap <C-l> :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
-nnoremap H H:exec 'norm! '. &scrolloff . 'k'<cr>
-nnoremap L L:exec 'norm! '. &scrolloff . 'j'<cr>
-nnoremap  <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
-nmap <silent> H  :let g:help_in_tabs = !g:help_in_tabs<CR>
-
-map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-			\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-			\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-
-cmap w!! %!sudo tee > /dev/null %
-
-" vnoremap
-vnoremap > >gv
-vnoremap < <gv
-
-" onoremap
-onoremap ax a`
-onoremap ix i`
-
-" xnoremap
-xnoremap + g<C-a>
-xnoremap - g<C-x>
 
 :command! WQ wq
 :command! Wq wq

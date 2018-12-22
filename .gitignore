@@ -8,6 +8,5 @@ images/
 *gitgraph*
 *colors*
 scripts/scripts/graphs
-*after*
 weechat/sec.conf
-plug.vim
+**/plug.vim

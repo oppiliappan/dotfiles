@@ -1,3 +1,5 @@
+mapclear
+
 let mapleader=' '
 
 " normal

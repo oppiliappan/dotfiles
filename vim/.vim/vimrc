@@ -1,4 +1,3 @@
-mapclear
 let &t_ZM = "\e[3m"
 
 " vim-plugs
@@ -28,7 +27,6 @@ augroup indents
 	autocmd!
 	autocmd FileType less,css,html setlocal ts=2 sts=2 sw=2 expandtab
 	autocmd FileType text,markdown setlocal expandtab
-	autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
 augroup END
 
 augroup highlight_follows_vim

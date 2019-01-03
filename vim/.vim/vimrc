@@ -5,7 +5,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
-Plug 'mattn/emmet-vim', { 'for': ['*html', '*css', 'vue'] }
+Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-repeat'
 Plug 'godlygeek/tabular'
 Plug 'lambdalisue/vim-manpager'
@@ -18,8 +18,11 @@ Plug 'andymass/vim-matchup'
 Plug 'jiangmiao/auto-pairs'
 Plug 'posva/vim-vue'
 Plug 'Yggdroot/indentLine'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'nerdypepper/agila.vim'
 Plug 'nerdypepper/vim-colors-plain'
+
 call plug#end()
 
 " augroups
@@ -85,7 +88,7 @@ set complete=.,w,b,i,u,t,
 set background=dark
 set mouse=a
 
-colorscheme plain
+colorscheme agila
 
 set shiftwidth=4     " indent = 4 spaces
 set expandtab

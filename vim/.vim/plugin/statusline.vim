@@ -20,7 +20,7 @@ let g:currentmode={
             \ '!'  : 'SHELL ',
             \ 't'  : 'TERMINAL '}
 
-hi PrimaryBlock        ctermfg=00 ctermbg=04
+hi PrimaryBlock        ctermfg=08 ctermbg=0
 hi SecondaryBlock      ctermfg=07 ctermbg=10
 hi Blanks              ctermfg=07 ctermbg=0
 highlight EndOfBuffer ctermfg=black ctermbg=black

@@ -2,22 +2,22 @@ set incremental-search true
 
 set recolor "true"
 
-set default-bg "#ffffff"
-set default-fg "#4d4d4c"
+set default-bg "#1e2541"
+set default-fg "#cccccc"
 
-set completion-bg "#ffffff"
-set completion-fg "#4d4d4c"
-set completion-highlight-bg "#4271ae"
-set completion-highlight-fg "#4d4d4c"
+set completion-bg "#1e2541"
+set completion-fg "#cccccc"
+set completion-highlight-bg "#57C7FF"
+set completion-highlight-fg "#cccccc"
 
-set statusbar-bg "#4271ae"
-set statusbar-fg "#ffffff"
+set statusbar-bg "#57C7FF"
+set statusbar-fg "#1e2541"
 
-set inputbar-bg "#ffffff"
-set inputbar-fg "#4d4d4c"
+set inputbar-bg "#1e2541"
+set inputbar-fg "#cccccc"
 
-set recolor-darkcolor "#4d4d4c"
-set recolor-lightcolor "#ffffff"
+set recolor-darkcolor "#cccccc"
+set recolor-lightcolor "#1e2541"
 
 set window-height "800"
 set window-width "600"

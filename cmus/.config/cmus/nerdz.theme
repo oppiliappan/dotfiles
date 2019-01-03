@@ -2,7 +2,7 @@
 set color_win_dir=default
 
 # Normal text
-set color_win_fg=247
+set color_win_fg=245
 
 # Window background color.
 set color_win_bg=default
@@ -18,7 +18,7 @@ set color_error=lightred
 set color_info=lightyellow
 
 # Color of currently playing track.
-set color_win_cur=4
+set color_win_cur=5
 
 # Color of the separator line between windows in view (1).
 set color_separator=black

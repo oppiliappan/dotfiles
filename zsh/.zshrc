@@ -8,6 +8,9 @@ export PATH=$PATH":/usr/local/go/bin"
 export PATH=$PATH":$HOME/anaconda3/bin"
 export GPG_TTY=$(tty)
 export TERM=xterm-256color-italic
+export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 ZSH_THEME="simple"
 
@@ -34,9 +37,6 @@ zle -N down-line-or-beginning-search
 [[ -n "$key[Down]" ]] && bindkey -- "$key[Down]" down-line-or-beginning-search
 
 [ -f ~/.fzf.zsh  ] && source ~/.fzf.zsh
-
-
-# functions
 
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh

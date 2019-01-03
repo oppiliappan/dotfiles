@@ -1,9 +1,9 @@
 ; ---------- global --------------
 
 [colors]
-foreground        = ${xrdb:color7}
+foreground        = ${xrdb:color0}
 foreground_bright = ${xrdb:color8}
-background        = ${xrdb:color0}
+background        = ${xrdb:color15}
 modb              = ${xrdb:color0}
 modb1             = ${xrdb:color0}
 modb2             = ${xrdb:color0}
@@ -31,8 +31,8 @@ offset-x = 40
 offset-y = 965
 
 locale     = de_DE.UTF-8
-background = ${colors.blue}
-foreground = ${colors.background}
+background = ${colors.background}
+foreground = ${colors.foreground}
 
 font-0 = SF Mono:size=12:antialias=true;2
 
@@ -66,10 +66,6 @@ modules-left   =
 modules-center = cmusnp
 modules-right  =
 
-border-left-size = 1
-border-bottom-size = 1
-border-right-size = 1
-border-color = ${colors.foreground}
 
 
 tray-position    =
@@ -97,10 +93,6 @@ modules-left   =
 modules-center = previous playpause next
 modules-right  =
 
-border-left-size = 1
-border-right-size = 1
-border-color = ${colors.foreground}
-
 tray-position    =
 
 spacing             = 3
@@ -110,9 +102,9 @@ module-margin-left  = 0
 module-margin-right = 0
 
 [bar/stats]
-width    = 200
+width    = 250
 height   = 60
-offset-x = 1680
+offset-x = 1630
 offset-y = 965
 
 locale     = de_DE.UTF-8
@@ -122,11 +114,8 @@ foreground = ${colors.background}
 font-0 = SF Mono:size=11:antialias=true;2
 
 modules-left   =
-modules-center = time separator bat
+modules-center =  time separator bat separator plus
 modules-right  =
-
-border-size = 1
-border-color = ${colors.foreground}
 
 tray-position    =
 
@@ -142,11 +131,12 @@ module-margin-right = 0
 type           = custom/script
 interval       = 0.01
 exec           = echo $(( $(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //') + 1))
-click-left     = ~/scripts/hidebars.sh -s
-click-right    = ~/scripts/hidebars.sh -h
+; click-left     = ~/scripts/hidebars.sh -s
+; click-right    = ~/scripts/hidebars.sh -h
 scroll-up      = ~/scripts/wscycle.sh -f
 scroll-down    = ~/scripts/wscycle.sh -r
-format-padding = 3
+format-padding = 0
+format-foreground = ${colors.foreground}
 
 [module/date]
 type = custom/script
@@ -173,7 +163,7 @@ exec              = echo label
 click-left        = cmus-remote -r -p && ~/scripts/popups/cover.sh
 click-right       = wmctrl -s 5
 format-foreground = ${colors.blue}
-format-background = ${colors.modb}
+format-background = ${colors.background}
 format-padding    = 2
 
 [module/next]
@@ -184,7 +174,7 @@ exec              = echo label
 click-left        = cmus-remote -n -p && ~/scripts/popups/cover.sh
 click-right       = wmctrl -s 5
 format-foreground = ${colors.blue}
-format-background = ${colors.modb}
+format-background = ${colors.background}
 format-padding    = 2
 
 [module/playpause]
@@ -196,7 +186,7 @@ interval          = 1
 scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
 format-foreground = ${colors.blue}
-format-background = ${colors.modb}
+format-background = ${colors.background}
 format-padding    = 2
 
 [module/2bws]
@@ -213,7 +203,7 @@ type              = custom/script
 exec              = ~/scripts/bat
 interval          = 100
 format-padding    = 0
-format-background = ${colors.modb}
+format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 
 [module/vol]
@@ -243,7 +233,7 @@ click-right       = wmctrl -s 5
 scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
 format-foreground = ${colors.foreground}
-format-background = ${colors.modb}
+format-background = ${colors.background}
 
 [module/brit]
 type              = custom/script

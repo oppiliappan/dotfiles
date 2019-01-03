@@ -2,4 +2,3 @@
 
 pkill polybar
 polybar stats &
-polybar fab &

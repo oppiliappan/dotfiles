@@ -8,8 +8,6 @@ urxvtd &
 
 pkill polybar
 polybar stats &
-sleep 0.2
-polybar fab &
 
 compton &
 dunst -config "$HOME"/.config/dunst/dunstrc &

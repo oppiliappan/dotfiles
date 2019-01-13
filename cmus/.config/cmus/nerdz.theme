@@ -2,7 +2,7 @@
 set color_win_dir=default
 
 # Normal text
-set color_win_fg=245
+set color_win_fg=240
 
 # Window background color.
 set color_win_bg=default

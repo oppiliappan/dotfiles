@@ -34,7 +34,7 @@ locale     = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = SF Mono:size=12:antialias=true;2
+font-0 = Pragmata Pro:size=12:antialias=true;2
 
 modules-left   =
 modules-center = plus
@@ -60,7 +60,7 @@ locale     = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = SF Mono:size=11:antialias=true;2
+font-0 = Pragmata Pro:size=11:antialias=true;2
 
 modules-left   =
 modules-center = cmusnp
@@ -86,7 +86,7 @@ locale     = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = SF Mono:size=11:antialias=true;2
+font-0 = Pragmata Pro:size=11:antialias=true;2
 font-1 = Siji:size=12:antialias=true;2
 
 modules-left   =
@@ -111,7 +111,7 @@ locale     = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.background}
 
-font-0 = SF Mono:size=11:antialias=true;2
+font-0 = Pragmata Pro:size=11:antialias=true;2
 
 modules-left   =
 modules-center =  time separator bat separator plus

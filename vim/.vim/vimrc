@@ -16,7 +16,6 @@ Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
 Plug 'andymass/vim-matchup'
 Plug 'jiangmiao/auto-pairs'
-Plug 'posva/vim-vue'
 Plug 'Yggdroot/indentLine'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
@@ -88,7 +87,7 @@ set complete=.,w,b,i,u,t,
 set background=dark
 set mouse=a
 
-colorscheme agila
+colorscheme plain
 
 set shiftwidth=4     " indent = 4 spaces
 set expandtab
@@ -131,11 +130,11 @@ let g:NERDTreeDirArrowCollapsible = '-'
 
 " gitgutter
 let g:gitgutter_override_sign_column_highlight = 0
-let g:gitgutter_sign_added                     = '│'
-let g:gitgutter_sign_modified                  = '│'
-let g:gitgutter_sign_removed                   = '│'
-let g:gitgutter_sign_removed_first_line        = '│'
-let g:gitgutter_sign_modified_removed          = '│'
+let g:gitgutter_sign_added                     = '+'
+let g:gitgutter_sign_modified                  = '±'
+let g:gitgutter_sign_removed                   = '-'
+let g:gitgutter_sign_removed_first_line        = '-'
+let g:gitgutter_sign_modified_removed          = '~'
 
 " ale
 let g:ale_set_signs             = 1

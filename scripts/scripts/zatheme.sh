@@ -10,10 +10,10 @@ set default-fg "'$( get_xres color7 )'"
 
 set completion-bg "'$( get_xres color0 )'"
 set completion-fg "'$( get_xres color7 )'"
-set completion-highlight-bg "'$( get_xres color4 )'"
+set completion-highlight-bg "'$( get_xres color2 )'"
 set completion-highlight-fg "'$( get_xres color7 )'"
 
-set statusbar-bg "'$( get_xres color4 )'"
+set statusbar-bg "'$( get_xres color2 )'"
 set statusbar-fg "'$( get_xres color0 )'"
 
 set inputbar-bg "'$( get_xres color0 )'"

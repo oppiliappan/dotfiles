@@ -1,6 +1,6 @@
 export ZSH=/home/nerdypepper/.oh-my-zsh
 export EDITOR=/usr/bin/nvim
-export MANPAGER="nvim -c MANPAGER -"
+export MANPAGER="vim -c MANPAGER -"
 export BROWSER="/usr/bin/chromium-browser"
 export PATH=$PATH":$HOME/scripts"
 export PATH=$PATH":$HOME/.cargo/bin"

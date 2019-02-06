@@ -3,24 +3,23 @@
 ! ------------------------------------------------------------------------------
 !
 !------------------------------------------------------------------------------
+#define base00 #ffffff
+#define base01 #e0e0e0
+#define base02 #d6d6d6
+#define base03 #8e908c
+#define base04 #969896
+#define base05 #4d4d4c
+#define base06 #282a2e
+#define base07 #1d1f21
+#define base08 #c82829
+#define base09 #f5871f
+#define base0A #eab700
+#define base0B #79b285
+#define base0C #3e999f
+#define base0D #4271ae
+#define base0E #8959a8
+#define base0F #a3685a
 
-#define base00 #1e2541
-#define base01 #3d4463
-#define base02 #4d567d
-#define base03 #57618c
-#define base04 #b8b8c5
-#define base05 #cccccc
-#define base06 #d9d9d9
-#define base07 #ffffff
-
-#define base08 #F0719B
-#define base09 #FFA56B
-#define base0A #ffcb6b
-#define base0B #5AF7B0
-#define base0C #89DDFF
-#define base0D #57C7FF
-#define base0E #C792EA
-#define base0F #ff5370
 
 !  URxvt
 ! ------------------------------------------------------------------------------
@@ -103,9 +102,9 @@ Xft.dpi: 110
 twobwm.border_width: 12
 twobwm.outer_border: 11
 twobwm.focus_color: base07
-twobwm.unfocus_color: base07
+twobwm.unfocus_color: base11
 twobwm.fixed_color: base0D
 twobwm.unkill_color: base08
 twobwm.fixed_unkill_color: base0E
 twobwm.outer_border_color: base00
-twobwm.inverted_colors: true
+twobwm.inverted_colors: false

@@ -1,9 +1,9 @@
 ; ---------- global --------------
 
 [colors]
-foreground        = ${xrdb:color0}
+foreground        = ${xrdb:color7}
 foreground_bright = ${xrdb:color8}
-background        = ${xrdb:color15}
+background        = ${xrdb:color0}
 modb              = ${xrdb:color0}
 modb1             = ${xrdb:color0}
 modb2             = ${xrdb:color0}
@@ -110,6 +110,9 @@ offset-y = 965
 locale     = de_DE.UTF-8
 background = ${colors.background}
 foreground = ${colors.background}
+
+border-size = 1
+border-color = ${colors.foreground}
 
 font-0 = Pragmata Pro:size=11:antialias=true;2
 

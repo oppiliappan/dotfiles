@@ -1,6 +1,6 @@
 precmd() { 
     print ''
-    print -rP "%{$fg[blue]%}$(_prompt_pwd)%F{8}$(git_prompt_info)%{$reset_color%}" 
+    print -rP "%{$fg[green]%}$(_prompt_pwd)%F{8}$(git_prompt_info)%{$reset_color%}" 
 }
 PROMPT='> '
 

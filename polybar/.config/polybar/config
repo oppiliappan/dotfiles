@@ -24,83 +24,6 @@ override-redirect = true
 
 ; ------------ bars ---------------
 
-[bar/fab]
-width    = 75
-height   = 75
-offset-x = 40
-offset-y = 965
-
-locale     = de_DE.UTF-8
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-font-0 = Pragmata Pro:size=12:antialias=true;2
-
-modules-left   =
-modules-center = plus
-modules-right  =
-
-tray-position    =
-
-radius = 37.5
-
-spacing             = 1
-padding-left        = 0
-padding-right       = 0
-module-margin-left  = 0
-module-margin-right = 0
-
-[bar/np]
-width    = 350
-height   = 45
-offset-x = 40
-offset-y = 905
-
-locale     = de_DE.UTF-8
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-font-0 = Pragmata Pro:size=11:antialias=true;2
-
-modules-left   =
-modules-center = cmusnp
-modules-right  =
-
-
-
-tray-position    =
-
-spacing             = 1
-padding-left        = 0
-padding-right       = 0
-module-margin-left  = 0
-module-margin-right = 0
-
-[bar/music]
-width    = 350
-height   = 60
-offset-x = 40
-offset-y = 855
-
-locale     = de_DE.UTF-8
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-font-0 = Pragmata Pro:size=11:antialias=true;2
-font-1 = Siji:size=12:antialias=true;2
-
-modules-left   =
-modules-center = previous playpause next
-modules-right  =
-
-tray-position    =
-
-spacing             = 3
-padding-left        = 0
-padding-right       = 0
-module-margin-left  = 0
-module-margin-right = 0
-
 [bar/stats]
 width    = 250
 height   = 60
@@ -127,6 +50,17 @@ padding-left        = 0
 padding-right       = 0
 module-margin-left  = 0
 module-margin-right = 0
+
+[bar/border]
+width    = 274
+height   = 84
+offset-x = 1618
+offset-y = 953
+
+background = ${colors.background}
+foreground = ${colors.background}
+
+modules-center = separator
 
 ; ---------- modules ---------------
 

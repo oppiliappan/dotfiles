@@ -5,7 +5,7 @@
 #                  
 
 [global]
-    font = SF Mono 10
+    font = Pragmata Pro 10
     allow_markup = no
     format = "%s\n%b"
     sort = yes

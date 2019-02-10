@@ -1,5 +1,5 @@
 export ZSH=/home/nerdypepper/.oh-my-zsh
-export EDITOR=/usr/bin/nvim
+export EDITOR=/usr/bin/vim
 export MANPAGER="vim -c MANPAGER -"
 export BROWSER="/usr/bin/chromium-browser"
 export PATH=$PATH":$HOME/scripts"
@@ -24,7 +24,7 @@ plugins=(git sudo zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 alias nerdz='~/scripts/nerdinfo.sh'
-alias nvime='nvim ~/.config/nvim/init.vim'
+alias vime='vim ~/.vim/vimrc'
 alias spdtst='curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
 alias tmux='tmux -u'
 alias o='xdg-open'

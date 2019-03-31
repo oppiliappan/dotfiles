@@ -3,6 +3,7 @@
 ! ------------------------------------------------------------------------------
 !
 !------------------------------------------------------------------------------
+
 #define base00 #ffffff
 #define base01 #e0e0e0
 #define base02 #d6d6d6
@@ -14,7 +15,7 @@
 #define base08 #c82829
 #define base09 #f5871f
 #define base0A #eab700
-#define base0B #79b285
+#define base0B #75bc75
 #define base0C #3e999f
 #define base0D #4271ae
 #define base0E #8959a8
@@ -48,10 +49,12 @@
 
 
 URxvt.cursorBlink : 0
-URxvt.font        :xft:Pragmata Pro:size=11
+URxvt.font       :xft:Iosevka Term:size=12
+URxvt.boldFont   :xft:Iosevka Term:size=12
+URxvt.italicFont :xft:Iosevka Term:size=12
 
 URxvt.lineSpace           : 0
-URxvt.letterSpace         : -1
+URxvt.letterSpace         : 0
 URxvt.scrollBar           : false
 URxvt.internalBorder      : 44
 URxvt.cursorUnderline     : false
@@ -76,7 +79,7 @@ rofi.color-active:    base03 , base0E , base00 , base0B , base00
 rofi.color-urgent:    base00 , base03 , base00 , base00 , base03
 
 rofi.fake-transparency : true
-rofi.font              : Pragmata Pro 11
+rofi.font              : Iosevka Term 12
 rofi.columns           : 1
 rofi.separator-style   : none
 rofi.hide-scrollbar    : true
@@ -99,10 +102,10 @@ Xft.dpi: 110
 ! 2bwm
 ! ------------------------------------------------------------------------------
 
-twobwm.border_width: 12
-twobwm.outer_border: 11
-twobwm.focus_color: base07
-twobwm.unfocus_color: base11
+twobwm.border_width: 1
+twobwm.outer_border: 0
+twobwm.focus_color: base05
+twobwm.unfocus_color: base5
 twobwm.fixed_color: base0D
 twobwm.unkill_color: base08
 twobwm.fixed_unkill_color: base0E

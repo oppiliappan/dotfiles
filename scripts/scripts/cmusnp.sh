@@ -24,7 +24,7 @@ then
 	title=$( cmus-remote -Q | grep tag\ title\ | sed 's/tag title //' )
 
 	np_string="$title - $artist"
-	np_string=$( trunc 25 "$np_string" )
+	np_string=$( trunc 40 "$np_string" )
 
 	spc=$(( $(( 32 - ${#np_string} ))/2 ))
 	spc="$( printf "%${spc}s" )"

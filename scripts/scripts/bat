@@ -9,11 +9,12 @@ prp="\e[35m"
 bprp="\e[35;1m"
 rst="\e[0m"
 
+icon="$( ~/scripts/get_xres color2 )"
+fg="$( ~/scripts/get_xres color7 )"
+
 bat_status=""
 bat_status=$( cat /sys/class/power_supply/BAT0/capacity )
-model_name=$( cat /sys/class/power_supply/BAT0/model_name )
 charging_status=$( cat /sys/class/power_supply/BAT0/status )
-cycle_count=$( cat /sys/class/power_supply/BAT0/cycle_count )
 
 health() {
 	for i in {1..5}
@@ -28,7 +29,7 @@ health() {
 }
 
 if [[ "$charging_status" == "Charging" ]]; then
-    echo "$bat_status%+"
+    echo -ne "%{F$icon} %{F$fg}$bat_status%"
 else
-    echo "$bat_status%"
+    echo -ne "%{F$icon} %{F$fg}$bat_status%"
 fi

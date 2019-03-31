@@ -2,6 +2,7 @@ let &t_ZM = "\e[3m"
 
 " vim-plugs
 call plug#begin('~/.local/share/nvim/plugged')
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
@@ -11,14 +12,18 @@ Plug 'godlygeek/tabular'
 Plug 'lambdalisue/vim-manpager'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
-Plug 'rust-lang/rust.vim'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
 Plug 'andymass/vim-matchup'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Yggdroot/indentLine'
+
+" syntax and friends
+Plug 'rust-lang/rust.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+
+" colorschemes
 Plug 'nerdypepper/agila.vim'
 Plug 'nerdypepper/vim-colors-plain'
 

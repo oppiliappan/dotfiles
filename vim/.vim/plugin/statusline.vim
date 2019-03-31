@@ -20,9 +20,9 @@ let g:currentmode={
             \ '!'  : 'SHELL ',
             \ 't'  : 'TERMINAL '}
 
-hi PrimaryBlock        ctermfg=08 ctermbg=0
+hi PrimaryBlock        ctermfg=00 ctermbg=2
 hi SecondaryBlock      ctermfg=07 ctermbg=10
-hi Blanks              ctermfg=07 ctermbg=0
+hi Blanks              ctermfg=08 ctermbg=0
 highlight EndOfBuffer ctermfg=black ctermbg=black
 
 set statusline=
@@ -30,13 +30,13 @@ set statusline=
 set statusline=
 set statusline+=%#PrimaryBlock#
 set statusline+=\ %{g:currentmode[mode()]}
-set statusline+=%#PrimaryBlock#
+set statusline+=%#SecondaryBlock#
 set statusline+=%{StatuslineGit()}
-set statusline+=%#PrimaryBlock#
-set statusline+=\ %t\ 
+set statusline+=%#Blanks#
+set statusline+=\ %f\ 
 set statusline+=%(%m%)
 set statusline+=%=
-set statusline+=%#PrimaryBlock#
+set statusline+=%#SecondaryBlock#
 set statusline+=\ Ln
 set statusline+=\ %l
 set statusline+=,Col
@@ -52,5 +52,3 @@ function! StatuslineGit()
     let l:branchname = GitBranch()
     return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
 endfunction
-
-

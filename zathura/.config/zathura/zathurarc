@@ -7,10 +7,10 @@ set default-fg "#4d4d4c"
 
 set completion-bg "#ffffff"
 set completion-fg "#4d4d4c"
-set completion-highlight-bg "#79b285"
+set completion-highlight-bg "#75bc75"
 set completion-highlight-fg "#4d4d4c"
 
-set statusbar-bg "#79b285"
+set statusbar-bg "#75bc75"
 set statusbar-fg "#ffffff"
 
 set inputbar-bg "#ffffff"

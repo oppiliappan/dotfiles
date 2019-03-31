@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+fg="$( ~/scripts/get_xres color7 )"
+icon="$( ~/scripts/get_xres color2 )"
+
 while getopts idq options
 do
 	case $options in
@@ -12,7 +15,7 @@ do
 			;;
 		q)
 			cur_vol=$(  amixer sget Master | awk -F"[][]" '/dB/ { print $2 }'  )
-			echo $cur_vol
+			echo "%{F$icon} %{F$fg}$cur_vol"
 			;;
 	esac
 done

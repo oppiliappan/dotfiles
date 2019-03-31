@@ -24,55 +24,65 @@ override-redirect = true
 
 ; ------------ bars ---------------
 
-[bar/stats]
-width    = 250
-height   = 60
-offset-x = 1630
-offset-y = 965
+[bar/workspace]
+width               = 340
+height              = 60
+offset-x            = 1540
+offset-y            = 40
+locale              = de_DE.UTF-8
+background          = ${colors.background}
+foreground          = ${colors.background}
 
-locale     = de_DE.UTF-8
-background = ${colors.background}
-foreground = ${colors.background}
+font-0              = Anka/Coder Condensed:size=13:weight=bold:antialias = true;2
+font-1              = icomoon:size=15:antialias = true;2
 
-border-size = 1
+border-size  = 1
 border-color = ${colors.foreground}
 
-font-0 = Pragmata Pro:size=11:antialias=true;2
+modules-left        = 
+modules-center      = 2bws
+modules-right       = 
+tray-position       =
+spacing             = 0
+padding-left        = 6
+padding-right       = 6
+module-margin-left  = 0
+module-margin-right = 0
 
-modules-left   =
-modules-center =  time separator bat separator plus
-modules-right  =
+[bar/stats]
+width               = 400
+height              = 60
+offset-x            = 40
+offset-y            = 40
+locale              = de_DE.UTF-8
+background          = ${colors.background}
+foreground          = ${colors.background}
 
-tray-position    =
+font-0              = Anka/Coder Condensed:size=13:weight=bold:antialias = true;2
+font-1              = icomoon:size=15:antialias = true;2
 
-spacing             = 1
+border-size  = 1
+border-color = ${colors.foreground}
+
+modules-left        = 
+modules-center      = brit vol bat time
+modules-right       = 
+tray-position       =
+spacing             = 0
 padding-left        = 0
 padding-right       = 0
 module-margin-left  = 0
 module-margin-right = 0
 
-[bar/border]
-width    = 274
-height   = 84
-offset-x = 1618
-offset-y = 953
-
-background = ${colors.background}
-foreground = ${colors.background}
-
-modules-center = separator
 
 ; ---------- modules ---------------
 
-[module/plus]
-type           = custom/script
-interval       = 0.01
-exec           = echo $(( $(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //') + 1))
-; click-left     = ~/scripts/hidebars.sh -s
-; click-right    = ~/scripts/hidebars.sh -h
-scroll-up      = ~/scripts/wscycle.sh -f
-scroll-down    = ~/scripts/wscycle.sh -r
-format-padding = 0
+[module/workspace]
+type              = custom/script
+interval          = 0.01
+exec              = echo $(( $(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //') + 1))
+format-padding    = 2
+format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 
 [module/date]
@@ -84,35 +94,37 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
 [module/time]
-type              = custom/script
-interval          = 1.0
-exec              = date +%I:%M
-format-padding    = 0
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
+type                     = custom/script
+interval                 = 1.0
+exec                     = date +%H:%M
+format-prefix            = " "
+format-prefix-foreground = ${colors.green}
+format-padding           = 1
+format-foreground        = ${colors.foreground}
+format-background        = ${colors.background}
 
  
 [module/previous]
 type              = custom/script
 format-text       = <label>
-label             = 
+label             = 
 exec              = echo label
 click-left        = cmus-remote -r -p && ~/scripts/popups/cover.sh
 click-right       = wmctrl -s 5
-format-foreground = ${colors.blue}
+format-foreground = ${colors.green}
 format-background = ${colors.background}
-format-padding    = 2
+format-padding    = 1
 
 [module/next]
 type              = custom/script
 format-text       = <label>
-label             = 
+label             = 
 exec              = echo label
 click-left        = cmus-remote -n -p && ~/scripts/popups/cover.sh
 click-right       = wmctrl -s 5
-format-foreground = ${colors.blue}
+format-foreground = ${colors.green}
 format-background = ${colors.background}
-format-padding    = 2
+format-padding    = 1
 
 [module/playpause]
 type              = custom/script
@@ -122,9 +134,9 @@ click-right       = wmctrl -s 5
 interval          = 1
 scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
-format-foreground = ${colors.blue}
+format-foreground = ${colors.green}
 format-background = ${colors.background}
-format-padding    = 2
+format-padding    = 1
 
 [module/2bws]
 type              = custom/script
@@ -139,18 +151,17 @@ scroll-down       = exec ~/scripts/wscycle.sh -r
 type              = custom/script
 exec              = ~/scripts/bat
 interval          = 100
-format-padding    = 0
+format-padding    = 2
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 
 [module/vol]
-type              = custom/script
-exec              = exec ~/scripts/vol -q
-interval          = 0.1
-format-prefix     = " "
-format-padding    = 2
-scroll-up         = ~/scripts/vol -i
-scroll-down       = ~/scripts/vol -d
+type                     = custom/script
+exec                     = ~/scripts/vol -q
+interval                 = 0.01
+format-padding           = 2
+scroll-up                = ~/scripts/vol -i
+scroll-down              = ~/scripts/vol -d
 
 [module/net]
 type              = custom/script
@@ -171,18 +182,20 @@ scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
+padding           = 2
 
 [module/brit]
-type              = custom/script
-exec              = light -b
-interval          = 1
-format-padding    = 2
-format-prefix     = "⏾ "
-format-background = ${colors.modb}
-scroll-up         = light -A 5
-scroll-down       = light -U 5
-click-left = redshift -O 4000
-click-right = redshift -O 6500
+type                     = custom/script
+exec                     = echo "$( light -b | sed 's/\..*//' )%"
+format-prefix            = " "
+format-prefix-foreground = ${colors.green}
+scroll-up                = exec light -A 3
+scroll-down              = exec light -U 3
+click-left               = redshift -O 4000
+click-right              = redshift -O 6500
+format-foreground        = ${colors.foreground}
+format-padding           = 2
+interval                 = 0.01
 
 [module/separator]
 type              = custom/script
@@ -190,4 +203,3 @@ format-text       = <label>
 label             = "  |  "
 exec              = echo label
 format-foreground = ${colors.foreground}
-

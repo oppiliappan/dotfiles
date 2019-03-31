@@ -3,8 +3,8 @@ env:
 
 window:
     dimensions:
-        columns: 100
-        lines: 60
+        columns: 0
+        lines: 0
 
     padding:
         x: 44
@@ -38,19 +38,19 @@ draw_bold_text_with_bright_colors: false
 font:
   # The normal (roman) font face to use.
   normal:
-    family: scientifica # should be "Menlo" or something on macOS.
+    family: Iosevka Term # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Regular
 
   # The bold font face
   bold:
-    family: scientifica # should be "Menlo" or something on macOS.
+    family: Iosevka Term # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
   italic:
-    family: scientifica # should be "Menlo" or something on macOS.
+    family: Iosevka Term # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Italic
 
@@ -80,15 +80,15 @@ render_timer: false
 
 # Use custom cursor colors. If true, display the cursor in the cursor.foreground
 # and cursor.background colors, otherwise invert the colors of the cursor.
-custom_cursor_colors: true
+custom_cursor_colors: false
 
 # Colorscheme (gruvbox)
 
 colors:
   # Default colors
     primary:
-        background: '0x212121'
-        foreground: '0xeeffff'
+        background: '0xffffff'
+        foreground: '0x4d4d4c'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
     cursor:
@@ -97,25 +97,42 @@ colors:
 
   # Normal colors
     normal:
-        black:   '0x212121'
-        red:     '0xf07178'
-        green:   '0x7ece91'
-        yellow:  '0xffcb6b'
-        blue:    '0x82aaff'
-        magenta: '0xc792ea'
-        cyan:    '0x89ddff'
-        white:   '0xeeffff'
+        black:   '0xffffff'
+        red:     '0xc82829'
+        green:   '0x75bc75'
+        yellow:  '0xeab700'
+        blue:    '0x4271ae'
+        magenta: '0x8959a8'
+        cyan:    '0x3e999f'
+        white:   '0x4d4d4c'
 
   # Bright colors
     bright:
-        black:   '0x4a4a4a'
-        red:     '0xf78c6c'
-        green:   '0x303030'
-        yellow:  '0x353535'
-        blue:    '0xb2ccd6'
-        magenta: '0xeeffff'
-        cyan:    '0x5e5e5e'
-        white:   '0xeeffff'
+        black:   '0x8e908c'
+        red:     '0xf5871f'
+        green:   '0xe0e0e0'
+        yellow:  '0xd6d6d6'
+        blue:    '0x969896'
+        magenta: '0x282a2e'
+        cyan:    '0xa3685a'
+        white:   '0x1d1f21'
+
+#define base00 #ffffff
+#define base01 #e0e0e0
+#define base02 #d6d6d6
+#define base03 #8e908c
+#define base04 #969896
+#define base05 #4d4d4c
+#define base06 #282a2e
+#define base07 #1d1f21
+#define base08 #c82829
+#define base09 #f5871f
+#define base0A #eab700
+#define base0B #718c00
+#define base0C #3e999f
+#define base0D #4271ae
+#define base0E #8959a8
+#define base0F #a3685a
 
 #*.color0:       #121c21
 #*.color1:       #1e2e36

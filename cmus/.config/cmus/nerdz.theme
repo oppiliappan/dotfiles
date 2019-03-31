@@ -2,7 +2,7 @@
 set color_win_dir=default
 
 # Normal text
-set color_win_fg=252
+set color_win_fg=250
 
 # Window background color.
 set color_win_bg=default
@@ -32,25 +32,26 @@ set color_statusline_bg=default
 set color_statusline_fg=gray
 
 # Color of the line displaying currently playing track.
-set color_titleline_bg=black
-set color_titleline_fg=15
+set color_titleline_bg=0
+set color_titleline_fg=2
 
 # Color of the selected row which is also the currently playing track in active window.
 set color_win_cur_sel_bg=default
-set color_win_cur_sel_fg=2
+set color_win_cur_sel_fg=10
 
 # Color of the selected row which is also the currently playing track in inactive window.
 set color_win_inactive_cur_sel_bg=default
-set color_win_inactive_cur_sel_fg=2
+set color_win_inactive_cur_sel_fg=10
 
 # Color of selected row in inactive window.
 set color_win_inactive_sel_bg=default
-set color_win_inactive_sel_fg=default
+set color_win_inactive_sel_fg=10
 
 # Color of selected row in active window.
 set color_win_sel_bg=default
-set color_win_sel_fg=2
+set color_win_sel_fg=10
 
 # Command line color.
 set color_cmdline_bg=default
 set color_cmdline_fg=default
+

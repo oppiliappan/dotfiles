@@ -6,6 +6,10 @@ blu="\e[34m"
 prp="\e[35m"
 bprp="\e[35;1m"
 rst="\e[0m"
+blk="\e[30m"
+
+bgrn="\e[42m"
+bylw="\e[43m"
 
 export EDITOR=/usr/bin/vim
 export MANPAGER="vim -c MANPAGER -"
@@ -61,10 +65,10 @@ git_branch() {
 
     if [[ $git_status =~ $on_branch ]]; then
         local branch=${BASH_REMATCH[1]}
-        echo -ne "${grn}($branch)${rst}"
+        echo -ne "${grn}$branch ${rst}"
     elif [[ $git_status =~ $on_commit ]]; then
         local commit=${BASH_REMATCH[1]}
-        echo -ne "${ylw}($commit)${rst}"
+        echo -ne "${ylw}$commit ${rst}"
     fi
 }
 

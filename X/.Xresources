@@ -48,12 +48,12 @@
 
 
 URxvt.cursorBlink : 0
-URxvt.font       :xft:Iosevka Term:size=12
-URxvt.boldFont   :xft:Iosevka Term:size=12
-URxvt.italicFont :xft:Iosevka Term:size=12
+URxvt.font       :xft:Roboto Mono:size=11
+URxvt.boldFont   :xft:Roboto Mono:size=11
+URxvt.italicFont :xft:Roboto Mono:size=11
 
 URxvt.lineSpace           : 0
-URxvt.letterSpace         : 0
+URxvt.letterSpace         : -2
 URxvt.scrollBar           : false
 URxvt.internalBorder      : 44
 URxvt.cursorUnderline     : false

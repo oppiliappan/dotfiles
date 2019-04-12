@@ -29,7 +29,7 @@ health() {
 }
 
 if [[ "$charging_status" == "Charging" ]]; then
-    echo -ne "%{F$icon} %{F$fg}$bat_status%"
+    echo -ne "+$bat_status%"
 else
-    echo -ne "%{F$icon} %{F$fg}$bat_status%"
+    echo -ne "$bat_status%"
 fi

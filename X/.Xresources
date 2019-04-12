@@ -4,23 +4,22 @@
 !
 !------------------------------------------------------------------------------
 
-#define base00 #ffffff
-#define base01 #e0e0e0
-#define base02 #d6d6d6
-#define base03 #8e908c
-#define base04 #969896
-#define base05 #4d4d4c
-#define base06 #282a2e
-#define base07 #1d1f21
-#define base08 #c82829
-#define base09 #f5871f
-#define base0A #eab700
-#define base0B #75bc75
-#define base0C #3e999f
-#define base0D #4271ae
-#define base0E #8959a8
+#define base00 #1d1f21
+#define base01 #282a2e
+#define base02 #373b41
+#define base03 #969896
+#define base04 #b4b7b4
+#define base05 #c5c8c6
+#define base06 #e0e0e0
+#define base07 #ffffff
+#define base08 #cc6666
+#define base09 #de935f
+#define base0A #f0c674
+#define base0B #b5bd68
+#define base0C #8abeb7
+#define base0D #81a2be
+#define base0E #b294bb
 #define base0F #a3685a
-
 
 !  URxvt
 ! ------------------------------------------------------------------------------
@@ -73,7 +72,7 @@ URxvt.matcher.button  : 1
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
 
-rofi.color-window:    base00 , base00 , base00 , base00 , base03
+rofi.color-window:    base00 , base02 , base00 , base00 , base03
 rofi.color-normal:    base00 , base03 , base00 , base00 , base07
 rofi.color-active:    base03 , base0E , base00 , base0B , base00
 rofi.color-urgent:    base00 , base03 , base00 , base00 , base03
@@ -104,8 +103,8 @@ Xft.dpi: 110
 
 twobwm.border_width: 1
 twobwm.outer_border: 0
-twobwm.focus_color: base05
-twobwm.unfocus_color: base5
+twobwm.focus_color: base02
+twobwm.unfocus_color: base02
 twobwm.fixed_color: base0D
 twobwm.unkill_color: base08
 twobwm.fixed_unkill_color: base0E

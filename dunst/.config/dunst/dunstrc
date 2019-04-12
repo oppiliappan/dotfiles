@@ -36,8 +36,8 @@
     icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
 [frame]
-    width = 0
-    color = "#303030"
+    width = 1
+    color = "#4d4d4c"
 
 [shortcuts]
 
@@ -50,18 +50,18 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#ffffff"
-    foreground = "#4d4d4c"
+    background = "#1d1f21"
+    foreground = "#c5c8c6"
     timeout = 2
 
 [urgency_normal]
-    background = "#ffffff"
-    foreground = "#4d4d4c"
+    background = "#1d1f21"
+    foreground = "#c5c8c6"
     timeout = 10
 
 [urgency_critical]
-    background = "#ffffff"
-    foreground = "#4d4d4c"
+    background = "#1d1f21"
+    foreground = "#c5c8c6"
     timeout = 0
 
 

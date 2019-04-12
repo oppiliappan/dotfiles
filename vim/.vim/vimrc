@@ -17,6 +17,7 @@ Plug 'wellle/targets.vim'
 Plug 'andymass/vim-matchup'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Yggdroot/indentLine'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 " syntax and friends
 Plug 'rust-lang/rust.vim'

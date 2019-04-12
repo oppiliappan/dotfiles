@@ -45,6 +45,9 @@ shopt -s \
     nocasematch 
 
 bind 'set completion-ignore-case on'
+bind "set show-all-if-ambiguous on"
+bind 'set colored-stats on'
+bind 'set completion-display-width 1'
 bind 'TAB:menu-complete'
 
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -77,9 +80,9 @@ rootornot() {
     fi
 }
 
-PS1='\n $(prompt_pwd) '
+PS1='\n$(prompt_pwd) '
 PS1+='$(git_branch) '
-PS1+='\n $(rootornot)'
+PS1+='\n$(rootornot)'
 
 PS2="   > "
 

@@ -14,7 +14,7 @@ alias tree='tree -C'
 # git aliases
 alias gst='git status'
 alias gd='git diff --minimal'
-alias gc='git commit'
+alias gc='git commit --verbose'
 alias gl='git log --pretty=oneline --abbrev-commit'
 alias o='xdg-open'
 

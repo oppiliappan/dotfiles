@@ -20,16 +20,21 @@ health() {
 	for i in {1..5}
 	do
 		if [[ $i -le $(( $bat_status/20 )) ]]; then
-			echo -ne "${red}♥${rst}"
+			echo -ne "#[fg=colour1]♥ "
 		else
-			echo -ne "${ylw}♥${rst}"
+			echo -ne "#[fg=colour8]♥ "
 		fi
 	done
 	echo
 }
 
-if [[ "$charging_status" == "Charging" ]]; then
-    echo -ne "+$bat_status%"
-else
-    echo -ne "$bat_status%"
-fi
+while getopts qi options 
+do
+    case $options in
+        i)
+            echo "$bat_status $charging_status"
+            ;;
+        q)
+            health
+        esac
+done

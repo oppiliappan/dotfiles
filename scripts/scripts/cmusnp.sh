@@ -31,13 +31,13 @@ then
 
 	if [[ "$status" = *playing* ]]
 	then
-		echo "$spc%{F${active}}$np_string$spc"
+		echo -ne "#[fg=colour8]|| $np_string"
 	elif [[ "$status" = *paused* ]]
 	then
-		echo "$spc%{F${inactive}}$np_string$spc"
+		echo -ne "#[fg=colour8]> $np_string"
 	elif [[ "$status" = *stopped* ]]
 	then
-		echo "%{F${inactive}}stopped"
+		echo -ne "#[fg=colour9]. stopped"
 	fi
 
 else

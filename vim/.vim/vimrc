@@ -68,6 +68,7 @@ set dir=/tmp
 
 syntax on
 
+set number
 set omnifunc=syntaxcomplete#Complete
 set completefunc=LanguageClient#complete
 set list
@@ -92,6 +93,7 @@ set foldmethod=manual
 set complete=.,w,b,i,u,t,
 set background=dark
 set mouse=a
+set conceallevel=0
 
 colorscheme plain
 
@@ -106,6 +108,7 @@ function! GetTabber()  " a lil function that integrates well with Tabular.vim
 	:execute 'Tabularize /' . c
 endfunction
 
+" Ugh
 :command! WQ wq
 :command! Wq wq
 :command! Wqa wqa
@@ -136,11 +139,15 @@ let g:NERDTreeDirArrowCollapsible = '-'
 
 " gitgutter
 let g:gitgutter_override_sign_column_highlight = 0
-let g:gitgutter_sign_added                     = '+'
-let g:gitgutter_sign_modified                  = '±'
-let g:gitgutter_sign_removed                   = '-'
-let g:gitgutter_sign_removed_first_line        = '-'
-let g:gitgutter_sign_modified_removed          = '~'
+let g:gitgutter_sign_added                     = '┃'
+let g:gitgutter_sign_modified                  = '┃'
+let g:gitgutter_sign_removed                   = '┃'
+let g:gitgutter_sign_removed_first_line        = '┃'
+let g:gitgutter_sign_modified_removed          = '┃'
+
+highlight GitGutterAdd    ctermfg=2
+highlight GitGutterChange ctermfg=3
+highlight GitGutterDelete ctermfg=1
 
 " ale
 let g:ale_set_signs             = 1
@@ -153,14 +160,6 @@ hi ALEWarningSign ctermfg=06 ctermbg=00
 
 " rust.vim
 let g:rustfmt_autosave = 0
-
-" deoplete
-let g:deoplete#enable_at_startup = 1
-
-" deoplete rust
-let g:deoplete#sources#rust#racer_binary='/home/nerdypepper/.cargo/bin/racer'
-let g:deoplete#sources#rust#rust_source_path='/home/nerdypepper/leet/rust-lang/src'
-nmap <buffer> gd <plug>DeopleteRustGoToDefinitionTab
 
 " fzf colors
 let g:fzf_colors =

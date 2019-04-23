@@ -6,14 +6,9 @@ setxkbmap -option caps:escape
 
 urxvtd &
 
-pkill polybar
-polybar border &
-sleep 0.4
-polybar stats &
-
 compton &
 dunst -config "$HOME"/.config/dunst/dunstrc &
-hsetroot -solid "#264d73"
 sxhkd -c "$HOME"/.config/sxhkd/sxhkdrc &
+feh --bg-fill "~/pics/walls/corinne-kutz-217502-unsplash.jpg"
 
 exec 2bwm

@@ -4,22 +4,22 @@
 !
 !------------------------------------------------------------------------------
 
-#define base00 #1d1f21
-#define base01 #282a2e
-#define base02 #373b41
-#define base03 #969896
-#define base04 #b4b7b4
-#define base05 #c5c8c6
-#define base06 #e0e0e0
-#define base07 #ffffff
-#define base08 #cc6666
-#define base09 #de935f
-#define base0A #f0c674
-#define base0B #b5bd68
-#define base0C #8abeb7
-#define base0D #81a2be
-#define base0E #b294bb
-#define base0F #a3685a
+#define base00 #fafafa
+#define base01 #f0f0f1
+#define base02 #e5e5e6
+#define base03 #a0a1a7
+#define base04 #696c77
+#define base05 #383a42
+#define base06 #202227
+#define base07 #090a0b
+#define base08 #ca1243
+#define base09 #d75f00
+#define base0A #c18401
+#define base0B #50a14f
+#define base0C #0184bc
+#define base0D #4078f2
+#define base0E #a626a4
+#define base0F #986801
 
 !  URxvt
 ! ------------------------------------------------------------------------------
@@ -48,14 +48,14 @@
 
 
 URxvt.cursorBlink : 0
-URxvt.font       :xft:Roboto Mono:size=11
-URxvt.boldFont   :xft:Roboto Mono:size=11
-URxvt.italicFont :xft:Roboto Mono:size=11
+URxvt.font       :xft:Fira Code:size=11
+URxvt.boldFont   :xft:Fira Code:size=11
+URxvt.italicFont :xft:Fira Code:size=11
 
 URxvt.lineSpace           : 0
-URxvt.letterSpace         : -2
+URxvt.letterSpace         : -1
 URxvt.scrollBar           : false
-URxvt.internalBorder      : 44
+URxvt.internalBorder      : 12
 URxvt.cursorUnderline     : false
 URxvt.geometry            : 70x35
 URxvt.thickness           : 5

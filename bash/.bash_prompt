@@ -5,10 +5,10 @@ git_branch() {
 
     if [[ $git_status =~ $on_branch ]]; then
         local branch=${BASH_REMATCH[1]}
-        echo -ne "${grn}─── $branch ${rst}"
+        echo -ne "───${grn} $branch ${rst}"
     elif [[ $git_status =~ $on_commit ]]; then
         local commit=${BASH_REMATCH[1]}
-        echo -ne "${ylw}─── $commit ${rst}"
+        echo -ne "───${ylw} $commit ${rst}"
     fi
 }
 
@@ -18,13 +18,13 @@ prompt_pwd() {
 
 rootornot() {
     if [[ "$(id -u)" -eq 0 ]]; then
-        echo -ne "${red}# ${rst}"
+        echo -ne "\001${red}\002# \001${rst}\002"
     else
-        echo -ne "${grn}$ ${rst}"
+        echo -ne "\001${grn}\002$ \001${rst}\002"
     fi
 }
 
-PS1='\n[$(prompt_pwd)]'
+PS1='\n$(prompt_pwd)'
 PS1+=' $(git_branch)'
 PS1+='\n$(rootornot)'
 

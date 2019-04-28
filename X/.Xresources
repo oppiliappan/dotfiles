@@ -4,22 +4,22 @@
 !
 !------------------------------------------------------------------------------
 
-#define base00 #fafafa
-#define base01 #f0f0f1
-#define base02 #e5e5e6
-#define base03 #a0a1a7
-#define base04 #696c77
-#define base05 #383a42
-#define base06 #202227
-#define base07 #090a0b
-#define base08 #ca1243
-#define base09 #d75f00
-#define base0A #c18401
-#define base0B #50a14f
-#define base0C #0184bc
-#define base0D #4078f2
-#define base0E #a626a4
-#define base0F #986801
+#define base00 #181818
+#define base01 #282828
+#define base02 #383838
+#define base03 #585858
+#define base04 #b8b8b8
+#define base05 #d8d8d8
+#define base06 #e8e8e8
+#define base07 #f8f8f8
+#define base08 #f07178
+#define base09 #f78c6c
+#define base0A #ffcb6b
+#define base0B #c3e88d
+#define base0C #89ddff
+#define base0D #82aaff
+#define base0E #c792ea
+#define base0F #ff5370
 
 !  URxvt
 ! ------------------------------------------------------------------------------
@@ -48,14 +48,14 @@
 
 
 URxvt.cursorBlink : 0
-URxvt.font       :xft:Fira Code:size=11
-URxvt.boldFont   :xft:Fira Code:size=11
-URxvt.italicFont :xft:Fira Code:size=11
+URxvt.font       :xft:Iosevka Term:size=12
+URxvt.boldFont   :xft:Iosevka Term:size=12
+URxvt.italicFont :xft:Iosevka Term:size=12
 
 URxvt.lineSpace           : 0
-URxvt.letterSpace         : -1
+URxvt.letterSpace         : 1
 URxvt.scrollBar           : false
-URxvt.internalBorder      : 12
+URxvt.internalBorder      : 44
 URxvt.cursorUnderline     : false
 URxvt.geometry            : 70x35
 URxvt.thickness           : 5

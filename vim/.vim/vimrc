@@ -68,7 +68,6 @@ set dir=/tmp
 
 syntax on
 
-set number
 set omnifunc=syntaxcomplete#Complete
 set completefunc=LanguageClient#complete
 set list

@@ -27,6 +27,7 @@ Plug 'mxw/vim-jsx'
 " colorschemes
 Plug 'nerdypepper/agila.vim'
 Plug 'nerdypepper/vim-colors-plain'
+Plug 'nerdypepper/chestnut.vim'
 
 call plug#end()
 

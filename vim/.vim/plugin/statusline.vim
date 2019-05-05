@@ -22,7 +22,7 @@ let g:currentmode={
 
 hi PrimaryBlock       ctermfg=00    ctermbg=2
 hi SecondaryBlock     ctermfg=07    ctermbg=10
-hi Blanks             ctermfg=08    ctermbg=0     cterm =bold
+hi Blanks             ctermfg=08    ctermbg=0
 highlight EndOfBuffer ctermfg=black ctermbg=black
 
 set statusline=

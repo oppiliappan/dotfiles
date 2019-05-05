@@ -16,7 +16,7 @@ alias gst='git status'
 alias gd='git diff --minimal'
 alias gc='git commit --verbose'
 alias glo='git log --pretty=oneline --abbrev-commit'
-alias ggp='git push origin'
+alias ggp='git push'
 alias gl='git log -p --abbrev-commit --pretty=medium'
 alias o='xdg-open'
 

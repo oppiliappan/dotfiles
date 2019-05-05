@@ -4,14 +4,14 @@
 !
 !------------------------------------------------------------------------------
 
-#define base00 #181818
-#define base01 #282828
-#define base02 #383838
-#define base03 #585858
-#define base04 #b8b8b8
-#define base05 #d8d8d8
-#define base06 #e8e8e8
-#define base07 #f8f8f8
+#define base00 #191919
+#define base01 #202020
+#define base02 #303030
+#define base03 #5f5a60
+#define base04 #505050
+#define base05 #a7a7a7
+#define base06 #808080
+#define base07 #ffffff
 #define base08 #f07178
 #define base09 #f78c6c
 #define base0A #ffcb6b
@@ -48,12 +48,10 @@
 
 
 URxvt.cursorBlink : 0
-URxvt.font       :xft:Iosevka Term:size=12
-URxvt.boldFont   :xft:Iosevka Term:size=12
-URxvt.italicFont :xft:Iosevka Term:size=12
+URxvt.font       :xft:FantasqueSansMono Nerd Font Mono:size=13
 
 URxvt.lineSpace           : 0
-URxvt.letterSpace         : 1
+URxvt.letterSpace         : -1
 URxvt.scrollBar           : false
 URxvt.internalBorder      : 44
 URxvt.cursorUnderline     : false
@@ -72,13 +70,13 @@ URxvt.matcher.button  : 1
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
 
-rofi.color-window:    base00 , base02 , base00 , base00 , base03
+rofi.color-window:    base00 , base00 , base00 , base00 , base03
 rofi.color-normal:    base00 , base03 , base00 , base00 , base07
 rofi.color-active:    base03 , base0E , base00 , base0B , base00
 rofi.color-urgent:    base00 , base03 , base00 , base00 , base03
 
 rofi.fake-transparency : true
-rofi.font              : Iosevka Term 12
+rofi.font              : Helvetica Now Display Med 12
 rofi.columns           : 1
 rofi.separator-style   : none
 rofi.hide-scrollbar    : true
@@ -101,7 +99,7 @@ Xft.dpi: 110
 ! 2bwm
 ! ------------------------------------------------------------------------------
 
-twobwm.border_width: 1
+twobwm.border_width: 0
 twobwm.outer_border: 0
 twobwm.focus_color: base02
 twobwm.unfocus_color: base02

@@ -36,7 +36,7 @@
     icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
 [frame]
-    width = 1
+    width = 0
     color = "#4d4d4c"
 
 [shortcuts]

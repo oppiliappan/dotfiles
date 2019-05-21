@@ -24,9 +24,7 @@ rootornot() {
     fi
 }
 
-PS1='\n$(prompt_pwd)'
-PS1+=' $(git_branch)'
-PS1+='\n$(rootornot)'
+PS1='\n$(/home/nerdypepper/code/rustuff/pista/target/debug/pista)'
 
 PS2="   > "
 

@@ -78,3 +78,27 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+export PROMPT_CHAR="$"
+export PROMPT_CHAR_COLOR="green"
+export PROMPT_CHAR_ROOT="#"
+export PROMPT_CHAR_ROOT_COLOR="red"
+
+export SHORTEN_CWD=1
+export CWD_COLOR="white"
+export EXPAND_TILDE=0
+
+export GIT_CLEAN="·"
+export GIT_CLEAN_COLOR="green"
+
+export GIT_WT_MODIFIED="×"
+export GIT_WT_MODIFIED_COLOR="red"
+
+export GIT_INDEX_MODIFIED="±"
+export GIT_INDEX_MODIFIED_COLOR="yellow"
+
+export BRANCH_COLOR="bright black"
+export COMMIT_COLOR="bright black"
+

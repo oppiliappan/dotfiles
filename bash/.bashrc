@@ -72,8 +72,10 @@ if ! shopt -oq posix; then
 fi
 
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
-[ -f ~/.bash_prompt ] && . ~/.bash_prompt
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+PS1='\n$(pista)'
+PS2="    >"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -102,3 +104,4 @@ export GIT_INDEX_MODIFIED_COLOR="yellow"
 export BRANCH_COLOR="bright black"
 export COMMIT_COLOR="bright black"
 
+export PROMPT_COMMAND=

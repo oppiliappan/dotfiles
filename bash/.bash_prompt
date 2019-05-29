@@ -24,14 +24,14 @@ rootornot() {
     fi
 }
 
-PS1='\n$(/home/nerdypepper/code/rustuff/pista/target/debug/pista)'
+PS1='\n$(pista)'
 
 PS2="   > "
 
 beep_if_long_time_past() {
     LAST_COMMAND_DURATION=$(($(date +%s) - ${LAST_COMMAND_TIME}))
     [[ ${LAST_COMMAND_DURATION} -gt 15 ]] && { notify-send "'$(echo $(history | tail -n1) | sed 's/[0-9]* //')' finished after ${LAST_COMMAND_DURATION} secs"; }
-    export LAST_COMMAND_TIME=
+    export LAST_COMMAND_TIME=0
 }
 
 export PROMPT_COMMAND=beep_if_long_time_past

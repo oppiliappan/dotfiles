@@ -48,7 +48,7 @@
 
 
 URxvt.cursorBlink : 0
-URxvt.font       :xft:FantasqueSansMono Nerd Font Mono:size=21
+URxvt.font       :xft:FantasqueSansMono Nerd Font Mono:size=13
 
 URxvt.lineSpace           : 0
 URxvt.letterSpace         : -1

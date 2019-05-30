@@ -4,22 +4,22 @@
 !
 !------------------------------------------------------------------------------
 
-#define base00 #191919
-#define base01 #202020
-#define base02 #303030
-#define base03 #5f5a60
-#define base04 #505050
-#define base05 #a7a7a7
-#define base06 #808080
-#define base07 #ffffff
-#define base08 #f07178
-#define base09 #f78c6c
-#define base0A #ffcb6b
-#define base0B #c3e88d
-#define base0C #89ddff
-#define base0D #82aaff
-#define base0E #c792ea
-#define base0F #ff5370
+#define base00 #fafafa
+#define base01 #f0f0f1
+#define base02 #e5e5e6
+#define base03 #a0a1a7
+#define base04 #696c77
+#define base05 #383a42
+#define base06 #202227
+#define base07 #090a0b
+#define base08 #ca1243
+#define base09 #d75f00
+#define base0A #c18401
+#define base0B #50a14f
+#define base0C #0184bc
+#define base0D #3d5470
+#define base0E #a626a4
+#define base0F #986801
 
 !  URxvt
 ! ------------------------------------------------------------------------------
@@ -48,7 +48,7 @@
 
 
 URxvt.cursorBlink : 0
-URxvt.font       :xft:FantasqueSansMono Nerd Font Mono:size=13
+URxvt.font       :xft:FantasqueSansMono Nerd Font Mono:size=11
 
 URxvt.lineSpace           : 0
 URxvt.letterSpace         : -1

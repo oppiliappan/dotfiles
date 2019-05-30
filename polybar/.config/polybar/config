@@ -2,7 +2,7 @@
 
 [colors]
 foreground        = ${xrdb:color7}
-foreground_bright = ${xrdb:color11}
+foreground_bright = ${xrdb:color8}
 background        = ${xrdb:color0}
 modb              = ${xrdb:color0}
 modb1             = ${xrdb:color0}
@@ -25,20 +25,15 @@ override-redirect = true
 ; ------------ bars ---------------
 
 [bar/workspace]
-width               = 340
+width               = 300
 height              = 60
-offset-x            = 1540
-offset-y            = 980
+offset-x            = 1600
+offset-y            = 1000
 locale              = de_DE.UTF-8
 background          = ${colors.background}
 foreground          = ${colors.background}
-
-font-0              = Anka/Coder Condensed:size=13:weight=bold:antialias = true;2
+font-0              = FantasqueSansMono Nerd Font Mono:size=9:weight=bold:antialias = true;2
 font-1              = icomoon:size=15:antialias = true;2
-
-border-size  = 1
-border-color = ${colors.foreground_bright}
-
 modules-left        = 
 modules-center      = 2bws
 modules-right       = 
@@ -49,23 +44,18 @@ padding-right       = 6
 module-margin-left  = 0
 module-margin-right = 0
 
-[bar/stats]
-width               = 400
+[bar/music]
+width               = 350
 height              = 60
-offset-x            = 40
-offset-y            = 980
+offset-x            = 20
+offset-y            = 1000
 locale              = de_DE.UTF-8
 background          = ${colors.background}
 foreground          = ${colors.background}
-
-font-0              = Anka/Coder Condensed:size=13:weight=bold:antialias = true;2
+font-0              = FantasqueSansMono Nerd Font Mono:size=9:antialias = true;2
 font-1              = icomoon:size=15:antialias = true;2
-
-border-size  = 1
-border-color = ${colors.foreground_bright}
-
 modules-left        = 
-modules-center      = brit vol bat time
+modules-center      = cmusnp
 modules-right       = 
 tray-position       =
 spacing             = 0
@@ -73,6 +63,27 @@ padding-left        = 0
 padding-right       = 0
 module-margin-left  = 0
 module-margin-right = 0
+
+[bar/time]
+width               = 175
+height              = 60
+offset-x            = 20
+offset-y            = 920
+locale              = de_DE.UTF-8
+background          = ${colors.background}
+foreground          = ${colors.background}
+font-0              = FantasqueSansMono Nerd Font Mono:size=9:antialias = true;2
+font-1              = icomoon:size=15:antialias = true;2
+modules-left        = 
+modules-center      = time
+modules-right       = 
+tray-position       =
+spacing             = 0
+padding-left        = 0
+padding-right       = 0
+module-margin-left  = 0
+module-margin-right = 0
+
 
 
 ; ---------- modules ---------------
@@ -85,19 +96,10 @@ format-padding    = 2
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 
-[module/date]
-type = custom/script
-interval = 1.0
-exec = ~/scripts/date.sh
-format-padding = 2
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-
 [module/time]
 type                     = custom/script
 interval                 = 1.0
-exec                     = date +%H:%M
-format-prefix            = " "
+exec                     = /home/nerdypepper/scripts/time.sh
 format-prefix-foreground = ${colors.green}
 format-padding           = 1
 format-foreground        = ${colors.foreground}
@@ -200,6 +202,6 @@ interval                 = 0.01
 [module/separator]
 type              = custom/script
 format-text       = <label>
-label             = "  |  "
+label             = "  │  "
 exec              = echo label
-format-foreground = ${colors.foreground}
+format-foreground = ${colors.foreground_bright}

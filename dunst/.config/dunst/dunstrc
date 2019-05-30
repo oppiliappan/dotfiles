@@ -5,7 +5,7 @@
 #                  
 
 [global]
-    font = FantasqueSansMono Nerd Font Mono 12
+    font = FantasqueSansMono Nerd Font Mono 9
     allow_markup = no
     format = "%s\n%b"
     sort = yes
@@ -26,7 +26,7 @@
     show_indicators = yes
     line_height = 0
     separator_height = 0
-    padding = 32
+    padding = 16
     horizontal_padding = 16
     separator_color = auto
     startup_notification = false
@@ -50,18 +50,18 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#181818"
-    foreground = "#c5c8c6"
+    background = "#ffffff"
+    foreground = "#4d4d4c"
     timeout = 2
 
 [urgency_normal]
-    background = "#181818"
-    foreground = "#c5c8c6"
+    background = "#ffffff"
+    foreground = "#4d4d4c"
     timeout = 10
 
 [urgency_critical]
-    background = "#181818"
-    foreground = "#c5c8c6"
+    background = "#ffffff"
+    foreground = "#4d4d4c"
     timeout = 0
 
 

@@ -25,66 +25,88 @@ override-redirect = true
 ; ------------ bars ---------------
 
 [bar/workspace]
-width               = 300
+width               = 240
 height              = 60
-offset-x            = 1600
+offset-x            = 1660
 offset-y            = 1000
 locale              = de_DE.UTF-8
 background          = ${colors.background}
-foreground          = ${colors.background}
+foreground          = ${colors.foreground}
 font-0              = FantasqueSansMono Nerd Font Mono:size=9:weight=bold:antialias = true;2
 font-1              = icomoon:size=15:antialias = true;2
 modules-left        = 
 modules-center      = 2bws
 modules-right       = 
-tray-position       =
-spacing             = 0
-padding-left        = 6
-padding-right       = 6
-module-margin-left  = 0
-module-margin-right = 0
 
 [bar/music]
-width               = 350
-height              = 60
-offset-x            = 20
-offset-y            = 1000
-locale              = de_DE.UTF-8
-background          = ${colors.background}
-foreground          = ${colors.background}
-font-0              = FantasqueSansMono Nerd Font Mono:size=9:antialias = true;2
-font-1              = icomoon:size=15:antialias = true;2
-modules-left        = 
-modules-center      = cmusnp
-modules-right       = 
-tray-position       =
-spacing             = 0
-padding-left        = 0
-padding-right       = 0
-module-margin-left  = 0
-module-margin-right = 0
-
-[bar/time]
-width               = 175
+width               = 60
 height              = 60
 offset-x            = 20
 offset-y            = 920
 locale              = de_DE.UTF-8
 background          = ${colors.background}
-foreground          = ${colors.background}
-font-0              = FantasqueSansMono Nerd Font Mono:size=9:antialias = true;2
+foreground          = ${colors.foreground}
+font-0              = FantasqueSansMono Nerd Font Mono:size=10:antialias = true;2
+font-1              = icomoon:size=15:antialias = true;2
+modules-left        = 
+modules-center      = music_pop
+modules-right       = 
+
+[bar/time]
+width               = 200
+height              = 60
+offset-x            = 20
+offset-y            = 1000
+locale              = de_DE.UTF-8
+background          = ${colors.background}
+foreground          = ${colors.foreground}
+font-0              = FantasqueSansMono Nerd Font Mono:size=10:antialias = true;2
 font-1              = icomoon:size=15:antialias = true;2
 modules-left        = 
 modules-center      = time
 modules-right       = 
-tray-position       =
-spacing             = 0
-padding-left        = 0
-padding-right       = 0
-module-margin-left  = 0
-module-margin-right = 0
 
+[bar/track]
+width               = 250
+height              = 80
+offset-x            = 220
+offset-y            = 700
+locale              = de_DE.UTF-8
+background          = ${colors.background}
+foreground          = ${colors.foreground}
+font-0              = FantasqueSansMono Nerd Font Mono:size=10:weight=bold:antialias = true;30
+font-1              = icomoon:size=15:antialias = true;2
+modules-left        = track
+modules-center      = 
+modules-right       = 
 
+[bar/artist]
+width               = 250
+height              = 40
+offset-x            = 220
+offset-y            = 780
+locale              = de_DE.UTF-8
+background          = ${colors.background}
+foreground          = ${colors.foreground}
+font-0              = FantasqueSansMono Nerd Font Mono:size=10:antialias = true;10
+font-1              = icomoon:size=15:antialias = true;2
+modules-left        = artist
+modules-center      = 
+modules-right       = 
+
+[bar/album]
+width               = 250
+height              = 80
+offset-x            = 220
+offset-y            = 820
+locale              = de_DE.UTF-8
+background          = ${colors.background}
+foreground          = ${colors.foreground}
+font-0              = FantasqueSansMono Nerd Font Mono:size=10:antialias = true;-30
+font-1              = icomoon:size=15:antialias = true;2
+modules-left        = album 
+modules-center      =
+modules-right       = 
 
 ; ---------- modules ---------------
 
@@ -105,6 +127,17 @@ format-padding           = 1
 format-foreground        = ${colors.foreground}
 format-background        = ${colors.background}
 
+[module/music_pop]
+type              = custom/script
+format-text       = <label>
+label             = 
+interval          = 1.0
+exec              = echo label
+click-left        = /home/nerdypepper/scripts/hidebars.sh -s
+click-right       = /home/nerdypepper/scripts/hidebars.sh -h
+format-padding    = 1
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
  
 [module/previous]
 type              = custom/script
@@ -172,6 +205,33 @@ interval          = 5
 format-padding    = 2
 format-background = ${colors.modb}
 click-left        = urxvtc -g 50x22 -b 0 -e nmtui
+
+[module/album]
+type              = custom/script
+exec              = ~/scripts/music.sh -b
+interval          = 2
+format-padding    = 2
+click-left        = cmus-remote -u
+scroll-up         = exec amixer sset Master 2%+
+scroll-down       = exec amixer sset Master 2%-
+
+[module/artist]
+type              = custom/script
+exec              = ~/scripts/music.sh -a
+interval          = 2
+format-padding    = 2
+click-left        = cmus-remote -u
+scroll-up         = exec amixer sset Master 2%+
+scroll-down       = exec amixer sset Master 2%-
+
+[module/track]
+type              = custom/script
+exec              = ~/scripts/music.sh -t
+interval          = 2
+format-padding    = 2
+click-left        = cmus-remote -u
+scroll-up         = exec amixer sset Master 2%+
+scroll-down       = exec amixer sset Master 2%-
 
 [module/cmusnp]
 type              = custom/script

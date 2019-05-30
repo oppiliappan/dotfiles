@@ -1,4 +1,4 @@
-![neet.png](https://files.nerdypepper.me/pP.png)
+![neet.png](https://files.nerdypepper.me/W1.png)
 
 
 ```

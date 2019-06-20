@@ -10,6 +10,7 @@ alias o='xdg-open'
 alias grep='grep --color=auto'
 alias ls='ls -F --color=always'
 alias tree='tree -C'
+alias o='xdg-open'
 
 # git aliases
 alias gst='git status'
@@ -18,5 +19,3 @@ alias gc='git commit --verbose'
 alias glo='git log --pretty=oneline --abbrev-commit'
 alias ggp='git push'
 alias gl='git log -p --abbrev-commit --pretty=medium'
-alias o='xdg-open'
-

@@ -22,6 +22,7 @@ export PATH=$PATH":$HOME/scripts"
 export PATH=$PATH":$HOME/.cargo/bin"
 export PATH=$PATH":/usr/local/go/bin"
 export PATH=$PATH":$HOME/anaconda3/bin"
+export PATH=$PATH":$HOME/protoc/bin"
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 case $- in
@@ -29,11 +30,12 @@ case $- in
       *) return;;
 esac
 
-HISTCONTROL=ignoreboth
-
+# better history syncing
 shopt -s histappend
+export HISTCONTROL=ignoreboth:erasedups
 HISTSIZE=1000
 HISTFILESIZE=2000
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
 # cool options for cool kids
 shopt -s \
@@ -83,13 +85,13 @@ export NVM_DIR="$HOME/.nvm"
 
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-export PROMPT_CHAR="$"
-export PROMPT_CHAR_COLOR="blue"
+export PROMPT_CHAR="→"
+export PROMPT_CHAR_COLOR="magenta"
 export PROMPT_CHAR_ROOT="#"
 export PROMPT_CHAR_ROOT_COLOR="red"
 
 export SHORTEN_CWD=1
-export CWD_COLOR="white"
+export CWD_COLOR="cyan"
 export EXPAND_TILDE=0
 
 export GIT_CLEAN="·"
@@ -103,5 +105,3 @@ export GIT_INDEX_MODIFIED_COLOR="yellow"
 
 export BRANCH_COLOR="bright black"
 export COMMIT_COLOR="bright black"
-
-export PROMPT_COMMAND=

@@ -49,6 +49,10 @@ augroup mapppings
 	autocmd FileType less,css,html nnoremap <Leader>s viB:sort<cr>
 augroup END
 
+augroup filetype
+  au! BufRead,BufNewFile *.proto setfiletype proto
+augroup end
+
 augroup restorecursor
 	autocmd BufReadPost *
 				\ if line("'\"") > 1 && line("'\"") <= line("$") |
@@ -94,8 +98,10 @@ set complete=.,w,b,i,u,t,
 set background=dark
 set mouse=a
 set conceallevel=0
+set cursorline
+set number
 
-colorscheme plain
+colorscheme agila
 
 set shiftwidth=4     " indent = 4 spaces
 set expandtab

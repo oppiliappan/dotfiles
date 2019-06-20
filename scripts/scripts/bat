@@ -9,8 +9,8 @@ prp="\e[35m"
 bprp="\e[35;1m"
 rst="\e[0m"
 
-icon="$( ~/scripts/get_xres color2 )"
-fg="$( ~/scripts/get_xres color7 )"
+icon="$( ~/scripts/get_xres color4 )"
+fg="$( ~/scripts/get_xres color8 )"
 
 bat_status=""
 bat_status=$( cat /sys/class/power_supply/BAT0/capacity )
@@ -20,9 +20,9 @@ health() {
 	for i in {0..4}
 	do
 		if [[ $i -le $(( $bat_status/20 )) ]]; then
-			echo -ne "#[fg=colour1]♥ "
+			echo -ne "%{F$icon} ♥ "
 		else
-			echo -ne "#[fg=colour8]♥ "
+			echo -ne "%{F$fg} ♥ "
 		fi
 	done
 	echo
@@ -32,7 +32,11 @@ while getopts qi options
 do
     case $options in
         i)
-            echo "$bat_status $charging_status"
+            if [[ "$charging_status" = *Charging* ]]; then
+                echo -ne "+$bat_status%"
+            else
+                echo -ne "$bat_status%"
+            fi
             ;;
         q)
             if [[ "$charging_status" = *Charging* ]]; then

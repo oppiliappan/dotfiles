@@ -4,22 +4,22 @@
 !
 !------------------------------------------------------------------------------
 
-#define base00 #fafafa
-#define base01 #f0f0f1
-#define base02 #e5e5e6
-#define base03 #a0a1a7
-#define base04 #696c77
-#define base05 #383a42
-#define base06 #202227
-#define base07 #090a0b
-#define base08 #ca1243
-#define base09 #d75f00
-#define base0A #c18401
-#define base0B #50a14f
-#define base0C #0184bc
-#define base0D #3d5470
-#define base0E #a626a4
-#define base0F #986801
+#define base00 #212121
+#define base01 #303030
+#define base02 #353535
+#define base03 #4A4A4A
+#define base04 #B2CCD6
+#define base05 #EEFFFF
+#define base06 #EEFFFF
+#define base07 #FFFFFF
+#define base08 #F07178
+#define base09 #F78C6C
+#define base0A #FFCB6B
+#define base0B #C3E88D
+#define base0C #89DDFF
+#define base0D #82AAFF
+#define base0E #C792EA
+#define base0F #FF5370
 
 !  URxvt
 ! ------------------------------------------------------------------------------
@@ -48,10 +48,10 @@
 
 
 URxvt.cursorBlink : 0
-URxvt.font       :xft:FantasqueSansMono Nerd Font Mono:size=11
+URxvt.font       :xft:SF Mono:size=10:style=semibold
 
 URxvt.lineSpace           : 0
-URxvt.letterSpace         : -1
+URxvt.letterSpace         : -2
 URxvt.scrollBar           : false
 URxvt.internalBorder      : 44
 URxvt.cursorUnderline     : false
@@ -81,8 +81,8 @@ rofi.columns           : 1
 rofi.separator-style   : none
 rofi.hide-scrollbar    : true
 rofi.location          : 1
-rofi.yoffset           : 48
-rofi.xoffset           : 48
+rofi.yoffset           : 20
+rofi.xoffset           : 20
 rofi.padding           : 32
 rofi.fullscreen        : false
 rofi.width             : 300

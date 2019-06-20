@@ -33,7 +33,6 @@ locale              = de_DE.UTF-8
 background          = ${colors.background}
 foreground          = ${colors.foreground}
 font-0              = FantasqueSansMono Nerd Font Mono:size=9:weight=bold:antialias = true;2
-font-1              = icomoon:size=15:antialias = true;2
 modules-left        = 
 modules-center      = 2bws
 modules-right       = 
@@ -47,9 +46,21 @@ locale              = de_DE.UTF-8
 background          = ${colors.background}
 foreground          = ${colors.foreground}
 font-0              = FantasqueSansMono Nerd Font Mono:size=10:antialias = true;2
-font-1              = icomoon:size=15:antialias = true;2
 modules-left        = 
 modules-center      = music_pop
+modules-right       = 
+
+[bar/battery]
+width               = 60
+height              = 60
+offset-x            = 1840
+offset-y            = 920
+locale              = de_DE.UTF-8
+background          = ${colors.background}
+foreground          = ${colors.foreground}
+font-0              = SF Mono:size=10:antialias = true;0
+modules-left        =
+modules-center      = bat
 modules-right       = 
 
 [bar/time]
@@ -60,8 +71,7 @@ offset-y            = 1000
 locale              = de_DE.UTF-8
 background          = ${colors.background}
 foreground          = ${colors.foreground}
-font-0              = FantasqueSansMono Nerd Font Mono:size=10:antialias = true;2
-font-1              = icomoon:size=15:antialias = true;2
+font-0              = SF Mono:size=10:antialias = true;2
 modules-left        = 
 modules-center      = time
 modules-right       = 
@@ -74,8 +84,7 @@ offset-y            = 700
 locale              = de_DE.UTF-8
 background          = ${colors.background}
 foreground          = ${colors.foreground}
-font-0              = FantasqueSansMono Nerd Font Mono:size=10:weight=bold:antialias = true;30
-font-1              = icomoon:size=15:antialias = true;2
+font-0              = SF Mono:size=10:weight=bold:antialias = true;30
 modules-left        = track
 modules-center      = 
 modules-right       = 
@@ -88,8 +97,7 @@ offset-y            = 780
 locale              = de_DE.UTF-8
 background          = ${colors.background}
 foreground          = ${colors.foreground}
-font-0              = FantasqueSansMono Nerd Font Mono:size=10:antialias = true;10
-font-1              = icomoon:size=15:antialias = true;2
+font-0              = SF Mono:size=10:antialias = true;10
 modules-left        = artist
 modules-center      = 
 modules-right       = 
@@ -102,8 +110,7 @@ offset-y            = 820
 locale              = de_DE.UTF-8
 background          = ${colors.background}
 foreground          = ${colors.foreground}
-font-0              = FantasqueSansMono Nerd Font Mono:size=10:antialias = true;-30
-font-1              = icomoon:size=15:antialias = true;2
+font-0              = SF Mono:size=10:antialias = true;-30
 modules-left        = album 
 modules-center      =
 modules-right       = 
@@ -184,7 +191,7 @@ scroll-down       = exec ~/scripts/wscycle.sh -r
 
 [module/bat]
 type              = custom/script
-exec              = ~/scripts/bat
+exec              = ~/scripts/bat -i
 interval          = 100
 format-padding    = 2
 format-background = ${colors.background}

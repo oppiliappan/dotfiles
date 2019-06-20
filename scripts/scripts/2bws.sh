@@ -11,9 +11,9 @@ OCCUPIED=●
 UNOCCUPIED=·
 
 # colors
-current="$( ~/scripts/get_xres color4 )"
-occupied="$( ~/scripts/get_xres color11 )"
-unoccupied="$( ~/scripts/get_xres color12 )"
+current="$( ~/scripts/get_xres color2 )"
+occupied="$( ~/scripts/get_xres color8 )"
+unoccupied="$( ~/scripts/get_xres color8 )"
 
 #  print workspaces to stdout
 draw() {

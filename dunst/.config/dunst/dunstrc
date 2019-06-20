@@ -5,7 +5,7 @@
 #                  
 
 [global]
-    font = FantasqueSansMono Nerd Font Mono 9
+    font = SF Mono Semibold 9
     allow_markup = no
     format = "%s\n%b"
     sort = yes
@@ -15,7 +15,7 @@
     show_age_threshold = 60
     word_wrap = yes
     ignore_newline = no
-    geometry = "300x8-32+32"
+    geometry = "300x8-20+20"
     shrink = yes
     transparency = 0
     idle_threshold = 120
@@ -50,18 +50,18 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#ffffff"
-    foreground = "#4d4d4c"
+    background = "#212121"
+    foreground = "#eeffff"
     timeout = 2
 
 [urgency_normal]
-    background = "#ffffff"
-    foreground = "#4d4d4c"
+    background = "#212121"
+    foreground = "#eeffff"
     timeout = 10
 
 [urgency_critical]
-    background = "#ffffff"
-    foreground = "#4d4d4c"
+    background = "#212121"
+    foreground = "#eeffff"
     timeout = 0
 
 

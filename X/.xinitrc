@@ -3,6 +3,7 @@
 xsetroot -cursor_name left_ptr &
 xrdb -load ~/.Xresources
 setxkbmap -option caps:escape
+setxkbmap -option compose:rctrl
 
 urxvtd &
 

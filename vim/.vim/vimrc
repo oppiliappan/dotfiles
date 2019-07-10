@@ -3,38 +3,40 @@ let &t_ZM = "\e[3m"
 " vim-plugs
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'airblade/vim-gitgutter'
+Plug 'andymass/vim-matchup'
+Plug 'godlygeek/tabular'
+Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-surround'
-Plug 'mattn/emmet-vim'
-Plug 'tpope/vim-repeat'
-Plug 'godlygeek/tabular'
 Plug 'lambdalisue/vim-manpager'
+Plug 'mattn/emmet-vim'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'scrooloose/nerdtree'
-Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
-Plug 'andymass/vim-matchup'
-Plug 'jiangmiao/auto-pairs'
 Plug 'Yggdroot/indentLine'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 " syntax and friends
-Plug 'rust-lang/rust.vim'
-Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'rust-lang/rust.vim'
 
 " colorschemes
 Plug 'nerdypepper/agila.vim'
-Plug 'nerdypepper/vim-colors-plain'
 Plug 'nerdypepper/chestnut.vim'
+Plug 'nerdypepper/vim-colors-plain'
 
 call plug#end()
 
 " augroups
 augroup indents
 	autocmd!
-	autocmd FileType less,css,html setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType less,css,html,js setlocal ts=2 sts=2 sw=2 expandtab
 	autocmd FileType text,markdown setlocal expandtab
 augroup END
 
@@ -76,7 +78,8 @@ syntax on
 set omnifunc=syntaxcomplete#Complete
 set completefunc=LanguageClient#complete
 set list
-filetype indent on
+filetype off
+filetype plugin indent on
 set laststatus=2
 set nowrap
 set noshowmode

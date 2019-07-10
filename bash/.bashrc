@@ -76,6 +76,7 @@ fi
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+PROMPT_COMMAND=''
 PS1='\n$(pista)'
 PS2="    >"
 

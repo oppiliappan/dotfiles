@@ -4,7 +4,7 @@
 foreground        = ${xrdb:color7}
 foreground_bright = ${xrdb:color8}
 background        = ${xrdb:color0}
-modb              = ${xrdb:color0}
+modb              = ${xrdb:color11}
 modb1             = ${xrdb:color0}
 modb2             = ${xrdb:color0}
 red     = ${xrdb:color1}
@@ -24,96 +24,37 @@ override-redirect = true
 
 ; ------------ bars ---------------
 
-[bar/workspace]
-width               = 240
-height              = 60
-offset-x            = 1660
-offset-y            = 1000
-locale              = de_DE.UTF-8
-background          = ${colors.background}
-foreground          = ${colors.foreground}
-font-0              = FantasqueSansMono Nerd Font Mono:size=9:weight=bold:antialias = true;2
-modules-left        = 
-modules-center      = 2bws
-modules-right       = 
+[bar/bottom]
+width            = 1920
+height           = 46
+offset-x         = 0
+offset-y         = 1034
+locale           = de_DE.UTF-8
+background       = ${colors.background}
+foreground       = ${colors.foreground}
+border-top-size  = 2
+border-top-color = ${colors.modb}
+modules-left     = time
+modules-center   = 2bws
+modules-right    = bat brit vol
+padding          = 3
 
-[bar/music]
-width               = 60
-height              = 60
-offset-x            = 20
-offset-y            = 920
-locale              = de_DE.UTF-8
-background          = ${colors.background}
-foreground          = ${colors.foreground}
-font-0              = FantasqueSansMono Nerd Font Mono:size=10:antialias = true;2
-modules-left        = 
-modules-center      = music_pop
-modules-right       = 
+font-0           = SF Mono:size=10:weight=bold:antialias=true;0
+font-1           = FantasqueSansMono Nerd Font Mono:size=8:weight=bold:antialias=true;0
 
-[bar/battery]
-width               = 60
-height              = 60
-offset-x            = 1840
-offset-y            = 920
+[bar/border]
+width               = 1920
+height              = 14
+offset-x            = 0
+offset-y            = 1020
 locale              = de_DE.UTF-8
 background          = ${colors.background}
 foreground          = ${colors.foreground}
-font-0              = SF Mono:size=10:antialias = true;0
+font-0              = SF Mono:size=10:weight = bold:antialias = true;2
 modules-left        =
-modules-center      = bat
-modules-right       = 
+modules-center      = separator
+modules-right       =
 
-[bar/time]
-width               = 200
-height              = 60
-offset-x            = 20
-offset-y            = 1000
-locale              = de_DE.UTF-8
-background          = ${colors.background}
-foreground          = ${colors.foreground}
-font-0              = SF Mono:size=10:antialias = true;2
-modules-left        = 
-modules-center      = time
-modules-right       = 
-
-[bar/track]
-width               = 250
-height              = 80
-offset-x            = 220
-offset-y            = 700
-locale              = de_DE.UTF-8
-background          = ${colors.background}
-foreground          = ${colors.foreground}
-font-0              = SF Mono:size=10:weight=bold:antialias = true;30
-modules-left        = track
-modules-center      = 
-modules-right       = 
-
-[bar/artist]
-width               = 250
-height              = 40
-offset-x            = 220
-offset-y            = 780
-locale              = de_DE.UTF-8
-background          = ${colors.background}
-foreground          = ${colors.foreground}
-font-0              = SF Mono:size=10:antialias = true;10
-modules-left        = artist
-modules-center      = 
-modules-right       = 
-
-[bar/album]
-width               = 250
-height              = 80
-offset-x            = 220
-offset-y            = 820
-locale              = de_DE.UTF-8
-background          = ${colors.background}
-foreground          = ${colors.foreground}
-font-0              = SF Mono:size=10:antialias = true;-30
-modules-left        = album 
-modules-center      =
-modules-right       = 
 
 ; ---------- modules ---------------
 
@@ -124,6 +65,7 @@ exec              = echo $(( $(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET
 format-padding    = 2
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
+format-font       = 1
 
 [module/time]
 type                     = custom/script
@@ -190,17 +132,21 @@ scroll-up         = exec ~/scripts/wscycle.sh -f
 scroll-down       = exec ~/scripts/wscycle.sh -r
 
 [module/bat]
-type              = custom/script
-exec              = ~/scripts/bat -i
-interval          = 100
-format-padding    = 2
-format-background = ${colors.background}
-format-foreground = ${colors.foreground}
+type                     = custom/script
+exec                     = ~/scripts/bat -i
+interval                 = 100
+format-padding           = 2
+format-prefix            = "BAT: "
+format-prefix-foreground = ${colors.orange}
+format-background        = ${colors.background}
+format-foreground        = ${colors.foreground}
 
 [module/vol]
 type                     = custom/script
 exec                     = ~/scripts/vol -q
 interval                 = 0.01
+format-prefix            = "VOL:"
+format-prefix-foreground = ${colors.yellow}
 format-padding           = 2
 scroll-up                = ~/scripts/vol -i
 scroll-down              = ~/scripts/vol -d
@@ -256,7 +202,7 @@ padding           = 2
 [module/brit]
 type                     = custom/script
 exec                     = echo "$( light -b | sed 's/\..*//' )%"
-format-prefix            = " "
+format-prefix            = "SCR: "
 format-prefix-foreground = ${colors.green}
 scroll-up                = exec light -A 3
 scroll-down              = exec light -U 3
@@ -269,6 +215,6 @@ interval                 = 0.01
 [module/separator]
 type              = custom/script
 format-text       = <label>
-label             = "  │  "
+label             = "    "
 exec              = echo label
 format-foreground = ${colors.foreground_bright}

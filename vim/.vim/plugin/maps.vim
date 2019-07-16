@@ -5,12 +5,12 @@ let mapleader=' '
 " normal
 nnoremap <Leader>o : only<cr>
 nnoremap <Leader>l : Lines<cr>
-nnoremap <Leader>b : bnext<cr>
-nnoremap <Leader>B : bprev<cr>
+nnoremap <Leader>b : Buffers<cr>
+nnoremap <Leader>n : bnext<cr>
+nnoremap <Leader>p : bprev<cr>
 nnoremap <Leader>z : FZF<cr>
 nnoremap <Leader>w : MtaJumpToOtherTag<cr>
 nnoremap <Leader>t : call GetTabber()<cr>
-nnoremap <Leader>r : RustRun<cr>
 nnoremap <Leader><ESC> : nohlsearch<cr>
 nnoremap <F2>      : NERDTreeToggle<cr>
 nnoremap <C-l> :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>

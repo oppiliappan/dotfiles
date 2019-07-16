@@ -15,7 +15,7 @@ do
 			;;
 		q)
 			cur_vol=$(  amixer sget Master | awk -F"[][]" '/dB/ { print $2 }'  )
-			echo "%{F$icon} %{F$fg}$cur_vol"
+			echo " %{F$fg}$cur_vol"
 			;;
 	esac
 done

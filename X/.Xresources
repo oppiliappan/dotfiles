@@ -53,7 +53,7 @@ URxvt.font       :xft:SF Mono:size=10:style=semibold
 URxvt.lineSpace           : 0
 URxvt.letterSpace         : -2
 URxvt.scrollBar           : false
-URxvt.internalBorder      : 44
+URxvt.internalBorder      : 22
 URxvt.cursorUnderline     : false
 URxvt.geometry            : 70x35
 URxvt.thickness           : 5
@@ -99,10 +99,10 @@ Xft.dpi: 110
 ! 2bwm
 ! ------------------------------------------------------------------------------
 
-twobwm.border_width: 0
-twobwm.outer_border: 0
-twobwm.focus_color: base02
-twobwm.unfocus_color: base02
+twobwm.border_width: 16
+twobwm.outer_border: 14
+twobwm.focus_color: base03
+twobwm.unfocus_color: base01
 twobwm.fixed_color: base0D
 twobwm.unkill_color: base08
 twobwm.fixed_unkill_color: base0E

@@ -86,7 +86,7 @@ filetype plugin indent on
 set laststatus=2
 set nowrap
 set noshowmode
-set listchars=tab:┊\ ,nbsp:␣,trail:∙,extends:>,precedes:<
+set listchars=tab:┊\ ,nbsp:␣,trail:·,extends:>,precedes:<
 set fillchars=vert:\│
 set ignorecase
 set smartcase
@@ -105,9 +105,11 @@ set background=dark
 set mouse=a
 set conceallevel=0
 set cursorline
-set number
+set nonumber
+set grepprg=rg\ --vimgrep\ --no-heading
+set grepformat=%f:%l:%c:%m,%f:%l:%m
 
-colorscheme agila
+colorscheme plain
 
 set shiftwidth=4     " indent = 4 spaces
 set expandtab
@@ -119,6 +121,7 @@ function! GetTabber()  " a lil function that integrates well with Tabular.vim
 	let c = nr2char(getchar())
 	:execute 'Tabularize /' . c
 endfunction
+
 
 " Ugh
 :command! WQ wq
@@ -151,15 +154,15 @@ let g:NERDTreeDirArrowCollapsible = '-'
 
 " gitgutter
 let g:gitgutter_override_sign_column_highlight = 0
-let g:gitgutter_sign_added                     = '┃'
-let g:gitgutter_sign_modified                  = '┃'
-let g:gitgutter_sign_removed                   = '┃'
-let g:gitgutter_sign_removed_first_line        = '┃'
-let g:gitgutter_sign_modified_removed          = '┃'
+let g:gitgutter_sign_added                     = '+'       " '┃'
+let g:gitgutter_sign_modified                  = '~'       " '┃'
+let g:gitgutter_sign_removed                   = '-'       " '┃'
+let g:gitgutter_sign_removed_first_line        = '-'       " '┃'
+let g:gitgutter_sign_modified_removed          = '~'       " '┃'
 
-highlight GitGutterAdd    ctermfg=2
-highlight GitGutterChange ctermfg=3
-highlight GitGutterDelete ctermfg=1
+highlight GitGutterAdd    ctermfg=8
+highlight GitGutterChange ctermfg=8
+highlight GitGutterDelete ctermfg=8
 
 " ale
 let g:ale_set_signs             = 1

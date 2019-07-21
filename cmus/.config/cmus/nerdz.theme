@@ -18,7 +18,7 @@ set color_error=lightred
 set color_info=lightyellow
 
 # Color of currently playing track.
-set color_win_cur=4
+set color_win_cur=6
 
 # Color of the separator line between windows in view (1).
 set color_separator=black
@@ -33,7 +33,7 @@ set color_statusline_fg=gray
 
 # Color of the line displaying currently playing track.
 set color_titleline_bg=0
-set color_titleline_fg=4
+set color_titleline_fg=6
 
 # Color of the selected row which is also the currently playing track in active window.
 set color_win_cur_sel_bg=default

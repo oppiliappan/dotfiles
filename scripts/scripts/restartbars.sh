@@ -2,4 +2,3 @@
 
 pkill polybar
 polybar bottom &
-polybar border &

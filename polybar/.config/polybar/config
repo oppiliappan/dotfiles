@@ -26,14 +26,12 @@ override-redirect = true
 
 [bar/bottom]
 width            = 1920
-height           = 46
+height           = 40
 offset-x         = 0
-offset-y         = 1034
+offset-y         = 1040
 locale           = de_DE.UTF-8
 background       = ${colors.background}
 foreground       = ${colors.foreground}
-border-top-size  = 2
-border-top-color = ${colors.modb}
 modules-left     = time
 modules-center   = 2bws
 modules-right    = bat brit vol
@@ -41,20 +39,6 @@ padding          = 3
 
 font-0           = SF Mono:size=10:weight=bold:antialias=true;0
 font-1           = FantasqueSansMono Nerd Font Mono:size=8:weight=bold:antialias=true;0
-
-[bar/border]
-width               = 1920
-height              = 14
-offset-x            = 0
-offset-y            = 1020
-locale              = de_DE.UTF-8
-background          = ${colors.background}
-foreground          = ${colors.foreground}
-font-0              = SF Mono:size=10:weight = bold:antialias = true;2
-modules-left        =
-modules-center      = separator
-modules-right       =
-
 
 ; ---------- modules ---------------
 
@@ -137,7 +121,7 @@ exec                     = ~/scripts/bat -i
 interval                 = 100
 format-padding           = 2
 format-prefix            = "BAT: "
-format-prefix-foreground = ${colors.orange}
+format-prefix-foreground = ${colors.foreground_bright}
 format-background        = ${colors.background}
 format-foreground        = ${colors.foreground}
 
@@ -146,7 +130,7 @@ type                     = custom/script
 exec                     = ~/scripts/vol -q
 interval                 = 0.01
 format-prefix            = "VOL:"
-format-prefix-foreground = ${colors.yellow}
+format-prefix-foreground = ${colors.foreground_bright}
 format-padding           = 2
 scroll-up                = ~/scripts/vol -i
 scroll-down              = ~/scripts/vol -d
@@ -156,7 +140,7 @@ type              = custom/script
 exec              = exec ~/scripts/netwrk.sh
 interval          = 5
 format-padding    = 2
-format-background = ${colors.modb}
+format-background = ${colors.foreground}
 click-left        = urxvtc -g 50x22 -b 0 -e nmtui
 
 [module/album]
@@ -203,12 +187,12 @@ padding           = 2
 type                     = custom/script
 exec                     = echo "$( light -b | sed 's/\..*//' )%"
 format-prefix            = "SCR: "
-format-prefix-foreground = ${colors.green}
+format-prefix-foreground = ${colors.foreground_bright}
 scroll-up                = exec light -A 3
 scroll-down              = exec light -U 3
 click-left               = redshift -O 4000
 click-right              = redshift -O 6500
-format-foreground        = ${colors.foreground}
+format-foreground        = ${colors.foreground
 format-padding           = 2
 interval                 = 0.01
 

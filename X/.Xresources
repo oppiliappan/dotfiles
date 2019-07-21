@@ -14,11 +14,11 @@
 #define base07 #FFFFFF
 #define base08 #F07178
 #define base09 #F78C6C
-#define base0A #FFCB6B
-#define base0B #C3E88D
-#define base0C #89DDFF
-#define base0D #82AAFF
-#define base0E #C792EA
+#define base0A #FDF200
+#define base0B #13CA91
+#define base0C #00FECA
+#define base0D #7898FB
+#define base0E #FF2079
 #define base0F #FF5370
 
 !  URxvt
@@ -46,14 +46,13 @@
 *color14:      base0F
 *color15:      base07
 
-
 URxvt.cursorBlink : 0
-URxvt.font       :xft:SF Mono:size=10:style=semibold
+URxvt.font       :xft:RobotoMono Nerd Font Mono:size=10
 
 URxvt.lineSpace           : 0
-URxvt.letterSpace         : -2
+URxvt.letterSpace         : -1
 URxvt.scrollBar           : false
-URxvt.internalBorder      : 22
+URxvt.internalBorder      : 44
 URxvt.cursorUnderline     : false
 URxvt.geometry            : 70x35
 URxvt.thickness           : 5
@@ -99,12 +98,12 @@ Xft.dpi: 110
 ! 2bwm
 ! ------------------------------------------------------------------------------
 
-twobwm.border_width: 16
-twobwm.outer_border: 14
-twobwm.focus_color: base03
+twobwm.border_width: 0
+twobwm.outer_border: 0
+twobwm.focus_color: base0E
 twobwm.unfocus_color: base01
 twobwm.fixed_color: base0D
 twobwm.unkill_color: base08
 twobwm.fixed_unkill_color: base0E
 twobwm.outer_border_color: base00
-twobwm.inverted_colors: false
+twobwm.inverted_colors: true

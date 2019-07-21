@@ -11,7 +11,7 @@ OCCUPIED=●
 UNOCCUPIED=·
 
 # colors
-current="$( ~/scripts/get_xres color4 )"
+current="$( ~/scripts/get_xres color5 )"
 occupied="$( ~/scripts/get_xres color8 )"
 unoccupied="$( ~/scripts/get_xres color8 )"
 
@@ -25,13 +25,13 @@ draw() {
         if [[ $i -eq $ws ]]
         then
             # current workspace
-            echo -ne "%{F$current}  $CURRENT  "
+            echo -ne "%{F$current}   $CURRENT   "
         else
             if [[ $windows -eq 0 ]]
             then
-                echo -ne "%{F$unoccupied}  $UNOCCUPIED  "
+                echo -ne "%{F$unoccupied}   $UNOCCUPIED   "
             else
-                echo -ne "%{F$occupied}  $OCCUPIED  "
+                echo -ne "%{F$occupied}   $OCCUPIED   "
             fi
         fi
     done

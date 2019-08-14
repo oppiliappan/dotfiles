@@ -77,6 +77,7 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 PROMPT_COMMAND=''
+# PS1='\n$(pista)'
 PS1='\n$(pista)'
 PS2="    >"
 
@@ -86,7 +87,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-export PROMPT_CHAR="λ"
+export PROMPT_CHAR=">"
 export PROMPT_CHAR_COLOR="magenta"
 export PROMPT_CHAR_ROOT="#"
 export PROMPT_CHAR_ROOT_COLOR="red"

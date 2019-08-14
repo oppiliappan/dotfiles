@@ -16,7 +16,10 @@ nnoremap <F2>      : NERDTreeToggle<cr>
 nnoremap <C-l> :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
 nnoremap H H:exec 'norm! '. &scrolloff . 'k'<cr>
 nnoremap L L:exec 'norm! '. &scrolloff . 'j'<cr>
-nnoremap  <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
+nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
+" nmap p pgb=
+" nmap P Pgb=
+
 nmap <silent> H  :let g:help_in_tabs = !g:help_in_tabs<CR>
 
 nnoremap <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'

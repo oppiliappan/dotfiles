@@ -3,7 +3,7 @@
 [colors]
 foreground        = ${xrdb:color7}
 foreground_bright = ${xrdb:color8}
-background        = ${xrdb:color0}
+background        = #00FFFFFF
 modb              = ${xrdb:color11}
 modb1             = ${xrdb:color0}
 modb2             = ${xrdb:color0}

@@ -47,7 +47,9 @@
 *color15:      base07
 
 URxvt.cursorBlink : 0
-URxvt.font       :xft:RobotoMono Nerd Font Mono:size=10
+URxvt.font       :xft:BlexMono Nerd Font Mono:size=10:style=Medium
+URxvt.italicFont :xft:BlexMono Nerd Font Mono:size=10:style=Italic
+URxvt.boldFont   :xft:BlexMono Nerd Font Mono:size=10:style=Bold
 
 URxvt.lineSpace           : 0
 URxvt.letterSpace         : -1

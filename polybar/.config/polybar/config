@@ -3,7 +3,7 @@
 [colors]
 foreground        = ${xrdb:color7}
 foreground_bright = ${xrdb:color8}
-background        = #00FFFFFF
+background        = ${xrdb:color0}
 modb              = ${xrdb:color11}
 modb1             = ${xrdb:color0}
 modb2             = ${xrdb:color0}
@@ -24,21 +24,52 @@ override-redirect = true
 
 ; ------------ bars ---------------
 
-[bar/bottom]
-width            = 1920
-height           = 40
-offset-x         = 0
-offset-y         = 1040
+[bar/time]
+width            = 250
+height           = 50
+offset-x         = 100
+offset-y         = 1010
 locale           = de_DE.UTF-8
 background       = ${colors.background}
 foreground       = ${colors.foreground}
-modules-left     = time
-modules-center   = 2bws
-modules-right    = bat brit vol
+modules-left     = 
+modules-center   = time
+modules-right    = 
 padding          = 3
 
-font-0           = SF Mono:size=10:weight=bold:antialias=true;0
-font-1           = FantasqueSansMono Nerd Font Mono:size=8:weight=bold:antialias=true;0
+font-0           = BlexMono Nerd Font Mono:size=10:weight=bold:antialias=true;0
+
+[bar/stat]
+width            = 220
+height           = 50
+offset-x         = 1680
+offset-y         = 1010
+locale           = de_DE.UTF-8
+background       = ${colors.background}
+foreground       = ${colors.foreground}
+modules-left     = 
+modules-center   = vol separator brit separator bat
+modules-right    = 
+padding          = 3
+
+font-0           = BlexMono Nerd Font Mono:size=10:weight=bold:antialias=true;0
+
+[bar/ws]
+width            = 70
+height           = 50
+offset-x         = 20
+offset-y         = 1010
+locale           = de_DE.UTF-8
+background       = ${colors.background}
+foreground       = ${colors.foreground}
+modules-left     = 
+modules-center   = workspace
+modules-right    = 
+padding          = 3
+radius           = 0
+
+font-0           = BlexMono Nerd Font Mono:size=10:weight=bold:antialias=true;0
+
 
 ; ---------- modules ---------------
 
@@ -47,14 +78,12 @@ type              = custom/script
 interval          = 0.01
 exec              = echo $(( $(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //') + 1))
 format-padding    = 2
-format-background = ${colors.background}
-format-foreground = ${colors.foreground}
 format-font       = 1
 
 [module/time]
 type                     = custom/script
 interval                 = 1.0
-exec                     = /home/nerdypepper/scripts/time.sh
+exec                     = bash /home/nerdypepper/scripts/time.sh
 format-prefix-foreground = ${colors.green}
 format-padding           = 1
 format-foreground        = ${colors.foreground}
@@ -108,7 +137,7 @@ format-padding    = 1
 
 [module/2bws]
 type              = custom/script
-exec              = ~/scripts/2bws.sh
+exec              = bash ~/scripts/2bws.sh
 interval          = 0.01
 format-padding    = 3
 format-foreground = ${colors.background}
@@ -120,8 +149,6 @@ type                     = custom/script
 exec                     = ~/scripts/bat -i
 interval                 = 100
 format-padding           = 2
-format-prefix            = "BAT: "
-format-prefix-foreground = ${colors.foreground_bright}
 format-background        = ${colors.background}
 format-foreground        = ${colors.foreground}
 
@@ -129,8 +156,6 @@ format-foreground        = ${colors.foreground}
 type                     = custom/script
 exec                     = ~/scripts/vol -q
 interval                 = 0.01
-format-prefix            = "VOL:"
-format-prefix-foreground = ${colors.foreground_bright}
 format-padding           = 2
 scroll-up                = ~/scripts/vol -i
 scroll-down              = ~/scripts/vol -d
@@ -186,8 +211,6 @@ padding           = 2
 [module/brit]
 type                     = custom/script
 exec                     = echo "$( light -b | sed 's/\..*//' )%"
-format-prefix            = "SCR: "
-format-prefix-foreground = ${colors.foreground_bright}
 scroll-up                = exec light -A 3
 scroll-down              = exec light -U 3
 click-left               = redshift -O 4000
@@ -199,6 +222,6 @@ interval                 = 0.01
 [module/separator]
 type              = custom/script
 format-text       = <label>
-label             = "    "
+label             = "/"
 exec              = echo label
 format-foreground = ${colors.foreground_bright}

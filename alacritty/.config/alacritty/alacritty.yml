@@ -38,29 +38,29 @@ draw_bold_text_with_bright_colors: false
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Iosevka Term # should be "Menlo" or something on macOS.
+    family: RobotoMono NF  # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
-    # style: Regular
+    style: Medium
 
   # The bold font face
   bold:
-    family: Iosevka Term # should be "Menlo" or something on macOS.
+    family: RobotoMono Nerd Font Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
-    # style: Bold
+    style: Bold
 
   # The italic font face
   italic:
-    family: Iosevka Term # should be "Menlo" or something on macOS.
+    family: RobotoMono Nerd Font Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Italic
 
   # Point size of the font
-  size: 8.0
+  size: 7.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
-    x: 0
+    x: -2
     y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
@@ -87,8 +87,8 @@ custom_cursor_colors: false
 colors:
   # Default colors
     primary:
-        background: '0xffffff'
-        foreground: '0x4d4d4c'
+        background: '0x212121'
+        foreground: '0xeeffff'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
     cursor:
@@ -97,60 +97,25 @@ colors:
 
   # Normal colors
     normal:
-        black:   '0xffffff'
-        red:     '0xc82829'
-        green:   '0x75bc75'
-        yellow:  '0xeab700'
-        blue:    '0x4271ae'
-        magenta: '0x8959a8'
-        cyan:    '0x3e999f'
-        white:   '0x4d4d4c'
+        black:   '0x212121'
+        red:     '0xF07178'
+        green:   '0x13CA91'
+        yellow:  '0xFDF200'
+        blue:    '0x7898FB'
+        magenta: '0xFF2079'
+        cyan:    '0x00FECA'
+        white:   '0xEEFFFF'
 
   # Bright colors
     bright:
-        black:   '0x8e908c'
-        red:     '0xf5871f'
-        green:   '0xe0e0e0'
-        yellow:  '0xd6d6d6'
-        blue:    '0x969896'
-        magenta: '0x282a2e'
-        cyan:    '0xa3685a'
-        white:   '0x1d1f21'
-
-#define base00 #ffffff
-#define base01 #e0e0e0
-#define base02 #d6d6d6
-#define base03 #8e908c
-#define base04 #969896
-#define base05 #4d4d4c
-#define base06 #282a2e
-#define base07 #1d1f21
-#define base08 #c82829
-#define base09 #f5871f
-#define base0A #eab700
-#define base0B #718c00
-#define base0C #3e999f
-#define base0D #4271ae
-#define base0E #8959a8
-#define base0F #a3685a
-
-#*.color0:       #121c21
-#*.color1:       #1e2e36
-#*.color2:       #304b59
-#*.color3:       #3f6173
-#*.color4:       #7b8e98
-#*.color5:       #aaafb2
-#*.color6:       #bcd9e8
-#*.color7:       #cfefff
-#                 
-#*.color8:       #f0696f
-#*.color9:       #fa9a6a
-#*.color10:      #f7cca1
-#*.color11:      #76a08c
-#*.color12:      #5f9993
-#*.color13:      #718c97
-#*.color14:      #ceb5ce
-#*.color15:      #877366
+        black:   '0x4A4A4A'
+        red:     '0xF78C6C'
+        green:   '0x303030'
+        yellow:  '0x353535'
+        blue:    '0xB2CCD6'
+        magenta: '0xEEFFFF'
+        cyan:    '0xFF5370'
+        white:   '0xFFFFFF'
 
 # Visual Bell
 #

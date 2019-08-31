@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
 pkill polybar
-polybar bottom &
+polybar time &
+polybar stat &
+polybar ws &

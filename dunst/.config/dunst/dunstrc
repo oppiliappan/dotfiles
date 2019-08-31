@@ -5,7 +5,7 @@
 #                  
 
 [global]
-    font = SF Mono Semibold 9
+    font = BlexMono Nerd Font Mono 9
     allow_markup = no
     format = "%s\n%b"
     sort = yes

@@ -4,7 +4,7 @@ let mapleader=' '
 
 " normal
 nnoremap <Leader>o : only<cr>
-nnoremap <Leader>l : Lines<cr>
+" nnoremap <Leader>l : Lines<cr>
 nnoremap <Leader>b : Buffers<cr>
 nnoremap <Leader>n : bnext<cr>
 nnoremap <Leader>p : bprev<cr>

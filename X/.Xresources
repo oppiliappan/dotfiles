@@ -102,7 +102,7 @@ Xft.dpi: 110
 
 twobwm.border_width: 0
 twobwm.outer_border: 0
-twobwm.focus_color: base0E
+twobwm.focus_color: base01
 twobwm.unfocus_color: base01
 twobwm.fixed_color: base0D
 twobwm.unkill_color: base08

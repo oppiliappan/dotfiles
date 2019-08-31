@@ -90,7 +90,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 export PROMPT_CHAR=">"
 export PROMPT_CHAR_COLOR="magenta"
 export PROMPT_CHAR_ROOT="#"
-export PROMPT_CHAR_ROOT_COLOR="red"
+export PROMPT_CHAR_ROOT_COLOR="yellow"
 
 export SHORTEN_CWD=1
 export CWD_COLOR="cyan"

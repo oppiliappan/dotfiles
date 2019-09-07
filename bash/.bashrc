@@ -76,9 +76,17 @@ fi
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+jobs_number () {
+    local number="$(jobs | wc -l)"
+    if [ $number == 0 ]; then
+        echo -n ""
+    else
+        echo -n "+ "
+    fi
+}
+
 PROMPT_COMMAND=''
-# PS1='\n$(pista)'
-PS1='\n$(pista)'
+PS1='\n$(jobs_number)$(pista)'
 PS2="    >"
 
 export NVM_DIR="$HOME/.nvm"

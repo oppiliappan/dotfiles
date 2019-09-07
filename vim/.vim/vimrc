@@ -38,10 +38,21 @@ Plug 'nerdypepper/vim-colors-plain'
 call plug#end()
 
 " augroups
-augroup indents
-	autocmd!
-	autocmd FileType less,css,html,js setlocal ts=2 sts=2 sw=2 expandtab
-	autocmd FileType text,markdown setlocal expandtab
+
+augroup plaintext
+    autocmd!
+	autocmd FileType text,markdown setlocal ts=2 sts=2 sw=2 expandtab textwidth=60
+augroup END
+
+augroup webdev
+    autocmd!
+	autocmd FileType less,css,html,js?,ts? setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType less,css,html nnoremap <Leader>s viB:sort<cr>
+augroup END
+
+augroup rustprograms
+    autocmd!
+	autocmd FileType rs setlocal ts=4 sts=4 sw=4 expandtab
 augroup END
 
 augroup highlight_follows_vim
@@ -49,15 +60,6 @@ augroup highlight_follows_vim
 	autocmd FocusGained * set cursorline
 	autocmd FocusLost * set nocursorline
 augroup END
-
-augroup mapppings
-	autocmd!
-	autocmd FileType less,css,html nnoremap <Leader>s viB:sort<cr>
-augroup END
-
-augroup filetype
-  au! BufRead,BufNewFile *.proto setfiletype proto
-augroup end
 
 augroup restorecursor
 	autocmd BufReadPost *
@@ -199,3 +201,6 @@ let g:indentLine_char      = '┆'
 
 let g:latex_view_general_viewer = 'zathura'
 let g:vimtex_view_method = "zathura"
+
+" man pages
+let g:ft_man_open_mode = 'tab'

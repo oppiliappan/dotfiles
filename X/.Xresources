@@ -4,22 +4,22 @@
 !
 !------------------------------------------------------------------------------
 
-#define base00 #212121
-#define base01 #303030
-#define base02 #353535
-#define base03 #4A4A4A
-#define base04 #B2CCD6
-#define base05 #EEFFFF
-#define base06 #EEFFFF
-#define base07 #FFFFFF
-#define base08 #F07178
-#define base09 #F78C6C
-#define base0A #FDF200
-#define base0B #13CA91
-#define base0C #00FECA
-#define base0D #7898FB
-#define base0E #FF2079
-#define base0F #FF5370
+#define base00 #ffffff
+#define base01 #e0e0e0
+#define base02 #d6d6d6
+#define base03 #8e908c
+#define base04 #969896
+#define base05 #4d4d4c
+#define base06 #282a2e
+#define base07 #1d1f21
+#define base08 #c82829
+#define base09 #f5871f
+#define base0A #eab700
+#define base0B #718c00
+#define base0C #51c5b6
+#define base0D #4271ae
+#define base0E #ff0080
+#define base0F #a3685a
 
 !  URxvt
 ! ------------------------------------------------------------------------------

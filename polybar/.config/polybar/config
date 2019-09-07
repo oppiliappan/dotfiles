@@ -37,7 +37,7 @@ modules-center   = time
 modules-right    = 
 padding          = 3
 
-font-0           = BlexMono Nerd Font Mono:size=10:weight=bold:antialias=true;0
+font-0           = Roboto Mono:size=10:weight=bold:antialias=true;0
 
 [bar/stat]
 width            = 220
@@ -52,7 +52,7 @@ modules-center   = vol separator brit separator bat
 modules-right    = 
 padding          = 3
 
-font-0           = BlexMono Nerd Font Mono:size=10:weight=bold:antialias=true;0
+font-0           = Roboto Mono:size=10:weight=bold:antialias=true;0
 
 [bar/ws]
 width            = 70
@@ -68,7 +68,7 @@ modules-right    =
 padding          = 3
 radius           = 0
 
-font-0           = BlexMono Nerd Font Mono:size=10:weight=bold:antialias=true;0
+font-0           = Roboto Mono:size=10:weight=bold:antialias=true;0
 
 
 ; ---------- modules ---------------

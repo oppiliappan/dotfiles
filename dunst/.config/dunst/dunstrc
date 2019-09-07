@@ -50,18 +50,18 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#212121"
-    foreground = "#eeffff"
+    background = "#ffffff"
+    foreground = "#212121"
     timeout = 2
 
 [urgency_normal]
-    background = "#212121"
-    foreground = "#eeffff"
+    background = "#ffffff"
+    foreground = "#212121"
     timeout = 10
 
 [urgency_critical]
-    background = "#212121"
-    foreground = "#eeffff"
+    background = "#ffffff"
+    foreground = "#212121"
     timeout = 0
 
 

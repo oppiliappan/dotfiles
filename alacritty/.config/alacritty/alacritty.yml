@@ -86,36 +86,36 @@ custom_cursor_colors: false
 
 colors:
   # Default colors
-    primary:
-        background: '0x212121'
-        foreground: '0xeeffff'
+  primary:
+    background: '0xffffff'
+    foreground: '0x4d4d4c'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
-    cursor:
-        text:   '0x212121'
-        cursor: '0xeeffff'
+  cursor:
+    text: '0xffffff'
+    cursor: '0x4d4d4c'
 
   # Normal colors
-    normal:
-        black:   '0x212121'
-        red:     '0xF07178'
-        green:   '0x13CA91'
-        yellow:  '0xFDF200'
-        blue:    '0x7898FB'
-        magenta: '0xFF2079'
-        cyan:    '0x00FECA'
-        white:   '0xEEFFFF'
+  normal:
+    black:   '0xffffff'
+    red:     '0xc82829'
+    green:   '0x718c00'
+    yellow:  '0xeab700'
+    blue:    '0x4271ae'
+    magenta: '0xff0078'
+    cyan:    '0x028265'
+    white:   '0x4d4d4c'
 
   # Bright colors
-    bright:
-        black:   '0x4A4A4A'
-        red:     '0xF78C6C'
-        green:   '0x303030'
-        yellow:  '0x353535'
-        blue:    '0xB2CCD6'
-        magenta: '0xEEFFFF'
-        cyan:    '0xFF5370'
-        white:   '0xFFFFFF'
+  bright:
+    black:   '0x8e908c'
+    red:     '0xf5871f'
+    green:   '0xe0e0e0'
+    yellow:  '0xd6d6d6'
+    blue:    '0x969896'
+    magenta: '0x282a2e'
+    cyan:    '0xa3685a'
+    white:   '0x1d1f21'
 
 # Visual Bell
 #

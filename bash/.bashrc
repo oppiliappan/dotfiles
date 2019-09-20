@@ -74,6 +74,7 @@ if ! shopt -oq posix; then
 fi
 
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
+[ -f ~/.bash_prompt ] && . ~/.bash_prompt
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 jobs_number () {
@@ -86,8 +87,6 @@ jobs_number () {
 }
 
 PROMPT_COMMAND=''
-PS1='\n$(jobs_number)$(pista)'
-PS2="    >"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

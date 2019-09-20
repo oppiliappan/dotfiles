@@ -1,3 +1,13 @@
+red="\e[31m"
+grn="\e[32m"
+ylw="\e[33m"
+cyn="\e[36m"
+blu="\e[34m"
+prp="\e[35m"
+bprp="\e[35;1m"
+gry="\e[94m"
+rst="\e[0m"
+
 git_branch() {
     local git_status="$(git status 2> /dev/null)"
     local on_branch="On branch ([^${IFS}]*)"
@@ -5,34 +15,32 @@ git_branch() {
 
     if [[ $git_status =~ $on_branch ]]; then
         local branch=${BASH_REMATCH[1]}
-        echo -ne "───${grn} $branch ${rst}"
+        echo -ne "${cyn} $branch${rst}"
     elif [[ $git_status =~ $on_commit ]]; then
         local commit=${BASH_REMATCH[1]}
-        echo -ne "───${ylw} $commit ${rst}"
+        echo -ne "${prp} $commit${rst}"
     fi
 }
 
 prompt_pwd() {
-    dirs +0 | sed -e 's-\(\.*[^/]\)[^/]*/-\1/-g'
+    if [ "$PWD" == "$HOME" ]; then
+        echo ""
+    elif [ "$PWD" == "/" ]; then
+        echo "/"
+    else
+        path="$(echo $PWD | sed -e "s-$HOME/--g")"
+        echo -ne " \001${gry}\002$path/\001${rst}\002"
+    fi
 }
 
 rootornot() {
     if [[ "$(id -u)" -eq 0 ]]; then
-        echo -ne "\001${red}\002# \001${rst}\002"
+        echo -ne "\001${red}\002#\001${rst}\002"
     else
-        echo -ne "\001${grn}\002$ \001${rst}\002"
+        echo -ne "$"
     fi
 }
 
-PS1='\n$(pista)'
+PS1='\n$(rootornot)$(git_branch)$(prompt_pwd) '
 
 PS2="   > "
-
-beep_if_long_time_past() {
-    LAST_COMMAND_DURATION=$(($(date +%s) - ${LAST_COMMAND_TIME}))
-    [[ ${LAST_COMMAND_DURATION} -gt 15 ]] && { notify-send "'$(echo $(history | tail -n1) | sed 's/[0-9]* //')' finished after ${LAST_COMMAND_DURATION} secs"; }
-    export LAST_COMMAND_TIME=0
-}
-
-export PROMPT_COMMAND=beep_if_long_time_past
-trap '[ -z ${LAST_COMMAND_TIME} ] && export LAST_COMMAND_TIME=$(date +%s)' DEBUG

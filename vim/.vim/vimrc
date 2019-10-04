@@ -33,7 +33,7 @@ Plug 'lervag/vimtex'
 " colorschemes
 Plug 'nerdypepper/agila.vim'
 Plug 'nerdypepper/chestnut.vim'
-Plug 'nerdypepper/vim-colors-plain'
+Plug 'nerdypepper/vim-colors-plain', { 'branch': 'duotone' }
 
 call plug#end()
 

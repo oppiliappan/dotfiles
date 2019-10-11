@@ -10,3 +10,4 @@ images/
 scripts/scripts/graphs
 weechat/sec.conf
 **/plug.vim
+ssh

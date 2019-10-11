@@ -6,12 +6,11 @@ setxkbmap -option caps:escape
 setxkbmap -option compose:rctrl
 
 urxvtd &
-
 compton &
 dunst -config "$HOME"/.config/dunst/dunstrc &
 sxhkd -c "$HOME"/.config/sxhkd/sxhkdrc &
 
-/home/nerdypepper/scripts/restartbars.sh &
-feh --bg-fill "/home/nerdypepper/pics/walls/fabian-moller-gI7zgb80QWY-unsplash.jpg"
+/home/np/scripts/restartbars.sh &
+/home/np/scripts/blur.sh &
 
 exec 2bwm

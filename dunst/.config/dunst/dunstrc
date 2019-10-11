@@ -5,7 +5,7 @@
 #                  
 
 [global]
-    font = BlexMono Nerd Font Mono 9
+    font = Input 10
     allow_markup = no
     format = "%s\n%b"
     sort = yes
@@ -50,18 +50,18 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#ffffff"
-    foreground = "#212121"
+    background = "#212121"
+    foreground = "#eeffff"
     timeout = 2
 
 [urgency_normal]
-    background = "#ffffff"
-    foreground = "#212121"
+    background = "#212121"
+    foreground = "#eeffff"
     timeout = 10
 
 [urgency_critical]
-    background = "#ffffff"
-    foreground = "#212121"
+    background = "#212121"
+    foreground = "#eeffff"
     timeout = 0
 
 

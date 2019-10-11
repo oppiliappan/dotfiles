@@ -1,35 +1,11 @@
-# super + Return
-#     urxvtc
-# 
-# super + {_,ctrl + ,alt + }{k,j,h,l}
-#     custardctl window --{move,expand,contract} {north,south,west,east}
-# 
-# super + shift + {k,j}
-#     custardctl window --{raise,lower}
-# 
-# super + {_,ctrl + ,alt +}{1-9,0}
-#     custardctl workspace --{focus,attach,detach} {1-9,10}
-# 
-# super + shift + {1-9,0}
-#     custardctl window --relocate {1-9,10}
-# 
-# super + q
-#     custardctl window --close
-# 
-# super + ctrl + q
-#     custardctl --stop
-# 
-# super + x
-#     custardctl window --maximize
-# 
-# super + d
-#     rofi -show run
+XF86Audio{Lower,Raise}Volume
+    amixer sset Master 2%{-,+}
 
-super + {Up, Down}
-    light -{A,U} 5
+XF86AudioMute
+    amixer sset Master toggle
 
-super +  {Right, Left}
-    /home/nerdypepper/scripts/vol -{i,d}
+XF86MonBrightness{Down,Up}
+    xbacklight -{dec,inc} 5
 
-@button{10,11}
-    /home/nerdypepper/scripts/wscycle.sh -{f,r}
+super + Escape
+	pkill -USR1 -x sxhkd

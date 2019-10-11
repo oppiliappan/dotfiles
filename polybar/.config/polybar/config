@@ -24,41 +24,27 @@ override-redirect = true
 
 ; ------------ bars ---------------
 
-[bar/time]
-width            = 250
-height           = 50
-offset-x         = 100
-offset-y         = 1010
-locale           = de_DE.UTF-8
-background       = ${colors.background}
-foreground       = ${colors.foreground}
-modules-left     = 
-modules-center   = time
-modules-right    = 
-padding          = 3
-
-font-0           = Roboto Mono:size=10:weight=bold:antialias=true;0
-
 [bar/stat]
 width            = 220
-height           = 50
+height           = 70
 offset-x         = 1680
-offset-y         = 1010
+offset-y         = 990
 locale           = de_DE.UTF-8
 background       = ${colors.background}
 foreground       = ${colors.foreground}
 modules-left     = 
-modules-center   = vol separator brit separator bat
+modules-center   = time separator bat
 modules-right    = 
 padding          = 3
-
-font-0           = Roboto Mono:size=10:weight=bold:antialias=true;0
+font-0           = Archivo Medium:size=11:antialias=true;0
+font-1           = Archivo:size=11:style=Italic:antialias=true;0
+font-2           = Archivo:size=11:style=Bold:antialias=true;0
 
 [bar/ws]
 width            = 70
-height           = 50
+height           = 70
 offset-x         = 20
-offset-y         = 1010
+offset-y         = 990
 locale           = de_DE.UTF-8
 background       = ${colors.background}
 foreground       = ${colors.foreground}
@@ -68,7 +54,7 @@ modules-right    =
 padding          = 3
 radius           = 0
 
-font-0           = Roboto Mono:size=10:weight=bold:antialias=true;0
+font-0           = Archivo Medium:size=11:antialias=true;0
 
 
 ; ---------- modules ---------------
@@ -83,9 +69,9 @@ format-font       = 1
 [module/time]
 type                     = custom/script
 interval                 = 1.0
-exec                     = bash /home/nerdypepper/scripts/time.sh
+exec                     = bash /home/np/scripts/time.sh
 format-prefix-foreground = ${colors.green}
-format-padding           = 1
+format-padding           = 4
 format-foreground        = ${colors.foreground}
 format-background        = ${colors.background}
 
@@ -95,8 +81,8 @@ format-text       = <label>
 label             = 
 interval          = 1.0
 exec              = echo label
-click-left        = /home/nerdypepper/scripts/hidebars.sh -s
-click-right       = /home/nerdypepper/scripts/hidebars.sh -h
+click-left        = /home/np/scripts/hidebars.sh -s
+click-right       = /home/np/scripts/hidebars.sh -h
 format-padding    = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
@@ -148,7 +134,7 @@ scroll-down       = exec ~/scripts/wscycle.sh -r
 type                     = custom/script
 exec                     = ~/scripts/bat -i
 interval                 = 100
-format-padding           = 2
+format-padding           = 4
 format-background        = ${colors.background}
 format-foreground        = ${colors.foreground}
 
@@ -222,6 +208,6 @@ interval                 = 0.01
 [module/separator]
 type              = custom/script
 format-text       = <label>
-label             = "/"
+label             = "  "
 exec              = echo label
-format-foreground = ${colors.foreground_bright}
+format-foreground = ${colors.foreground}

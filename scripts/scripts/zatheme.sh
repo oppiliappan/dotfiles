@@ -13,8 +13,8 @@ set completion-fg "'$( get_xres color7 )'"
 set completion-highlight-bg "'$( get_xres color5 )'"
 set completion-highlight-fg "'$( get_xres color7 )'"
 
-# set statusbar-bg "'$( get_xres color5 )'"
-# set statusbar-fg "'$( get_xres color0 )'"
+set statusbar-bg "'$( get_xres color0 )'"
+set statusbar-fg "'$( get_xres color7 )'"
 
 set inputbar-bg "'$( get_xres color0 )'"
 set inputbar-fg "'$( get_xres color7 )'"
@@ -30,8 +30,8 @@ set smooth-scroll true
 set statusbar-home-tilde "true"
 set statusbar-h-padding "50"
 set statusbar-v-padding "50"
-set guioptions ""
+set guioptions "s"
 
-set font "SF Mono 10"
+set font "Archivo 10"
 
 ' > ~/.config/zathura/zathurarc

@@ -12,7 +12,7 @@ bgrn="\e[42m"
 bylw="\e[43m"
 
 export EDITOR=/usr/bin/vim
-export MANPAGER="vim -c MANPAGER -"
+export MANPAGER="less"
 export BROWSER="/usr/bin/chromium-browser"
 export GPG_TTY=$(tty)
 export TERM=xterm-256color-italic
@@ -92,25 +92,30 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# pista
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-
 export PROMPT_CHAR=">"
 export PROMPT_CHAR_COLOR="magenta"
 export PROMPT_CHAR_ROOT="#"
 export PROMPT_CHAR_ROOT_COLOR="yellow"
-
 export SHORTEN_CWD=1
 export CWD_COLOR="cyan"
 export EXPAND_TILDE=0
-
 export GIT_CLEAN="·"
 export GIT_CLEAN_COLOR="green"
-
 export GIT_WT_MODIFIED="×"
 export GIT_WT_MODIFIED_COLOR="red"
-
 export GIT_INDEX_MODIFIED="±"
 export GIT_INDEX_MODIFIED_COLOR="yellow"
-
 export BRANCH_COLOR="bright black"
 export COMMIT_COLOR="bright black"
+
+# pfetch
+export PF_INFO="ascii title os kernel uptime pkgs shell "
+export PF_SEP=" "
+export PF_COL1=7
+export PF_COL2=7
+export PF_COL3=6
+export PF_ALIGN="9"
+export PF_ASCII="void"
+

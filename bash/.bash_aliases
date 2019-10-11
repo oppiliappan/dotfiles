@@ -11,6 +11,7 @@ alias grep='grep --color=auto'
 alias ls='ls -F --color=always'
 alias tree='tree -C'
 alias o='xdg-open'
+alias rless='less -r'
 
 # git aliases
 alias gst='git status'
@@ -20,3 +21,8 @@ alias glo='git log --pretty=oneline --abbrev-commit'
 alias ggp='git push'
 alias gl='git log -p --abbrev-commit --pretty=medium'
 alias gb='git branch -v'
+
+# xbps
+alias +='sudo xbps-install'
+alias ~='sudo xbps-remove'
+alias ?='xbps-query -Rs'

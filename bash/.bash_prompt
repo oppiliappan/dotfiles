@@ -37,7 +37,7 @@ rootornot() {
     if [[ "$(id -u)" -eq 0 ]]; then
         echo -ne "\001${red}\002#\001${rst}\002"
     else
-        echo -ne "$"
+        echo -ne "λ"
     fi
 }
 

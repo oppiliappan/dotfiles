@@ -49,6 +49,11 @@ augroup webdev
 	autocmd FileType less,css,html nnoremap <Leader>s viB:sort<cr>
 augroup END
 
+augroup scm_pairs
+    autocmd!
+    autocmd FileType scheme let b:AutoPairs = {"(": ")", "[": "]", "{": "}"}
+augroup END
+
 augroup rustprograms
     autocmd!
 	autocmd FileType rs setlocal ts=4 sts=4 sw=4 expandtab

@@ -45,7 +45,7 @@ endfunction
 
 function! StatuslineGit()
     let l:branchname = GitBranch()
-    return strlen(l:branchname) > 0?'* '.l:branchname.' ':''
+    return strlen(l:branchname) > 0?'* '.l:branchname.'  ':''
 endfunction
 
 function! ReadOnly() abort
@@ -99,9 +99,8 @@ function! StatusLine(mode) abort
 
   " active
   if a:mode ==# 'active'
-    let l:line.='%7* %{StatuslineGit()}'
+    let l:line.='%7*%{StatuslineGit()}'
     let l:line.='%<'
-    let l:line.='  '
     let l:line.=Filepath()
 
     let l:line.='%5*'

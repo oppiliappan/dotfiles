@@ -17,12 +17,12 @@ export BROWSER="/usr/bin/chromium-browser"
 export GPG_TTY=$(tty)
 export TERM=xterm-256color-italic
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH=$PATH":$HOME/scripts"
+export PATH=$PATH":$HOME/bin"
 export PATH=$PATH":$HOME/.cargo/bin"
-export PATH=$PATH":/usr/local/go/bin"
-export PATH=$PATH":$HOME/anaconda3/bin"
+export PATH=$PATH":$HOME/leet/flutter/bin"
 export PATH=$PATH":$HOME/protoc/bin"
+export PATH=$PATH":/opt/texlive/2019/bin/x86_64-linux"
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 case $- in
@@ -92,8 +92,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+source "$HOME/bin/flutter_completions.sh"
+
 # pista
-export VIRTUAL_ENV_DISABLE_PROMPT=1
 export PROMPT_CHAR=">"
 export PROMPT_CHAR_COLOR="magenta"
 export PROMPT_CHAR_ROOT="#"
@@ -118,4 +119,6 @@ export PF_COL2=7
 export PF_COL3=6
 export PF_ALIGN="9"
 export PF_ASCII="void"
+
+export _JAVA_AWT_WM_NONREPARENTING=1
 

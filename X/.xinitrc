@@ -11,6 +11,6 @@ dunst -config "$HOME"/.config/dunst/dunstrc &
 sxhkd -c "$HOME"/.config/sxhkd/sxhkdrc &
 
 /home/np/scripts/restartbars.sh &
-/home/np/scripts/blur.sh &
+/home/np/.fehbg
 
 exec 2bwm

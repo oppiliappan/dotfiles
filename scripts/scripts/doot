@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+red="\e[31m"
+grn="\e[32m"
+ylw="\e[33m"
+cyn="\e[36m"
+blu="\e[34m"
+prp="\e[35m"
+bprp="\e[35;1m"
+gry="\e[94m"
+rst="\e[0m"
+
+COL=$(tput cols)
+ROW=$(tput lines)
+((PADY = ROW / 2 - 1 - ${#ENTS[@]} / 2))
+((PADX = COL / 2 - LEN / 2))
+
+for ((i = 0; i < PADX; ++i)); do
+    PADC="$PADC "
+done
+
+for ((i = 0; i < PADY; ++i)); do
+    PADR="$PADR\n"
+done
+clear
+printf "%b" "$PADR"
+
+echo -ne "$ylw$PADC"
+echo -e '  _/_'
+echo -n "$PADC"
+echo -n '/'
+echo -ne "$rst"
+echo -n '`▅_▅'\'''
+echo -ne "$ylw"
+echo '\'
+echo -n "$PADC"
+echo -n '\'
+echo -ne "$prp"
+echo -ne ' vwv '
+echo -ne "$ylw"
+echo -e '/'
+echo -n "$PADC"
+echo -n ' `---'\'''
+
+echo -e "$rst"
+
+for ((i = 0; i < PADX - 5; ++i)); do
+    PADT="$PADT "
+done
+
+echo "$PADT$USER @ $HOSTNAME"
+echo "$PADT$(uptime -p)"
+
+read x

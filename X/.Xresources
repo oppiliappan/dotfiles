@@ -89,6 +89,10 @@ rofi.fullscreen        : false
 rofi.width             : 300
 rofi.lines             : 6
 
+dzen2.font:       -*-archivo-medium-r-normal--0-90-0-0-p-0-*-*
+dzen2.foreground: base07
+dzen2.background: base00
+
 Xft.autohint: 1
 Xft.antialias: 1
 Xft.lcdfilter: lcddefault

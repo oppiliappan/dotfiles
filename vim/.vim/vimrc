@@ -10,7 +10,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}, 'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
@@ -28,6 +28,7 @@ Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'rust-lang/rust.vim'
 Plug 'lervag/vimtex'
+Plug 'dart-lang/dart-vim-plugin'
 
 " colorschemes
 Plug 'nerdypepper/agila.vim'
@@ -111,7 +112,7 @@ set complete=.,w,b,i,u,t,
 set background=dark
 set mouse=a
 set conceallevel=0
-set cursorline
+set nocursorline
 set nonumber
 set grepprg=rg\ --vimgrep\ --no-heading
 set grepformat=%f:%l:%c:%m,%f:%l:%m
@@ -208,3 +209,7 @@ let g:vimtex_view_method = "zathura"
 
 " man pages
 let g:ft_man_open_mode = 'tab'
+
+" dart
+let dart_html_in_string=v:true
+let dart_style_guide=2

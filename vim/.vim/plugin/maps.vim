@@ -20,7 +20,6 @@ nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
 " nmap p pgb=
 " nmap P Pgb=
 
-nmap <silent> H  :let g:help_in_tabs = !g:help_in_tabs<CR>
 
 nnoremap <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
             \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"

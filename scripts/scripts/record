@@ -1,0 +1,18 @@
+#!/bin/bash
+slop=$(slop -f "%x %y %w %h %g %i") || exit 1
+read -r X Y W H G ID < <(echo $slop)
+ffmpeg \
+    -f x11grab \
+    -s "$W"x"$H" \
+    -i :0.0+$X,$Y  \
+    -framerate 60 \
+    -vcodec libx264 \
+    -threads 4 \
+    -y \
+    /home/np/tmp/x.mkv
+
+ffmpeg \
+    -i /home/np/tmp/x.mkv \
+    -pix_fmt yuv420p \
+    -vf scale=-2:1080 \
+    "/home/np/vids/rec/$1"

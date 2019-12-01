@@ -17,15 +17,15 @@ bat_status=$( cat /sys/class/power_supply/BAT0/capacity )
 charging_status=$( cat /sys/class/power_supply/BAT0/status )
 
 health() {
-	for i in {0..4}
-	do
-		if [[ $i -le $(( $bat_status/20 )) ]]; then
-			echo -ne "%{F$icon} ♥ "
-		else
-			echo -ne "%{F$fg} ♥ "
-		fi
-	done
-	echo
+    for i in {1..5}
+    do
+        if [[ $i -le $(( $bat_status/20 )) ]]; then
+            echo -ne "#[fg=colour1]• "
+        else
+            echo -ne "#[fg=colour8]• "
+        fi
+    done
+    echo
 }
 
 while getopts qi options 
@@ -44,5 +44,5 @@ do
             else
                 health
             fi
-        esac
+    esac
 done

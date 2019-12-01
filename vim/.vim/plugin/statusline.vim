@@ -77,15 +77,16 @@ function! Filepath() abort
 endfunction
 
 function! LinterStatus() abort
-    let l:counts = ale#statusline#Count(bufnr(''))
-    let l:status = []
-    if l:counts.warning
-        call add(l:status, printf('%%3*%s!%%*', l:counts.warning))
-    endif
-    if l:counts.error
-        call add(l:status, printf('%%5*%s×%%*',  l:counts.error))
-    endif
-    return join(l:status, ' ')
+  let info = get(b:, 'coc_diagnostic_info', {})
+  if empty(info) | return '' | endif
+  let msgs = []
+  if get(info, 'error', 0)
+    call add(msgs, printf('%%5*%s×%%*', info['error']))
+  endif
+  if get(info, 'warning', 0)
+    call add(msgs, printf('%%3*%s!%%*', info['warning']))
+  endif
+  return join(msgs, ' ')
 endfunction
 
 function! StatusLine(mode) abort
@@ -112,7 +113,7 @@ function! StatusLine(mode) abort
     let l:line.=' '
     let l:line.=LinterStatus()
     let l:line.=' '
-    let l:line.='%8*'. &filetype . ' '
+    let l:line.='%8*'. &filetype
 
   else
     " inactive

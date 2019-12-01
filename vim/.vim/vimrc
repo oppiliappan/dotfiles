@@ -12,7 +12,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}, 'branch': 'release'}
 Plug 'scrooloose/nerdtree'
-Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
 Plug 'Yggdroot/indentLine'
 
@@ -55,7 +54,7 @@ augroup scm_pairs
     autocmd FileType scheme let b:AutoPairs = {"(": ")", "[": "]", "{": "}"}
 augroup END
 
-augroup rustprograms
+augroup rustdev
     autocmd!
 	autocmd FileType rs setlocal ts=4 sts=4 sw=4 expandtab
 augroup END
@@ -116,6 +115,12 @@ set nocursorline
 set nonumber
 set grepprg=rg\ --vimgrep\ --no-heading
 set grepformat=%f:%l:%c:%m,%f:%l:%m
+set cmdheight=2
+set shortmess+=c
+set updatetime=300
+set signcolumn=yes
+
+let g:netrw_browsex_viewer= "xdg-open"
 
 colorscheme plain
 
@@ -172,17 +177,8 @@ highlight GitGutterAdd    ctermfg=8
 highlight GitGutterChange ctermfg=8
 highlight GitGutterDelete ctermfg=8
 
-" ale
-let g:ale_set_signs             = 1
-let g:ale_use_deprecated_neovim = 1
-let g:ale_sign_error            = '> '
-let g:ale_sign_warning          = '! '
-
-hi ALEErrorSign ctermfg=01 ctermbg=00
-hi ALEWarningSign ctermfg=06 ctermbg=00
-
 " rust.vim
-let g:rustfmt_autosave = 0
+let g:rustfmt_autosave = 1
 
 " fzf colors
 let g:fzf_colors =

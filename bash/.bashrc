@@ -51,10 +51,11 @@ shopt -s \
     nocasematch 
 
 bind 'set completion-ignore-case on'
-bind "set show-all-if-ambiguous on"
+bind 'set show-all-if-ambiguous on'
 bind 'set colored-stats on'
 bind 'set completion-display-width 1'
 bind 'TAB:menu-complete'
+bind "t: $HOME/scripts/tmux-fzf.sh"
 bind Space:magic-space
 
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -121,4 +122,3 @@ export PF_ALIGN="9"
 export PF_ASCII="void"
 
 export _JAVA_AWT_WM_NONREPARENTING=1
-

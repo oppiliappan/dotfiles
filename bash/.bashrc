@@ -23,6 +23,9 @@ export PATH=$PATH":$HOME/.cargo/bin"
 export PATH=$PATH":$HOME/leet/flutter/bin"
 export PATH=$PATH":$HOME/protoc/bin"
 export PATH=$PATH":/opt/texlive/2019/bin/x86_64-linux"
+
+export GUILE_LOAD_PATH="/usr/local/share/guile/2.2:/usr/local/share/guile/site/2.2:/usr/local/share/guile/site:/usr/local/share/guile"
+
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 case $- in

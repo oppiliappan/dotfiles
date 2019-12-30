@@ -55,12 +55,12 @@ font:
     style: Italic
 
   # Point size of the font
-  size: 18.0
+  size: 15.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
-    x: 1
+    x: 0
     y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
@@ -87,17 +87,17 @@ custom_cursor_colors: false
 colors:
   # Default colors
     primary:
-        background: '0x212121'
+        background: '0x000000'
         foreground: '0xeeffff'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
     cursor:
-        text:   '0x212121'
+        text:   '0x000000'
         cursor: '0xeeffff'
 
   # Normal colors
     normal:
-        black:   '0x212121'
+        black:   '0x000000'
         red:     '0xF07178'
         green:   '0x13CA91'
         yellow:  '0xFDF200'

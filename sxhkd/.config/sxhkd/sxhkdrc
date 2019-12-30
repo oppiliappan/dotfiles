@@ -9,3 +9,6 @@ XF86MonBrightness{Down,Up}
 
 super + Escape
 	pkill -USR1 -x sxhkd
+
+ctrl + Escape
+    xcursorlocate

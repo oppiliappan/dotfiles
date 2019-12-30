@@ -24,37 +24,51 @@ override-redirect = true
 
 ; ------------ bars ---------------
 
-[bar/stat]
-width            = 220
-height           = 70
-offset-x         = 1680
-offset-y         = 990
-locale           = de_DE.UTF-8
-background       = ${colors.background}
-foreground       = ${colors.foreground}
-modules-left     = 
-modules-center   = time separator bat
-modules-right    = 
-padding          = 3
-font-0           = Archivo Medium:size=11:antialias=true;0
-font-1           = Archivo:size=11:style=Italic:antialias=true;0
-font-2           = Archivo:size=11:style=Bold:antialias=true;0
-
-[bar/ws]
-width            = 70
+[bar/time]
+width            = 400
 height           = 70
 offset-x         = 20
-offset-y         = 990
-locale           = de_DE.UTF-8
-background       = ${colors.background}
+offset-y         = 1010
+locale           = en_US.UTF-8
+background       = #00FFFFFF
 foreground       = ${colors.foreground}
-modules-left     = 
-modules-center   = workspace
+modules-left     = time
+modules-center   =
 modules-right    = 
-padding          = 3
-radius           = 0
+padding          = 0
+font-0           = undefined:size=18:antialias=true;0
 
-font-0           = Archivo Medium:size=11:antialias=true;0
+[bar/date]
+width            = 400
+height           = 70
+offset-x         = 20
+offset-y         = 960
+locale           = en_US.UTF-8
+background       = #00FFFFFF
+foreground       = ${colors.foreground}
+modules-left     = date
+modules-center   = 
+modules-right    = 
+padding          = 0
+radius           = 0
+font-0           = undefined:size=18:antialias=true;0
+font-1           = scientifica:size=18:antialias=true;0
+
+[bar/music]
+width            = 400
+height           = 70
+offset-x         = 20
+offset-y         = 20
+locale           = en_US.UTF-8
+background       = #00FFFFFF
+foreground       = ${colors.foreground}
+modules-left     = cmusnp
+modules-center   = 
+modules-right    = 
+padding          = 0
+radius           = 0
+font-0           = undefined:size=18:antialias=true;0
+font-1           = scientifica:size=18:antialias=true;0
 
 
 ; ---------- modules ---------------
@@ -66,14 +80,22 @@ exec              = echo $(( $(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET
 format-padding    = 2
 format-font       = 1
 
+[module/date]
+type                     = custom/script
+interval                 = 1.0
+exec                     = /home/np/scripts/date.sh
+format-prefix-foreground = ${colors.green}
+format-padding           = 0
+format-foreground        = ${colors.foreground}
+
+
 [module/time]
 type                     = custom/script
 interval                 = 1.0
-exec                     = bash /home/np/scripts/time.sh
+exec                     = echo "$(date +%p)    $(date +%I:%M)"
 format-prefix-foreground = ${colors.green}
-format-padding           = 4
+format-padding           = 0
 format-foreground        = ${colors.foreground}
-format-background        = ${colors.background}
 
 [module/music_pop]
 type              = custom/script
@@ -191,8 +213,7 @@ click-right       = wmctrl -s 5
 scroll-up         = exec amixer sset Master 2%+
 scroll-down       = exec amixer sset Master 2%-
 format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-padding           = 2
+padding           = 0
 
 [module/brit]
 type                     = custom/script

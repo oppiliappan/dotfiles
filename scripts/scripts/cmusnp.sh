@@ -31,13 +31,13 @@ then
 
 	if [[ "$status" = *playing* ]]
 	then
-		echo -ne "|| $np_string"
+		echo -ne "%{F#FF0000}%{F#FFFFFF}PAUSE"
 	elif [[ "$status" = *paused* ]]
 	then
-		echo -ne ">  $np_string"
+		echo -ne "PLAY"
 	elif [[ "$status" = *stopped* ]]
 	then
-		echo -ne ". stopped"
+		echo -ne "START"
 	fi
 
 else

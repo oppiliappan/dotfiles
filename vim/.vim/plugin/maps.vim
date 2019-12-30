@@ -12,7 +12,6 @@ nnoremap <Leader>z : FZF<cr>
 nnoremap <Leader>w : MtaJumpToOtherTag<cr>
 nnoremap <Leader>t : call GetTabber()<cr>
 nnoremap <Leader><ESC> : nohlsearch<cr>
-nnoremap <F2>      : NERDTreeToggle<cr>
 nnoremap <C-l> :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
 nnoremap H H:exec 'norm! '. &scrolloff . 'k'<cr>
 nnoremap L L:exec 'norm! '. &scrolloff . 'j'<cr>

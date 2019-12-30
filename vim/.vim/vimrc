@@ -11,9 +11,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}, 'branch': 'release'}
-Plug 'scrooloose/nerdtree'
 Plug 'wellle/targets.vim'
-Plug 'Yggdroot/indentLine'
 
 " tpope
 Plug 'tpope/vim-repeat'

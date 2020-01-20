@@ -13,7 +13,7 @@ weechat/sec.conf
 ssh
 
 vim/.vim/autoload
-vim/.vim/view
-vim/.vim/spell
+vim/.vim/view/*
+vim/.vim/spell/*
 vim/.vim/.netrwhist
 

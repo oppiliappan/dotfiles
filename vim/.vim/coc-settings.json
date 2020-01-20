@@ -2,7 +2,8 @@
     "suggest.timeout": 500,
     "coc.source.vimtex.enable": "true",
     "coc.preferences.formatOnSaveFiletypes": [
-        "dart"
+        "dart",
+        "python"
     ],
     "languageserver": {
         "bash": {
@@ -26,5 +27,12 @@
     "diagnostic": {
         "errorSign": "×",
         "warningSign": "!"
+    },
+    "python.formatting.provider": "black",
+    "python": {
+        "formatting": {
+            "provider": "black"
+        },
+        "jediEnabled": "false"
     }
 }

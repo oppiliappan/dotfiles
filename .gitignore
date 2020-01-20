@@ -11,3 +11,9 @@ scripts/scripts/graphs
 weechat/sec.conf
 **/plug.vim
 ssh
+
+vim/.vim/autoload
+vim/.vim/view
+vim/.vim/spell
+vim/.vim/.netrwhist
+

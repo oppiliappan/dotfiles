@@ -5,7 +5,7 @@
 #                  
 
 [global]
-    font = Input 10
+    font = JetBrains Mono 10
     allow_markup = no
     format = "%s\n%b"
     sort = yes
@@ -50,17 +50,17 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#212121"
+    background = "#000000"
     foreground = "#eeffff"
     timeout = 2
 
 [urgency_normal]
-    background = "#212121"
+    background = "#000000"
     foreground = "#eeffff"
     timeout = 10
 
 [urgency_critical]
-    background = "#212121"
+    background = "#000000"
     foreground = "#eeffff"
     timeout = 0
 

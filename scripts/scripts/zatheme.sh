@@ -32,6 +32,6 @@ set statusbar-h-padding "50"
 set statusbar-v-padding "50"
 set guioptions "s"
 
-set font "JetBrains Mono 10"
+set font "Input 10"
 
 ' > ~/.config/zathura/zathurarc

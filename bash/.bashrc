@@ -16,6 +16,7 @@ export MANPAGER="less"
 export BROWSER="/usr/bin/chromium-browser"
 export GPG_TTY=$(tty)
 export TERM=xterm-256color-italic
+export TZ='Asia/Kolkata'
 
 export PATH=$PATH":$HOME/scripts"
 export PATH=$PATH":$HOME/bin"

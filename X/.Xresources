@@ -46,15 +46,15 @@
 *color14:      base0F
 *color15:      base07
 
-URxvt.cursorBlink : 0
-URxvt.font       :xft:JetBrains Mono:size=11:style=Regular \
-                  xft:DejaVu Sans Mono:size=12:style=Medium
+URxvt.cursorBlink : 1
+URxvt.font       :xft:Input:size=12:style=Regular \
+                  xft:DejaVu Sans Mono:size=11:style=Medium
 
-URxvt.italicFont :xft:JetBrains Mono:size=11:style=Italic
-URxvt.boldFont   :xft:JetBrains Mono:size=11:style=Bold
+URxvt.italicFont :xft:Input:size=12:style=Italic
+URxvt.boldFont   :xft:Input:size=12:style=Bold
 
 URxvt.lineSpace           : 0
-URxvt.letterSpace         : 0
+URxvt.letterSpace         : -1
 URxvt.scrollBar           : false
 URxvt.internalBorder      : 44
 URxvt.cursorUnderline     : false
@@ -79,7 +79,7 @@ rofi.color-active:    base03 , base0E , base00 , base0B , base00
 rofi.color-urgent:    base00 , base03 , base00 , base00 , base03
 
 rofi.fake-transparency : true
-rofi.font              : JetBrains Mono 12
+rofi.font              : Input 12
 rofi.columns           : 1
 rofi.separator-style   : none
 rofi.hide-scrollbar    : true

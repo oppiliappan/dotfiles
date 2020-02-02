@@ -52,6 +52,13 @@ augroup scm_pairs
     autocmd FileType scheme let b:AutoPairs = {"(": ")", "[": "]", "{": "}"}
 augroup END
 
+augroup texwrap
+    autocmd!
+    autocmd FileType tex set wrap
+    autocmd FileType tex nnoremap j gj
+    autocmd FileType tex nnoremap k gk
+augroup END
+
 augroup rustdev
     autocmd!
 	autocmd FileType rs setlocal ts=4 sts=4 sw=4 expandtab
@@ -59,8 +66,8 @@ augroup END
 
 augroup highlight_follows_vim
 	autocmd!
-	autocmd FocusGained * set cursorline
-	autocmd FocusLost * set nocursorline
+	autocmd WinEnter * set cursorline
+	autocmd WinLeave * set nocursorline
 augroup END
 
 augroup restorecursor
@@ -69,11 +76,6 @@ augroup restorecursor
 				\   execute "normal! g`\"" |
 				\ endif
 augroup END
-
-augroup nerdtree
-	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-augroup END
-
 
 " general settings
 set nobackup
@@ -154,14 +156,6 @@ cab vg vimgrep
 " emmet
 let g:user_emmet_mode='a'
 let g:user_emmet_leader_key='<C-X>'
-
-" nerdtree
-let g:NERDTreeMinimalUI           = 1
-let g:NERDTreeWinPos              = 'left'
-let g:NERDTreeWinSize             = 20
-let g:NERDTreeStatusline          = "  "
-let g:NERDTreeDirArrowExpandable  = '+'
-let g:NERDTreeDirArrowCollapsible = '-'
 
 " gitgutter
 let g:gitgutter_override_sign_column_highlight = 0

@@ -1,4 +1,4 @@
-syntax keyword scmNiceLambda lambda conceal cchar=ℓ
+syntax keyword scmNiceLambda lambda conceal cchar=λ
 
 syntax clear schemeFunction
 

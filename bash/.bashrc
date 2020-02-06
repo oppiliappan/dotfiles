@@ -1,22 +1,10 @@
-red="\e[31m"
-grn="\e[32m"
-ylw="\e[33m"
-cyn="\e[36m"
-blu="\e[34m"
-prp="\e[35m"
-bprp="\e[35;1m"
-rst="\e[0m"
-blk="\e[30m"
-
-bgrn="\e[42m"
-bylw="\e[43m"
-
 export EDITOR=/usr/bin/vim
 export MANPAGER="less"
 export BROWSER="/usr/bin/chromium-browser"
 export GPG_TTY=$(tty)
 export TERM=xterm-256color-italic
 export TZ='Asia/Kolkata'
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --color=bw'
 
 export PATH=$PATH":$HOME/scripts"
 export PATH=$PATH":$HOME/bin"
@@ -98,23 +86,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 source "$HOME/bin/flutter_completions.sh"
-
-# pista
-export PROMPT_CHAR=">"
-export PROMPT_CHAR_COLOR="magenta"
-export PROMPT_CHAR_ROOT="#"
-export PROMPT_CHAR_ROOT_COLOR="yellow"
-export SHORTEN_CWD=1
-export CWD_COLOR="cyan"
-export EXPAND_TILDE=0
-export GIT_CLEAN="·"
-export GIT_CLEAN_COLOR="green"
-export GIT_WT_MODIFIED="×"
-export GIT_WT_MODIFIED_COLOR="red"
-export GIT_INDEX_MODIFIED="±"
-export GIT_INDEX_MODIFIED_COLOR="yellow"
-export BRANCH_COLOR="bright black"
-export COMMIT_COLOR="bright black"
 
 # pfetch
 export PF_INFO="ascii title os kernel uptime pkgs shell "

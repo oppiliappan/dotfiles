@@ -10,7 +10,7 @@ else
         id="$id.$ext"
         scp -P 443 "$1" emerald:files/"$id"
         echo "https://u.peppe.rs/$id"
-        if hash xclip > /dev/null; then
+        if hash xclip 2> /dev/null; then
             echo "https://u.peppe.rs/$id" | xclip -selection clipboard
             echo "https://u.peppe.rs/$id" | xclip -i
         fi

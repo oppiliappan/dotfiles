@@ -41,6 +41,12 @@ rootornot() {
     fi
 }
 
-PS1='\n$(rootornot)$(git_branch)$(prompt_pwd) '
+host() {
+    if [ "$HOSTNAME" == "localhost" ]; then
+        echo -ne "(phone)"
+    fi
+}
+
+PS1='\n$(rootornot)$(git_branch)$(prompt_pwd)$(host) '
 
 PS2="   > "

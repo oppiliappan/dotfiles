@@ -8,7 +8,7 @@
 #define base01 #303030
 #define base02 #353535
 #define base03 #4A4A4A
-#define base04 #B2B2C2
+#define base04 #787878
 #define base05 #EEFFFF
 #define base06 #EEFFFF
 #define base07 #FFFFFF
@@ -56,7 +56,7 @@ URxvt.boldFont   :xft:Input:size=12:style=Bold
 URxvt.lineSpace           : 0
 URxvt.letterSpace         : -1
 URxvt.scrollBar           : false
-URxvt.internalBorder      : 44
+URxvt.internalBorder      : 25
 URxvt.cursorUnderline     : false
 URxvt.geometry            : 70x35
 URxvt.thickness           : 5
@@ -107,12 +107,12 @@ Xft.dpi: 110
 ! 2bwm
 ! ------------------------------------------------------------------------------
 
-twobwm.border_width: 0
-twobwm.outer_border: 0
+twobwm.border_width: 20
+twobwm.outer_border: 18
 twobwm.focus_color: base01
 twobwm.unfocus_color: base01
 twobwm.fixed_color: base0D
 twobwm.unkill_color: base08
 twobwm.fixed_unkill_color: base0E
 twobwm.outer_border_color: base00
-twobwm.inverted_colors: true
+twobwm.inverted_colors: false

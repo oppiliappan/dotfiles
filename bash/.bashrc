@@ -12,6 +12,8 @@ export PATH=$PATH":$HOME/.cargo/bin"
 export PATH=$PATH":$HOME/leet/flutter/bin"
 export PATH=$PATH":$HOME/protoc/bin"
 export PATH=$PATH":/opt/texlive/2019/bin/x86_64-linux"
+export PATH=$PATH":/home/np/leet/depot_tools"
+export PATH=$PATH":/home/np/.local/bin"
 
 export GUILE_LOAD_PATH="/usr/local/share/guile/2.2:/usr/local/share/guile/site/2.2:/usr/local/share/guile/site:/usr/local/share/guile"
 
@@ -49,11 +51,6 @@ bind 'set completion-display-width 1'
 bind 'TAB:menu-complete'
 bind "t: $HOME/scripts/tmux-fzf.sh"
 bind Space:magic-space
-
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -97,3 +94,6 @@ export PF_ALIGN="9"
 export PF_ASCII="void"
 
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+[[ -f ~/.bash_zoxide.sh ]] && source ~/.bash_zoxide.sh

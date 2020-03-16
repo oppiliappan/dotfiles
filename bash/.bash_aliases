@@ -27,3 +27,4 @@ alias gb='git branch -v'
 alias +='sudo xbps-install'
 alias ~='sudo xbps-remove'
 alias ?='xbps-query -Rs'
+

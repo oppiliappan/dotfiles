@@ -1,6 +1,6 @@
 {
     "suggest.timeout": 500,
-    "coc.source.vimtex.enable": "true",
+    "coc.source.vimtex.enable": true,
     "coc.preferences.formatOnSaveFiletypes": [
         "dart",
         "python"
@@ -24,15 +24,8 @@
             }
         }
     },
-    "diagnostic": {
-        "errorSign": "×",
-        "warningSign": "!"
-    },
+    "diagnostic.errorSign": "×",
+    "diagnostic.warningSign": "!",
     "python.formatting.provider": "black",
-    "python": {
-        "formatting": {
-            "provider": "black"
-        },
-        "jediEnabled": "false"
-    }
+    "python.jediEnabled": false
 }

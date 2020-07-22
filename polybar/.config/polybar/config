@@ -1,0 +1,234 @@
+; ---------- global --------------
+
+[colors]
+foreground        = ${xrdb:color7}
+foreground_bright = ${xrdb:color8}
+background        = ${xrdb:color0}
+modb              = ${xrdb:color11}
+modb1             = ${xrdb:color0}
+modb2             = ${xrdb:color0}
+red     = ${xrdb:color1}
+orange  = ${xrdb:color9}
+yellow  = ${xrdb:color3}
+green   = ${xrdb:color2}
+cyan    = ${xrdb:color6}
+blue    = ${xrdb:color4}
+magenta = ${xrdb:color5}
+brown   = ${xrdb:color7}
+
+[global/wm]
+margin-top        = 0
+margin-bottom     = 0
+override-redirect = true
+
+
+; ------------ bars ---------------
+
+[bar/time]
+width            = 400
+height           = 70
+offset-x         = 20
+offset-y         = 1010
+locale           = en_US.UTF-8
+background       = #00FFFFFF
+foreground       = ${colors.foreground}
+modules-left     = time
+modules-center   =
+modules-right    = 
+padding          = 0
+font-0           = undefined:size=18:antialias=true;0
+
+[bar/date]
+width            = 400
+height           = 70
+offset-x         = 20
+offset-y         = 960
+locale           = en_US.UTF-8
+background       = #00FFFFFF
+foreground       = ${colors.foreground}
+modules-left     = date
+modules-center   = 
+modules-right    = 
+padding          = 0
+radius           = 0
+font-0           = undefined:size=18:antialias=true;0
+font-1           = scientifica:size=18:antialias=true;0
+
+[bar/music]
+width            = 400
+height           = 70
+offset-x         = 20
+offset-y         = 20
+locale           = en_US.UTF-8
+background       = #00FFFFFF
+foreground       = ${colors.foreground}
+modules-left     = cmusnp
+modules-center   = 
+modules-right    = 
+padding          = 0
+radius           = 0
+font-0           = undefined:size=18:antialias=true;0
+font-1           = scientifica:size=18:antialias=true;0
+
+
+; ---------- modules ---------------
+
+[module/workspace]
+type              = custom/script
+interval          = 0.01
+exec              = echo $(( $(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //') + 1))
+format-padding    = 2
+format-font       = 1
+
+[module/date]
+type                     = custom/script
+interval                 = 1.0
+exec                     = /home/np/scripts/date.sh
+format-prefix-foreground = ${colors.green}
+format-padding           = 0
+format-foreground        = ${colors.foreground}
+
+
+[module/time]
+type                     = custom/script
+interval                 = 1.0
+exec                     = echo "$(date +%p)    $(date +%I:%M)"
+format-prefix-foreground = ${colors.green}
+format-padding           = 0
+format-foreground        = ${colors.foreground}
+
+[module/music_pop]
+type              = custom/script
+format-text       = <label>
+label             = 
+interval          = 1.0
+exec              = echo label
+click-left        = /home/np/scripts/hidebars.sh -s
+click-right       = /home/np/scripts/hidebars.sh -h
+format-padding    = 1
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+ 
+[module/previous]
+type              = custom/script
+format-text       = <label>
+label             = 
+exec              = echo label
+click-left        = cmus-remote -r -p && ~/scripts/popups/cover.sh
+click-right       = wmctrl -s 5
+format-foreground = ${colors.green}
+format-background = ${colors.background}
+format-padding    = 1
+
+[module/next]
+type              = custom/script
+format-text       = <label>
+label             = 
+exec              = echo label
+click-left        = cmus-remote -n -p && ~/scripts/popups/cover.sh
+click-right       = wmctrl -s 5
+format-foreground = ${colors.green}
+format-background = ${colors.background}
+format-padding    = 1
+
+[module/playpause]
+type              = custom/script
+exec              = exec ~/scripts/playpause.sh
+click-left        = cmus-remote -u
+click-right       = wmctrl -s 5
+interval          = 1
+scroll-up         = exec amixer sset Master 2%+
+scroll-down       = exec amixer sset Master 2%-
+format-foreground = ${colors.green}
+format-background = ${colors.background}
+format-padding    = 1
+
+[module/2bws]
+type              = custom/script
+exec              = bash ~/scripts/2bws.sh
+interval          = 0.01
+format-padding    = 3
+format-foreground = ${colors.background}
+scroll-up         = exec ~/scripts/wscycle.sh -f
+scroll-down       = exec ~/scripts/wscycle.sh -r
+
+[module/bat]
+type                     = custom/script
+exec                     = ~/scripts/bat -i
+interval                 = 100
+format-padding           = 4
+format-background        = ${colors.background}
+format-foreground        = ${colors.foreground}
+
+[module/vol]
+type                     = custom/script
+exec                     = ~/scripts/vol -q
+interval                 = 0.01
+format-padding           = 2
+scroll-up                = ~/scripts/vol -i
+scroll-down              = ~/scripts/vol -d
+
+[module/net]
+type              = custom/script
+exec              = exec ~/scripts/netwrk.sh
+interval          = 5
+format-padding    = 2
+format-background = ${colors.foreground}
+click-left        = urxvtc -g 50x22 -b 0 -e nmtui
+
+[module/album]
+type              = custom/script
+exec              = ~/scripts/music.sh -b
+interval          = 2
+format-padding    = 2
+click-left        = cmus-remote -u
+scroll-up         = exec amixer sset Master 2%+
+scroll-down       = exec amixer sset Master 2%-
+
+[module/artist]
+type              = custom/script
+exec              = ~/scripts/music.sh -a
+interval          = 2
+format-padding    = 2
+click-left        = cmus-remote -u
+scroll-up         = exec amixer sset Master 2%+
+scroll-down       = exec amixer sset Master 2%-
+
+[module/track]
+type              = custom/script
+exec              = ~/scripts/music.sh -t
+interval          = 2
+format-padding    = 2
+click-left        = cmus-remote -u
+scroll-up         = exec amixer sset Master 2%+
+scroll-down       = exec amixer sset Master 2%-
+
+[module/cmusnp]
+type              = custom/script
+interval          = 0.1
+format-text       = <label>
+exec              = bash ~/scripts/cmusnp.sh
+click-left        = cmus-remote -u
+click-right       = wmctrl -s 5
+scroll-up         = exec amixer sset Master 2%+
+scroll-down       = exec amixer sset Master 2%-
+format-foreground = ${colors.foreground}
+padding           = 0
+
+[module/brit]
+type                     = custom/script
+exec                     = echo "$( light -b | sed 's/\..*//' )%"
+scroll-up                = exec light -A 3
+scroll-down              = exec light -U 3
+click-left               = redshift -O 4000
+click-right              = redshift -O 6500
+format-foreground        = ${colors.foreground
+format-padding           = 2
+interval                 = 0.01
+
+[module/separator]
+type              = custom/script
+format-text       = <label>
+label             = "  "
+exec              = echo label
+format-foreground = ${colors.foreground}

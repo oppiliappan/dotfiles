@@ -1,0 +1,52 @@
+red="\e[31m"
+grn="\e[32m"
+ylw="\e[33m"
+cyn="\e[36m"
+blu="\e[34m"
+prp="\e[35m"
+bprp="\e[35;1m"
+gry="\e[94m"
+rst="\e[0m"
+
+git_branch() {
+    local git_status="$(git status 2> /dev/null)"
+    local on_branch="On branch ([^${IFS}]*)"
+    local on_commit="HEAD detached at ([^${IFS}]*)"
+
+    if [[ $git_status =~ $on_branch ]]; then
+        local branch=${BASH_REMATCH[1]}
+        echo -ne "\001${cyn}\002 $branch\001${rst}\002"
+    elif [[ $git_status =~ $on_commit ]]; then
+        local commit=${BASH_REMATCH[1]}
+        echo -ne "\001${prp}\002 $commit\001${rst}\002"
+    fi
+}
+
+prompt_pwd() {
+    if [ "$PWD" == "$HOME" ]; then
+        echo ""
+    elif [ "$PWD" == "/" ]; then
+        echo "/"
+    else
+        path="$(echo $PWD | sed -e "s-$HOME/--g")"
+        echo -ne " \001${gry}\002$path/\001${rst}\002"
+    fi
+}
+
+rootornot() {
+    if [[ "$(id -u)" -eq 0 ]]; then
+        echo -ne "\001${red}\002#\001${rst}\002"
+    else
+        echo -ne "$"
+    fi
+}
+
+host() {
+    if [ "$HOSTNAME" == "localhost" ]; then
+        echo -ne "(phone)"
+    fi
+}
+
+PS1='\n$(pista)'
+
+PS2="   > "

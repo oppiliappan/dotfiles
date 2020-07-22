@@ -1,0 +1,118 @@
+! ------------------------------------------------------------------------------
+!  Colors
+! ------------------------------------------------------------------------------
+!
+!------------------------------------------------------------------------------
+
+#define base00 #000000
+#define base01 #303030
+#define base02 #353535
+#define base03 #4A4A4A
+#define base04 #787878
+#define base05 #EEFFFF
+#define base06 #EEFFFF
+#define base07 #FFFFFF
+#define base08 #F07178
+#define base09 #F78C6C
+#define base0A #FDF200
+#define base0B #13CA91
+#define base0C #79ffe1
+#define base0D #7898FB
+#define base0E #ff3299
+#define base0F #FF5370
+
+!  URxvt
+! ------------------------------------------------------------------------------
+
+*foreground:   base05
+*background:   base00
+*cursorColor:  base05
+
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
+
+*color8:       base03
+*color9:       base09
+*color10:      base01
+*color11:      base02
+*color12:      base04
+*color13:      base06
+*color14:      base0F
+*color15:      base07
+
+URxvt.cursorBlink : 1
+URxvt.font       :xft:Input:size=12:style=Regular \
+                  xft:DejaVu Sans Mono:size=11:style=Medium
+
+URxvt.italicFont :xft:Input:size=12:style=Italic
+URxvt.boldFont   :xft:Input:size=12:style=Bold
+
+URxvt.lineSpace           : 0
+URxvt.letterSpace         : -1
+URxvt.scrollBar           : false
+URxvt.internalBorder      : 25
+URxvt.cursorUnderline     : false
+URxvt.geometry            : 70x35
+URxvt.thickness           : 5
+URxvt.titleBar            : false
+URxvt.intensityStyles     : false
+
+
+URxvt.perl-ext-common : default,matcher
+URxvt.url-launcher    : firefox
+URxvt.matcher.button  : 1
+
+! ------------------------------------------------------------------------------
+! rofi
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+
+rofi.color-window:    base00 , base00 , base00 , base00 , base03
+rofi.color-normal:    base00 , base03 , base00 , base00 , base07
+rofi.color-active:    base03 , base0E , base00 , base0B , base00
+rofi.color-urgent:    base00 , base03 , base00 , base00 , base03
+
+rofi.fake-transparency : true
+rofi.font              : Iosevka Nerd 13
+rofi.columns           : 1
+rofi.separator-style   : none
+rofi.hide-scrollbar    : true
+rofi.location          : 1
+rofi.yoffset           : 20
+rofi.xoffset           : 20
+rofi.padding           : 32
+rofi.fullscreen        : false
+rofi.width             : 300
+rofi.lines             : 6
+
+dzen2.font:       -*-archivo-medium-r-normal--0-90-0-0-p-0-*-*
+dzen2.foreground: base07
+dzen2.background:  ase00
+
+Xft.autohint: 1
+Xft.antialias: 1
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.dpi: 110
+
+! ------------------------------------------------------------------------------
+! 2bwm
+! ------------------------------------------------------------------------------
+
+twobwm.border_width: 8
+twobwm.outer_border: 2
+twobwm.focus_color: base01
+twobwm.unfocus_color: base01
+twobwm.fixed_color: base0D
+twobwm.unkill_color: base08
+twobwm.fixed_unkill_color: base0E
+twobwm.outer_border_color: base00
+twobwm.inverted_colors: true

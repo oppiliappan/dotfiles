@@ -1,0 +1,36 @@
+[user]
+	email = nerdy@peppe.rs
+	name = Akshay
+
+[commit]
+    verbose = true
+
+[core]
+    pager = delta
+    hooksPath = "/home/np/.hooks/"
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    features = decorations labels
+    syntax-theme = none
+    zero-style = 8
+    navigate = true
+
+[delta "decorations"]
+    file-decoration-style = none
+    whitespace-error-style = 22 reverse
+    minus-style = 7 "#440000"
+    minus-emph-style = 7 bold "#990000"
+    plus-style = 7 "#003300"
+    plus-emph-style = 7 bold "#009900"
+    file-style = 7 italic
+    hunk-header-style = 7
+    hunk-header-decoration-style = 8 ul
+
+[delta "labels"]
+    file-modified-label = " MODIFIED "
+    file-removed-label  = " REMOVED "
+    file-added-label    = " ADDED "
+    file-renamed-label  = " RENAMED "

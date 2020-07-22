@@ -1,0 +1,54 @@
+{
+    "suggest.timeout": 500,
+    "coc.source.vimtex.enable": true,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "dart",
+        "python"
+    ],
+    "languageserver": {
+        "bash": {
+            "command": "bash-language-server",
+            "args": ["start"],
+            "filetypes": ["sh"],
+            "ignoredRootPaths": ["~"]
+        },
+        "ccls": {
+            "command": "ccls",
+            "filetypes": ["c", "cpp", "objc", "objcpp"],
+            "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+            "initializationOptions": {
+                "cache": {
+                    "directory": "/tmp/ccls"
+                },
+                "cformatpath": "/bin/clang-format"
+            }
+        },
+        "haskell": {
+            "command": "hie-wrapper",
+            "args": ["--lsp"],
+            "rootPatterns": [
+                "stack.yaml",
+                "cabal.config",
+                "package.yaml"
+            ],
+            "filetypes": [
+                "hs",
+                "lhs",
+                "haskell"
+            ],
+            "initializationOptions": {
+                "languageServerHaskell": {
+                    "hlintOn": true
+                }
+            }
+        }
+    },
+    "diagnostic.errorSign": "×",
+    "diagnostic.warningSign": "!",
+    "python.formatting.provider": "black",
+    "python.jediEnabled": true,
+    "rust-analyzer.serverPath": "~/.cargo/bin/rust-analyzer",
+    "rust-analyzer.inlayHints.chainingHints": true,
+    "rust-analyzer.procMacro.enable": true,
+    "rust-analyzer.lruCapacity": 12
+}

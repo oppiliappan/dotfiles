@@ -46,7 +46,7 @@
 *color14:      base0F
 *color15:      base07
 
-URxvt.cursorBlink : 1
+URxvt.cursorBlink : on
 URxvt.font       :xft:Input:size=12:style=Regular \
                   xft:DejaVu Sans Mono:size=11:style=Medium
 
@@ -79,7 +79,7 @@ rofi.color-active:    base03 , base0E , base00 , base0B , base00
 rofi.color-urgent:    base00 , base03 , base00 , base00 , base03
 
 rofi.fake-transparency : true
-rofi.font              : Iosevka Nerd 13
+rofi.font              : Input 13
 rofi.columns           : 1
 rofi.separator-style   : none
 rofi.hide-scrollbar    : true
@@ -90,10 +90,6 @@ rofi.padding           : 32
 rofi.fullscreen        : false
 rofi.width             : 300
 rofi.lines             : 6
-
-dzen2.font:       -*-archivo-medium-r-normal--0-90-0-0-p-0-*-*
-dzen2.foreground: base07
-dzen2.background:  ase00
 
 Xft.autohint: 1
 Xft.antialias: 1

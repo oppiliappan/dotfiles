@@ -12,7 +12,7 @@ alias spdtst='curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/t
 alias tmux='tmux -u'
 alias tree='tree -C'
 alias vim='nvim'
-alias vime='nvim ~/.vim/vimrc'
+alias vime='nvim ~/.config/nvim/init.vim'
 
 # git aliases
 alias gb='git branch -v'

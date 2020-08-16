@@ -38,19 +38,19 @@ draw_bold_text_with_bright_colors: false
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Basier Square Mono  # should be "Menlo" or something on macOS.
+    family: Liga Input  # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     style: Regular
 
   # The bold font face
   bold:
-    family: Basier Square Mono # should be "Menlo" or something on macOS.
+    family: Liga Input # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     style: Bold
 
   # The italic font face
   italic:
-    family: Basier Square Mono # should be "Menlo" or something on macOS.
+    family: Liga Input # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     style: Italic
 

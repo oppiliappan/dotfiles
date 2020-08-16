@@ -13,7 +13,7 @@ alias tmux='tmux -u'
 alias tree='tree -C'
 alias vim='nvim'
 alias vime='nvim ~/.config/nvim/init.vim'
-alias tb='nc termbin 9999'
+alias tb='nc termbin.com 9999'
 
 # git aliases
 alias gb='git branch -v'

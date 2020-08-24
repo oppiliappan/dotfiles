@@ -47,6 +47,7 @@ host() {
     fi
 }
 
-PS1='\n$(pista)'
 
-PS2="   > "
+export PS1='\n$(pista)'
+
+export PS2="   > "

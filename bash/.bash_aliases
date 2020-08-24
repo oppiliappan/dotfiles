@@ -23,9 +23,3 @@ alias ggp='git push'
 alias gl='git log -p --abbrev-commit --pretty=medium'
 alias glo='git log --pretty=oneline --abbrev-commit'
 alias gst='git status --short'
-
-# xbps
-alias +='sudo xbps-install'
-alias ?='xbps-query -Rs'
-alias ~='sudo xbps-remove'
-

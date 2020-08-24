@@ -20,7 +20,7 @@ health() {
     for i in {0..4}
     do
         if [[ $i -le $(( $bat_status/20 )) ]]; then
-            echo -ne "#[fg=colour1,blink]· "
+            echo -ne "#[fg=colour1]· "
         else
             echo -ne "#[fg=colour8]· "
         fi

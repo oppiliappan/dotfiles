@@ -5,7 +5,7 @@
 #                  
 
 [global]
-    font = Iosevka Nerd 11
+    font = Input 10
     allow_markup = no
     format = "%s\n%b"
     sort = yes

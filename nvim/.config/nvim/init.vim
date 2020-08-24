@@ -21,12 +21,10 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-fugitive'
 
 " syntax and friends
-Plug 'leafgarland/typescript-vim', {'for' : 'typescript'}
-Plug 'mxw/vim-jsx', {'for' : 'javascript.jsx'}
-Plug 'pangloss/vim-javascript', {'for' : ['javascript.jsx', 'javascript']}
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
 Plug 'lervag/vimtex', {'for': 'tex'}
 Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
+Plug 'LnL7/vim-nix'
 
 " colorschemes
 Plug 'nerdypepper/agila.vim'
@@ -181,5 +179,12 @@ let g:matchup_matchparen_deferred = 1
 let g:matchup_matchparen_hi_surround_always = 1
 
 " coc-nvim
-hi CocHintSign ctermfg=7
-let g:python3_host_prog="/usr/bin/python3"
+hi CocHintSign ctermfg=6
+hi CocErrorSign ctermfg=1
+hi CocWarningSign ctermfg=3
+hi CocInfoSign ctermfg=6
+
+hi CocInfoFloat ctermfg=7
+hi CocHintFloat ctermfg=7
+
+hi CocRustChainingHint ctermfg=8

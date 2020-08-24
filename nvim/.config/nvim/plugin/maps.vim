@@ -26,7 +26,7 @@ nnoremap <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> 
             \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
             \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
-cmap w!! %!sudo tee > /dev/null %
+cmap w!! %!sudo -S tee > /dev/null %
 
 " visual
 vnoremap > >gv

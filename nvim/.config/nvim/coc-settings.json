@@ -5,6 +5,7 @@
         "dart",
         "python"
     ],
+    "coc.preferences.hoverTarget": "preview",
     "languageserver": {
         "bash": {
             "command": "bash-language-server",
@@ -43,12 +44,20 @@
             }
         }
     },
-    "diagnostic.errorSign": "×",
-    "diagnostic.warningSign": "!",
+    "diagnostic": {
+        "errorSign": "×",
+        "warningSign": "!",
+        "infoSign": "#",
+        "hintSign": "@",
+        "messageTarget": "float",
+        "messageDelay": 150
+    },
     "python.formatting.provider": "black",
     "python.jediEnabled": true,
-    "rust-analyzer.serverPath": "~/.cargo/bin/rust-analyzer",
-    "rust-analyzer.inlayHints.chainingHints": true,
-    "rust-analyzer.procMacro.enable": true,
-    "rust-analyzer.lruCapacity": 12
+    "rust-analyzer": {
+        "serverPath": "/home/np/.nix-profile/bin/rust-analyzer",
+        "inlayHints.chainingHints": true,
+        "procMacro.enable": true,
+        "lruCapacity": 12
+    }
 }

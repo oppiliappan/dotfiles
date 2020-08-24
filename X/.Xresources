@@ -46,27 +46,27 @@
 *color14:      base0F
 *color15:      base07
 
-URxvt.cursorBlink : on
-URxvt.font       :xft:Input:size=12:style=Regular \
-                  xft:DejaVu Sans Mono:size=11:style=Medium
-
-URxvt.italicFont :xft:Input:size=12:style=Italic
-URxvt.boldFont   :xft:Input:size=12:style=Bold
-
-URxvt.lineSpace           : 0
-URxvt.letterSpace         : -1
-URxvt.scrollBar           : false
-URxvt.internalBorder      : 25
-URxvt.cursorUnderline     : false
-URxvt.geometry            : 70x35
-URxvt.thickness           : 5
-URxvt.titleBar            : false
-URxvt.intensityStyles     : false
-
-
-URxvt.perl-ext-common : default,matcher
-URxvt.url-launcher    : firefox
-URxvt.matcher.button  : 1
+*.cursorBlink : on
+*.font       :xft:Input:size=12:style=Regular \
+              xft:DejaVu Sans Mono:size=11:style=Medium
+ 
+*.italicFont :xft:Input:size=12:style=Italic
+*.boldFont   :xft:Input:size=12:style=Bold
+ 
+*.lineSpace           : 0
+*.letterSpace         : -1
+*.scrollBar           : false
+*.internalBorder      : 25
+*.cursorUnderline     : false
+*.geometry            : 70x35
+*.thickness           : 5
+*.titleBar            : false
+*.intensityStyles     : false
+ 
+ 
+*.perl-ext-common : default,matcher
+*.url-launcher    : firefox
+*.matcher.button  : 1
 
 ! ------------------------------------------------------------------------------
 ! rofi

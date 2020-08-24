@@ -7,16 +7,15 @@
 images/
 *gitgraph*
 *colors*
-scripts/scripts/graphs
-weechat/sec.conf
 **/plug.vim
 ssh
 
-vim/.vim/autoload
-vim/.vim/view/*
-vim/.vim/spell/*
 ./**/*.netrwhist
 ./**/*.add
 ./**/*.add.spl
 
-i3
+nvim/.config/nvim/autoload
+cmus/*
+!cmus/.config/cmus/nerdz.theme
+weechat/*
+!weechat/.weechat/weechat.conf
